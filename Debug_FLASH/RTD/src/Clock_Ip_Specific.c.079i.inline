@@ -1,0 +1,1523 @@
+IPA function summary for Clock_Ip_PRAMCSetRamIWS.part.0/26 inlinable
+  global time:     5.000000
+  self size:       6
+  global size:     6
+  min size:       3
+  self stack:      0
+  global stack:    0
+    size:3.000000, time:3.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for Clock_Ip_PRAMCSetRamIWS/17 inlinable
+  global time:     17.310000
+  self size:       18
+  global size:     18
+  min size:       15
+  self stack:      0
+  global stack:    0
+    size:14.000000, time:12.010000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_PRAMCSetRamIWS.part.0/26 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size: 3 stack: 0
+
+IPA function summary for Clock_Ip_FLASH_SetFlashIWS/16 inlinable
+  global time:     18.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:1.000000, time:1.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 3 time: 15
+
+IPA function summary for Clock_Ip_Command/15 inlinable
+  global time:     10.666667
+  self size:       11
+  global size:     11
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+    size:6.000000, time:2.000000,  nonconst if:(op1 changed)
+  calls:
+    Clock_Ip_PowerClockIpModules/3 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size:73 stack:12 predicate: (op1 == 1)
+    Clock_Ip_ClockInitializeObjects/13 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size: 5 stack: 0 predicate: (op1 == 2)
+
+IPA function summary for Clock_Ip_ClockPowerModeChangeNotification/14 inlinable
+  global time:     2.000000
+  self size:       3
+  global size:     3
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for Clock_Ip_ClockInitializeObjects/13 inlinable
+  global time:     7.500000
+  self size:       11
+  global size:     11
+  min size:       8
+  self stack:      0
+  global stack:    0
+    size:8.000000, time:5.500000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for EnableSircInStandbyMode/12 inlinable
+  global time:     21.000000
+  self size:       10
+  global size:     10
+  min size:       7
+  self stack:      12
+  global stack:    12
+    size:3.000000, time:3.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for DisableSircInStandbyMode/11 inlinable
+  global time:     20.000000
+  self size:       9
+  global size:     9
+  min size:       6
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for EnableFircInStandbyMode/10 inlinable
+  global time:     21.000000
+  self size:       10
+  global size:     10
+  min size:       7
+  self stack:      12
+  global stack:    12
+    size:3.000000, time:3.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for DisableFircInStandbyMode/9 inlinable
+  global time:     20.000000
+  self size:       9
+  global size:     9
+  min size:       6
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for Clock_Ip_McMeEnterKey/7 inlinable
+  global time:     4.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for Clock_Ip_SetFlashWaitStates/6 inlinable
+  global time:     12.000000
+  self size:       4
+  global size:     4
+  min size:       1
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_FLASH_SetFlashIWS/16 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 1 time: 10 callee size: 3 stack: 0
+
+IPA function summary for Clock_Ip_SetRamWaitStates/5 inlinable
+  global time:     12.000000
+  self size:       4
+  global size:     4
+  min size:       1
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_PRAMCSetRamIWS/17 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 1 time: 10 callee size: 9 stack: 0
+
+IPA function summary for Clock_Ip_CodeInRamSetFlashWaitStates/4 inlinable
+  global time:     21.250000
+  self size:       29
+  global size:     29
+  min size:       26
+  self stack:      0
+  global stack:    0
+    size:26.000000, time:19.250000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for Clock_Ip_PowerClockIpModules/3 inlinable
+  global time:     327.195842
+  self size:       147
+  global size:     147
+  min size:       144
+  self stack:      12
+  global stack:    12
+    size:88.000000, time:115.537997
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_ReportClockErrors/23 function body not available
+      freq:0.11 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_TimeoutExpired/22 function body not available
+      freq:3.08 loop depth: 1 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_StartTimeout/21 function body not available
+      freq:0.33 loop depth: 0 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+       op3 is compile time invariant
+    Clock_Ip_McMeEnterKey/7 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0
+    Clock_Ip_ReportClockErrors/23 function body not available
+      freq:0.11 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_TimeoutExpired/22 function body not available
+      freq:3.08 loop depth: 1 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_StartTimeout/21 function body not available
+      freq:0.33 loop depth: 0 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+       op3 is compile time invariant
+    Clock_Ip_McMeEnterKey/7 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0
+    Clock_Ip_ReportClockErrors/23 function body not available
+      freq:0.11 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_TimeoutExpired/22 function body not available
+      freq:3.08 loop depth: 1 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_StartTimeout/21 function body not available
+      freq:0.33 loop depth: 0 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+       op3 is compile time invariant
+    Clock_Ip_McMeEnterKey/7 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0
+    Clock_Ip_ReportClockErrors/23 function body not available
+      freq:0.11 loop depth: 0 size: 3 time: 12
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_TimeoutExpired/22 function body not available
+      freq:3.08 loop depth: 1 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+    Clock_Ip_StartTimeout/21 function body not available
+      freq:0.33 loop depth: 0 size: 5 time: 14
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+       op3 is compile time invariant
+    Clock_Ip_McMeEnterKey/7 function not considered for inlining
+      freq:0.33 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0
+
+
+Flattening functions:
+Overall time estimate: 518.922509 weighted by profile: 0.000000
+
+Deciding on inlining of small functions.  Starting with size 0.
+Enqueueing calls in Clock_Ip_PRAMCSetRamIWS.part.0/26.
+Enqueueing calls in Clock_Ip_PRAMCSetRamIWS/17.
+Enqueueing calls in Clock_Ip_FLASH_SetFlashIWS/16.
+Enqueueing calls in Clock_Ip_Command/15.
+Enqueueing calls in Clock_Ip_ClockPowerModeChangeNotification/14.
+Enqueueing calls in Clock_Ip_ClockInitializeObjects/13.
+Enqueueing calls in EnableSircInStandbyMode/12.
+Enqueueing calls in DisableSircInStandbyMode/11.
+Enqueueing calls in EnableFircInStandbyMode/10.
+Enqueueing calls in DisableFircInStandbyMode/9.
+Enqueueing calls in Clock_Ip_McMeEnterKey/7.
+Enqueueing calls in Clock_Ip_SetFlashWaitStates/6.
+Enqueueing calls in Clock_Ip_SetRamWaitStates/5.
+Enqueueing calls in Clock_Ip_CodeInRamSetFlashWaitStates/4.
+Enqueueing calls in Clock_Ip_PowerClockIpModules/3.
+
+Considering Clock_Ip_PRAMCSetRamIWS.part.0/26 with 6 size
+ to be inlined into Clock_Ip_PRAMCSetRamIWS/17 in unknown:0
+ Estimated badness is -0.396000, frequency 0.33.
+
+Considering Clock_Ip_ClockInitializeObjects/13 with 11 size
+ to be inlined into Clock_Ip_Command/15 in ../RTD/src/Clock_Ip_Specific.c:573
+ Estimated badness is -0.126984, frequency 0.33.
+node context cache: 3 hits, 0 misses, 6 initializations
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Deciding on functions to be inlined into all callers and removing useless speculations:
+
+Inlining Clock_Ip_PowerClockIpModules/3 size 147.
+ Called once from Clock_Ip_Command/15 18 insns.
+ Inlined into Clock_Ip_Command/15 which now has 161 size
+Overall time estimate: 280.481948 weighted by profile: 0.000000
+
+Why inlining failed?
+function body not available                       :       12 calls, 4.698311 freq, 0 count
+call is unlikely and code size would grow         :        6 calls, 2.440000 freq, 0 count
+IPA function summary for Clock_Ip_PRAMCSetRamIWS/17 inlinable
+  global time:     15.000000
+  self size:       18
+  global size:     20
+  min size:       17
+  self stack:      0
+  global stack:    0
+  estimated growth:14
+    size:17.000000, time:13.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_PRAMCSetRamIWS.part.0/26 inlined
+      freq:0.33
+      Stack frame offset 0, callee self size 0
+
+IPA function summary for Clock_Ip_FLASH_SetFlashIWS/16 inlinable
+  global time:     18.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+  estimated growth:3
+    size:1.000000, time:1.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 3 time: 15
+
+IPA function summary for Clock_Ip_Command/15 inlinable
+  global time:     114.231948
+  self size:       11
+  global size:     161
+  min size:       0
+  self stack:      0
+  global stack:    12
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+    size:6.000000, time:2.000000,  nonconst if:(op1 changed)
+    size:8.000000, time:1.833333,  executed if:(op1 == 2)
+    size:88.000000, time:38.512666,  executed if:(op1 == 1)
+  calls:
+    Clock_Ip_PowerClockIpModules/3 inlined
+      freq:0.33
+      Stack frame offset 0, callee self size 12
+      Clock_Ip_ReportClockErrors/23 function body not available
+        freq:0.04 loop depth: 0 size: 3 time: 12 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_TimeoutExpired/22 function body not available
+        freq:1.03 loop depth: 1 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_StartTimeout/21 function body not available
+        freq:0.11 loop depth: 0 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+         op2 is compile time invariant
+         op3 is compile time invariant
+      Clock_Ip_McMeEnterKey/7 call is unlikely and code size would grow
+        freq:0.11 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0 predicate: (op1 == 1)
+      Clock_Ip_ReportClockErrors/23 function body not available
+        freq:0.04 loop depth: 0 size: 3 time: 12 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_TimeoutExpired/22 function body not available
+        freq:1.03 loop depth: 1 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_StartTimeout/21 function body not available
+        freq:0.11 loop depth: 0 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+         op2 is compile time invariant
+         op3 is compile time invariant
+      Clock_Ip_McMeEnterKey/7 call is unlikely and code size would grow
+        freq:0.11 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0 predicate: (op1 == 1)
+      Clock_Ip_ReportClockErrors/23 function body not available
+        freq:0.04 loop depth: 0 size: 3 time: 12 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_TimeoutExpired/22 function body not available
+        freq:1.03 loop depth: 1 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_StartTimeout/21 function body not available
+        freq:0.11 loop depth: 0 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+         op2 is compile time invariant
+         op3 is compile time invariant
+      Clock_Ip_McMeEnterKey/7 call is unlikely and code size would grow
+        freq:0.11 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0 predicate: (op1 == 1)
+      Clock_Ip_ReportClockErrors/23 function body not available
+        freq:0.04 loop depth: 0 size: 3 time: 12 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_TimeoutExpired/22 function body not available
+        freq:1.03 loop depth: 1 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+      Clock_Ip_StartTimeout/21 function body not available
+        freq:0.11 loop depth: 0 size: 5 time: 14 predicate: (op1 == 1)
+         op0 is compile time invariant
+         op1 is compile time invariant
+         op2 is compile time invariant
+         op3 is compile time invariant
+      Clock_Ip_McMeEnterKey/7 call is unlikely and code size would grow
+        freq:0.11 loop depth: 0 size: 1 time: 10 callee size: 2 stack: 0 predicate: (op1 == 1)
+    Clock_Ip_ClockInitializeObjects/13 inlined
+      freq:0.33
+      Stack frame offset 0, callee self size 0
+
+IPA function summary for Clock_Ip_ClockPowerModeChangeNotification/14 inlinable
+  global time:     2.000000
+  self size:       3
+  global size:     3
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for EnableSircInStandbyMode/12 inlinable
+  global time:     21.000000
+  self size:       10
+  global size:     10
+  min size:       7
+  self stack:      12
+  global stack:    12
+    size:3.000000, time:3.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for DisableSircInStandbyMode/11 inlinable
+  global time:     20.000000
+  self size:       9
+  global size:     9
+  min size:       6
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for EnableFircInStandbyMode/10 inlinable
+  global time:     21.000000
+  self size:       10
+  global size:     10
+  min size:       7
+  self stack:      12
+  global stack:    12
+    size:3.000000, time:3.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for DisableFircInStandbyMode/9 inlinable
+  global time:     20.000000
+  self size:       9
+  global size:     9
+  min size:       6
+  self stack:      0
+  global stack:    0
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    indirect call loop depth: 0 freq:1.00 size: 4 time: 16
+
+IPA function summary for Clock_Ip_McMeEnterKey/7 inlinable
+  global time:     4.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+  estimated growth:4
+    size:2.000000, time:2.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+IPA function summary for Clock_Ip_SetFlashWaitStates/6 inlinable
+  global time:     12.000000
+  self size:       4
+  global size:     4
+  min size:       1
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_FLASH_SetFlashIWS/16 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 1 time: 10 callee size: 3 stack: 0
+
+IPA function summary for Clock_Ip_SetRamWaitStates/5 inlinable
+  global time:     12.000000
+  self size:       4
+  global size:     4
+  min size:       1
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Clock_Ip_PRAMCSetRamIWS/17 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 1 time: 10 callee size:10 stack: 0
+
+IPA function summary for Clock_Ip_CodeInRamSetFlashWaitStates/4 inlinable
+  global time:     21.250000
+  self size:       29
+  global size:     29
+  min size:       26
+  self stack:      0
+  global stack:    0
+    size:26.000000, time:19.250000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Symbol table:
+
+Clock_Ip_PRAMCSetRamIWS.part.0/26 (Clock_Ip_PRAMCSetRamIWS.part.0) @061558c0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function Clock_Ip_PRAMCSetRamIWS.part.0/26 is inline copy in Clock_Ip_PRAMCSetRamIWS/17
+  Availability: local
+  Function flags: count:354334801 (estimated locally) body local split_part optimize_size
+  Called by: Clock_Ip_PRAMCSetRamIWS/17 (inlined) (354334801 (estimated locally),0.33 per call) 
+  Calls: 
+Clock_Ip_FreqIds/25 (Clock_Ip_FreqIds) @06146678
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Clock_Ip_CodeInRamSetFlashWaitStates/4 (read) Clock_Ip_PRAMCSetRamIWS/17 (read) Clock_Ip_PRAMCSetRamIWS/17 (read) 
+  Availability: not_available
+  Varpool flags:
+Clock_Ip_pxConfig/24 (Clock_Ip_pxConfig) @06146630
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Clock_Ip_CodeInRamSetFlashWaitStates/4 (read) Clock_Ip_PRAMCSetRamIWS/17 (read) 
+  Availability: not_available
+  Varpool flags:
+Clock_Ip_ReportClockErrors/23 (Clock_Ip_ReportClockErrors) @0610c7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Clock_Ip_PowerClockIpModules/3 (38976829 (estimated locally),0.04 per call) Clock_Ip_PowerClockIpModules/3 (38976829 (estimated locally),0.04 per call) Clock_Ip_PowerClockIpModules/3 (38976829 (estimated locally),0.04 per call) Clock_Ip_PowerClockIpModules/3 (38976829 (estimated locally),0.04 per call) 
+  Calls: 
+Clock_Ip_TimeoutExpired/22 (Clock_Ip_TimeoutExpired) @0610c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Clock_Ip_PowerClockIpModules/3 (1104104727 (estimated locally),1.03 per call) Clock_Ip_PowerClockIpModules/3 (1104104724 (estimated locally),1.03 per call) Clock_Ip_PowerClockIpModules/3 (1104104720 (estimated locally),1.03 per call) Clock_Ip_PowerClockIpModules/3 (1104104716 (estimated locally),1.03 per call) 
+  Calls: 
+Clock_Ip_StartTimeout/21 (Clock_Ip_StartTimeout) @0610c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Clock_Ip_PowerClockIpModules/3 (118111602 (estimated locally),0.11 per call) Clock_Ip_PowerClockIpModules/3 (118111602 (estimated locally),0.11 per call) Clock_Ip_PowerClockIpModules/3 (118111601 (estimated locally),0.11 per call) Clock_Ip_PowerClockIpModules/3 (118111601 (estimated locally),0.11 per call) 
+  Calls: 
+Clock_Ip_axIntOscCallbacks/20 (Clock_Ip_axIntOscCallbacks) @06108e10
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Clock_Ip_ClockInitializeObjects/13 (addr) Clock_Ip_ClockInitializeObjects/13 (addr) 
+  Availability: not_available
+  Varpool flags: read-only
+Clock_Ip_au8IrcoscCallbackIndex/19 (Clock_Ip_au8IrcoscCallbackIndex) @06108dc8
+  Type: variable
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: external public
+  References: 
+  Referring: Clock_Ip_ClockInitializeObjects/13 (read) Clock_Ip_ClockInitializeObjects/13 (read) 
+  Availability: not_available
+  Varpool flags: read-only
+Clock_Ip_bObjectsAreInitialized.0/18 (Clock_Ip_bObjectsAreInitialized) @06108d80
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Clock_Ip_ClockInitializeObjects/13 (read) Clock_Ip_ClockInitializeObjects/13 (write) 
+  Availability: available
+  Varpool flags: initialized
+Clock_Ip_PRAMCSetRamIWS/17 (Clock_Ip_PRAMCSetRamIWS) @061037e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Clock_Ip_pxConfig/24 (read) Clock_Ip_FreqIds/25 (read) Clock_Ip_FreqIds/25 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: Clock_Ip_SetRamWaitStates/5 (1073741824 (estimated locally),1.00 per call) 
+  Calls: Clock_Ip_PRAMCSetRamIWS.part.0/26 (inlined) (354334801 (estimated locally),0.33 per call) 
+Clock_Ip_FLASH_SetFlashIWS/16 (Clock_Ip_FLASH_SetFlashIWS) @06103540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Clock_Ip_SetFlashWaitStatesCallback/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: Clock_Ip_SetFlashWaitStates/6 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+   Indirect call(1073741824 (estimated locally),1.00 per call)  Num speculative call targets: 0
+Clock_Ip_Command/15 (Clock_Ip_Command) @061032a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741817 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Clock_Ip_PowerClockIpModules/3 (inlined) (357913942 (estimated locally),0.33 per call) Clock_Ip_ClockInitializeObjects/13 (inlined) (357913942 (estimated locally),0.33 per call) 
+Clock_Ip_ClockPowerModeChangeNotification/14 (Clock_Ip_ClockPowerModeChangeNotification) @06103000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Clock_Ip_ClockInitializeObjects/13 (Clock_Ip_ClockInitializeObjects) @06021a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Clock_Ip_bObjectsAreInitialized.0/18 (read) Clock_Ip_bObjectsAreInitialized.0/18 (write) Clock_Ip_au8IrcoscCallbackIndex/19 (read) Clock_Ip_axIntOscCallbacks/20 (addr) Clock_Ip_pxSircStdbyClock/0 (write) Clock_Ip_au8IrcoscCallbackIndex/19 (read) Clock_Ip_axIntOscCallbacks/20 (addr) Clock_Ip_pxFircStdbyClock/1 (write) 
+  Referring: 
+  Function Clock_Ip_ClockInitializeObjects/13 is inline copy in Clock_Ip_Command/15
+  Availability: local
+  Function flags: count:357913942 (estimated locally) body local optimize_size
+  Called by: Clock_Ip_Command/15 (inlined) (357913942 (estimated locally),0.33 per call) 
+  Calls: 
+EnableSircInStandbyMode/12 (EnableSircInStandbyMode) @060212a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Clock_Ip_pxSircStdbyClock/0 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+   Indirect call(1073741824 (estimated locally),1.00 per call)  Num speculative call targets: 0
+DisableSircInStandbyMode/11 (DisableSircInStandbyMode) @06021ee0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Clock_Ip_pxSircStdbyClock/0 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+   Indirect call(1073741824 (estimated locally),1.00 per call)  Num speculative call targets: 0
+EnableFircInStandbyMode/10 (EnableFircInStandbyMode) @06021c40
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Clock_Ip_pxFircStdbyClock/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+   Indirect call(1073741824 (estimated locally),1.00 per call)  Num speculative call targets: 0
+DisableFircInStandbyMode/9 (DisableFircInStandbyMode) @060219a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Clock_Ip_pxFircStdbyClock/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+   Indirect call(1073741824 (estimated locally),1.00 per call)  Num speculative call targets: 0
+Clock_Ip_McMeEnterKey/7 (Clock_Ip_McMeEnterKey) @06021460
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: Clock_Ip_PowerClockIpModules/3 (118111602 (estimated locally),0.11 per call) Clock_Ip_PowerClockIpModules/3 (118111602 (estimated locally),0.11 per call) Clock_Ip_PowerClockIpModules/3 (118111601 (estimated locally),0.11 per call) Clock_Ip_PowerClockIpModules/3 (118111601 (estimated locally),0.11 per call) 
+  Calls: 
+Clock_Ip_SetFlashWaitStates/6 (Clock_Ip_SetFlashWaitStates) @060211c0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Clock_Ip_FLASH_SetFlashIWS/16 (1073741824 (estimated locally),1.00 per call) 
+Clock_Ip_SetRamWaitStates/5 (Clock_Ip_SetRamWaitStates) @06018a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Clock_Ip_PRAMCSetRamIWS/17 (1073741824 (estimated locally),1.00 per call) 
+Clock_Ip_CodeInRamSetFlashWaitStates/4 (Clock_Ip_CodeInRamSetFlashWaitStates) @06018d20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: Clock_Ip_pxConfig/24 (read) Clock_Ip_FreqIds/25 (read) 
+  Referring: Clock_Ip_SetFlashWaitStatesCallback/2 (addr) 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Clock_Ip_PowerClockIpModules/3 (Clock_Ip_PowerClockIpModules) @060189a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Clock_Ip_PowerClockIpModules/3 is inline copy in Clock_Ip_Command/15
+  Availability: local
+  Function flags: count:357913942 (estimated locally) body local optimize_size
+  Called by: Clock_Ip_Command/15 (inlined) (357913942 (estimated locally),0.33 per call) 
+  Calls: Clock_Ip_ReportClockErrors/23 (38976829 (estimated locally),0.04 per call) Clock_Ip_TimeoutExpired/22 (1104104727 (estimated locally),1.03 per call) Clock_Ip_StartTimeout/21 (118111602 (estimated locally),0.11 per call) Clock_Ip_McMeEnterKey/7 (118111602 (estimated locally),0.11 per call) Clock_Ip_ReportClockErrors/23 (38976829 (estimated locally),0.04 per call) Clock_Ip_TimeoutExpired/22 (1104104724 (estimated locally),1.03 per call) Clock_Ip_StartTimeout/21 (118111602 (estimated locally),0.11 per call) Clock_Ip_McMeEnterKey/7 (118111602 (estimated locally),0.11 per call) Clock_Ip_ReportClockErrors/23 (38976829 (estimated locally),0.04 per call) Clock_Ip_TimeoutExpired/22 (1104104720 (estimated locally),1.03 per call) Clock_Ip_StartTimeout/21 (118111601 (estimated locally),0.11 per call) Clock_Ip_McMeEnterKey/7 (118111601 (estimated locally),0.11 per call) Clock_Ip_ReportClockErrors/23 (38976829 (estimated locally),0.04 per call) Clock_Ip_TimeoutExpired/22 (1104104716 (estimated locally),1.03 per call) Clock_Ip_StartTimeout/21 (118111601 (estimated locally),0.11 per call) Clock_Ip_McMeEnterKey/7 (118111601 (estimated locally),0.11 per call) 
+Clock_Ip_SetFlashWaitStatesCallback/2 (Clock_Ip_SetFlashWaitStatesCallback) @060153a8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Clock_Ip_CodeInRamSetFlashWaitStates/4 (addr) 
+  Referring: Clock_Ip_FLASH_SetFlashIWS/16 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Clock_Ip_pxFircStdbyClock/1 (Clock_Ip_pxFircStdbyClock) @06015318
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: DisableFircInStandbyMode/9 (read) Clock_Ip_ClockInitializeObjects/13 (write) EnableFircInStandbyMode/10 (read) 
+  Availability: available
+  Varpool flags:
+Clock_Ip_pxSircStdbyClock/0 (Clock_Ip_pxSircStdbyClock) @06015288
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: DisableSircInStandbyMode/11 (read) Clock_Ip_ClockInitializeObjects/13 (write) EnableSircInStandbyMode/12 (read) 
+  Availability: available
+  Varpool flags:
+
+;; Function Clock_Ip_CodeInRamSetFlashWaitStates (Clock_Ip_CodeInRamSetFlashWaitStates, funcdef_no=1, decl_uid=6439, cgraph_uid=2, symbol_order=4)
+
+Clock_Ip_CodeInRamSetFlashWaitStates ()
+{
+  uint32 ConfiguredCoreClock;
+  uint32 RwscSetting;
+  const struct Clock_Ip_ClockConfigType * Clock_Ip_pxConfig.10_1;
+  unsigned char _2;
+  int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG RwscSetting => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG ConfiguredCoreClock => 0
+  # DEBUG BEGIN_STMT
+  Clock_Ip_pxConfig.10_1 = Clock_Ip_pxConfig;
+  _2 = Clock_Ip_FreqIds[13];
+  _3 = (int) _2;
+  ConfiguredCoreClock_13 = Clock_Ip_pxConfig.10_1->ConfiguredFrequencies[_3].ConfiguredFrequencyValue;
+  # DEBUG ConfiguredCoreClock => ConfiguredCoreClock_13
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_13 <= 167000000)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 7>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_13 <= 66000000)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 4> [local count: 268435456]:
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_13 <= 100000000)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 134217728]:
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_13 <= 133000000)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 6> [local count: 67108864]:
+  # DEBUG BEGIN_STMT
+  # DEBUG RwscSetting => 4
+  goto <bb 10>; [100.00%]
+
+  <bb 7> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_13 <= 200000000)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 8> [local count: 268435456]:
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_13 <= 233000000)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 9> [local count: 134217728]:
+  # DEBUG BEGIN_STMT
+
+  <bb 10> [local count: 1073741824]:
+  # RwscSetting_11 = PHI <2(4), 5(7), 6(8), 7(9), 3(5), 1(3), 4(6)>
+  # DEBUG RwscSetting => RwscSetting_11
+  # DEBUG BEGIN_STMT
+  _4 ={v} MEM[(struct FLASH_Type *)1076805632B].CTL;
+  _5 = _4 & 4294934527;
+  MEM[(struct FLASH_Type *)1076805632B].CTL ={v} _5;
+  # DEBUG BEGIN_STMT
+  _6 ={v} MEM[(struct FLASH_Type *)1076805632B].CTL;
+  _7 = _6 & 4294959359;
+  MEM[(struct FLASH_Type *)1076805632B].CTL ={v} _7;
+  # DEBUG BEGIN_STMT
+  _8 ={v} MEM[(struct FLASH_Type *)1076805632B].CTL;
+  _9 = RwscSetting_11 << 8;
+  _10 = _8 | _9;
+  MEM[(struct FLASH_Type *)1076805632B].CTL ={v} _10;
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_McMeEnterKey (Clock_Ip_McMeEnterKey, funcdef_no=4, decl_uid=6244, cgraph_uid=5, symbol_order=7)
+
+Clock_Ip_McMeEnterKey ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  MEM[(struct MC_ME_Type *)1076740096B].CTL_KEY ={v} 23280;
+  # DEBUG BEGIN_STMT
+  MEM[(struct MC_ME_Type *)1076740096B].CTL_KEY ={v} 42255;
+  return;
+
+}
+
+
+
+;; Function DisableFircInStandbyMode (DisableFircInStandbyMode, funcdef_no=6, decl_uid=6236, cgraph_uid=7, symbol_order=9)
+
+DisableFircInStandbyMode ()
+{
+  const struct Clock_Ip_IntOscCallbackType * Clock_Ip_pxFircStdbyClock.0_1;
+  void (*<T656>) (Clock_Ip_NameType) _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_pxFircStdbyClock.0_1 = Clock_Ip_pxFircStdbyClock;
+  _2 = Clock_Ip_pxFircStdbyClock.0_1->Disable;
+  _2 (1);
+  return;
+
+}
+
+
+
+;; Function EnableFircInStandbyMode (EnableFircInStandbyMode, funcdef_no=7, decl_uid=6238, cgraph_uid=8, symbol_order=10)
+
+EnableFircInStandbyMode ()
+{
+  struct Clock_Ip_IrcoscConfigType FircConfig;
+  const struct Clock_Ip_IntOscCallbackType * Clock_Ip_pxFircStdbyClock.1_1;
+  void (*<T653>) (const struct Clock_Ip_IrcoscConfigType *) _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  FircConfig.Enable = 1;
+  # DEBUG BEGIN_STMT
+  Clock_Ip_pxFircStdbyClock.1_1 = Clock_Ip_pxFircStdbyClock;
+  _2 = Clock_Ip_pxFircStdbyClock.1_1->Enable;
+  _2 (&FircConfig);
+  FircConfig ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function DisableSircInStandbyMode (DisableSircInStandbyMode, funcdef_no=8, decl_uid=6240, cgraph_uid=9, symbol_order=11)
+
+DisableSircInStandbyMode ()
+{
+  const struct Clock_Ip_IntOscCallbackType * Clock_Ip_pxSircStdbyClock.2_1;
+  void (*<T656>) (Clock_Ip_NameType) _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_pxSircStdbyClock.2_1 = Clock_Ip_pxSircStdbyClock;
+  _2 = Clock_Ip_pxSircStdbyClock.2_1->Disable;
+  _2 (3);
+  return;
+
+}
+
+
+
+;; Function EnableSircInStandbyMode (EnableSircInStandbyMode, funcdef_no=9, decl_uid=6242, cgraph_uid=10, symbol_order=12)
+
+EnableSircInStandbyMode ()
+{
+  struct Clock_Ip_IrcoscConfigType SircConfig;
+  const struct Clock_Ip_IntOscCallbackType * Clock_Ip_pxSircStdbyClock.3_1;
+  void (*<T653>) (const struct Clock_Ip_IrcoscConfigType *) _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  SircConfig.Enable = 1;
+  # DEBUG BEGIN_STMT
+  Clock_Ip_pxSircStdbyClock.3_1 = Clock_Ip_pxSircStdbyClock;
+  _2 = Clock_Ip_pxSircStdbyClock.3_1->Enable;
+  _2 (&SircConfig);
+  SircConfig ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_ClockPowerModeChangeNotification (Clock_Ip_ClockPowerModeChangeNotification, funcdef_no=11, decl_uid=6409, cgraph_uid=12, symbol_order=14)
+
+Clock_Ip_ClockPowerModeChangeNotification (Clock_Ip_PowerModesType PowerMode, Clock_Ip_PowerNotificationType Notification)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_Command (Clock_Ip_Command, funcdef_no=12, decl_uid=6426, cgraph_uid=13, symbol_order=15)
+
+
+Symbols to be put in SSA form
+{ D.6581 }
+Incremental SSA update started at block: 0
+Number of blocks in CFG: 40
+Number of blocks to update: 39 ( 98%)
+
+
+Removing basic block 3
+Removing basic block 4
+Removing basic block 6
+Removing basic block 10
+Removing basic block 15
+Removing basic block 22
+Removing basic block 29
+Removing basic block 36
+;; 5 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+;;
+;; Loop 1
+;;  header 26, latch 27
+;;  depth 1, outer 0
+;;  nodes: 26 27
+;;
+;; Loop 2
+;;  header 20, latch 21
+;;  depth 1, outer 0
+;;  nodes: 20 21
+;;
+;; Loop 3
+;;  header 14, latch 15
+;;  depth 1, outer 0
+;;  nodes: 14 15
+;;
+;; Loop 4
+;;  header 8, latch 9
+;;  depth 1, outer 0
+;;  nodes: 8 9
+;; 2 succs { 31 6 3 }
+;; 3 succs { 4 5 }
+;; 4 succs { 5 }
+;; 5 succs { 31 }
+;; 6 succs { 7 12 }
+;; 7 succs { 8 }
+;; 8 succs { 9 10 }
+;; 9 succs { 8 10 }
+;; 10 succs { 11 12 }
+;; 11 succs { 12 }
+;; 12 succs { 13 18 }
+;; 13 succs { 14 }
+;; 14 succs { 15 16 }
+;; 15 succs { 14 16 }
+;; 16 succs { 17 18 }
+;; 17 succs { 18 }
+;; 18 succs { 19 24 }
+;; 19 succs { 20 }
+;; 20 succs { 21 22 }
+;; 21 succs { 20 22 }
+;; 22 succs { 23 24 }
+;; 23 succs { 24 }
+;; 24 succs { 25 30 }
+;; 25 succs { 26 }
+;; 26 succs { 27 28 }
+;; 27 succs { 26 28 }
+;; 28 succs { 29 30 }
+;; 29 succs { 30 }
+;; 30 succs { 31 }
+;; 31 succs { 1 }
+cyclic probability of bb 8 is 0.893025; turning freq 0.110000 to 1.028278
+cyclic probability of bb 14 is 0.893025; turning freq 0.110000 to 1.028278
+cyclic probability of bb 20 is 0.893025; turning freq 0.110000 to 1.028278
+cyclic probability of bb 26 is 0.893025; turning freq 0.110000 to 1.028278
+Clock_Ip_Command (const struct Clock_Ip_ClockConfigType * Config, Clock_Ip_CommandType Command)
+{
+  uint32 StartTime;
+  uint32 ElapsedTime;
+  uint32 TimeoutTicks;
+  boolean TimeoutOccurred;
+  static boolean Clock_Ip_bObjectsAreInitialized = 0;
+  _Bool Clock_Ip_bObjectsAreInitialized.4_7;
+  unsigned char _8;
+  int _9;
+  const struct Clock_Ip_IntOscCallbackType * _10;
+  unsigned char _11;
+  int _12;
+  const struct Clock_Ip_IntOscCallbackType * _13;
+  long unsigned int _14;
+  long unsigned int _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  long unsigned int _21;
+  long unsigned int TimeoutTicks.5_22;
+  long unsigned int _24;
+  long unsigned int _25;
+  long unsigned int _27;
+  long unsigned int _28;
+  long unsigned int _29;
+  long unsigned int _30;
+  long unsigned int _31;
+  long unsigned int _32;
+  long unsigned int _33;
+  long unsigned int _34;
+  long unsigned int TimeoutTicks.6_35;
+  long unsigned int _37;
+  long unsigned int _38;
+  long unsigned int _40;
+  long unsigned int _41;
+  long unsigned int _42;
+  long unsigned int _43;
+  long unsigned int _44;
+  long unsigned int _45;
+  long unsigned int _46;
+  long unsigned int _47;
+  long unsigned int TimeoutTicks.7_48;
+  long unsigned int _50;
+  long unsigned int _51;
+  long unsigned int _53;
+  long unsigned int _54;
+  long unsigned int _55;
+  long unsigned int _56;
+  long unsigned int _57;
+  long unsigned int _58;
+  long unsigned int _59;
+  long unsigned int _60;
+  long unsigned int TimeoutTicks.8_61;
+  long unsigned int _63;
+  long unsigned int _64;
+
+  <bb 2> [local count: 1044213900]:
+  # DEBUG BEGIN_STMT
+  switch (Command_2(D)) <default: <L4> [33.33%], case 1: <L7> [33.33%], case 2: <L6> [33.33%]>
+
+  <bb 3> [local count: 348071303]:
+<L6>:
+  # DEBUG BEGIN_STMT
+  # DEBUG INLINE_ENTRY Clock_Ip_ClockInitializeObjects
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Clock_Ip_bObjectsAreInitialized.4_7 = Clock_Ip_bObjectsAreInitialized;
+  if (Clock_Ip_bObjectsAreInitialized.4_7 != 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 4> [local count: 174035651]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_bObjectsAreInitialized = 1;
+  # DEBUG BEGIN_STMT
+  _8 = Clock_Ip_au8IrcoscCallbackIndex[2];
+  _9 = (int) _8;
+  _10 = &Clock_Ip_axIntOscCallbacks[_9];
+  Clock_Ip_pxSircStdbyClock = _10;
+  # DEBUG BEGIN_STMT
+  _11 = Clock_Ip_au8IrcoscCallbackIndex[1];
+  _12 = (int) _11;
+  _13 = &Clock_Ip_axIntOscCallbacks[_12];
+  Clock_Ip_pxFircStdbyClock = _13;
+
+  <bb 5> [local count: 348071303]:
+  goto <bb 31>; [100.00%]
+
+  <bb 6> [local count: 348071303]:
+<L7>:
+  # DEBUG BEGIN_STMT
+  # DEBUG Config => Config_5(D)
+  # DEBUG INLINE_ENTRY Clock_Ip_SpecificPlatformInitClock
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG INLINE_ENTRY Clock_Ip_PowerClockIpModules
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG TimeoutOccurred => 0
+  # DEBUG BEGIN_STMT
+  _14 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _15 = _14 & 16777216;
+  if (_15 == 0)
+    goto <bb 7>; [33.00%]
+  else
+    goto <bb 12>; [67.00%]
+
+  <bb 7> [local count: 114863529]:
+  # DEBUG BEGIN_STMT
+  _16 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN;
+  _17 = _16 | 16777216;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN ={v} _17;
+  # DEBUG BEGIN_STMT
+  _18 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF;
+  _19 = _18 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF ={v} _19;
+  # DEBUG BEGIN_STMT
+  _20 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD;
+  _21 = _20 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD ={v} _21;
+  # DEBUG BEGIN_STMT
+  Clock_Ip_McMeEnterKey ();
+  # DEBUG BEGIN_STMT
+  Clock_Ip_StartTimeout (&StartTime, &ElapsedTime, &TimeoutTicks, 50000);
+
+  <bb 8> [local count: 1073741818]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  TimeoutTicks.5_22 = TimeoutTicks;
+  TimeoutOccurred_23 = Clock_Ip_TimeoutExpired (&StartTime, &ElapsedTime, TimeoutTicks.5_22);
+  # DEBUG TimeoutOccurred => TimeoutOccurred_23
+  # DEBUG BEGIN_STMT
+  _24 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _25 = _24 & 16777216;
+  if (_25 == 0)
+    goto <bb 9>; [94.50%]
+  else
+    goto <bb 10>; [5.50%]
+
+  <bb 9> [local count: 1014686018]:
+  if (TimeoutOccurred_23 != 0)
+    goto <bb 10>; [5.50%]
+  else
+    goto <bb 8>; [94.50%]
+
+  <bb 10> [local count: 114863530]:
+  # TimeoutOccurred_26 = PHI <TimeoutOccurred_23(8), TimeoutOccurred_23(9)>
+  # DEBUG BEGIN_STMT
+  if (TimeoutOccurred_26 != 0)
+    goto <bb 11>; [33.00%]
+  else
+    goto <bb 12>; [67.00%]
+
+  <bb 11> [local count: 37904965]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_ReportClockErrors (1, 7);
+
+  <bb 12> [local count: 348071303]:
+  # DEBUG BEGIN_STMT
+  _27 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _28 = _27 & 2097152;
+  if (_28 == 0)
+    goto <bb 13>; [33.00%]
+  else
+    goto <bb 18>; [67.00%]
+
+  <bb 13> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  _29 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN;
+  _30 = _29 | 2097152;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN ={v} _30;
+  # DEBUG BEGIN_STMT
+  _31 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF;
+  _32 = _31 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF ={v} _32;
+  # DEBUG BEGIN_STMT
+  _33 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD;
+  _34 = _33 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD ={v} _34;
+  # DEBUG BEGIN_STMT
+  Clock_Ip_McMeEnterKey ();
+  # DEBUG BEGIN_STMT
+  Clock_Ip_StartTimeout (&StartTime, &ElapsedTime, &TimeoutTicks, 50000);
+
+  <bb 14> [local count: 1073741820]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  TimeoutTicks.6_35 = TimeoutTicks;
+  TimeoutOccurred_36 = Clock_Ip_TimeoutExpired (&StartTime, &ElapsedTime, TimeoutTicks.6_35);
+  # DEBUG TimeoutOccurred => TimeoutOccurred_36
+  # DEBUG BEGIN_STMT
+  _37 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _38 = _37 & 2097152;
+  if (_38 == 0)
+    goto <bb 15>; [94.50%]
+  else
+    goto <bb 16>; [5.50%]
+
+  <bb 15> [local count: 1014686020]:
+  if (TimeoutOccurred_36 != 0)
+    goto <bb 16>; [5.50%]
+  else
+    goto <bb 14>; [94.50%]
+
+  <bb 16> [local count: 114863531]:
+  # TimeoutOccurred_39 = PHI <TimeoutOccurred_36(14), TimeoutOccurred_36(15)>
+  # DEBUG BEGIN_STMT
+  if (TimeoutOccurred_39 != 0)
+    goto <bb 17>; [33.00%]
+  else
+    goto <bb 18>; [67.00%]
+
+  <bb 17> [local count: 37904965]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_ReportClockErrors (1, 5);
+
+  <bb 18> [local count: 348071304]:
+  # DEBUG BEGIN_STMT
+  _40 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _41 = _40 & 524288;
+  if (_41 == 0)
+    goto <bb 19>; [33.00%]
+  else
+    goto <bb 24>; [67.00%]
+
+  <bb 19> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  _42 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN;
+  _43 = _42 | 524288;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN ={v} _43;
+  # DEBUG BEGIN_STMT
+  _44 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF;
+  _45 = _44 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF ={v} _45;
+  # DEBUG BEGIN_STMT
+  _46 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD;
+  _47 = _46 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD ={v} _47;
+  # DEBUG BEGIN_STMT
+  Clock_Ip_McMeEnterKey ();
+  # DEBUG BEGIN_STMT
+  Clock_Ip_StartTimeout (&StartTime, &ElapsedTime, &TimeoutTicks, 50000);
+
+  <bb 20> [local count: 1073741821]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  TimeoutTicks.7_48 = TimeoutTicks;
+  TimeoutOccurred_49 = Clock_Ip_TimeoutExpired (&StartTime, &ElapsedTime, TimeoutTicks.7_48);
+  # DEBUG TimeoutOccurred => TimeoutOccurred_49
+  # DEBUG BEGIN_STMT
+  _50 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _51 = _50 & 524288;
+  if (_51 == 0)
+    goto <bb 21>; [94.50%]
+  else
+    goto <bb 22>; [5.50%]
+
+  <bb 21> [local count: 1014686021]:
+  if (TimeoutOccurred_49 != 0)
+    goto <bb 22>; [5.50%]
+  else
+    goto <bb 20>; [94.50%]
+
+  <bb 22> [local count: 114863531]:
+  # TimeoutOccurred_52 = PHI <TimeoutOccurred_49(20), TimeoutOccurred_49(21)>
+  # DEBUG BEGIN_STMT
+  if (TimeoutOccurred_52 != 0)
+    goto <bb 23>; [33.00%]
+  else
+    goto <bb 24>; [67.00%]
+
+  <bb 23> [local count: 37904965]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_ReportClockErrors (1, 6);
+
+  <bb 24> [local count: 348071305]:
+  # DEBUG BEGIN_STMT
+  _53 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _54 = _53 & 32768;
+  if (_54 == 0)
+    goto <bb 25>; [33.00%]
+  else
+    goto <bb 30>; [67.00%]
+
+  <bb 25> [local count: 114863530]:
+  # DEBUG BEGIN_STMT
+  _55 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN;
+  _56 = _55 | 32768;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_CLKEN ={v} _56;
+  # DEBUG BEGIN_STMT
+  _57 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF;
+  _58 = _57 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PCONF ={v} _58;
+  # DEBUG BEGIN_STMT
+  _59 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD;
+  _60 = _59 | 1;
+  MEM[(struct MC_ME_Type *)1076740096B].PRTN1_PUPD ={v} _60;
+  # DEBUG BEGIN_STMT
+  Clock_Ip_McMeEnterKey ();
+  # DEBUG BEGIN_STMT
+  Clock_Ip_StartTimeout (&StartTime, &ElapsedTime, &TimeoutTicks, 50000);
+
+  <bb 26> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  TimeoutTicks.8_61 = TimeoutTicks;
+  TimeoutOccurred_62 = Clock_Ip_TimeoutExpired (&StartTime, &ElapsedTime, TimeoutTicks.8_61);
+  # DEBUG TimeoutOccurred => TimeoutOccurred_62
+  # DEBUG BEGIN_STMT
+  _63 ={v} MEM[(struct MC_ME_Type *)1076740096B].PRTN1_COFB1_STAT;
+  _64 = _63 & 32768;
+  if (_64 == 0)
+    goto <bb 27>; [94.50%]
+  else
+    goto <bb 28>; [5.50%]
+
+  <bb 27> [local count: 1014686025]:
+  if (TimeoutOccurred_62 != 0)
+    goto <bb 28>; [5.50%]
+  else
+    goto <bb 26>; [94.50%]
+
+  <bb 28> [local count: 114863531]:
+  # TimeoutOccurred_65 = PHI <TimeoutOccurred_62(26), TimeoutOccurred_62(27)>
+  # DEBUG BEGIN_STMT
+  if (TimeoutOccurred_65 != 0)
+    goto <bb 29>; [33.00%]
+  else
+    goto <bb 30>; [67.00%]
+
+  <bb 29> [local count: 37904965]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_ReportClockErrors (1, 90);
+
+  <bb 30> [local count: 348071307]:
+  StartTime ={v} {CLOBBER};
+  ElapsedTime ={v} {CLOBBER};
+  TimeoutTicks ={v} {CLOBBER};
+
+  <bb 31> [local count: 1044213914]:
+<L4>:
+  # DEBUG TimeoutOccurred => NULL
+  # DEBUG TimeoutTicks => NULL
+  # DEBUG ElapsedTime => NULL
+  # DEBUG StartTime => NULL
+  # DEBUG Config => NULL
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_FLASH_SetFlashIWS (Clock_Ip_FLASH_SetFlashIWS, funcdef_no=13, decl_uid=6471, cgraph_uid=14, symbol_order=16)
+
+Clock_Ip_FLASH_SetFlashIWS ()
+{
+  void (*<T73f>) (void) Clock_Ip_SetFlashWaitStatesCallback.9_1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_SetFlashWaitStatesCallback.9_1 = Clock_Ip_SetFlashWaitStatesCallback;
+  Clock_Ip_SetFlashWaitStatesCallback.9_1 ();
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_SetFlashWaitStates (Clock_Ip_SetFlashWaitStates, funcdef_no=3, decl_uid=6423, cgraph_uid=4, symbol_order=6)
+
+Clock_Ip_SetFlashWaitStates ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_FLASH_SetFlashIWS ();
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_PRAMCSetRamIWS (Clock_Ip_PRAMCSetRamIWS, funcdef_no=14, decl_uid=6446, cgraph_uid=15, symbol_order=17)
+
+
+Symbols to be put in SSA form
+{ D.6584 }
+Incremental SSA update started at block: 0
+Number of blocks in CFG: 11
+Number of blocks to update: 10 ( 91%)
+
+
+Removing basic block 5
+Removing basic block 7
+Removing basic block 8
+Merging blocks 9 and 10
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6
+;; 2 succs { 4 3 }
+;; 3 succs { 4 5 }
+;; 4 succs { 6 }
+;; 5 succs { 6 }
+;; 6 succs { 1 }
+Clock_Ip_PRAMCSetRamIWS ()
+{
+  uint32 ConfiguredAipsPlatClock;
+  uint32 ConfiguredCoreClock;
+  const struct Clock_Ip_ClockConfigType * Clock_Ip_pxConfig.11_1;
+  unsigned char _2;
+  int _3;
+  unsigned char _5;
+  int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _14;
+  long unsigned int _15;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ConfiguredCoreClock => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG ConfiguredAipsPlatClock => 0
+  # DEBUG BEGIN_STMT
+  Clock_Ip_pxConfig.11_1 = Clock_Ip_pxConfig;
+  _2 = Clock_Ip_FreqIds[13];
+  _3 = (int) _2;
+  ConfiguredCoreClock_11 = Clock_Ip_pxConfig.11_1->ConfiguredFrequencies[_3].ConfiguredFrequencyValue;
+  # DEBUG ConfiguredCoreClock => ConfiguredCoreClock_11
+  # DEBUG BEGIN_STMT
+  _5 = Clock_Ip_FreqIds[14];
+  _6 = (int) _5;
+  ConfiguredAipsPlatClock_12 = Clock_Ip_pxConfig.11_1->ConfiguredFrequencies[_6].ConfiguredFrequencyValue;
+  # DEBUG ConfiguredAipsPlatClock => ConfiguredAipsPlatClock_12
+  # DEBUG BEGIN_STMT
+  if (ConfiguredCoreClock_11 > 80000000)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+  if (ConfiguredCoreClock_11 == ConfiguredAipsPlatClock_12)
+    goto <bb 4>; [34.00%]
+  else
+    goto <bb 5>; [66.00%]
+
+  <bb 4> [local count: 719407025]:
+  # DEBUG BEGIN_STMT
+  _7 ={v} MEM[(struct PRAMC_Type *)1076248576B].PRCR1;
+  _8 = _7 | 1;
+  MEM[(struct PRAMC_Type *)1076248576B].PRCR1 ={v} _8;
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 354334800]:
+  # DEBUG INLINE_ENTRY Clock_Ip_PRAMCSetRamIWS
+  # DEBUG BEGIN_STMT
+  _14 ={v} MEM[(struct PRAMC_Type *)1076248576B].PRCR1;
+  _15 = _14 & 4294967294;
+  MEM[(struct PRAMC_Type *)1076248576B].PRCR1 ={v} _15;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG ConfiguredCoreClock => NULL
+  # DEBUG ConfiguredAipsPlatClock => NULL
+  return;
+
+}
+
+
+
+;; Function Clock_Ip_SetRamWaitStates (Clock_Ip_SetRamWaitStates, funcdef_no=2, decl_uid=6421, cgraph_uid=3, symbol_order=5)
+
+Clock_Ip_SetRamWaitStates ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Clock_Ip_PRAMCSetRamIWS ();
+  return;
+
+}
+
+

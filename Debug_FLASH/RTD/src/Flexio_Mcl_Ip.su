@@ -1,0 +1,2 @@
+../RTD/src/Flexio_Mcl_Ip.c:141:28:Flexio_Mcl_Ip_InitDevice	24	static
+../RTD/src/Flexio_Mcl_Ip.c:172:6:Flexio_Mcl_Ip_DeinitDevice	8	static

@@ -1,0 +1,4669 @@
+Lpspi_Ip_GetStatus (uint8 Instance)
+{
+  Lpspi_Ip_HwStatusType Status;
+  const struct Lpspi_Ip_StateStructureType * State;
+  Lpspi_Ip_HwStatusType D.7460;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = Instance <= 3;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  if (State != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Status = State->Status;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  D.7460 = Status;
+  return D.7460;
+
+}
+
+
+Lpspi_Ip_IrqHandler (uint8 Instance)
+{
+  uint32 IrqFlags;
+  const struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  long unsigned int D.7450;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  IrqFlags = 0;
+  # DEBUG BEGIN_STMT
+  if (State != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _3 = Base->SR;
+  IrqFlags = _3 & 6147;
+  # DEBUG BEGIN_STMT
+  _4 = Base->IER;
+  D.7450 = _4 & 6147;
+  IrqFlags = D.7450 & IrqFlags;
+  # DEBUG BEGIN_STMT
+  if (IrqFlags != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _5 = State->ExternalDevice;
+  _6 = _5->DeviceParams;
+  _7 = _6->TransferType;
+  if (_7 <= 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TransferProcessHalfDuplex (Instance);
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TransferProcess (Instance);
+  goto <bb 9>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _8 = Base->SR;
+  _9 = _8 & 16128;
+  Base->SR = _9;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _10 = Base->SR;
+  _11 = _10 & 16128;
+  Base->SR = _11;
+
+  <bb 9> :
+  return;
+
+}
+
+
+Lpspi_Ip_Cancel (uint8 Instance)
+{
+  uint32 Cfgr1;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Cfgr1 = 0;
+  # DEBUG BEGIN_STMT
+  _1 = Instance <= 3;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_2];
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10 ();
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = Base->CR;
+  _7 = _6 & 4294967294;
+  Base->CR = _7;
+  # DEBUG BEGIN_STMT
+  Cfgr1 = Base->CFGR1;
+  # DEBUG BEGIN_STMT
+  _8 = Base->CR;
+  _9 = _8 | 2;
+  Base->CR = _9;
+  # DEBUG BEGIN_STMT
+  _10 = Base->CR;
+  _11 = _10 & 4294967293;
+  Base->CR = _11;
+  # DEBUG BEGIN_STMT
+  Base->CFGR1 = Cfgr1;
+  # DEBUG BEGIN_STMT
+  _12 = State->PhyUnitConfig;
+  _13 = _12->DmaUsed;
+  if (_13 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _14 = State->PhyUnitConfig;
+  _15 = _14->RxDmaChannel;
+  _16 = (long unsigned int) _15;
+  Dma_Ip_SetLogicChannelCommand (_16, 1);
+  # DEBUG BEGIN_STMT
+  _17 = State->PhyUnitConfig;
+  _18 = _17->TxDmaChannel;
+  _19 = (long unsigned int) _18;
+  Dma_Ip_SetLogicChannelCommand (_19, 1);
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10 ();
+  return;
+
+}
+
+
+Lpspi_Ip_UpdateTransferMode (uint8 Instance, Lpspi_Ip_ModeType Mode)
+{
+  struct Dma_Ip_LogicChannelTransferListType DmaTcdList[1];
+  Lpspi_Ip_StatusType Status;
+  struct Lpspi_Ip_StateStructureType * State;
+  Lpspi_Ip_StatusType D.7440;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = Instance <= 3;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  _3 = State != 0B;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = State->Status;
+  if (_4 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  State->TransferMode = Mode;
+  # DEBUG BEGIN_STMT
+  _5 = State->PhyUnitConfig;
+  _6 = _5->DmaUsed;
+  if (_6 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Param = 21;
+  # DEBUG BEGIN_STMT
+  _7 = State->TransferMode;
+  switch (_7) <default: <L11> [INV], case 0: <L2> [INV], case 1: <L3> [INV]>
+
+  <bb 5> :
+<L2>:
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Value = 0;
+  # DEBUG BEGIN_STMT
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+<L3>:
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Value = 1;
+  # DEBUG BEGIN_STMT
+
+  <bb 7> :
+<L11>:
+  # DEBUG BEGIN_STMT
+  _8 = State->PhyUnitConfig;
+  _9 = _8->TxDmaChannel;
+  _10 = (long unsigned int) _9;
+  Dma_Ip_SetLogicChannelTransferList (_10, &DmaTcdList, 1);
+  # DEBUG BEGIN_STMT
+  _11 = State->PhyUnitConfig;
+  _12 = _11->RxDmaChannel;
+  _13 = (long unsigned int) _12;
+  Dma_Ip_SetLogicChannelTransferList (_13, &DmaTcdList, 1);
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  D.7440 = Status;
+  DmaTcdList = {CLOBBER};
+  return D.7440;
+
+}
+
+
+Lpspi_Ip_UpdateDefaultTransmitData (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint32 DefaultData)
+{
+  Lpspi_Ip_StatusType Status;
+  const struct Lpspi_Ip_StateStructureType * State;
+  Lpspi_Ip_StatusType D.7433;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = ExternalDevice->Instance;
+  _3 = (int) _2;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = ExternalDevice->DeviceParams;
+  _6->DefaultData = DefaultData;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.7433 = Status;
+  return D.7433;
+
+}
+
+
+Lpspi_Ip_UpdateLsb (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, boolean Lsb)
+{
+  Lpspi_Ip_StatusType Status;
+  const struct Lpspi_Ip_StateStructureType * State;
+  Lpspi_Ip_StatusType D.7428;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = ExternalDevice->Instance;
+  _3 = (int) _2;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = ExternalDevice->DeviceParams;
+  _6->Lsb = Lsb;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.7428 = Status;
+  return D.7428;
+
+}
+
+
+Lpspi_Ip_UpdateFrameSize (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint8 FrameSize)
+{
+  Lpspi_Ip_StatusType Status;
+  const struct Lpspi_Ip_StateStructureType * State;
+  Lpspi_Ip_StatusType D.7423;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = FrameSize <= 32;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = FrameSize > 3;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = ExternalDevice->Instance;
+  _5 = (int) _4;
+  State = Lpspi_Ip_apxStateStructureArray[_5];
+  # DEBUG BEGIN_STMT
+  _6 = State != 0B;
+  DevAssert (_6);
+  # DEBUG BEGIN_STMT
+  _7 = State->Status;
+  if (_7 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _8 = ExternalDevice->DeviceParams;
+  _8->FrameSize = FrameSize;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.7423 = Status;
+  return D.7423;
+
+}
+
+
+Lpspi_Ip_ManageBuffers (uint8 Instance)
+{
+  struct Dma_Ip_LogicChannelStatusType DmaChannelStatus;
+  const struct Lpspi_Ip_StateStructureType * State;
+  const struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = Instance <= 3;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_2];
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = State->TransferMode;
+  if (_5 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = State->PhyUnitConfig;
+  _7 = _6->DmaUsed;
+  _8 = ~_7;
+  if (_8 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _9 = Base->SR;
+  _10 = _9 & 2;
+  if (_10 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  _11 = Base->SR;
+  _12 = _11 & 1;
+  if (_12 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 6> :
+  _13 = State->CurrentTxFifoSlot;
+  if (_13 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _14 = State->ExternalDevice;
+  _15 = _14->DeviceParams;
+  _16 = _15->TransferType;
+  if (_16 != 2)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TransferProcessHalfDuplex (Instance);
+  goto <bb 14>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TransferProcess (Instance);
+  goto <bb 14>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _17 = State->PhyUnitConfig;
+  _18 = _17->RxDmaChannel;
+  _19 = (long unsigned int) _18;
+  Dma_Ip_GetLogicChannelStatus (_19, &DmaChannelStatus);
+  # DEBUG BEGIN_STMT
+  _20 = DmaChannelStatus.Done;
+  if (_20 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _21 = State->PhyUnitConfig;
+  _22 = _21->RxDmaChannel;
+  _23 = (long unsigned int) _22;
+  Dma_Ip_SetLogicChannelCommand (_23, 3);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_IrqRxDmaHandler (Instance);
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _24 = State->PhyUnitConfig;
+  _25 = _24->TxDmaChannel;
+  _26 = (long unsigned int) _25;
+  Dma_Ip_GetLogicChannelStatus (_26, &DmaChannelStatus);
+  # DEBUG BEGIN_STMT
+  _27 = DmaChannelStatus.Done;
+  if (_27 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _28 = State->PhyUnitConfig;
+  _29 = _28->TxDmaChannel;
+  _30 = (long unsigned int) _29;
+  Dma_Ip_SetLogicChannelCommand (_30, 3);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_IrqTxDmaHandler (Instance);
+
+  <bb 14> :
+  DmaChannelStatus = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_AsyncTransmitHalfDuplex (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint8 * Buffer, uint16 Length, Lpspi_Ip_HalfDuplexType TransferType, void (*Lpspi_Ip_CallbackType) (uint8, Lpspi_Ip_EventType) EndCallback)
+{
+  uint32 InterruptEnable;
+  uint8 Instance;
+  Lpspi_Ip_StatusType Status;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  Lpspi_Ip_StatusType D.7330;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  Instance = 0;
+  # DEBUG BEGIN_STMT
+  InterruptEnable = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = Length != 0;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_CheckValidParameters (ExternalDevice, Length);
+  # DEBUG BEGIN_STMT
+  Instance = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_5];
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  _6 = State->Status;
+  if (_6 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 19>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 2;
+  # DEBUG BEGIN_STMT
+  State->ExternalDevice = ExternalDevice;
+  # DEBUG BEGIN_STMT
+  _7 = State->ExternalDevice;
+  _8 = _7->DeviceParams;
+  _8->TransferType = TransferType;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_HalfDuplexPrepare (Instance, Buffer);
+  # DEBUG BEGIN_STMT
+  State->Callback = EndCallback;
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitTxInit (Instance, 0B, Length);
+  # DEBUG BEGIN_STMT
+  if (TransferType == 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitRxInit (Instance, 0B, Length);
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  if (TransferType == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  InterruptEnable = 2049;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  InterruptEnable = 6147;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _9 = State->PhyUnitConfig;
+  _10 = _9->DmaUsed;
+  _11 = ~_10;
+  if (_11 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  if (TransferType == 1)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Base->FCR = 0;
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  Base->FCR = 3;
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  Base->DER = 0;
+  # DEBUG BEGIN_STMT
+  _12 = State->TransferMode;
+  switch (_12) <default: <L23> [INV], case 0: <L11> [INV], case 1: <L12> [INV]>
+
+  <bb 14> :
+<L11>:
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  goto <bb 19>; [INV]
+
+  <bb 15> :
+<L12>:
+  # DEBUG BEGIN_STMT
+  Base->IER = InterruptEnable;
+  # DEBUG BEGIN_STMT
+  goto <bb 19>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  if (TransferType == 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TxDmaConfig (Instance);
+  # DEBUG BEGIN_STMT
+  Base->DER = 1;
+  goto <bb 19>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  Base->FCR = 0;
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_RxDmaConfig (Instance);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TxDmaConfig (Instance);
+  # DEBUG BEGIN_STMT
+  Base->DER = 3;
+
+  <bb 19> :
+<L23>:
+  # DEBUG BEGIN_STMT
+  D.7330 = Status;
+  return D.7330;
+
+}
+
+
+Lpspi_Ip_AsyncTransmit (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint8 * TxBuffer, uint8 * RxBuffer, uint16 Length, void (*Lpspi_Ip_CallbackType) (uint8, Lpspi_Ip_EventType) EndCallback)
+{
+  uint8 Instance;
+  Lpspi_Ip_StatusType Status;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  Lpspi_Ip_StatusType D.7244;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  Instance = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = Length != 0;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_CheckValidParameters (ExternalDevice, Length);
+  # DEBUG BEGIN_STMT
+  Instance = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_5];
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  _6 = State->Status;
+  if (_6 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 9>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _7 = Base->CFGR1;
+  _8 = _7 & 3774873599;
+  Base->CFGR1 = _8;
+  # DEBUG BEGIN_STMT
+  State->Status = 2;
+  # DEBUG BEGIN_STMT
+  State->ExternalDevice = ExternalDevice;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  State->Callback = EndCallback;
+  # DEBUG BEGIN_STMT
+  State->CurrentTxFifoSlot = 4;
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitTxInit (Instance, TxBuffer, Length);
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitRxInit (Instance, RxBuffer, Length);
+  # DEBUG BEGIN_STMT
+  _9 = State->PhyUnitConfig;
+  _10 = _9->DmaUsed;
+  _11 = ~_10;
+  if (_11 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Base->DER = 0;
+  # DEBUG BEGIN_STMT
+  _12 = State->TransferMode;
+  switch (_12) <default: <L12> [INV], case 0: <L3> [INV], case 1: <L4> [INV]>
+
+  <bb 6> :
+<L3>:
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  goto <bb 9>; [INV]
+
+  <bb 7> :
+<L4>:
+  # DEBUG BEGIN_STMT
+  Base->IER = 6147;
+  # DEBUG BEGIN_STMT
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_RxDmaConfig (Instance);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TxDmaConfig (Instance);
+  # DEBUG BEGIN_STMT
+  Base->DER = 3;
+
+  <bb 9> :
+<L12>:
+  # DEBUG BEGIN_STMT
+  D.7244 = Status;
+  return D.7244;
+
+}
+
+
+Lpspi_TransmitRxInit (uint8 Instance, uint8 * RxBuffer, uint16 NumberOfFrames)
+{
+  struct Lpspi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  State->RxIndex = 0;
+  # DEBUG BEGIN_STMT
+  _2 = State->ExternalDevice;
+  _3 = _2->DeviceParams;
+  _4 = _3->TransferType;
+  if (_4 != 2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  State->RxBuffer = RxBuffer;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _5 = State->ExternalDevice;
+  _6 = _5->DeviceParams;
+  _7 = _6->FrameSize;
+  if (_7 <= 8)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  State->ExpectedFifoReads = NumberOfFrames;
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _8 = State->ExternalDevice;
+  _9 = _8->DeviceParams;
+  _10 = _9->FrameSize;
+  if (_10 <= 16)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _11 = NumberOfFrames / 2;
+  State->ExpectedFifoReads = _11;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _12 = NumberOfFrames / 4;
+  State->ExpectedFifoReads = _12;
+
+  <bb 9> :
+  return;
+
+}
+
+
+Lpspi_TransmitTxInit (uint8 Instance, uint8 * TxBuffer, uint16 NumberOfFrames)
+{
+  uint32 Lsbf;
+  uint32 Cfgr1;
+  uint32 TransferCommand;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  long unsigned int iftmp.3;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  TransferCommand = 0;
+  # DEBUG BEGIN_STMT
+  Cfgr1 = 0;
+  # DEBUG BEGIN_STMT
+  _3 = State->ExternalDevice;
+  _4 = _3->DeviceParams;
+  _5 = _4->Lsb;
+  if (_5 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  iftmp.3 = 1;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  iftmp.3 = 0;
+
+  <bb 5> :
+  Lsbf = iftmp.3;
+  # DEBUG BEGIN_STMT
+  _6 = State->FirstCmd;
+  if (_6 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11 ();
+  # DEBUG BEGIN_STMT
+  _7 = Base->CR;
+  _8 = _7 & 4294967294;
+  Base->CR = _8;
+  # DEBUG BEGIN_STMT
+  Cfgr1 = Base->CFGR1;
+  # DEBUG BEGIN_STMT
+  _9 = Base->CR;
+  _10 = _9 | 2;
+  Base->CR = _10;
+  # DEBUG BEGIN_STMT
+  _11 = Base->CR;
+  _12 = _11 & 4294967293;
+  Base->CR = _12;
+  # DEBUG BEGIN_STMT
+  Base->CFGR1 = Cfgr1;
+  # DEBUG BEGIN_STMT
+  _13 = Base->SR;
+  Base->SR = _13;
+  # DEBUG BEGIN_STMT
+  _14 = State->ExternalDevice;
+  _15 = _14->Ccr;
+  Base->CCR = _15;
+  # DEBUG BEGIN_STMT
+  _16 = Base->CR;
+  _17 = _16 | 1;
+  Base->CR = _17;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11 ();
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _18 = State->ExternalDevice;
+  _19 = _18->Tcr;
+  _20 = State->ExternalDevice;
+  _21 = _20->DeviceParams;
+  _22 = _21->FrameSize;
+  _23 = (long unsigned int) _22;
+  _24 = _23 + 4294967295;
+  _25 = _24 & 4095;
+  _26 = _19 | _25;
+  _27 = Lsbf << 23;
+  _28 = _27 & 8388608;
+  TransferCommand = _26 | _28;
+  # DEBUG BEGIN_STMT
+  _29 = State->ExternalDevice;
+  _30 = _29->DeviceParams;
+  _31 = _30->TransferType;
+  if (_31 != 1)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _32 = State->ExternalDevice;
+  _33 = _32->DeviceParams;
+  _34 = _33->TransferType;
+  if (_34 == 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  TransferCommand = TransferCommand | 524288;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _35 = State->FirstCmd;
+  if (_35 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Base->TCR = TransferCommand;
+  goto <bb 15>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _36 = TransferCommand & 2097152;
+  if (_36 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _37 = TransferCommand | 1048576;
+  Base->TCR = _37;
+  goto <bb 15>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  Base->TCR = TransferCommand;
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  _38 = State->ExternalDevice;
+  _39 = _38->DeviceParams;
+  _40 = _39->TransferType;
+  if (_40 == 2)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _41 = State->CurrentTxFifoSlot;
+  _42 = _41 + 255;
+  State->CurrentTxFifoSlot = _42;
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  State->TxIndex = 0;
+  # DEBUG BEGIN_STMT
+  _43 = State->ExternalDevice;
+  _44 = _43->DeviceParams;
+  _45 = _44->TransferType;
+  if (_45 != 2)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  State->TxBuffer = TxBuffer;
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _46 = State->ExternalDevice;
+  _47 = _46->DeviceParams;
+  _48 = _47->FrameSize;
+  if (_48 <= 8)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  State->ExpectedFifoWrites = NumberOfFrames;
+  goto <bb 24>; [INV]
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  _49 = State->ExternalDevice;
+  _50 = _49->DeviceParams;
+  _51 = _50->FrameSize;
+  if (_51 <= 16)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  # DEBUG BEGIN_STMT
+  _52 = NumberOfFrames / 2;
+  State->ExpectedFifoWrites = _52;
+  goto <bb 24>; [INV]
+
+  <bb 23> :
+  # DEBUG BEGIN_STMT
+  _53 = NumberOfFrames / 4;
+  State->ExpectedFifoWrites = _53;
+
+  <bb 24> :
+  return;
+
+}
+
+
+Lpspi_Ip_SyncTransmitHalfDuplex (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint8 * Buffer, uint16 Length, Lpspi_Ip_HalfDuplexType TransferType, uint32 TimeOut)
+{
+  uint8 NumberOfReads;
+  uint8 NumberOfWrites;
+  uint8 NumberOfFramesTxFifo;
+  boolean TransferCompleted;
+  uint8 Instance;
+  uint32 ElapsedTicks;
+  uint32 CurrentTicks;
+  uint32 TimeoutTicks;
+  Lpspi_Ip_StatusType Status;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  Lpspi_Ip_StatusType D.7217;
+  long unsigned int D.7210;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  TimeoutTicks = OsIf_MicrosToTicks (TimeOut, 0);
+  # DEBUG BEGIN_STMT
+  CurrentTicks = 0;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  Instance = 0;
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = Length != 0;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_CheckValidParameters (ExternalDevice, Length);
+  # DEBUG BEGIN_STMT
+  Instance = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_5];
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  _6 = State->Status;
+  if (_6 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 31>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 2;
+  # DEBUG BEGIN_STMT
+  State->ExternalDevice = ExternalDevice;
+  # DEBUG BEGIN_STMT
+  _7 = State->ExternalDevice;
+  _8 = _7->DeviceParams;
+  _8->TransferType = TransferType;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_HalfDuplexPrepare (Instance, Buffer);
+  # DEBUG BEGIN_STMT
+  Base->DER = 0;
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitTxInit (Instance, 0B, Length);
+  # DEBUG BEGIN_STMT
+  if (TransferType == 1)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitRxInit (Instance, 0B, Length);
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _9 = OsIf_GetCounter (0);
+  CurrentTicks = _9;
+  # DEBUG BEGIN_STMT
+  goto <bb 26>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  if (TransferType == 1)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _10 = Base->FSR;
+  _11 = _10 >> 16;
+  _12 = (unsigned char) _11;
+  NumberOfReads = _12 & 7;
+  # DEBUG BEGIN_STMT
+  _13 = (int) NumberOfReads;
+  _14 = State->ExpectedFifoReads;
+  _15 = (int) _14;
+  _16 = State->RxIndex;
+  _17 = (int) _16;
+  _18 = _15 - _17;
+  if (_13 > _18)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _19 = State->ExpectedFifoReads;
+  _20 = (unsigned char) _19;
+  _21 = State->RxIndex;
+  _22 = (unsigned char) _21;
+  NumberOfReads = _20 - _22;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  if (NumberOfReads != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ReadDataFromFifo (Instance, NumberOfReads);
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _23 = Base->FSR;
+  _24 = _23 & 7;
+  if (_24 == 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 13> :
+  _25 = State->ExpectedFifoWrites;
+  _26 = State->TxIndex;
+  if (_25 != _26)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  _27 = State->HalfDuplexTcrCommand;
+  Base->TCR = _27;
+  # DEBUG BEGIN_STMT
+  _28 = State->TxIndex;
+  _29 = _28;
+  _30 = _29 + 1;
+  State->TxIndex = _30;
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  _31 = State->ExpectedFifoReads;
+  _32 = State->RxIndex;
+  if (_31 == _32)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _33 = Base->FSR;
+  _34 = (unsigned char) _33;
+  NumberOfFramesTxFifo = _34 & 7;
+  # DEBUG BEGIN_STMT
+  NumberOfWrites = 4 - NumberOfFramesTxFifo;
+  # DEBUG BEGIN_STMT
+  if (NumberOfWrites != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  TransferCompleted = Lpspi_Ip_HalfDuplexTransmitProcess (Instance, NumberOfWrites);
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  if (TransferCompleted != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 19> :
+  _35 = State->NextChannelIsRX;
+  if (_35 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 20> :
+  _36 = State->KeepCs;
+  _37 = ~_36;
+  if (_37 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 0;
+  # DEBUG BEGIN_STMT
+  _38 = Base->FSR;
+  _39 = _38 & 7;
+  if (_39 == 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 1;
+
+  <bb 23> :
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  D.7210 = OsIf_GetElapsed (&CurrentTicks, 0);
+  ElapsedTicks = D.7210 + ElapsedTicks;
+  # DEBUG BEGIN_STMT
+  if (ElapsedTicks >= TimeoutTicks)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  # DEBUG BEGIN_STMT
+  Status = 3;
+
+  <bb 26> :
+  # DEBUG BEGIN_STMT
+  _40 = ~TransferCompleted;
+  if (_40 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 27> :
+  if (Status == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 28> :
+  # DEBUG BEGIN_STMT
+  if (Status != 0)
+    goto <bb 29>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 29> :
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  goto <bb 31>; [INV]
+
+  <bb 30> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 31> :
+  # DEBUG BEGIN_STMT
+  D.7217 = Status;
+  CurrentTicks = {CLOBBER};
+  return D.7217;
+
+}
+
+
+Lpspi_Ip_SyncTransmit (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint8 * TxBuffer, uint8 * RxBuffer, uint16 Length, uint32 TimeOut)
+{
+  uint8 Instance;
+  uint32 ElapsedTicks;
+  uint32 CurrentTicks;
+  uint32 TimeoutTicks;
+  Lpspi_Ip_StatusType Status;
+  uint8 NumberOfReads;
+  uint8 NumberOfWrites;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  Lpspi_Ip_StatusType D.7120;
+  long unsigned int D.7113;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  TimeoutTicks = OsIf_MicrosToTicks (TimeOut, 0);
+  # DEBUG BEGIN_STMT
+  CurrentTicks = 0;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  Instance = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = Length != 0;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = TimeOut != 0;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_CheckValidParameters (ExternalDevice, Length);
+  # DEBUG BEGIN_STMT
+  Instance = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _4 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_4];
+  # DEBUG BEGIN_STMT
+  _5 = State != 0B;
+  DevAssert (_5);
+  # DEBUG BEGIN_STMT
+  _6 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_6];
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  _7 = State->Status;
+  if (_7 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 26>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 2;
+  # DEBUG BEGIN_STMT
+  State->ExternalDevice = ExternalDevice;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  Base->DER = 0;
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  State->CurrentTxFifoSlot = 4;
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitTxInit (Instance, TxBuffer, Length);
+  # DEBUG BEGIN_STMT
+  Lpspi_TransmitRxInit (Instance, RxBuffer, Length);
+  # DEBUG BEGIN_STMT
+  _8 = OsIf_GetCounter (0);
+  CurrentTicks = _8;
+  # DEBUG BEGIN_STMT
+  goto <bb 21>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _9 = Base->FSR;
+  _10 = _9 >> 16;
+  _11 = (unsigned char) _10;
+  NumberOfReads = _11 & 7;
+  # DEBUG BEGIN_STMT
+  if (NumberOfReads != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _12 = (int) NumberOfReads;
+  _13 = State->ExpectedFifoReads;
+  _14 = (int) _13;
+  _15 = State->RxIndex;
+  _16 = (int) _15;
+  _17 = _14 - _16;
+  if (_12 > _17)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _18 = State->ExpectedFifoReads;
+  _19 = (unsigned char) _18;
+  _20 = State->RxIndex;
+  _21 = (unsigned char) _20;
+  NumberOfReads = _19 - _21;
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _22 = State->RxIndex;
+  if (_22 == 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _23 = State->CurrentTxFifoSlot;
+  _24 = _23 + 1;
+  State->CurrentTxFifoSlot = _24;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ReadDataFromFifo (Instance, NumberOfReads);
+  # DEBUG BEGIN_STMT
+  _25 = State->CurrentTxFifoSlot;
+  _26 = NumberOfReads + _25;
+  State->CurrentTxFifoSlot = _26;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _27 = State->CurrentTxFifoSlot;
+  if (_27 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _28 = State->ExpectedFifoWrites;
+  _29 = State->TxIndex;
+  if (_28 != _29)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  NumberOfWrites = State->CurrentTxFifoSlot;
+  # DEBUG BEGIN_STMT
+  _30 = (int) NumberOfWrites;
+  _31 = State->ExpectedFifoWrites;
+  _32 = (int) _31;
+  _33 = State->TxIndex;
+  _34 = (int) _33;
+  _35 = _32 - _34;
+  if (_30 > _35)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  _36 = State->ExpectedFifoWrites;
+  _37 = (unsigned char) _36;
+  _38 = State->TxIndex;
+  _39 = (unsigned char) _38;
+  NumberOfWrites = _37 - _39;
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_PushDataToFifo (Instance, NumberOfWrites);
+  # DEBUG BEGIN_STMT
+  _40 = State->CurrentTxFifoSlot;
+  _41 = _40 - NumberOfWrites;
+  State->CurrentTxFifoSlot = _41;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  goto <bb 19>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _42 = State->KeepCs;
+  _43 = ~_42;
+  if (_43 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  _44 = Base->TCR;
+  _45 = _44 & 2097152;
+  if (_45 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  _46 = Base->TCR;
+  _47 = _46 & 4291821567;
+  Base->TCR = _47;
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  D.7113 = OsIf_GetElapsed (&CurrentTicks, 0);
+  ElapsedTicks = D.7113 + ElapsedTicks;
+  # DEBUG BEGIN_STMT
+  if (ElapsedTicks >= TimeoutTicks)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  Status = 3;
+  # DEBUG BEGIN_STMT
+  goto <bb 22>; [INV]
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  _48 = State->RxIndex;
+  _49 = State->ExpectedFifoReads;
+  if (_48 != _49)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 22> :
+  # DEBUG BEGIN_STMT
+  if (Status != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 23> :
+  if (Length == 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  goto <bb 26>; [INV]
+
+  <bb 25> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 26> :
+  # DEBUG BEGIN_STMT
+  D.7120 = Status;
+  CurrentTicks = {CLOBBER};
+  return D.7120;
+
+}
+
+
+Lpspi_Ip_DeInit (uint8 Instance)
+{
+  Lpspi_Ip_StatusType Status;
+  const struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  Lpspi_Ip_StatusType D.7091;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = Instance <= 3;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_2];
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _6 = Base->CR;
+  _7 = _6 | 2;
+  Base->CR = _7;
+  # DEBUG BEGIN_STMT
+  Base->CR = 0;
+  # DEBUG BEGIN_STMT
+  _8 = (int) Instance;
+  Lpspi_Ip_apxStateStructureArray[_8] = 0B;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.7091 = Status;
+  return D.7091;
+
+}
+
+
+Lpspi_Ip_Init (const struct Lpspi_Ip_ConfigType * PhyUnitConfigPtr)
+{
+  uint8 Instance;
+  Lpspi_Ip_StatusType Status;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  Lpspi_Ip_StatusType D.7065;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  Instance = 0;
+  # DEBUG BEGIN_STMT
+  _1 = PhyUnitConfigPtr != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  Instance = PhyUnitConfigPtr->Instance;
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  _3 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State == 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = PhyUnitConfigPtr->StateIndex;
+  _6 = (int) _5;
+  _7 = (int) Instance;
+  _8 = &Lpspi_Ip_axStateStructure[_6];
+  Lpspi_Ip_apxStateStructureArray[_7] = _8;
+  # DEBUG BEGIN_STMT
+  _9 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_9];
+  # DEBUG BEGIN_STMT
+  State->PhyUnitConfig = PhyUnitConfigPtr;
+  # DEBUG BEGIN_STMT
+  _10 = PhyUnitConfigPtr->Cr;
+  _11 = _10 | 8;
+  Base->CR = _11;
+  # DEBUG BEGIN_STMT
+  _12 = PhyUnitConfigPtr->Cfgr1;
+  Base->CFGR1 = _12;
+  # DEBUG BEGIN_STMT
+  Base->FCR = 2;
+  # DEBUG BEGIN_STMT
+  State->KeepCs = 0;
+  # DEBUG BEGIN_STMT
+  State->FirstCmd = 1;
+  # DEBUG BEGIN_STMT
+  _13 = State->PhyUnitConfig;
+  _14 = _13->DmaUsed;
+  if (_14 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_DmaInit (Instance);
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+  # DEBUG BEGIN_STMT
+  _15 = PhyUnitConfigPtr->TransferMode;
+  Lpspi_Ip_UpdateTransferMode (Instance, _15);
+  # DEBUG BEGIN_STMT
+  D.7065 = Status;
+  return D.7065;
+
+}
+
+
+Lpspi_Ip_IrqRxDmaHandler (uint8 Instance)
+{
+  boolean EndOfTransferFlag;
+  boolean ErrorFlag;
+  uint32 SrStatusRegister;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  SrStatusRegister = 0;
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 0;
+  # DEBUG BEGIN_STMT
+  EndOfTransferFlag = 0;
+  # DEBUG BEGIN_STMT
+  if (State != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _3 = State->Status;
+  if (_3 == 2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  SrStatusRegister = Base->SR;
+  # DEBUG BEGIN_STMT
+  _4 = Base->SR;
+  _5 = _4 & 16128;
+  Base->SR = _5;
+  # DEBUG BEGIN_STMT
+  _6 = SrStatusRegister & 6144;
+  if (_6 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 1;
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _7 = State->ExpectedFifoReads;
+  _8 = State->RxIndex;
+  if (_7 != _8)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_RxDmaContinueTransfer (Instance);
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  EndOfTransferFlag = 1;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  if (EndOfTransferFlag != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  if (ErrorFlag != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _9 = State->KeepCs;
+  _10 = ~_9;
+  if (_10 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  if (ErrorFlag != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14 ();
+  # DEBUG BEGIN_STMT
+  _11 = Base->CR;
+  _12 = _11 & 4294967294;
+  Base->CR = _12;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14 ();
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  Base->DER = 0;
+  # DEBUG BEGIN_STMT
+  if (ErrorFlag != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  # DEBUG BEGIN_STMT
+  _13 = State->PhyUnitConfig;
+  _14 = _13->TxDmaChannel;
+  _15 = (long unsigned int) _14;
+  Dma_Ip_SetLogicChannelCommand (_15, 1);
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  _16 = State->Callback;
+  if (_16 != 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  if (ErrorFlag != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _17 = State->Callback;
+  _17 (Instance, 1);
+  goto <bb 21>; [INV]
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  _18 = State->Callback;
+  _18 (Instance, 0);
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Lpspi_Ip_IrqTxDmaHandler (uint8 Instance)
+{
+  Lpspi_Ip_HalfDuplexType TransferType;
+  boolean EndOfTransferFlag;
+  boolean ErrorFlag;
+  uint32 SrStatusRegister;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  SrStatusRegister = 0;
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 0;
+  # DEBUG BEGIN_STMT
+  EndOfTransferFlag = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (State != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _3 = State->Status;
+  if (_3 == 2)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _4 = State->ExternalDevice;
+  _5 = _4->DeviceParams;
+  TransferType = _5->TransferType;
+  # DEBUG BEGIN_STMT
+  SrStatusRegister = Base->SR;
+  # DEBUG BEGIN_STMT
+  _6 = Base->SR;
+  _7 = _6 & 16128;
+  Base->SR = _7;
+  # DEBUG BEGIN_STMT
+  _8 = SrStatusRegister & 6144;
+  if (_8 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 1;
+  goto <bb 11>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _9 = State->ExpectedFifoWrites;
+  _10 = State->TxIndex;
+  if (_9 != _10)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TxDmaContinueTransfer (Instance);
+  goto <bb 11>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _11 = State->ExternalDevice;
+  _12 = _11->DeviceParams;
+  TransferType = _12->TransferType;
+  # DEBUG BEGIN_STMT
+  if (TransferType == 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  EndOfTransferFlag = 1;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_TxDmaFinishTransfer (Instance);
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  if (ErrorFlag != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  if (EndOfTransferFlag != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _13 = State->KeepCs;
+  _14 = ~_13;
+  if (_14 != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  if (ErrorFlag != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13 ();
+  # DEBUG BEGIN_STMT
+  _15 = Base->CR;
+  _16 = _15 & 4294967294;
+  Base->CR = _16;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13 ();
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  Base->DER = 0;
+  # DEBUG BEGIN_STMT
+  if (TransferType == 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 18>; [INV]
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ChannelFinished (Instance, ErrorFlag);
+  goto <bb 20>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  _17 = State->PhyUnitConfig;
+  _18 = _17->RxDmaChannel;
+  _19 = (long unsigned int) _18;
+  Dma_Ip_SetLogicChannelCommand (_19, 1);
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  # DEBUG BEGIN_STMT
+  _20 = State->Callback;
+  if (_20 != 0B)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _21 = State->Callback;
+  _21 (Instance, 1);
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Lpspi_Ip_TxDmaFinishTransfer (const uint8 Instance)
+{
+  const struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  uint32 TimeoutTicks;
+  uint32 ElapsedTicks;
+  uint32 CurrentTicks;
+  Lpspi_Ip_HalfDuplexType TransferType;
+  long unsigned int D.7025;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  CurrentTicks = 0;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  TimeoutTicks = OsIf_MicrosToTicks (50000, 0);
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  _3 = State->ExternalDevice;
+  _4 = _3->DeviceParams;
+  TransferType = _4->TransferType;
+  # DEBUG BEGIN_STMT
+  _5 = State->NextChannelIsRX;
+  if (_5 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  if (TransferType == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  _6 = State->KeepCs;
+  _7 = ~_6;
+  if (_7 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _8 = State->KeepCs;
+  _9 = ~_8;
+  if (_9 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _10 = Base->TCR;
+  _11 = _10 & 2097152;
+  if (_11 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _12 = Base->TCR;
+  _13 = _12 & 4291821567;
+  Base->TCR = _13;
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  if (TransferType == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _14 = OsIf_GetCounter (0);
+  CurrentTicks = _14;
+  # DEBUG BEGIN_STMT
+  D.7025 = OsIf_GetElapsed (&CurrentTicks, 0);
+  ElapsedTicks = D.7025 + ElapsedTicks;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _15 = Base->FSR;
+  _16 = _15 & 7;
+  if (_16 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  if (ElapsedTicks < TimeoutTicks)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  if (ElapsedTicks >= TimeoutTicks)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _17 = Base->CR;
+  _18 = _17 | 256;
+  Base->CR = _18;
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  CurrentTicks = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_RxDmaContinueTransfer (uint8 Instance)
+{
+  uint16 NumberDmaIterRead;
+  struct Dma_Ip_LogicChannelTransferListType DmaTcdList[1];
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _3 = State->ExpectedFifoReads;
+  _4 = State->RxIndex;
+  NumberDmaIterRead = _3 - _4;
+  # DEBUG BEGIN_STMT
+  NumberDmaIterRead.1_5 = (signed short) NumberDmaIterRead;
+  if (NumberDmaIterRead.1_5 < 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  NumberDmaIterRead = 32767;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _6 = State->RxIndex;
+  _7 = NumberDmaIterRead + _6;
+  State->RxIndex = _7;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Param = 18;
+  # DEBUG BEGIN_STMT
+  _8 = (long unsigned int) NumberDmaIterRead;
+  DmaTcdList[0].Value = _8;
+  # DEBUG BEGIN_STMT
+  _9 = State->PhyUnitConfig;
+  _10 = _9->RxDmaChannel;
+  _11 = (long unsigned int) _10;
+  Dma_Ip_SetLogicChannelTransferList (_11, &DmaTcdList, 1);
+  # DEBUG BEGIN_STMT
+  _12 = State->PhyUnitConfig;
+  _13 = _12->RxDmaChannel;
+  _14 = (long unsigned int) _13;
+  Dma_Ip_SetLogicChannelCommand (_14, 0);
+  # DEBUG BEGIN_STMT
+  _15 = Base->DER;
+  _16 = _15 | 1;
+  Base->DER = _16;
+  DmaTcdList = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_TxDmaContinueTransfer (uint8 Instance)
+{
+  uint16 NumberDmaIterWrite;
+  struct Dma_Ip_LogicChannelTransferListType DmaTcdList[1];
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _3 = State->ExpectedFifoWrites;
+  _4 = State->TxIndex;
+  NumberDmaIterWrite = _3 - _4;
+  # DEBUG BEGIN_STMT
+  NumberDmaIterWrite.0_5 = (signed short) NumberDmaIterWrite;
+  if (NumberDmaIterWrite.0_5 < 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  NumberDmaIterWrite = 32767;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _6 = State->TxIndex;
+  _7 = NumberDmaIterWrite + _6;
+  State->TxIndex = _7;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Param = 18;
+  # DEBUG BEGIN_STMT
+  _8 = (long unsigned int) NumberDmaIterWrite;
+  DmaTcdList[0].Value = _8;
+  # DEBUG BEGIN_STMT
+  _9 = State->PhyUnitConfig;
+  _10 = _9->TxDmaChannel;
+  _11 = (long unsigned int) _10;
+  Dma_Ip_SetLogicChannelTransferList (_11, &DmaTcdList, 1);
+  # DEBUG BEGIN_STMT
+  _12 = Base->DER;
+  _13 = _12 & 4294967294;
+  Base->DER = _13;
+  # DEBUG BEGIN_STMT
+  _14 = State->PhyUnitConfig;
+  _15 = _14->TxDmaChannel;
+  _16 = (long unsigned int) _15;
+  Dma_Ip_SetLogicChannelCommand (_16, 0);
+  DmaTcdList = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_RxDmaConfig (uint8 Instance)
+{
+  boolean DesSignedOffsetIsSet;
+  uint8 DmaTcdListIndexCounter;
+  uint16 NumberDmaIterRead;
+  struct Dma_Ip_LogicChannelTransferListType DmaTcdList[16];
+  struct Lpspi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  NumberDmaIterRead = State->ExpectedFifoReads;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = 0;
+  # DEBUG BEGIN_STMT
+  DesSignedOffsetIsSet = 0;
+  # DEBUG BEGIN_STMT
+  NumberDmaIterRead.14_2 = (signed short) NumberDmaIterRead;
+  if (NumberDmaIterRead.14_2 < 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  NumberDmaIterRead = 32767;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  State->RxIndex = NumberDmaIterRead;
+  # DEBUG BEGIN_STMT
+  _3 = State->PreRxMajorLoopCount;
+  if (NumberDmaIterRead != _3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _4 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_4].Param = 18;
+  # DEBUG BEGIN_STMT
+  _5 = (int) DmaTcdListIndexCounter;
+  _6 = (long unsigned int) NumberDmaIterRead;
+  DmaTcdList[_5].Value = _6;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.15_7 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.15_7 + 1;
+  # DEBUG BEGIN_STMT
+  State->PreRxMajorLoopCount = NumberDmaIterRead;
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _8 = State->PhyUnitConfig;
+  _9 = _8->TcdConfigOptimize;
+  _10 = ~_9;
+  if (_10 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _11 = State->ExternalDevice;
+  _12 = _11->DeviceParams;
+  _13 = _12->FrameSize;
+  if (_13 <= 8)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 8> :
+  _14 = State->PreRxTransferSize;
+  if (_14 != 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _15 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_15].Param = 15;
+  # DEBUG BEGIN_STMT
+  _16 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_16].Value = 1;
+  # DEBUG BEGIN_STMT
+  _17 = (unsigned int) DmaTcdListIndexCounter;
+  _18 = _17 + 1;
+  DmaTcdList[_18].Param = 3;
+  # DEBUG BEGIN_STMT
+  _19 = (unsigned int) DmaTcdListIndexCounter;
+  _20 = _19 + 1;
+  DmaTcdList[_20].Value = 0;
+  # DEBUG BEGIN_STMT
+  _21 = (unsigned int) DmaTcdListIndexCounter;
+  _22 = _21 + 2;
+  DmaTcdList[_22].Param = 8;
+  # DEBUG BEGIN_STMT
+  _23 = (unsigned int) DmaTcdListIndexCounter;
+  _24 = _23 + 2;
+  DmaTcdList[_24].Value = 0;
+  # DEBUG BEGIN_STMT
+  _25 = (unsigned int) DmaTcdListIndexCounter;
+  _26 = _25 + 3;
+  DmaTcdList[_26].Param = 6;
+  # DEBUG BEGIN_STMT
+  _27 = (unsigned int) DmaTcdListIndexCounter;
+  _28 = _27 + 3;
+  DmaTcdList[_28].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 4;
+  # DEBUG BEGIN_STMT
+  State->PreRxTransferSize = 0;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 1;
+  # DEBUG BEGIN_STMT
+  DesSignedOffsetIsSet = 1;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _29 = State->ExternalDevice;
+  _30 = _29->DeviceParams;
+  _31 = _30->FrameSize;
+  _32 = _31 + 247;
+  if (_32 <= 7)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 11> :
+  _33 = State->PreRxTransferSize;
+  if (_33 != 1)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _34 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_34].Param = 15;
+  # DEBUG BEGIN_STMT
+  _35 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_35].Value = 2;
+  # DEBUG BEGIN_STMT
+  _36 = (unsigned int) DmaTcdListIndexCounter;
+  _37 = _36 + 1;
+  DmaTcdList[_37].Param = 3;
+  # DEBUG BEGIN_STMT
+  _38 = (unsigned int) DmaTcdListIndexCounter;
+  _39 = _38 + 1;
+  DmaTcdList[_39].Value = 1;
+  # DEBUG BEGIN_STMT
+  _40 = (unsigned int) DmaTcdListIndexCounter;
+  _41 = _40 + 2;
+  DmaTcdList[_41].Param = 8;
+  # DEBUG BEGIN_STMT
+  _42 = (unsigned int) DmaTcdListIndexCounter;
+  _43 = _42 + 2;
+  DmaTcdList[_43].Value = 1;
+  # DEBUG BEGIN_STMT
+  _44 = (unsigned int) DmaTcdListIndexCounter;
+  _45 = _44 + 3;
+  DmaTcdList[_45].Param = 6;
+  # DEBUG BEGIN_STMT
+  _46 = (unsigned int) DmaTcdListIndexCounter;
+  _47 = _46 + 3;
+  DmaTcdList[_47].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 4;
+  # DEBUG BEGIN_STMT
+  State->PreRxTransferSize = 1;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 2;
+  # DEBUG BEGIN_STMT
+  DesSignedOffsetIsSet = 1;
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _48 = State->ExternalDevice;
+  _49 = _48->DeviceParams;
+  _50 = _49->FrameSize;
+  if (_50 > 16)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 14> :
+  _51 = State->PreRxTransferSize;
+  if (_51 != 2)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  _52 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_52].Param = 15;
+  # DEBUG BEGIN_STMT
+  _53 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_53].Value = 4;
+  # DEBUG BEGIN_STMT
+  _54 = (unsigned int) DmaTcdListIndexCounter;
+  _55 = _54 + 1;
+  DmaTcdList[_55].Param = 3;
+  # DEBUG BEGIN_STMT
+  _56 = (unsigned int) DmaTcdListIndexCounter;
+  _57 = _56 + 1;
+  DmaTcdList[_57].Value = 2;
+  # DEBUG BEGIN_STMT
+  _58 = (unsigned int) DmaTcdListIndexCounter;
+  _59 = _58 + 2;
+  DmaTcdList[_59].Param = 8;
+  # DEBUG BEGIN_STMT
+  _60 = (unsigned int) DmaTcdListIndexCounter;
+  _61 = _60 + 2;
+  DmaTcdList[_61].Value = 2;
+  # DEBUG BEGIN_STMT
+  _62 = (unsigned int) DmaTcdListIndexCounter;
+  _63 = _62 + 3;
+  DmaTcdList[_63].Param = 6;
+  # DEBUG BEGIN_STMT
+  _64 = (unsigned int) DmaTcdListIndexCounter;
+  _65 = _64 + 3;
+  DmaTcdList[_65].Value = 4;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 4;
+  # DEBUG BEGIN_STMT
+  State->PreRxTransferSize = 2;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 4;
+  # DEBUG BEGIN_STMT
+  DesSignedOffsetIsSet = 1;
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _66 = State->RxBuffer;
+  if (_66 == 0B)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  _67 = State->IsPreRxBufferNull;
+  _68 = ~_67;
+  if (_68 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  _69 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_69].Param = 5;
+  # DEBUG BEGIN_STMT
+  _70 = (int) DmaTcdListIndexCounter;
+  Lpspi_Ip_u32DiscardData.16_71 = (long unsigned int) &Lpspi_Ip_u32DiscardData;
+  DmaTcdList[_70].Value = Lpspi_Ip_u32DiscardData.16_71;
+  # DEBUG BEGIN_STMT
+  _72 = (unsigned int) DmaTcdListIndexCounter;
+  _73 = _72 + 1;
+  DmaTcdList[_73].Param = 6;
+  # DEBUG BEGIN_STMT
+  _74 = (unsigned int) DmaTcdListIndexCounter;
+  _75 = _74 + 1;
+  DmaTcdList[_75].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 2;
+  # DEBUG BEGIN_STMT
+  State->IsPreRxBufferNull = 1;
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _76 = State->RxBuffer;
+  if (_76 != 0B)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  _77 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_77].Param = 5;
+  # DEBUG BEGIN_STMT
+  _78 = State->RxBuffer;
+  _79 = (int) DmaTcdListIndexCounter;
+  _80 = (long unsigned int) _78;
+  DmaTcdList[_79].Value = _80;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.17_81 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.17_81 + 1;
+  # DEBUG BEGIN_STMT
+  _82 = State->IsPreRxBufferNull;
+  if (_82 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 21> :
+  _83 = ~DesSignedOffsetIsSet;
+  if (_83 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  # DEBUG BEGIN_STMT
+  _84 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_84].Param = 6;
+  # DEBUG BEGIN_STMT
+  _85 = State->RxDesSignedOffsetValue;
+  _86 = (int) DmaTcdListIndexCounter;
+  _87 = (long unsigned int) _85;
+  DmaTcdList[_86].Value = _87;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.18_88 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.18_88 + 1;
+
+  <bb 23> :
+  # DEBUG BEGIN_STMT
+  State->IsPreRxBufferNull = 0;
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  _89 = State->PhyUnitConfig;
+  _90 = _89->RxDmaChannel;
+  _91 = (long unsigned int) _90;
+  _92 = (long unsigned int) DmaTcdListIndexCounter;
+  Dma_Ip_SetLogicChannelTransferList (_91, &DmaTcdList, _92);
+  # DEBUG BEGIN_STMT
+  _93 = State->PhyUnitConfig;
+  _94 = _93->RxDmaChannel;
+  _95 = (long unsigned int) _94;
+  Dma_Ip_SetLogicChannelCommand (_95, 0);
+  DmaTcdList = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_TxDmaConfig (uint8 Instance)
+{
+  boolean SrcSignedOffsetIsSet;
+  uint8 DmaTcdListIndexCounter;
+  uint16 NumberDmaIterWrite;
+  struct Dma_Ip_LogicChannelTransferListType DmaTcdList[17];
+  struct Lpspi_Ip_StateStructureType * State;
+  const struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  NumberDmaIterWrite = State->ExpectedFifoWrites;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = 0;
+  # DEBUG BEGIN_STMT
+  SrcSignedOffsetIsSet = 0;
+  # DEBUG BEGIN_STMT
+  NumberDmaIterWrite.19_3 = (signed short) NumberDmaIterWrite;
+  if (NumberDmaIterWrite.19_3 < 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  NumberDmaIterWrite = 32767;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  State->TxIndex = NumberDmaIterWrite;
+  # DEBUG BEGIN_STMT
+  _4 = State->PreTxMajorLoopCount;
+  if (NumberDmaIterWrite != _4)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _5 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_5].Param = 18;
+  # DEBUG BEGIN_STMT
+  _6 = (int) DmaTcdListIndexCounter;
+  _7 = (long unsigned int) NumberDmaIterWrite;
+  DmaTcdList[_6].Value = _7;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.20_8 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.20_8 + 1;
+  # DEBUG BEGIN_STMT
+  State->PreTxMajorLoopCount = NumberDmaIterWrite;
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _9 = State->ExternalDevice;
+  _10 = _9->DeviceParams;
+  _11 = _10->TransferType;
+  if (_11 == 1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 7> :
+  _12 = State->IsPreChanneHalfDuplexlRxMode;
+  _13 = ~_12;
+  if (_13 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _14 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_14].Param = 0;
+  # DEBUG BEGIN_STMT
+  _15 = &State->HalfDuplexTcrCommand;
+  _16 = (int) DmaTcdListIndexCounter;
+  _17 = (long unsigned int) _15;
+  DmaTcdList[_16].Value = _17;
+  # DEBUG BEGIN_STMT
+  _18 = (unsigned int) DmaTcdListIndexCounter;
+  _19 = _18 + 1;
+  DmaTcdList[_19].Param = 1;
+  # DEBUG BEGIN_STMT
+  _20 = (unsigned int) DmaTcdListIndexCounter;
+  _21 = _20 + 1;
+  DmaTcdList[_21].Value = 0;
+  # DEBUG BEGIN_STMT
+  _22 = (unsigned int) DmaTcdListIndexCounter;
+  _23 = _22 + 2;
+  DmaTcdList[_23].Param = 3;
+  # DEBUG BEGIN_STMT
+  _24 = (unsigned int) DmaTcdListIndexCounter;
+  _25 = _24 + 2;
+  DmaTcdList[_25].Value = 2;
+  # DEBUG BEGIN_STMT
+  _26 = (unsigned int) DmaTcdListIndexCounter;
+  _27 = _26 + 3;
+  DmaTcdList[_27].Param = 8;
+  # DEBUG BEGIN_STMT
+  _28 = (unsigned int) DmaTcdListIndexCounter;
+  _29 = _28 + 3;
+  DmaTcdList[_29].Value = 2;
+  # DEBUG BEGIN_STMT
+  _30 = (unsigned int) DmaTcdListIndexCounter;
+  _31 = _30 + 4;
+  DmaTcdList[_31].Param = 15;
+  # DEBUG BEGIN_STMT
+  _32 = (unsigned int) DmaTcdListIndexCounter;
+  _33 = _32 + 4;
+  DmaTcdList[_33].Value = 4;
+  # DEBUG BEGIN_STMT
+  _34 = (unsigned int) DmaTcdListIndexCounter;
+  _35 = _34 + 5;
+  DmaTcdList[_35].Param = 5;
+  # DEBUG BEGIN_STMT
+  _36 = &Base->TCR;
+  _37 = (unsigned int) DmaTcdListIndexCounter;
+  _38 = _37 + 5;
+  _39 = (long unsigned int) _36;
+  DmaTcdList[_38].Value = _39;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 6;
+  # DEBUG BEGIN_STMT
+  State->IsPreChanneHalfDuplexlRxMode = 1;
+  # DEBUG BEGIN_STMT
+  State->PreTxTransferSize = 3;
+  goto <bb 30>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _40 = State->PhyUnitConfig;
+  _41 = _40->TcdConfigOptimize;
+  _42 = ~_41;
+  if (_42 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 10> :
+  _43 = State->IsPreChanneHalfDuplexlRxMode;
+  if (_43 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _44 = State->ExternalDevice;
+  _45 = _44->DeviceParams;
+  _46 = _45->FrameSize;
+  if (_46 <= 8)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 12> :
+  _47 = State->PreTxTransferSize;
+  if (_47 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _48 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_48].Param = 15;
+  # DEBUG BEGIN_STMT
+  _49 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_49].Value = 1;
+  # DEBUG BEGIN_STMT
+  _50 = (unsigned int) DmaTcdListIndexCounter;
+  _51 = _50 + 1;
+  DmaTcdList[_51].Param = 3;
+  # DEBUG BEGIN_STMT
+  _52 = (unsigned int) DmaTcdListIndexCounter;
+  _53 = _52 + 1;
+  DmaTcdList[_53].Value = 0;
+  # DEBUG BEGIN_STMT
+  _54 = (unsigned int) DmaTcdListIndexCounter;
+  _55 = _54 + 2;
+  DmaTcdList[_55].Param = 8;
+  # DEBUG BEGIN_STMT
+  _56 = (unsigned int) DmaTcdListIndexCounter;
+  _57 = _56 + 2;
+  DmaTcdList[_57].Value = 0;
+  # DEBUG BEGIN_STMT
+  _58 = (unsigned int) DmaTcdListIndexCounter;
+  _59 = _58 + 3;
+  DmaTcdList[_59].Param = 1;
+  # DEBUG BEGIN_STMT
+  _60 = (unsigned int) DmaTcdListIndexCounter;
+  _61 = _60 + 3;
+  DmaTcdList[_61].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 4;
+  # DEBUG BEGIN_STMT
+  State->PreTxTransferSize = 0;
+  # DEBUG BEGIN_STMT
+  SrcSignedOffsetIsSet = 1;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 1;
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  _62 = State->ExternalDevice;
+  _63 = _62->DeviceParams;
+  _64 = _63->FrameSize;
+  _65 = _64 + 247;
+  if (_65 <= 7)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 15> :
+  _66 = State->PreTxTransferSize;
+  if (_66 != 1)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _67 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_67].Param = 15;
+  # DEBUG BEGIN_STMT
+  _68 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_68].Value = 2;
+  # DEBUG BEGIN_STMT
+  _69 = (unsigned int) DmaTcdListIndexCounter;
+  _70 = _69 + 1;
+  DmaTcdList[_70].Param = 3;
+  # DEBUG BEGIN_STMT
+  _71 = (unsigned int) DmaTcdListIndexCounter;
+  _72 = _71 + 1;
+  DmaTcdList[_72].Value = 1;
+  # DEBUG BEGIN_STMT
+  _73 = (unsigned int) DmaTcdListIndexCounter;
+  _74 = _73 + 2;
+  DmaTcdList[_74].Param = 8;
+  # DEBUG BEGIN_STMT
+  _75 = (unsigned int) DmaTcdListIndexCounter;
+  _76 = _75 + 2;
+  DmaTcdList[_76].Value = 1;
+  # DEBUG BEGIN_STMT
+  _77 = (unsigned int) DmaTcdListIndexCounter;
+  _78 = _77 + 3;
+  DmaTcdList[_78].Param = 1;
+  # DEBUG BEGIN_STMT
+  _79 = (unsigned int) DmaTcdListIndexCounter;
+  _80 = _79 + 3;
+  DmaTcdList[_80].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 4;
+  # DEBUG BEGIN_STMT
+  State->PreTxTransferSize = 1;
+  # DEBUG BEGIN_STMT
+  SrcSignedOffsetIsSet = 1;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 2;
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  _81 = State->ExternalDevice;
+  _82 = _81->DeviceParams;
+  _83 = _82->FrameSize;
+  if (_83 > 16)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 18> :
+  _84 = State->PreTxTransferSize;
+  if (_84 != 2)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _85 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_85].Param = 15;
+  # DEBUG BEGIN_STMT
+  _86 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_86].Value = 4;
+  # DEBUG BEGIN_STMT
+  _87 = (unsigned int) DmaTcdListIndexCounter;
+  _88 = _87 + 1;
+  DmaTcdList[_88].Param = 3;
+  # DEBUG BEGIN_STMT
+  _89 = (unsigned int) DmaTcdListIndexCounter;
+  _90 = _89 + 1;
+  DmaTcdList[_90].Value = 2;
+  # DEBUG BEGIN_STMT
+  _91 = (unsigned int) DmaTcdListIndexCounter;
+  _92 = _91 + 2;
+  DmaTcdList[_92].Param = 8;
+  # DEBUG BEGIN_STMT
+  _93 = (unsigned int) DmaTcdListIndexCounter;
+  _94 = _93 + 2;
+  DmaTcdList[_94].Value = 2;
+  # DEBUG BEGIN_STMT
+  _95 = (unsigned int) DmaTcdListIndexCounter;
+  _96 = _95 + 3;
+  DmaTcdList[_96].Param = 1;
+  # DEBUG BEGIN_STMT
+  _97 = (unsigned int) DmaTcdListIndexCounter;
+  _98 = _97 + 3;
+  DmaTcdList[_98].Value = 4;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 4;
+  # DEBUG BEGIN_STMT
+  State->PreTxTransferSize = 2;
+  # DEBUG BEGIN_STMT
+  SrcSignedOffsetIsSet = 1;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 4;
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  _99 = State->IsPreChanneHalfDuplexlRxMode;
+  if (_99 != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  _100 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_100].Param = 5;
+  # DEBUG BEGIN_STMT
+  _101 = &Base->TDR;
+  _102 = (int) DmaTcdListIndexCounter;
+  _103 = (long unsigned int) _101;
+  DmaTcdList[_102].Value = _103;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.21_104 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.21_104 + 1;
+  # DEBUG BEGIN_STMT
+  State->IsPreChanneHalfDuplexlRxMode = 0;
+
+  <bb 22> :
+  # DEBUG BEGIN_STMT
+  _105 = State->TxBuffer;
+  if (_105 == 0B)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 23> :
+  _106 = State->IsPreTxBufferNull;
+  _107 = ~_106;
+  if (_107 != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  _108 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_108].Param = 0;
+  # DEBUG BEGIN_STMT
+  _109 = State->ExternalDevice;
+  _110 = _109->DeviceParams;
+  _111 = &_110->DefaultData;
+  _112 = (int) DmaTcdListIndexCounter;
+  _113 = (long unsigned int) _111;
+  DmaTcdList[_112].Value = _113;
+  # DEBUG BEGIN_STMT
+  _114 = (unsigned int) DmaTcdListIndexCounter;
+  _115 = _114 + 1;
+  DmaTcdList[_115].Param = 1;
+  # DEBUG BEGIN_STMT
+  _116 = (unsigned int) DmaTcdListIndexCounter;
+  _117 = _116 + 1;
+  DmaTcdList[_117].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter + 2;
+  # DEBUG BEGIN_STMT
+  State->IsPreTxBufferNull = 1;
+
+  <bb 25> :
+  # DEBUG BEGIN_STMT
+  _118 = State->TxBuffer;
+  if (_118 != 0B)
+    goto <bb 26>; [INV]
+  else
+    goto <bb 30>; [INV]
+
+  <bb 26> :
+  # DEBUG BEGIN_STMT
+  _119 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_119].Param = 0;
+  # DEBUG BEGIN_STMT
+  _120 = State->TxBuffer;
+  _121 = (int) DmaTcdListIndexCounter;
+  _122 = (long unsigned int) _120;
+  DmaTcdList[_121].Value = _122;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.22_123 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.22_123 + 1;
+  # DEBUG BEGIN_STMT
+  _124 = State->IsPreTxBufferNull;
+  if (_124 != 0)
+    goto <bb 27>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 27> :
+  _125 = ~SrcSignedOffsetIsSet;
+  if (_125 != 0)
+    goto <bb 28>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 28> :
+  # DEBUG BEGIN_STMT
+  _126 = (int) DmaTcdListIndexCounter;
+  DmaTcdList[_126].Param = 1;
+  # DEBUG BEGIN_STMT
+  _127 = State->TxSrcSignedOffsetValue;
+  _128 = (int) DmaTcdListIndexCounter;
+  _129 = (long unsigned int) _127;
+  DmaTcdList[_128].Value = _129;
+  # DEBUG BEGIN_STMT
+  DmaTcdListIndexCounter.23_130 = DmaTcdListIndexCounter;
+  DmaTcdListIndexCounter = DmaTcdListIndexCounter.23_130 + 1;
+
+  <bb 29> :
+  # DEBUG BEGIN_STMT
+  State->IsPreTxBufferNull = 0;
+
+  <bb 30> :
+  # DEBUG BEGIN_STMT
+  _131 = State->PhyUnitConfig;
+  _132 = _131->TxDmaChannel;
+  _133 = (long unsigned int) _132;
+  _134 = (long unsigned int) DmaTcdListIndexCounter;
+  Dma_Ip_SetLogicChannelTransferList (_133, &DmaTcdList, _134);
+  # DEBUG BEGIN_STMT
+  _135 = State->PhyUnitConfig;
+  _136 = _135->TxDmaChannel;
+  _137 = (long unsigned int) _136;
+  Dma_Ip_SetLogicChannelCommand (_137, 0);
+  DmaTcdList = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_DmaInit (uint8 Instance)
+{
+  uint8 FrameSize;
+  struct Dma_Ip_LogicChannelTransferListType DmaTcdList[10];
+  struct Lpspi_Ip_StateStructureType * State;
+  const struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _3 = State->PhyUnitConfig;
+  FrameSize = _3->TcdConfigOptimizeFrameSize;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Param = 5;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Param = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Param = 3;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Param = 8;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Param = 15;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Param = 6;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[6].Param = 23;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[7].Param = 7;
+  # DEBUG BEGIN_STMT
+  _4 = &Base->TDR;
+  _5 = (long unsigned int) _4;
+  DmaTcdList[0].Value = _5;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Value = 0;
+  # DEBUG BEGIN_STMT
+  _6 = State->PhyUnitConfig;
+  _7 = _6->TcdConfigOptimize;
+  if (_7 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  if (FrameSize <= 8)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 1;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 1;
+  goto <bb 9>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  if (FrameSize <= 16)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 2;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 2;
+  goto <bb 9>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Value = 4;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 4;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 4;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 1;
+  # DEBUG BEGIN_STMT
+  State->PreTxTransferSize = 0;
+  # DEBUG BEGIN_STMT
+  State->TxSrcSignedOffsetValue = 1;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[6].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[7].Value = 0;
+  # DEBUG BEGIN_STMT
+  _8 = State->PhyUnitConfig;
+  _9 = _8->TxDmaChannel;
+  _10 = (long unsigned int) _9;
+  Dma_Ip_SetLogicChannelTransferList (_10, &DmaTcdList, 8);
+  # DEBUG BEGIN_STMT
+  DmaTcdList[0].Param = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Param = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Param = 3;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Param = 8;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Param = 15;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Param = 6;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[6].Param = 23;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[7].Param = 7;
+  # DEBUG BEGIN_STMT
+  _11 = &Base->RDR;
+  _12 = (long unsigned int) _11;
+  DmaTcdList[0].Value = _12;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[1].Value = 0;
+  # DEBUG BEGIN_STMT
+  _13 = State->PhyUnitConfig;
+  _14 = _13->TcdConfigOptimize;
+  if (_14 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  if (FrameSize <= 8)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Value = 1;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 1;
+  goto <bb 16>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  if (FrameSize <= 16)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Value = 2;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 2;
+  goto <bb 16>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 2;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 4;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Value = 4;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 4;
+  goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[2].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[3].Value = 0;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[4].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[5].Value = 1;
+  # DEBUG BEGIN_STMT
+  State->PreRxTransferSize = 0;
+  # DEBUG BEGIN_STMT
+  State->RxDesSignedOffsetValue = 1;
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  DmaTcdList[6].Value = 1;
+  # DEBUG BEGIN_STMT
+  DmaTcdList[7].Value = 0;
+  # DEBUG BEGIN_STMT
+  _15 = State->PhyUnitConfig;
+  _16 = _15->RxDmaChannel;
+  _17 = (long unsigned int) _16;
+  Dma_Ip_SetLogicChannelTransferList (_17, &DmaTcdList, 8);
+  # DEBUG BEGIN_STMT
+  State->IsPreChanneHalfDuplexlRxMode = 0;
+  # DEBUG BEGIN_STMT
+  State->IsPreTxBufferNull = 0;
+  # DEBUG BEGIN_STMT
+  State->IsPreRxBufferNull = 0;
+  # DEBUG BEGIN_STMT
+  State->PreTxMajorLoopCount = 0;
+  # DEBUG BEGIN_STMT
+  State->PreRxMajorLoopCount = 0;
+  DmaTcdList = {CLOBBER};
+  return;
+
+}
+
+
+Lpspi_Ip_CheckValidParameters (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint16 Length)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice->DeviceParams;
+  _2 = _1->FrameSize;
+  if (_2 > 16)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _3 = Length & 3;
+  _4 = _3 == 0;
+  DevAssert (_4);
+  goto <bb 6>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _5 = ExternalDevice->DeviceParams;
+  _6 = _5->FrameSize;
+  if (_6 > 8)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _7 = Length & 1;
+  _8 = _7 == 0;
+  DevAssert (_8);
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Lpspi_Ip_TransferProcess (uint8 Instance)
+{
+  boolean ErrorFlag;
+  uint8 NumberOfReads;
+  uint8 NumberOfWrites;
+  uint32 SrStatusRegister;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  NumberOfWrites = 0;
+  # DEBUG BEGIN_STMT
+  NumberOfReads = 0;
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 0;
+  # DEBUG BEGIN_STMT
+  _3 = State->Status;
+  if (_3 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SrStatusRegister = Base->SR;
+  # DEBUG BEGIN_STMT
+  _4 = Base->SR;
+  _5 = _4 & 16128;
+  Base->SR = _5;
+  # DEBUG BEGIN_STMT
+  _6 = SrStatusRegister & 6144;
+  if (_6 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 1;
+  goto <bb 19>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _7 = Base->FSR;
+  _8 = _7 >> 16;
+  _9 = (unsigned char) _8;
+  NumberOfReads = _9 & 7;
+  # DEBUG BEGIN_STMT
+  if (NumberOfReads != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _10 = (int) NumberOfReads;
+  _11 = State->ExpectedFifoReads;
+  _12 = (int) _11;
+  _13 = State->RxIndex;
+  _14 = (int) _13;
+  _15 = _12 - _14;
+  if (_10 > _15)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _16 = State->ExpectedFifoReads;
+  _17 = (unsigned char) _16;
+  _18 = State->RxIndex;
+  _19 = (unsigned char) _18;
+  NumberOfReads = _17 - _19;
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _20 = State->RxIndex;
+  if (_20 == 0)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _21 = State->CurrentTxFifoSlot;
+  _22 = _21 + 1;
+  State->CurrentTxFifoSlot = _22;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ReadDataFromFifo (Instance, NumberOfReads);
+  # DEBUG BEGIN_STMT
+  _23 = State->CurrentTxFifoSlot;
+  _24 = NumberOfReads + _23;
+  State->CurrentTxFifoSlot = _24;
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _25 = State->CurrentTxFifoSlot;
+  if (_25 != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _26 = State->ExpectedFifoWrites;
+  _27 = State->TxIndex;
+  if (_26 != _27)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  NumberOfWrites = State->CurrentTxFifoSlot;
+  # DEBUG BEGIN_STMT
+  _28 = (int) NumberOfWrites;
+  _29 = State->ExpectedFifoWrites;
+  _30 = (int) _29;
+  _31 = State->TxIndex;
+  _32 = (int) _31;
+  _33 = _30 - _32;
+  if (_28 > _33)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  _34 = State->ExpectedFifoWrites;
+  _35 = (unsigned char) _34;
+  _36 = State->TxIndex;
+  _37 = (unsigned char) _36;
+  NumberOfWrites = _35 - _37;
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_PushDataToFifo (Instance, NumberOfWrites);
+  # DEBUG BEGIN_STMT
+  _38 = State->CurrentTxFifoSlot;
+  _39 = _38 - NumberOfWrites;
+  State->CurrentTxFifoSlot = _39;
+  goto <bb 19>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _40 = Base->IER;
+  _41 = _40 & 4294967294;
+  Base->IER = _41;
+  # DEBUG BEGIN_STMT
+  _42 = State->KeepCs;
+  _43 = ~_42;
+  if (_43 != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  _44 = Base->TCR;
+  _45 = _44 & 2097152;
+  if (_45 != 0)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  _46 = Base->TCR;
+  _47 = _46 & 4291821567;
+  Base->TCR = _47;
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _48 = State->RxIndex;
+  _49 = State->ExpectedFifoReads;
+  if (_48 == _49)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 20> :
+  if (ErrorFlag != 0)
+    goto <bb 21>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  _50 = State->KeepCs;
+  _51 = ~_50;
+  if (_51 != 0)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 22> :
+  if (ErrorFlag != 0)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 23> :
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  _52 = Base->CR;
+  _53 = _52 & 4294967294;
+  Base->CR = _53;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12 ();
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ChannelFinished (Instance, ErrorFlag);
+
+  <bb 25> :
+  return;
+
+}
+
+
+Lpspi_Ip_HalfDuplexPrepare (uint8 Instance, uint8 * Buffer)
+{
+  uint32 LsbWriteValue;
+  struct LPSPI_Type * Base;
+  struct Lpspi_Ip_StateStructureType * State;
+  long unsigned int iftmp.13;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_2];
+  # DEBUG BEGIN_STMT
+  _3 = State->ExternalDevice;
+  _4 = _3->DeviceParams;
+  _5 = _4->Lsb;
+  if (_5 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  iftmp.13 = 1;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  iftmp.13 = 0;
+
+  <bb 5> :
+  LsbWriteValue = iftmp.13;
+  # DEBUG BEGIN_STMT
+  _6 = Base->CFGR1;
+  _7 = _6 & 3774873599;
+  Base->CFGR1 = _7;
+  # DEBUG BEGIN_STMT
+  _8 = Base->CFGR1;
+  _9 = State->ExternalDevice;
+  _10 = _9->HalfDuplexCfgr1;
+  _11 = _8 | _10;
+  Base->CFGR1 = _11;
+  # DEBUG BEGIN_STMT
+  State->CurrentTxFifoSlot = 1;
+  # DEBUG BEGIN_STMT
+  _12 = State->ExternalDevice;
+  _13 = _12->DeviceParams;
+  _14 = _13->TransferType;
+  if (_14 == 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  State->TxBuffer = Buffer;
+  goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  State->RxBuffer = Buffer;
+  # DEBUG BEGIN_STMT
+  _15 = State->ExternalDevice;
+  _16 = _15->Tcr;
+  _17 = State->ExternalDevice;
+  _18 = _17->DeviceParams;
+  _19 = _18->FrameSize;
+  _20 = (long unsigned int) _19;
+  _21 = _20 + 4294967295;
+  _22 = _21 & 4095;
+  _23 = _16 | _22;
+  _24 = LsbWriteValue << 23;
+  _25 = _24 & 8388608;
+  _26 = _23 | _25;
+  State->HalfDuplexTcrCommand = _26;
+  # DEBUG BEGIN_STMT
+  _27 = State->HalfDuplexTcrCommand;
+  _28 = _27 | 262144;
+  State->HalfDuplexTcrCommand = _28;
+
+  <bb 8> :
+  return;
+
+}
+
+
+__attribute__((always_inline))
+Lpspi_Ip_HalfDuplexPushDataToFifo (uint8 Instance, uint8 NumberOfWrites)
+{
+  uint8 WriteToFifoTime;
+  const struct Lpspi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  WriteToFifoTime = NumberOfWrites;
+  # DEBUG BEGIN_STMT
+  _2 = (int) NumberOfWrites;
+  _3 = State->ExpectedFifoWrites;
+  _4 = (int) _3;
+  _5 = State->TxIndex;
+  _6 = (int) _5;
+  _7 = _4 - _6;
+  if (_2 > _7)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _8 = State->ExpectedFifoWrites;
+  _9 = (unsigned char) _8;
+  _10 = State->TxIndex;
+  _11 = (unsigned char) _10;
+  WriteToFifoTime = _9 - _11;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_PushDataToFifo (Instance, WriteToFifoTime);
+  return;
+
+}
+
+
+__attribute__((always_inline))
+Lpspi_Ip_HalfDuplexTransmitProcess (uint8 Instance, uint8 NumberOfWrites)
+{
+  boolean TransferCompleted;
+  struct LPSPI_Type * Base;
+  const struct Lpspi_Ip_StateStructureType * State;
+  boolean D.7234;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_2];
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 0;
+  # DEBUG BEGIN_STMT
+  _3 = State->ExpectedFifoWrites;
+  _4 = State->TxIndex;
+  if (_3 != _4)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_HalfDuplexPushDataToFifo (Instance, NumberOfWrites);
+  goto <bb 8>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _5 = State->KeepCs;
+  _6 = ~_5;
+  if (_6 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _7 = Base->TCR;
+  _8 = _7 & 2097152;
+  if (_8 != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _9 = Base->TCR;
+  _10 = _9 & 4291821567;
+  Base->TCR = _10;
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 1;
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  D.7234 = TransferCompleted;
+  return D.7234;
+
+}
+
+
+Lpspi_Ip_HalfDupleTransmitChannelComplete (uint8 Instance)
+{
+  boolean TimeOutError;
+  uint32 ElapsedTicks;
+  uint32 CurrentTicks;
+  uint32 TimeoutTicks;
+  const struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+  boolean D.7389;
+  long unsigned int D.7385;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  TimeoutTicks = OsIf_MicrosToTicks (50000, 0);
+  # DEBUG BEGIN_STMT
+  CurrentTicks = 0;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  TimeOutError = 0;
+  # DEBUG BEGIN_STMT
+  _3 = State->KeepCs;
+  _4 = ~_3;
+  if (_4 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _5 = Base->TCR;
+  _6 = _5 & 4291821567;
+  Base->TCR = _6;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _7 = State->NextChannelIsRX;
+  if (_7 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  _8 = State->KeepCs;
+  _9 = ~_8;
+  if (_9 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _10 = OsIf_GetCounter (0);
+  CurrentTicks = _10;
+  # DEBUG BEGIN_STMT
+  D.7385 = OsIf_GetElapsed (&CurrentTicks, 0);
+  ElapsedTicks = D.7385 + ElapsedTicks;
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _11 = Base->FSR;
+  _12 = _11 & 7;
+  if (_12 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  if (ElapsedTicks < TimeoutTicks)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  if (ElapsedTicks >= TimeoutTicks)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  TimeOutError = 1;
+  # DEBUG BEGIN_STMT
+  _13 = Base->CR;
+  _14 = _13 | 256;
+  Base->CR = _14;
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  D.7389 = TimeOutError;
+  CurrentTicks = {CLOBBER};
+  return D.7389;
+
+}
+
+
+Lpspi_Ip_TransferProcessHalfDuplex (uint8 Instance)
+{
+  uint8 NumberOfFramesTxFifo;
+  boolean TransferCompleted;
+  Lpspi_Ip_HalfDuplexType TransferType;
+  boolean ErrorFlag;
+  uint8 NumberOfReads;
+  uint8 NumberOfWrites;
+  uint32 SrStatusRegister;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  NumberOfWrites = 0;
+  # DEBUG BEGIN_STMT
+  NumberOfReads = 0;
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _3 = State->Status;
+  if (_3 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SrStatusRegister = Base->SR;
+  # DEBUG BEGIN_STMT
+  _4 = Base->SR;
+  _5 = _4 & 16128;
+  Base->SR = _5;
+  # DEBUG BEGIN_STMT
+  _6 = State->ExternalDevice;
+  _7 = _6->DeviceParams;
+  TransferType = _7->TransferType;
+  # DEBUG BEGIN_STMT
+  _8 = SrStatusRegister & 6144;
+  if (_8 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 1;
+  goto <bb 19>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _9 = State->ExpectedFifoWrites;
+  _10 = State->TxIndex;
+  if (_9 == _10)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  if (TransferType == 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  ErrorFlag = Lpspi_Ip_HalfDupleTransmitChannelComplete (Instance);
+  # DEBUG BEGIN_STMT
+  TransferCompleted = 1;
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  if (TransferType == 1)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _11 = Base->FSR;
+  _12 = _11 >> 16;
+  _13 = (unsigned char) _12;
+  NumberOfReads = _13 & 7;
+  # DEBUG BEGIN_STMT
+  _14 = (int) NumberOfReads;
+  _15 = State->ExpectedFifoReads;
+  _16 = (int) _15;
+  _17 = State->RxIndex;
+  _18 = (int) _17;
+  _19 = _16 - _18;
+  if (_14 > _19)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _20 = State->ExpectedFifoReads;
+  _21 = (unsigned char) _20;
+  _22 = State->RxIndex;
+  _23 = (unsigned char) _22;
+  NumberOfReads = _21 - _23;
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  if (NumberOfReads != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ReadDataFromFifo (Instance, NumberOfReads);
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _24 = Base->FSR;
+  _25 = _24 & 7;
+  if (_25 == 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 14> :
+  _26 = State->ExpectedFifoWrites;
+  _27 = State->TxIndex;
+  if (_26 != _27)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  _28 = State->HalfDuplexTcrCommand;
+  Base->TCR = _28;
+  # DEBUG BEGIN_STMT
+  _29 = State->TxIndex;
+  _30 = _29;
+  _31 = _30 + 1;
+  State->TxIndex = _31;
+  goto <bb 19>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  _32 = Base->FSR;
+  _33 = (unsigned char) _32;
+  NumberOfFramesTxFifo = _33 & 7;
+  # DEBUG BEGIN_STMT
+  NumberOfWrites = 4 - NumberOfFramesTxFifo;
+  # DEBUG BEGIN_STMT
+  if (NumberOfWrites != 0)
+    goto <bb 17>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 17> :
+  _34 = State->ExpectedFifoWrites;
+  _35 = State->TxIndex;
+  if (_34 != _35)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_HalfDuplexPushDataToFifo (Instance, NumberOfWrites);
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  if (TransferType == 0)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  if (TransferCompleted != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 21> :
+  _36 = State->RxIndex;
+  _37 = State->ExpectedFifoReads;
+  if (_36 == _37)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  if (TransferType == 1)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 23> :
+  if (ErrorFlag != 0)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 25>; [INV]
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  Base->IER = 0;
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_ChannelFinished (Instance, ErrorFlag);
+
+  <bb 25> :
+  return;
+
+}
+
+
+Lpspi_Ip_ChannelFinished (uint8 Instance, boolean ErrorFlag)
+{
+  Lpspi_Ip_EventType EventState;
+  struct Lpspi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  EventState = 1;
+  # DEBUG BEGIN_STMT
+  if (ErrorFlag != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  # DEBUG BEGIN_STMT
+  EventState = 1;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+  # DEBUG BEGIN_STMT
+  EventState = 0;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _2 = State->Callback;
+  if (_2 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _3 = State->Callback;
+  _3 (Instance, EventState);
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+__attribute__((always_inline))
+Lpspi_Ip_PushDataToFifo (uint8 Instance, uint8 NumberOfWrites)
+{
+  uint8 Index;
+  uint32 Data;
+  struct Lpspi_Ip_StateStructureType * State;
+  struct LPSPI_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  Data = 0;
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  # DEBUG BEGIN_STMT
+  _3 = State->ExternalDevice;
+  _4 = _3->DeviceParams;
+  Data = _4->DefaultData;
+  # DEBUG BEGIN_STMT
+  _5 = State->TxBuffer;
+  if (_5 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = State->ExternalDevice;
+  _7 = _6->DeviceParams;
+  _8 = _7->FrameSize;
+  if (_8 <= 8)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _9 = State->TxBuffer;
+  _10 = State->TxIndex;
+  _11 = (int) _10;
+  _12 = (int) Index;
+  _13 = _11 + _12;
+  _14 = (sizetype) _13;
+  _15 = _9 + _14;
+  _16 = *_15;
+  Data = (uint32) _16;
+  # DEBUG BEGIN_STMT
+  Base->TDR = Data;
+  # DEBUG BEGIN_STMT
+  Index.9_17 = Index;
+  Index = Index.9_17 + 1;
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfWrites)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _18 = State->ExternalDevice;
+  _19 = _18->DeviceParams;
+  _20 = _19->FrameSize;
+  if (_20 <= 16)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _21 = State->TxBuffer;
+  _22 = State->TxIndex;
+  _23 = (int) _22;
+  _24 = (int) Index;
+  _25 = _23 + _24;
+  _26 = (unsigned int) _25;
+  _27 = _26 * 2;
+  _28 = _21 + _27;
+  _29 = MEM[(uint16 *)_28];
+  Data = (uint32) _29;
+  # DEBUG BEGIN_STMT
+  Base->TDR = Data;
+  # DEBUG BEGIN_STMT
+  Index.10_30 = Index;
+  Index = Index.10_30 + 1;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfWrites)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _31 = State->TxBuffer;
+  _32 = State->TxIndex;
+  _33 = (int) _32;
+  _34 = (int) Index;
+  _35 = _33 + _34;
+  _36 = (unsigned int) _35;
+  _37 = _36 * 4;
+  _38 = _31 + _37;
+  Data = MEM[(uint32 *)_38];
+  # DEBUG BEGIN_STMT
+  Base->TDR = Data;
+  # DEBUG BEGIN_STMT
+  Index.11_39 = Index;
+  Index = Index.11_39 + 1;
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfWrites)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  Base->TDR = Data;
+  # DEBUG BEGIN_STMT
+  Index.12_40 = Index;
+  Index = Index.12_40 + 1;
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfWrites)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  _41 = State->TxIndex;
+  _42 = (short unsigned int) NumberOfWrites;
+  _43 = _41 + _42;
+  State->TxIndex = _43;
+  return;
+
+}
+
+
+__attribute__((always_inline))
+Lpspi_Ip_ReadDataFromFifo (uint8 Instance, uint8 NumberOfReads)
+{
+  uint8 Index;
+  uint32 Data;
+  struct Lpspi_Ip_StateStructureType * State;
+  const struct LPSPI_Type * Base;
+  long unsigned int vol.7;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  Base = Lpspi_Ip_apxBases[_1];
+  # DEBUG BEGIN_STMT
+  _2 = (int) Instance;
+  State = Lpspi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  Data = 0;
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  # DEBUG BEGIN_STMT
+  _3 = State->RxBuffer;
+  if (_3 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _4 = State->ExternalDevice;
+  _5 = _4->DeviceParams;
+  _6 = _5->FrameSize;
+  if (_6 <= 8)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Data = Base->RDR;
+  # DEBUG BEGIN_STMT
+  _7 = State->RxBuffer;
+  _8 = State->RxIndex;
+  _9 = (int) _8;
+  _10 = (int) Index;
+  _11 = _9 + _10;
+  _12 = (sizetype) _11;
+  _13 = _7 + _12;
+  _14 = (unsigned char) Data;
+  *_13 = _14;
+  # DEBUG BEGIN_STMT
+  Index.4_15 = Index;
+  Index = Index.4_15 + 1;
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfReads)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _16 = State->ExternalDevice;
+  _17 = _16->DeviceParams;
+  _18 = _17->FrameSize;
+  if (_18 <= 16)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  Data = Base->RDR;
+  # DEBUG BEGIN_STMT
+  _19 = State->RxBuffer;
+  _20 = State->RxIndex;
+  _21 = (int) _20;
+  _22 = (int) Index;
+  _23 = _21 + _22;
+  _24 = (unsigned int) _23;
+  _25 = _24 * 2;
+  _26 = _19 + _25;
+  _27 = (short unsigned int) Data;
+  MEM[(uint16 *)_26] = _27;
+  # DEBUG BEGIN_STMT
+  Index.5_28 = Index;
+  Index = Index.5_28 + 1;
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfReads)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  Data = Base->RDR;
+  # DEBUG BEGIN_STMT
+  _29 = State->RxBuffer;
+  _30 = State->RxIndex;
+  _31 = (int) _30;
+  _32 = (int) Index;
+  _33 = _31 + _32;
+  _34 = (unsigned int) _33;
+  _35 = _34 * 4;
+  _36 = _29 + _35;
+  MEM[(uint32 *)_36] = Data;
+  # DEBUG BEGIN_STMT
+  Index.6_37 = Index;
+  Index = Index.6_37 + 1;
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfReads)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  Index = 0;
+  goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  vol.7 = Base->RDR;
+  # DEBUG BEGIN_STMT
+  Index.8_38 = Index;
+  Index = Index.8_38 + 1;
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  if (Index < NumberOfReads)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  _39 = State->RxIndex;
+  _40 = (short unsigned int) NumberOfReads;
+  _41 = _39 + _40;
+  State->RxIndex = _41;
+  return;
+
+}
+
+
+DevAssert (volatile boolean x)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  x.2_1 = x;
+  if (x.2_1 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  __asm__ __volatile__("BKPT #0");
+  # DEBUG BEGIN_STMT
+  goto <bb 3>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+

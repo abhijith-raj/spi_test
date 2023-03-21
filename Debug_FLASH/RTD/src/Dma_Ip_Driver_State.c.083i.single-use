@@ -1,0 +1,218 @@
+Variable fpa_Dma_Ip_HwChannelState/10 is used by single function
+Dma_Ip_SetHwChannelStatePointer (uint32 LocHwVers, uint32 LocHwInst, uint32 LocHwCh, struct Dma_Ip_HwChannelStateType * StatePointer)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_4(D)][LocHwCh_5(D)] ={v} StatePointer_6(D);
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+Dma_Ip_GetHwChannelStatePointer (uint32 LocHwVers, uint32 LocHwInst, uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * PtStatePtr;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG PtStatePtr => 0B
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [55.78%]
+  else
+    goto <bb 4>; [44.22%]
+
+  <bb 3> [local count: 598933193]:
+  # DEBUG BEGIN_STMT
+  PtStatePtr_6 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_4(D)][LocHwCh_5(D)];
+  # DEBUG PtStatePtr => PtStatePtr_6
+
+  <bb 4> [local count: 1073741824]:
+  # PtStatePtr_1 = PHI <0B(2), PtStatePtr_6(3)>
+  # DEBUG PtStatePtr => PtStatePtr_1
+  # DEBUG BEGIN_STMT
+  return PtStatePtr_1;
+
+}
+
+
+Dma_Ip_GetHwChannelState (uint32 LocHwVers, uint32 LocHwInst, uint32 LocHwCh)
+{
+  Dma_Ip_HwChannelStateValueType StateValue;
+  struct Dma_Ip_HwChannelStateType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG StateValue => 0
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  StateValue_7 = _1->StateValue;
+  # DEBUG StateValue => StateValue_7
+
+  <bb 4> [local count: 1073741824]:
+  # StateValue_2 = PHI <0(2), StateValue_7(3)>
+  # DEBUG StateValue => StateValue_2
+  # DEBUG BEGIN_STMT
+  return StateValue_2;
+
+}
+
+
+Dma_Ip_SetHwChannelState (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const Dma_Ip_HwChannelEventValueEnum EventValue)
+{
+  Dma_Ip_HwChannelStateValueType StateValue;
+  static void (*<T5db>) (const uint32, const uint32, const uint32) fpa_Dma_Ip_HwChannelState[5][5] = {{Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_TransferEvent, Dma_Ip_SetHwChannel_ScatterGatherEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_TransferEvent, Dma_Ip_SetHwChannel_ScatterGatherEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_TransferEvent, Dma_Ip_SetHwChannel_ScatterGatherEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent}};
+  struct Dma_Ip_HwChannelStateType * _1;
+  void (*<T5d4>) (const uint32, const uint32, const uint32) _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG StateValue => 0
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  StateValue_8 = _1->StateValue;
+  # DEBUG StateValue => StateValue_8
+  # DEBUG BEGIN_STMT
+  _2 = fpa_Dma_Ip_HwChannelState[StateValue_8][EventValue_9(D)];
+  _2 (3, LocHwInst_6(D), LocHwCh_7(D));
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ErrorEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  _1->StateValue = 4;
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ScatterGatherEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  _1->StateValue = 3;
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_TransferEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  _1->StateValue = 2;
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ReadyEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  _1->StateValue = 1;
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ResetEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _1 ={v} Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  _1->StateValue = 0;
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+

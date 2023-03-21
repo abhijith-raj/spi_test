@@ -1,0 +1,9 @@
+../RTD/src/Dma_Ip_Driver_State.c:138:13:Dma_Ip_SetHwChannel_ResetEvent	0	static
+../RTD/src/Dma_Ip_Driver_State.c:151:13:Dma_Ip_SetHwChannel_ReadyEvent	0	static
+../RTD/src/Dma_Ip_Driver_State.c:164:13:Dma_Ip_SetHwChannel_TransferEvent	0	static
+../RTD/src/Dma_Ip_Driver_State.c:177:13:Dma_Ip_SetHwChannel_ScatterGatherEvent	0	static
+../RTD/src/Dma_Ip_Driver_State.c:190:13:Dma_Ip_SetHwChannel_ErrorEvent	0	static
+../RTD/src/Dma_Ip_Driver_State.c:203:6:Dma_Ip_SetHwChannelState	8	static
+../RTD/src/Dma_Ip_Driver_State.c:231:32:Dma_Ip_GetHwChannelState	0	static
+../RTD/src/Dma_Ip_Driver_State.c:248:29:Dma_Ip_GetHwChannelStatePointer	0	static
+../RTD/src/Dma_Ip_Driver_State.c:265:6:Dma_Ip_SetHwChannelStatePointer	0	static

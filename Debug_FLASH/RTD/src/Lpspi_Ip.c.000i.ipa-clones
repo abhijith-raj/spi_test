@@ -1,0 +1,29 @@
+Callgraph clone;Lpspi_Ip_PushDataToFifo;6;../RTD/src/Lpspi_Ip.c;320;19;Lpspi_Ip_HalfDuplexPushDataToFifo;11;../RTD/src/Lpspi_Ip.c;602;19;inlining to
+Callgraph clone;Lpspi_Ip_HalfDuplexPushDataToFifo;11;../RTD/src/Lpspi_Ip.c;602;19;Lpspi_Ip_HalfDuplexTransmitProcess;10;../RTD/src/Lpspi_Ip.c;567;22;inlining to
+Callgraph clone;Lpspi_Ip_CheckValidParameters;14;../RTD/src/Lpspi_Ip.c;778;13;Lpspi_Ip_CheckValidParameters.part.0;61;../RTD/src/Lpspi_Ip.c;778;13;part
+Callgraph clone;Lpspi_Ip_HalfDuplexPushDataToFifo;11;../RTD/src/Lpspi_Ip.c;602;19;Lpspi_Ip_TransferProcessHalfDuplex;8;../RTD/src/Lpspi_Ip.c;409;13;inlining to
+Callgraph clone;Lpspi_Ip_ReadDataFromFifo;5;../RTD/src/Lpspi_Ip.c;266;19;Lpspi_Ip_TransferProcessHalfDuplex;8;../RTD/src/Lpspi_Ip.c;409;13;inlining to
+Callgraph removal;Lpspi_Ip_HalfDuplexPushDataToFifo;11;../RTD/src/Lpspi_Ip.c;602;19
+Callgraph clone;Lpspi_Ip_PushDataToFifo;6;../RTD/src/Lpspi_Ip.c;320;19;Lpspi_Ip_TransferProcess;13;../RTD/src/Lpspi_Ip.c;672;13;inlining to
+Callgraph clone;Lpspi_Ip_ReadDataFromFifo;5;../RTD/src/Lpspi_Ip.c;266;19;Lpspi_Ip_TransferProcess;13;../RTD/src/Lpspi_Ip.c;672;13;inlining to
+Callgraph clone;Lpspi_Ip_PushDataToFifo;6;../RTD/src/Lpspi_Ip.c;320;19;Lpspi_Ip_SyncTransmit;25;../RTD/src/Lpspi_Ip.c;1858;21;inlining to
+Callgraph clone;Lpspi_Ip_ReadDataFromFifo;5;../RTD/src/Lpspi_Ip.c;266;19;Lpspi_Ip_SyncTransmit;25;../RTD/src/Lpspi_Ip.c;1858;21;inlining to
+Callgraph removal;Lpspi_Ip_PushDataToFifo;6;../RTD/src/Lpspi_Ip.c;320;19
+Callgraph clone;Lpspi_Ip_HalfDuplexTransmitProcess;10;../RTD/src/Lpspi_Ip.c;567;22;Lpspi_Ip_SyncTransmitHalfDuplex;26;../RTD/src/Lpspi_Ip.c;1993;21;inlining to
+Callgraph clone;Lpspi_Ip_ReadDataFromFifo;5;../RTD/src/Lpspi_Ip.c;266;19;Lpspi_Ip_SyncTransmitHalfDuplex;26;../RTD/src/Lpspi_Ip.c;1993;21;inlining to
+Callgraph removal;Lpspi_Ip_ReadDataFromFifo;5;../RTD/src/Lpspi_Ip.c;266;19
+Callgraph removal;Lpspi_Ip_HalfDuplexTransmitProcess;10;../RTD/src/Lpspi_Ip.c;567;22
+Callgraph clone;Lpspi_Ip_CheckValidParameters;14;../RTD/src/Lpspi_Ip.c;778;13;Lpspi_Ip_CheckValidParameters.isra.0;66;../RTD/src/Lpspi_Ip.c;778;13;isra
+Callgraph clone;Lpspi_Ip_CheckValidParameters.part.0;61;../RTD/src/Lpspi_Ip.c;778;13;Lpspi_Ip_CheckValidParameters.isra.0;66;../RTD/src/Lpspi_Ip.c;778;13;inlining to
+Callgraph clone;Lpspi_Ip_RxDmaContinueTransfer;19;../RTD/src/Lpspi_Ip.c;1484;13;Lpspi_Ip_IrqRxDmaHandler;22;../RTD/src/Lpspi_Ip.c;1684;6;inlining to
+Callgraph clone;Lpspi_Ip_TxDmaContinueTransfer;18;../RTD/src/Lpspi_Ip.c;1446;13;Lpspi_Ip_IrqTxDmaHandler;21;../RTD/src/Lpspi_Ip.c;1582;6;inlining to
+Callgraph clone;Lpspi_Ip_TxDmaFinishTransfer;20;../RTD/src/Lpspi_Ip.c;1521;13;Lpspi_Ip_IrqTxDmaHandler;21;../RTD/src/Lpspi_Ip.c;1582;6;inlining to
+Callgraph clone;Lpspi_Ip_DmaInit;15;../RTD/src/Lpspi_Ip.c;1029;13;Lpspi_Ip_Init;23;../RTD/src/Lpspi_Ip.c;1781;21;inlining to
+Callgraph clone;Lpspi_Ip_HalfDupleTransmitChannelComplete;9;../RTD/src/Lpspi_Ip.c;515;16;Lpspi_Ip_TransferProcessHalfDuplex;8;../RTD/src/Lpspi_Ip.c;409;13;inlining to
+Callgraph removal;Lpspi_Ip_CheckValidParameters;14;../RTD/src/Lpspi_Ip.c;778;13
+Callgraph removal;Lpspi_Ip_HalfDupleTransmitChannelComplete;9;../RTD/src/Lpspi_Ip.c;515;16
+Callgraph removal;Lpspi_Ip_CheckValidParameters.part.0;61;../RTD/src/Lpspi_Ip.c;778;13
+Callgraph removal;Lpspi_Ip_TxDmaContinueTransfer;18;../RTD/src/Lpspi_Ip.c;1446;13
+Callgraph removal;Lpspi_Ip_TxDmaFinishTransfer;20;../RTD/src/Lpspi_Ip.c;1521;13
+Callgraph removal;Lpspi_Ip_RxDmaContinueTransfer;19;../RTD/src/Lpspi_Ip.c;1484;13
+Callgraph removal;Lpspi_Ip_DmaInit;15;../RTD/src/Lpspi_Ip.c;1029;13

@@ -1,0 +1,3712 @@
+HwAccDmaCh_SetControl_EnStart.part.0 (struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  uint16 reg;
+  const uint32 LocHwVers;
+  _Bool _2;
+  short unsigned int _5;
+  short unsigned int _6;
+  short unsigned int _7;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#35 s=> LocHwVers
+  # DEBUG LocHwVers => D#35
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = LocValue_1(D) != 0;
+  # DEBUG ptTcd => pxLocTcd_3(D)
+  # DEBUG Value => _2
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetControl_EnStart
+  # DEBUG BEGIN_STMT
+  reg_4 = pxLocTcd_3(D)->reg_CSR;
+  # DEBUG reg => reg_4
+  # DEBUG BEGIN_STMT
+  _5 = reg_4 & 65534;
+  _6 = (short unsigned int) _2;
+  _7 = _5 | _6;
+  pxLocTcd_3(D)->reg_CSR = _7;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_StoreDestinationAddress.part.0 (struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  uint16 reg;
+  const uint32 LocHwVers;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#33 s=> LocHwVers
+  # DEBUG LocHwVers => D#33
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_2(D)
+  # DEBUG Value => LocValue_1(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetControl_StoreDestinationAddress
+  # DEBUG BEGIN_STMT
+  # DEBUG D#8 => pxLocTcd_2(D)->reg_SLAST_SDA
+  # DEBUG reg => D#8
+  # DEBUG BEGIN_STMT
+  pxLocTcd_2(D)->reg_SLAST_SDA = LocValue_1(D);
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_2(D)
+  # DEBUG Value => 1
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetAuxiliary_EnDestinationStoreAddress
+  # DEBUG BEGIN_STMT
+  reg_3 = pxLocTcd_2(D)->reg_CSR;
+  # DEBUG reg => reg_3
+  # DEBUG BEGIN_STMT
+  _4 = reg_3 & 65407;
+  _5 = _4 | 128;
+  pxLocTcd_2(D)->reg_CSR = _5;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_EnMuxTrigger.part.0 (const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  uint32 LocDmaCh;
+  uint32 LocDmaMuxInst;
+  uint32 LocDmaMuxCh;
+  const uint32 LocHwVers;
+  long unsigned int _2;
+  long unsigned int _6;
+  struct DMAMUX_Type * _8;
+  volatile uint8_t * _9;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#31 s=> LocHwVers
+  # DEBUG LocHwVers => D#31
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = LocHwInst_1(D) * 32;
+  LocDmaCh_4 = _2 + LocHwCh_3(D);
+  # DEBUG LocDmaCh => LocDmaCh_4
+  # DEBUG BEGIN_STMT
+  LocDmaMuxInst_5 = LocDmaCh_4 / 6;
+  # DEBUG LocDmaMuxInst => LocDmaMuxInst_5
+  # DEBUG BEGIN_STMT
+  _6 = LocDmaCh_4 % 6;
+  LocDmaMuxCh_7 = _6 ^ 3;
+  # DEBUG LocDmaMuxCh => LocDmaMuxCh_7
+  # DEBUG BEGIN_STMT
+  _8 = Dma_Ip_paxHwv3MuxBase[LocDmaMuxInst_5];
+  _9 = &_8->CHCFG[LocDmaMuxCh_7];
+  hwv3AccInlineDmaCh_SetRequest_EnTriggerMux (_9, LocValue_10(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 3> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_MuxSource.part.0 (const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  uint32 LocDmaCh;
+  uint32 LocDmaMuxInst;
+  uint32 LocDmaMuxCh;
+  const uint32 LocHwVers;
+  long unsigned int _2;
+  long unsigned int _6;
+  struct DMAMUX_Type * _8;
+  volatile uint8_t * _9;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#29 s=> LocHwVers
+  # DEBUG LocHwVers => D#29
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = LocHwInst_1(D) * 32;
+  LocDmaCh_4 = _2 + LocHwCh_3(D);
+  # DEBUG LocDmaCh => LocDmaCh_4
+  # DEBUG BEGIN_STMT
+  LocDmaMuxInst_5 = LocDmaCh_4 / 6;
+  # DEBUG LocDmaMuxInst => LocDmaMuxInst_5
+  # DEBUG BEGIN_STMT
+  _6 = LocDmaCh_4 % 6;
+  LocDmaMuxCh_7 = _6 ^ 3;
+  # DEBUG LocDmaMuxCh => LocDmaMuxCh_7
+  # DEBUG BEGIN_STMT
+  _8 = Dma_Ip_paxHwv3MuxBase[LocDmaMuxInst_5];
+  _9 = &_8->CHCFG[LocDmaMuxCh_7];
+  hwv3AccInlineDmaCh_SetRequest_SourceMux (_9, LocValue_10(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 3> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_EnMuxSource.part.0 (const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  uint32 LocDmaCh;
+  uint32 LocDmaMuxInst;
+  uint32 LocDmaMuxCh;
+  const uint32 LocHwVers;
+  long unsigned int _2;
+  long unsigned int _6;
+  struct DMAMUX_Type * _8;
+  volatile uint8_t * _9;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#27 s=> LocHwVers
+  # DEBUG LocHwVers => D#27
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _2 = LocHwInst_1(D) * 32;
+  LocDmaCh_4 = _2 + LocHwCh_3(D);
+  # DEBUG LocDmaCh => LocDmaCh_4
+  # DEBUG BEGIN_STMT
+  LocDmaMuxInst_5 = LocDmaCh_4 / 6;
+  # DEBUG LocDmaMuxInst => LocDmaMuxInst_5
+  # DEBUG BEGIN_STMT
+  _6 = LocDmaCh_4 % 6;
+  LocDmaMuxCh_7 = _6 ^ 3;
+  # DEBUG LocDmaMuxCh => LocDmaMuxCh_7
+  # DEBUG BEGIN_STMT
+  _8 = Dma_Ip_paxHwv3MuxBase[LocDmaMuxInst_5];
+  _9 = &_8->CHCFG[LocDmaMuxCh_7];
+  hwv3AccInlineDmaCh_SetRequest_EnHwRequestMux (_9, LocValue_10(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 3> [local count: 1073741824]:
+  return;
+
+}
+
+
+hwAccDmaInst_CmdResume.part.0 ()
+{
+  uint32 LocHwVers;
+  uint32 LocHwInst;
+  uint32 reg;
+  const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#20 s=> pxLocLogicInst
+  # DEBUG pxLocLogicInst => D#20
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptInst => 1075888128B
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_CmdResume
+  # DEBUG BEGIN_STMT
+  reg_1 ={v} MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR;
+  # DEBUG reg => reg_1
+  # DEBUG BEGIN_STMT
+  reg_2 = reg_1 & 4294967263;
+  # DEBUG reg => reg_2
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR ={v} reg_2;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+hwAccDmaInst_CmdHalt.part.0 ()
+{
+  uint32 LocHwVers;
+  uint32 LocHwInst;
+  uint32 reg;
+  const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#17 s=> pxLocLogicInst
+  # DEBUG pxLocLogicInst => D#17
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptInst => 1075888128B
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_CmdHalt
+  # DEBUG BEGIN_STMT
+  reg_1 ={v} MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR;
+  # DEBUG reg => reg_1
+  # DEBUG BEGIN_STMT
+  reg_2 = reg_1 | 32;
+  # DEBUG reg => reg_2
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR ={v} reg_2;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+hwAccDmaInst_CmdCancelTransferWithError.part.0 ()
+{
+  uint32 LocHwVers;
+  uint32 LocHwInst;
+  uint32 reg;
+  const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#14 s=> pxLocLogicInst
+  # DEBUG pxLocLogicInst => D#14
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptInst => 1075888128B
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_CmdCancelTransferWithError
+  # DEBUG BEGIN_STMT
+  reg_1 ={v} MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR;
+  # DEBUG reg => reg_1
+  # DEBUG BEGIN_STMT
+  reg_2 = reg_1 | 256;
+  # DEBUG reg => reg_2
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR ={v} reg_2;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+hwAccDmaInst_CmdCancelTransfer.part.0 ()
+{
+  uint32 LocHwVers;
+  uint32 LocHwInst;
+  uint32 reg;
+  const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG D#11 s=> pxLocLogicInst
+  # DEBUG pxLocLogicInst => D#11
+
+  <bb 2> [local count: 1073741824]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptInst => 1075888128B
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_CmdCancelTransfer
+  # DEBUG BEGIN_STMT
+  reg_1 ={v} MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR;
+  # DEBUG reg => reg_1
+  # DEBUG BEGIN_STMT
+  reg_2 = reg_1 | 512;
+  # DEBUG reg => reg_2
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR ={v} reg_2;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnScatterGatherProcessing (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, boolean LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetAuxiliary_EnScatterGatherProcessing (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_ScatterGatherAddress (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress
+  # DEBUG BEGIN_STMT
+  # DEBUG D#7 => pxLocTcd_4(D)->reg_DLAST_SGA
+  # DEBUG reg => D#7
+  # DEBUG BEGIN_STMT
+  pxLocTcd_4(D)->reg_DLAST_SGA = LocValue_5(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd (const struct Dma_Ip_LogicChannelIdType * const pxLocLogicCh, const struct Dma_Ip_ScatterGatherConfigType * const pxLocScatterGather)
+{
+  uint32 reg;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned char _3;
+  struct Dma_Ip_Hwv3ChTcdRegType * _4;
+  struct Dma_Ip_SwTcdRegType * _5;
+  long unsigned int _6;
+  short unsigned int _7;
+  short unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  short unsigned int _12;
+  short unsigned int _13;
+  long unsigned int _14;
+  short unsigned int _15;
+  short unsigned int _16;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicCh_19(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  _2 = pxLocLogicCh_19(D)->HwInstId;
+  LocHwInst_20 = (uint32) _2;
+  # DEBUG LocHwInst => LocHwInst_20
+  # DEBUG BEGIN_STMT
+  _3 = pxLocLogicCh_19(D)->HwChId;
+  LocHwCh_21 = (uint32) _3;
+  # DEBUG LocHwCh => LocHwCh_21
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  _4 = g_ptHwChTcdPtrArray[LocHwInst_20][LocHwCh_21];
+  # DEBUG D#52 => &_4->tChReg
+  # DEBUG ptCh => D#52
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_CmdClearDone
+  # DEBUG BEGIN_STMT
+  reg_34 = MEM[(struct Dma_Ip_ChRegType *)_4].reg_CH_CSR;
+  # DEBUG reg => reg_34
+  # DEBUG BEGIN_STMT
+  reg_35 = reg_34 | 1073741824;
+  # DEBUG reg => reg_35
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_ChRegType *)_4].reg_CH_CSR = reg_35;
+  # DEBUG ptCh => NULL
+  # DEBUG reg => NULL
+  # DEBUG BEGIN_STMT
+  _5 = pxLocScatterGather_22(D)->Stcd;
+  _6 = _5->reg_SADDR;
+  _4->tTcdReg.reg_SADDR = _6;
+  # DEBUG BEGIN_STMT
+  _7 = _5->reg_SOFF;
+  _4->tTcdReg.reg_SOFF = _7;
+  # DEBUG BEGIN_STMT
+  _8 = _5->reg_ATTR;
+  _4->tTcdReg.reg_ATTR = _8;
+  # DEBUG BEGIN_STMT
+  _9 = _5->reg_NBYTES.reg_MLOFFYES;
+  _4->tTcdReg.reg_NBYTES.reg_MLOFFYES = _9;
+  # DEBUG BEGIN_STMT
+  _10 = _5->reg_SLAST_SDA;
+  _4->tTcdReg.reg_SLAST_SDA = _10;
+  # DEBUG BEGIN_STMT
+  _11 = _5->reg_DADDR;
+  _4->tTcdReg.reg_DADDR = _11;
+  # DEBUG BEGIN_STMT
+  _12 = _5->reg_DOFF;
+  _4->tTcdReg.reg_DOFF = _12;
+  # DEBUG BEGIN_STMT
+  _13 = _5->reg_CITER.reg_ELINKYES;
+  _4->tTcdReg.reg_CITER.reg_ELINKYES = _13;
+  # DEBUG BEGIN_STMT
+  _14 = _5->reg_DLAST_SGA;
+  _4->tTcdReg.reg_DLAST_SGA = _14;
+  # DEBUG BEGIN_STMT
+  _15 = _5->reg_BITER.reg_ELINKYES;
+  _4->tTcdReg.reg_BITER.reg_ELINKYES = _15;
+  # DEBUG BEGIN_STMT
+  _16 = _5->reg_CSR;
+  _4->tTcdReg.reg_CSR = _16;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+HwAccDmaCh_LoadConfigIntoSoftwareTcd (uint32 HwVersId, const struct Dma_Ip_ScatterGatherConfigType * const pxLocScatterGather, const uint32 ElementId, const boolean NotLastElement)
+{
+  uint32 hwLinkCh;
+  struct Dma_Ip_SwTcdRegType * _1;
+  struct Dma_Ip_ScatterGatherConfigType * _2;
+  struct Dma_Ip_SwTcdRegType * _3;
+  long unsigned int _4;
+  struct Dma_Ip_SwTcdRegType * _5;
+  struct Dma_Ip_SwTcdRegType * _6;
+  struct Dma_Ip_TransferConfigType * _7;
+  struct Dma_Ip_SwTcdRegType * _8;
+  struct Dma_Ip_SwTcdRegType * _9;
+  struct Dma_Ip_TransferConfigType * _10;
+  long unsigned int _11;
+  short int _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  short int _15;
+  long unsigned int _16;
+  struct Dma_Ip_SwTcdRegType * _17;
+  struct Dma_Ip_SwTcdRegType * _18;
+  struct Dma_Ip_TransferConfigType * _19;
+  _Bool _20;
+  struct Dma_Ip_TransferConfigType * _21;
+  unsigned char _22;
+  long unsigned int _23;
+  struct Dma_Ip_SwTcdRegType * _24;
+  struct Dma_Ip_SwTcdRegType * _25;
+  struct Dma_Ip_TransferConfigType * _26;
+  long unsigned int _27;
+  struct Dma_Ip_SwTcdRegType * _28;
+  struct Dma_Ip_TransferConfigType * _29;
+  _Bool _30;
+  struct Dma_Ip_TransferConfigType * _31;
+  _Bool _32;
+  unsigned char _33;
+  long unsigned int _34;
+  struct Dma_Ip_SwTcdRegType * _35;
+  struct Dma_Ip_SwTcdRegType * _36;
+  struct Dma_Ip_SwTcdRegType * _37;
+  struct Dma_Ip_TransferConfigType * _38;
+  long unsigned int _39;
+  struct Dma_Ip_SwTcdRegType * _40;
+  struct Dma_Ip_TransferConfigType * _41;
+  long int _42;
+  long unsigned int _43;
+  const uint32 iftmp.10_44;
+  const uint32 iftmp.11_45;
+  short unsigned int _69;
+  short unsigned int _70;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (HwVersId_49(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 15>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  if (NotLastElement_51(D) != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 4> [local count: 182536112]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocScatterGather_52(D)->Stcd;
+  _2 = pxLocScatterGather_52(D)->NextConfig;
+  _3 = _2->Stcd;
+  _4 = (long unsigned int) _3;
+  # DEBUG ptTcd => _1
+  # DEBUG Value => _4
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress
+  # DEBUG BEGIN_STMT
+  # DEBUG D#7 => MEM[(struct Dma_Ip_TcdRegType *)_1].reg_DLAST_SGA
+  # DEBUG reg => D#7
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_TcdRegType *)_1].reg_DLAST_SGA = _4;
+  goto <bb 6>; [100.00%]
+
+  <bb 5> [local count: 182536112]:
+  # DEBUG BEGIN_STMT
+  _5 = pxLocScatterGather_52(D)->Stcd;
+  # DEBUG ptTcd => _5
+  # DEBUG Value => 0
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress
+  # DEBUG BEGIN_STMT
+  # DEBUG D#7 => MEM[(struct Dma_Ip_TcdRegType *)_5].reg_DLAST_SGA
+  # DEBUG reg => D#7
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_TcdRegType *)_5].reg_DLAST_SGA = 0;
+
+  <bb 6> [local count: 365072224]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  _6 = pxLocScatterGather_52(D)->Stcd;
+  hwv3AccInlineDmaCh_SetAuxiliary_EnScatterGatherProcessing (_6, NotLastElement_51(D));
+  # DEBUG BEGIN_STMT
+  _7 = pxLocScatterGather_52(D)->TransferConfig;
+  if (_7 != 0B)
+    goto <bb 7>; [53.47%]
+  else
+    goto <bb 15>; [46.53%]
+
+  <bb 7> [local count: 195204118]:
+  # DEBUG BEGIN_STMT
+  _8 = pxLocScatterGather_52(D)->Stcd;
+  hwv3AccInlineDmaCh_SetControlAndStatus (_8, pxLocScatterGather_52(D));
+  # DEBUG BEGIN_STMT
+  _9 = pxLocScatterGather_52(D)->Stcd;
+  _10 = pxLocScatterGather_52(D)->TransferConfig;
+  _11 = _10->Source.Addr;
+  # DEBUG ptTcd => _9
+  # DEBUG Value => _11
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetSource_Address
+  # DEBUG BEGIN_STMT
+  # DEBUG D#1 => MEM[(struct Dma_Ip_TcdRegType *)_9].reg_SADDR
+  # DEBUG reg => D#1
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_TcdRegType *)_9].reg_SADDR = _11;
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  _12 = _10->Source.SignedOffset;
+  _13 = (long unsigned int) _12;
+  # DEBUG ptTcd => _9
+  # DEBUG Value => _13
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetSource_SignedOffset
+  # DEBUG BEGIN_STMT
+  # DEBUG D#2 => MEM[(struct Dma_Ip_TcdRegType *)_9].reg_SOFF
+  # DEBUG reg => (uint32) D#2
+  # DEBUG BEGIN_STMT
+  _70 = (short unsigned int) _13;
+  MEM[(struct Dma_Ip_TcdRegType *)_9].reg_SOFF = _70;
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  _14 = _10->Destination.Addr;
+  # DEBUG ptTcd => _9
+  # DEBUG Value => _14
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetDestination_Address
+  # DEBUG BEGIN_STMT
+  # DEBUG D#4 => MEM[(struct Dma_Ip_TcdRegType *)_9].reg_DADDR
+  # DEBUG reg => D#4
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_TcdRegType *)_9].reg_DADDR = _14;
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  _15 = _10->Destination.SignedOffset;
+  _16 = (long unsigned int) _15;
+  # DEBUG ptTcd => _9
+  # DEBUG Value => _16
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetDestination_SignedOffset
+  # DEBUG BEGIN_STMT
+  # DEBUG D#5 => MEM[(struct Dma_Ip_TcdRegType *)_9].reg_DOFF
+  # DEBUG reg => D#5
+  # DEBUG BEGIN_STMT
+  _69 = (short unsigned int) _16;
+  MEM[(struct Dma_Ip_TcdRegType *)_9].reg_DOFF = _69;
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetTransferAttributes (_9, pxLocScatterGather_52(D));
+  # DEBUG BEGIN_STMT
+  _17 = pxLocScatterGather_52(D)->Stcd;
+  hwv3AccInlineDmaCh_SetSignedMinorLoopOffset (_17, pxLocScatterGather_52(D));
+  # DEBUG BEGIN_STMT
+  _18 = pxLocScatterGather_52(D)->Stcd;
+  _19 = pxLocScatterGather_52(D)->TransferConfig;
+  _20 = _19->MinorLoop.EnLink;
+  if (_20 != 0)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 8> [local count: 97602059]:
+
+  <bb 9> [local count: 195204118]:
+  # iftmp.10_44 = PHI <1(7), 0(8)>
+  hwv3AccInlineDmaCh_SetMinorLoop_EnLink (_18, iftmp.10_44);
+  # DEBUG BEGIN_STMT
+  _21 = pxLocScatterGather_52(D)->TransferConfig;
+  _22 = _21->MinorLoop.LogicLinkCh;
+  _23 = (long unsigned int) _22;
+  hwLinkCh_59 = Dma_Ip_ConvertLogicChToHwCh (_23);
+  # DEBUG hwLinkCh => hwLinkCh_59
+  # DEBUG BEGIN_STMT
+  _24 = pxLocScatterGather_52(D)->Stcd;
+  hwv3AccInlineDmaCh_SetMinorLoop_LinkCh (_24, hwLinkCh_59);
+  # DEBUG BEGIN_STMT
+  _25 = pxLocScatterGather_52(D)->Stcd;
+  _26 = pxLocScatterGather_52(D)->TransferConfig;
+  _27 = _26->MinorLoop.Size;
+  hwv3AccInlineDmaCh_SetMinorLoop_Size (_25, _27);
+  # DEBUG BEGIN_STMT
+  _28 = pxLocScatterGather_52(D)->Stcd;
+  _29 = pxLocScatterGather_52(D)->TransferConfig;
+  _30 = _29->MajorLoop.EnLink;
+  if (_30 != 0)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 10> [local count: 97602059]:
+
+  <bb 11> [local count: 195204118]:
+  # iftmp.11_45 = PHI <1(9), 0(10)>
+  hwv3AccInlineDmaCh_SetMajorLoop_EnLink (_28, iftmp.11_45);
+  # DEBUG BEGIN_STMT
+  _31 = pxLocScatterGather_52(D)->TransferConfig;
+  _32 = _31->MajorLoop.EnLink;
+  if (_32 != 0)
+    goto <bb 12>; [50.00%]
+  else
+    goto <bb 13>; [50.00%]
+
+  <bb 12> [local count: 97602059]:
+  # DEBUG BEGIN_STMT
+  _33 = _31->MajorLoop.LogicLinkCh;
+  _34 = (long unsigned int) _33;
+  hwLinkCh_66 = Dma_Ip_ConvertLogicChToHwCh (_34);
+  # DEBUG hwLinkCh => hwLinkCh_66
+  # DEBUG BEGIN_STMT
+  _35 = pxLocScatterGather_52(D)->Stcd;
+  hwv3AccInlineDmaCh_SetMajorLoop_LinkCh (_35, hwLinkCh_66);
+  goto <bb 14>; [100.00%]
+
+  <bb 13> [local count: 97602059]:
+  # DEBUG BEGIN_STMT
+  _36 = pxLocScatterGather_52(D)->Stcd;
+  hwv3AccInlineDmaCh_SetMajorLoop_LinkCh (_36, ElementId_63(D));
+
+  <bb 14> [local count: 195204118]:
+  # DEBUG BEGIN_STMT
+  _37 = pxLocScatterGather_52(D)->Stcd;
+  _38 = pxLocScatterGather_52(D)->TransferConfig;
+  _39 = _38->MajorLoop.Count;
+  hwv3AccInlineDmaCh_SetMajorLoop_Count (_37, _39);
+  # DEBUG BEGIN_STMT
+  _40 = pxLocScatterGather_52(D)->Stcd;
+  _41 = pxLocScatterGather_52(D)->TransferConfig;
+  _42 = _41->Source.LastAddrAdj;
+  _43 = (long unsigned int) _42;
+  # DEBUG ptTcd => _40
+  # DEBUG Value => _43
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetSource_SignedLastAddrAdj
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => MEM[(struct Dma_Ip_TcdRegType *)_40].reg_SLAST_SDA
+  # DEBUG reg => D#3
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_TcdRegType *)_40].reg_SLAST_SDA = _43;
+
+  <bb 15> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+HwAccDmaCh_GetParam (const uint32 Parameter, const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  static void (*<T6b0>) (const uint32, const uint32, const uint32, uint32 * const) fpHwAcc_DmaCh_GetParam[9] = {HwAccDmaCh_GetSourceAddress, HwAccDmaCh_GetDestinationAddress, HwAccDmaCh_GetBeginIterCount, HwAccDmaCh_GetCurrentIterCount, HwAccDmaCh_GetStoreDstAddress, HwAccDmaCh_GetMasterId, HwAccDmaCh_GetIntMajor, HwAccDmaCh_GetIntHalfMajor, HwAccDmaCh_GetParamDummyFunction};
+  void (*<T6ac>) (const uint32, const uint32, const uint32, uint32 * const) _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fpHwAcc_DmaCh_GetParam[Parameter_3(D)];
+  _1 (LocHwVers_4(D), LocHwInst_5(D), LocHwCh_6(D), retValue_7(D));
+  return;
+
+}
+
+
+HwAccDmaCh_GetIntHalfMajor (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  short unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#41 => &_1->tTcdReg
+  # DEBUG ptTcd => D#41
+  # DEBUG retValue => retValue_7(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetIntHalfMajor
+  # DEBUG BEGIN_STMT
+  _8 = MEM[(const struct Dma_Ip_TcdRegType *)_1 + 32B].reg_CSR;
+  _9 = (long unsigned int) _8;
+  _10 = _9 >> 2;
+  _11 = _10 & 1;
+  *retValue_7(D) = _11;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG retValue => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_GetIntMajor (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  short unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#40 => &_1->tTcdReg
+  # DEBUG ptTcd => D#40
+  # DEBUG retValue => retValue_7(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetIntMajor
+  # DEBUG BEGIN_STMT
+  _8 = MEM[(const struct Dma_Ip_TcdRegType *)_1 + 32B].reg_CSR;
+  _9 = (long unsigned int) _8;
+  _10 = _9 >> 1;
+  _11 = _10 & 1;
+  *retValue_7(D) = _11;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG retValue => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_GetMasterId (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  long unsigned int _8;
+  long unsigned int _9;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#39 => &_1->tChReg
+  # DEBUG ptCh => D#39
+  # DEBUG retValue => retValue_7(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetMasterId
+  # DEBUG BEGIN_STMT
+  _8 = MEM[(const struct Dma_Ip_ChRegType *)_1].reg_CH_SBR;
+  _9 = _8 & 63;
+  *retValue_7(D) = _9;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG retValue => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_GetStoreDstAddress (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  uint32 * LocPhysicalAddress.9_2;
+  long unsigned int _3;
+  long unsigned int _11;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_5(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_7(D)][LocHwCh_8(D)];
+  # DEBUG D#38 => &_1->tTcdReg
+  # DEBUG ptTcd => D#38
+  # DEBUG retValue => &LocPhysicalAddress
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetStoreDstAddress
+  # DEBUG BEGIN_STMT
+  _11 = MEM[(const struct Dma_Ip_TcdRegType *)_1 + 32B].reg_SLAST_SDA;
+  # DEBUG LocPhysicalAddress => _11
+  # DEBUG ptTcd => NULL
+  # DEBUG retValue => NULL
+  # DEBUG BEGIN_STMT
+  LocPhysicalAddress.9_2 = (uint32 *) _11;
+  _3 = *LocPhysicalAddress.9_2;
+  *retValue_9(D) = _3;
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG LocPhysicalAddress => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_GetCurrentIterCount (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_TcdRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tTcdReg;
+  hwv3AccInlineDmaCh_GetCurrentIterCount (_2, retValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_GetBeginIterCount (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_TcdRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tTcdReg;
+  hwv3AccInlineDmaCh_GetBeginIterCount (_2, retValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_GetDestinationAddress (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  long unsigned int _9;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#37 => &_1->tTcdReg
+  # DEBUG ptTcd => D#37
+  # DEBUG retValue => &LocPhysicalAddress
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetDestinationAddress
+  # DEBUG BEGIN_STMT
+  _9 = MEM[(const struct Dma_Ip_TcdRegType *)_1 + 32B].reg_DADDR;
+  # DEBUG LocPhysicalAddress => _9
+  # DEBUG ptTcd => NULL
+  # DEBUG retValue => NULL
+  # DEBUG BEGIN_STMT
+  *retValue_7(D) = _9;
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG LocPhysicalAddress => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_GetSourceAddress (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  long unsigned int _9;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#36 => &_1->tTcdReg
+  # DEBUG ptTcd => D#36
+  # DEBUG retValue => &LocPhysicalAddress
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetSourceAddress
+  # DEBUG BEGIN_STMT
+  _9 = MEM[(const struct Dma_Ip_TcdRegType *)_1 + 32B].reg_SADDR;
+  # DEBUG LocPhysicalAddress => _9
+  # DEBUG ptTcd => NULL
+  # DEBUG retValue => NULL
+  # DEBUG BEGIN_STMT
+  *retValue_7(D) = _9;
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG LocPhysicalAddress => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetTransferParam (const uint32 Parameter, const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  static void (*<T6a1>) (const uint32, struct Dma_Ip_TcdRegType *, const uint32) fpHwAcc_DmaCh_SetTransferParam[26] = {HwAccDmaCh_SetSource_Address, HwAccDmaCh_SetSource_SignedOffset, HwAccDmaCh_SetSource_LastAddrAdj, HwAccDmaCh_SetSource_TransferSize, HwAccDmaCh_SetSource_Modulo, HwAccDmaCh_SetDestination_Address, HwAccDmaCh_SetDestination_SignedOffset, HwAccDmaCh_SetDestination_LastAddrAdj, HwAccDmaCh_SetDestination_TransferSize, HwAccDmaCh_SetDestination_Modulo, HwAccDmaCh_SetMinorLoop_enSrcOffset, HwAccDmaCh_SetMinorLoop_enDstOffset, HwAccDmaCh_SetMinorLoop_Offset, HwAccDmaCh_SetMinorLoop_EnLink, HwAccDmaCh_SetMinorLoop_LogicLinkCh, HwAccDmaCh_SetMinorLoop_Size, HwAccDmaCh_SetMajorLoop_EnLink, HwAccDmaCh_SetMajorLoop_LogicLinkCh, HwAccDmaCh_SetMajorLoop_Count, HwAccDmaCh_SetControl_StoreDestinationAddress, HwAccDmaCh_SetControl_EnStart, HwAccDmaCh_SetControl_EnMajor, HwAccDmaCh_SetControl_EnHalfMajor, HwAccDmaCh_SetControl_DisAutoHwRequest, HwAccDmaCh_SetControl_EnEndOfPacketSignal, HwAccDmaCh_SetControl_BandwidthControl};
+  void (*<T69d>) (const uint32, struct Dma_Ip_TcdRegType *, const uint32) _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fpHwAcc_DmaCh_SetTransferParam[Parameter_3(D)];
+  _1 (LocHwVers_4(D), pxLocTcd_5(D), LocValue_6(D));
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_BandwidthControl (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetControl_BandwidthControl (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnEndOfPacketSignal (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetControl_EnEndOfPacketSignal (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_DisAutoHwRequest (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetControl_DisAutoHwRequest (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnHalfMajor (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetControl_EnHalfMajor (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnMajor (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetControl_EnMajor (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnStart (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_1(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG D#34 => LocHwVers_1(D)
+  HwAccDmaCh_SetControl_EnStart.part.0 (pxLocTcd_4(D), LocValue_3(D));
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_StoreDestinationAddress (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_1(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG D#32 => LocHwVers_1(D)
+  HwAccDmaCh_SetControl_StoreDestinationAddress.part.0 (pxLocTcd_3(D), LocValue_4(D));
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetMajorLoop_Count (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMajorLoop_Count (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMajorLoop_LogicLinkCh (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  uint32 hwLinkCh;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  hwLinkCh_5 = Dma_Ip_ConvertLogicChToHwCh (LocValue_3(D));
+  # DEBUG hwLinkCh => hwLinkCh_5
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_6(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMajorLoop_LinkCh (pxLocTcd_7(D), hwLinkCh_5);
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMajorLoop_EnLink (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMajorLoop_EnLink (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMinorLoop_Size (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMinorLoop_Size (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMinorLoop_LogicLinkCh (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  uint32 hwLinkCh;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  hwLinkCh_5 = Dma_Ip_ConvertLogicChToHwCh (LocValue_3(D));
+  # DEBUG hwLinkCh => hwLinkCh_5
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_6(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMinorLoop_LinkCh (pxLocTcd_7(D), hwLinkCh_5);
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMinorLoop_EnLink (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMinorLoop_EnLink (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMinorLoop_Offset (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMinorLoop_SignedOffset (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMinorLoop_enDstOffset (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMinorLoop_enDstOffset (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetMinorLoop_enSrcOffset (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetMinorLoop_enSrcOffset (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetDestination_Modulo (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetDestination_Modulo (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetDestination_TransferSize (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetDestination_TransferSize (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetDestination_LastAddrAdj (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetDestination_LastAddrAdj
+  # DEBUG BEGIN_STMT
+  # DEBUG D#6 => pxLocTcd_4(D)->reg_DLAST_SGA
+  # DEBUG reg => D#6
+  # DEBUG BEGIN_STMT
+  pxLocTcd_4(D)->reg_DLAST_SGA = LocValue_5(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetDestination_SignedOffset (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  short unsigned int _6;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetDestination_SignedOffset
+  # DEBUG BEGIN_STMT
+  # DEBUG D#5 => pxLocTcd_4(D)->reg_DOFF
+  # DEBUG reg => D#5
+  # DEBUG BEGIN_STMT
+  _6 = (short unsigned int) LocValue_5(D);
+  pxLocTcd_4(D)->reg_DOFF = _6;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetDestination_Address (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetDestination_Address
+  # DEBUG BEGIN_STMT
+  # DEBUG D#4 => pxLocTcd_4(D)->reg_DADDR
+  # DEBUG reg => D#4
+  # DEBUG BEGIN_STMT
+  pxLocTcd_4(D)->reg_DADDR = LocValue_5(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetSource_Modulo (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetSource_Modulo (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetSource_TransferSize (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaCh_SetSource_TransferSize (pxLocTcd_4(D), LocValue_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetSource_LastAddrAdj (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  uint16 reg;
+  short unsigned int _7;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => 0
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetAuxiliary_EnDestinationStoreAddress
+  # DEBUG BEGIN_STMT
+  reg_6 = pxLocTcd_4(D)->reg_CSR;
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _7 = reg_6 & 65407;
+  pxLocTcd_4(D)->reg_CSR = _7;
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  # DEBUG reg => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetSource_SignedLastAddrAdj
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => pxLocTcd_4(D)->reg_SLAST_SDA
+  # DEBUG reg => D#3
+  # DEBUG BEGIN_STMT
+  pxLocTcd_4(D)->reg_SLAST_SDA = LocValue_5(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetSource_SignedOffset (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  short unsigned int _6;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetSource_SignedOffset
+  # DEBUG BEGIN_STMT
+  # DEBUG D#2 => pxLocTcd_4(D)->reg_SOFF
+  # DEBUG reg => (uint32) D#2
+  # DEBUG BEGIN_STMT
+  _6 = (short unsigned int) LocValue_5(D);
+  pxLocTcd_4(D)->reg_SOFF = _6;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetSource_Address (const uint32 LocHwVers, struct Dma_Ip_TcdRegType * pxLocTcd, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_2(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  # DEBUG ptTcd => pxLocTcd_4(D)
+  # DEBUG Value => LocValue_5(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_SetSource_Address
+  # DEBUG BEGIN_STMT
+  # DEBUG D#1 => pxLocTcd_4(D)->reg_SADDR
+  # DEBUG reg => D#1
+  # DEBUG BEGIN_STMT
+  pxLocTcd_4(D)->reg_SADDR = LocValue_5(D);
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG Value => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetGlobalParam (const uint32 Parameter, const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  static void (*<T68d>) (const uint32, const uint32, const uint32, const uint32) fpHwAcc_DmaCh_SetGlobalParam[11] = {HwAccDmaCh_SetControl_EnMasterIdReplication, HwAccDmaCh_SetControl_EnBufferedWrites, HwAccDmaCh_SetRequest_EnMuxSource, HwAccDmaCh_SetRequest_MuxSource, HwAccDmaCh_SetRequest_EnMuxTrigger, HwAccDmaCh_SetRequest_EnRequest, HwAccDmaCh_SetInterrupt_EnError, HwAccDmaCh_SetPriority_Group, HwAccDmaCh_SetPriority_Level, HwAccDmaCh_SetPriority_EnPreemption, HwAccDmaCh_SetPriority_DisPreempt};
+  void (*<T689>) (const uint32, const uint32, const uint32, const uint32) _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fpHwAcc_DmaCh_SetGlobalParam[Parameter_3(D)];
+  _1 (LocHwVers_4(D), LocHwInst_5(D), LocHwCh_6(D), LocValue_7(D));
+  return;
+
+}
+
+
+HwAccDmaCh_SetPriority_DisPreempt (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetPriority_DisPreempt (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetPriority_EnPreemption (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetPriority_EnPreemption (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetPriority_Level (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetPriority_Level (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetPriority_Group (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  volatile uint32 * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = &MEM[(struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CH_GRPRI[LocHwCh_5(D)];
+  hwv3AccInlineDmaCh_SetPriority_Group (_1, LocValue_6(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetInterrupt_EnError (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetInterrupt_EnError (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_EnRequest (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetRequest_EnHwRequest (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_EnMuxTrigger (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaCh => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaMuxInst => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaMuxCh => 0
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG D#30 => LocHwVers_3(D)
+  HwAccDmaCh_SetRequest_EnMuxTrigger.part.0 (LocHwInst_5(D), LocHwCh_6(D), LocValue_7(D));
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_MuxSource (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaCh => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaMuxInst => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaMuxCh => 0
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG D#28 => LocHwVers_3(D)
+  HwAccDmaCh_SetRequest_MuxSource.part.0 (LocHwInst_5(D), LocHwCh_6(D), LocValue_7(D));
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetRequest_EnMuxSource (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaCh => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaMuxInst => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocDmaMuxCh => 0
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG D#26 => LocHwVers_3(D)
+  HwAccDmaCh_SetRequest_EnMuxSource.part.0 (LocHwInst_5(D), LocHwCh_6(D), LocValue_7(D));
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnBufferedWrites (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetControl_EnBufferedWrites (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_SetControl_EnMasterIdReplication (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const uint32 LocValue)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  struct Dma_Ip_ChRegType * _2;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_4(D) == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_6(D)][LocHwCh_7(D)];
+  _2 = &_1->tChReg;
+  hwv3AccInlineDmaCh_SetControl_EnMasterIdReplication (_2, LocValue_8(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_GetStatus_Error (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const pLocError)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  long unsigned int _8;
+  long unsigned int _9;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#51 => &_1->tChReg
+  # DEBUG ptCh => D#51
+  # DEBUG pValue => pLocError_7(D)
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetErrorStatus
+  # DEBUG BEGIN_STMT
+  _8 = MEM[(const struct Dma_Ip_ChRegType *)_1].reg_CH_ES;
+  _9 = _8 & 2147483903;
+  *pLocError_7(D) = _9;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG pValue => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_GetStatus (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, struct Dma_Ip_LogicChannelStatusType * const pChStatus)
+{
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+  long unsigned int _8;
+  _Bool _9;
+  long unsigned int _10;
+  signed int _11;
+  _Bool _12;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#47 => &_1->tChReg
+  # DEBUG D#48 => &pChStatus_7(D)->Active
+  # DEBUG ptCh => D#47
+  # DEBUG pBool => D#48
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetActiveStatus
+  # DEBUG BEGIN_STMT
+  _10 = MEM[(const struct Dma_Ip_ChRegType *)_1].reg_CH_CSR;
+  _11 = (signed int) _10;
+  _12 = _11 < 0;
+  MEM[(boolean *)pChStatus_7(D) + 8B] = _12;
+  # DEBUG ptCh => NULL
+  # DEBUG pBool => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG D#49 => &_1->tChReg
+  # DEBUG D#50 => &pChStatus_7(D)->Done
+  # DEBUG ptCh => D#49
+  # DEBUG pBool => D#50
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_GetDoneStatus
+  # DEBUG BEGIN_STMT
+  _8 = _10 & 1073741824;
+  _9 = _8 != 0;
+  MEM[(boolean *)pChStatus_7(D) + 9B] = _9;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG pBool => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_SetCommand (const uint32 Command, const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  static void (*<T673>) (const uint32, const uint32, const uint32) fpHwAcc_DmaCh_Command[5] = {HwAccDmaCh_CmdSetHwRequest, HwAccDmaCh_CmdClearHwRequest, HwAccDmaCh_CmdSetSwRequest, HwAccDmaCh_CmdClearDone, HwAccDmaCh_CmdClearError};
+  void (*<T66f>) (const uint32, const uint32, const uint32) _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fpHwAcc_DmaCh_Command[Command_3(D)];
+  _1 (LocHwVers_4(D), LocHwInst_5(D), LocHwCh_6(D));
+  return;
+
+}
+
+
+HwAccDmaCh_CmdClearError (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  uint32 reg;
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#25 => &_1->tChReg
+  # DEBUG ptCh => D#25
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_CmdClearError
+  # DEBUG BEGIN_STMT
+  reg_7 = MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_ES;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  reg_8 = reg_7 | 2147483648;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_ES = reg_8;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_CmdClearDone (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  uint32 reg;
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#24 => &_1->tChReg
+  # DEBUG ptCh => D#24
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_CmdClearDone
+  # DEBUG BEGIN_STMT
+  reg_7 = MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  reg_8 = reg_7 | 1073741824;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_CSR = reg_8;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_CmdSetSwRequest (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  uint16 reg;
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#23 => &_1->tTcdReg
+  # DEBUG ptTcd => D#23
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_CmdSwReqStart
+  # DEBUG BEGIN_STMT
+  reg_7 = MEM[(struct Dma_Ip_TcdRegType *)_1 + 32B].reg_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  reg_8 = reg_7 | 1;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_TcdRegType *)_1 + 32B].reg_CSR = reg_8;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptTcd => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_CmdClearHwRequest (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  uint32 reg;
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#22 => &_1->tChReg
+  # DEBUG ptCh => D#22
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_CmdClearRequest
+  # DEBUG BEGIN_STMT
+  reg_7 = MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  reg_8 = reg_7 & 4294967294;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_CSR = reg_8;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaCh_CmdSetHwRequest (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  uint32 reg;
+  struct Dma_Ip_Hwv3ChTcdRegType * _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_3(D) == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_5(D)][LocHwCh_6(D)];
+  # DEBUG D#21 => &_1->tChReg
+  # DEBUG ptCh => D#21
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaCh_CmdSetRequest
+  # DEBUG BEGIN_STMT
+  reg_7 = MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  reg_8 = reg_7 | 1;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  MEM[(struct Dma_Ip_ChRegType *)_1].reg_CH_CSR = reg_8;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptCh => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaInst_GetStatus (const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst, struct Dma_Ip_LogicInstanceStatusType * const Status)
+{
+  unsigned char _1;
+  long unsigned int _6;
+  signed int _7;
+  _Bool _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  unsigned char _11;
+  unsigned char _12;
+  long unsigned int _13;
+  long unsigned int _14;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicInst_4(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  # DEBUG D#46 => pxLocLogicInst_4(D)->HwInstId
+  # DEBUG LocHwInst => (uint32) D#46
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG D#43 => &Status_5(D)->Errors
+  # DEBUG ptInst => 1075888128B
+  # DEBUG pValue => D#43
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_GetErrorStatus
+  # DEBUG BEGIN_STMT
+  _13 ={v} MEM[(const struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_ES;
+  _14 = _13 & 2667578367;
+  MEM[(uint32 *)Status_5(D)] = _14;
+  # DEBUG ptInst => NULL
+  # DEBUG pValue => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG D#44 => &Status_5(D)->ActiveId
+  # DEBUG ptInst => 1075888128B
+  # DEBUG pValue => D#44
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_GetActiveIdStatus
+  # DEBUG BEGIN_STMT
+  _9 ={v} MEM[(const struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR;
+  _10 = _9 >> 24;
+  _11 = (unsigned char) _10;
+  _12 = _11 & 31;
+  MEM[(uint8 *)Status_5(D) + 4B] = _12;
+  # DEBUG ptInst => NULL
+  # DEBUG pValue => NULL
+  # DEBUG BEGIN_STMT
+  # DEBUG D#45 => &Status_5(D)->Active
+  # DEBUG ptInst => 1075888128B
+  # DEBUG pBool => D#45
+  # DEBUG INLINE_ENTRY hwv3AccInlineDmaInst_GetActiveStatus
+  # DEBUG BEGIN_STMT
+  _6 ={v} MEM[(const struct Dma_Ip_Hwv3InstRegType *)1075888128B].reg_CSR;
+  _7 = (signed int) _6;
+  _8 = _7 < 0;
+  MEM[(boolean *)Status_5(D) + 5B] = _8;
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG pBool => NULL
+  return;
+
+}
+
+
+HwAccDmaInst_SetCommand (const uint32 Command, const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst)
+{
+  static void (*<T65c>) (const struct Dma_Ip_LogicInstanceIdType * const) fpHwAcc_DmaInst_Command[4] = {hwAccDmaInst_CmdCancelTransfer, hwAccDmaInst_CmdCancelTransferWithError, hwAccDmaInst_CmdHalt, hwAccDmaInst_CmdResume};
+  void (*<T658>) (const struct Dma_Ip_LogicInstanceIdType * const) _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = fpHwAcc_DmaInst_Command[Command_3(D)];
+  _1 (pxLocLogicInst_4(D));
+  return;
+
+}
+
+
+hwAccDmaInst_CmdResume (const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst)
+{
+  unsigned char _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicInst_4(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  # DEBUG D#18 => pxLocLogicInst_4(D)->HwInstId
+  # DEBUG LocHwInst => (uint32) D#18
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG D#19 => pxLocLogicInst_4(D)
+  hwAccDmaInst_CmdResume.part.0 ();
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+hwAccDmaInst_CmdHalt (const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst)
+{
+  unsigned char _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicInst_4(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  # DEBUG D#15 => pxLocLogicInst_4(D)->HwInstId
+  # DEBUG LocHwInst => (uint32) D#15
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG D#16 => pxLocLogicInst_4(D)
+  hwAccDmaInst_CmdHalt.part.0 ();
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+hwAccDmaInst_CmdCancelTransferWithError (const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst)
+{
+  unsigned char _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicInst_4(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  # DEBUG D#12 => pxLocLogicInst_4(D)->HwInstId
+  # DEBUG LocHwInst => (uint32) D#12
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG D#13 => pxLocLogicInst_4(D)
+  hwAccDmaInst_CmdCancelTransferWithError.part.0 ();
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+hwAccDmaInst_CmdCancelTransfer (const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst)
+{
+  unsigned char _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicInst_4(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  # DEBUG D#9 => pxLocLogicInst_4(D)->HwInstId
+  # DEBUG LocHwInst => (uint32) D#9
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+<L0>:
+  # DEBUG D#10 => pxLocLogicInst_4(D)
+  hwAccDmaInst_CmdCancelTransfer.part.0 ();
+
+  <bb 4> [local count: 1073741824]:
+  # DEBUG ptInst => NULL
+  # DEBUG reg => NULL
+  return;
+
+}
+
+
+HwAccDmaInst_SetConfig (const struct Dma_Ip_LogicInstanceIdType * const pxLocLogicInst, const struct Dma_Ip_LogicInstanceConfigType * const pxLocInstConfig)
+{
+  unsigned char _1;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = pxLocLogicInst_4(D)->HwVersId;
+  # DEBUG LocHwVers => (uint32) _1
+  # DEBUG BEGIN_STMT
+  # DEBUG D#42 => pxLocLogicInst_4(D)->HwInstId
+  # DEBUG LocHwInst => (uint32) D#42
+  # DEBUG BEGIN_STMT
+  if (_1 == 3)
+    goto <bb 3>; [20.24%]
+  else
+    goto <bb 4>; [79.76%]
+
+  <bb 3> [local count: 217325344]:
+<L0>:
+  # DEBUG BEGIN_STMT
+  hwv3AccInlineDmaInst_SetConfig (1075888128B, pxLocInstConfig_5(D));
+  # DEBUG BEGIN_STMT
+
+  <bb 4> [local count: 1073741824]:
+  return;
+
+}
+
+
+HwAccDmaCh_GetParamDummyFunction (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * const retValue)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetSignedMinorLoopOffset (struct Dma_Ip_TcdRegType * ptTcd, const struct Dma_Ip_ScatterGatherConfigType * const pxLocScatterGather)
+{
+  uint32 reg;
+  long unsigned int _1;
+  struct Dma_Ip_TransferConfigType * _2;
+  _Bool _3;
+  long unsigned int _4;
+  _Bool _5;
+  long unsigned int _6;
+  long int _7;
+  long unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int iftmp.17_11;
+  long unsigned int iftmp.18_12;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_15 = ptTcd_14(D)->reg_NBYTES.reg_MLOFFYES;
+  # DEBUG reg => reg_15
+  # DEBUG BEGIN_STMT
+  _1 = reg_15 & 2147483647;
+  _2 = pxLocScatterGather_16(D)->TransferConfig;
+  _3 = _2->MinorLoop.EnSrcOffset;
+  if (_3 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+
+  <bb 4> [local count: 1073741824]:
+  # iftmp.17_11 = PHI <2147483648(2), 0(3)>
+  reg_17 = _1 | iftmp.17_11;
+  # DEBUG reg => reg_17
+  # DEBUG BEGIN_STMT
+  _4 = reg_17 & 3221225471;
+  _5 = _2->MinorLoop.EnDstOffset;
+  if (_5 != 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 536870913]:
+
+  <bb 6> [local count: 1073741824]:
+  # iftmp.18_12 = PHI <1073741824(4), 0(5)>
+  reg_18 = _4 | iftmp.18_12;
+  # DEBUG reg => reg_18
+  # DEBUG BEGIN_STMT
+  _6 = reg_18 & 3221226495;
+  _7 = _2->MinorLoop.Offset;
+  _8 = (long unsigned int) _7;
+  _9 = _8 << 10;
+  _10 = _9 & 1073740800;
+  reg_19 = _6 | _10;
+  # DEBUG reg => reg_19
+  # DEBUG BEGIN_STMT
+  ptTcd_14(D)->reg_NBYTES.reg_MLOFFYES = reg_19;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetTransferAttributes (struct Dma_Ip_TcdRegType * ptTcd, const struct Dma_Ip_ScatterGatherConfigType * const pxLocScatterGather)
+{
+  uint16 reg;
+  short unsigned int _1;
+  struct Dma_Ip_TransferConfigType * _2;
+  unsigned char _3;
+  short unsigned int _4;
+  short unsigned int _5;
+  short unsigned int _6;
+  short unsigned int _7;
+  unsigned char _8;
+  short unsigned int _9;
+  short unsigned int _10;
+  short unsigned int _11;
+  unsigned char _12;
+  short unsigned int _13;
+  short unsigned int _14;
+  unsigned char _15;
+  short unsigned int _16;
+  short unsigned int _17;
+  short unsigned int _18;
+  unsigned char _28;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_21 = ptTcd_20(D)->reg_ATTR;
+  # DEBUG reg => reg_21
+  # DEBUG BEGIN_STMT
+  _1 = reg_21 & 63743;
+  _2 = pxLocScatterGather_22(D)->TransferConfig;
+  _3 = _2->Source.TransferSize;
+  _4 = (short unsigned int) _3;
+  _5 = _4 << 8;
+  _6 = _5 & 1792;
+  reg_23 = _1 | _6;
+  # DEBUG reg => reg_23
+  # DEBUG BEGIN_STMT
+  _7 = reg_23 & 2047;
+  _8 = _2->Source.Modulo;
+  _9 = (short unsigned int) _8;
+  _10 = _9 << 11;
+  reg_24 = _7 | _10;
+  # DEBUG reg => reg_24
+  # DEBUG BEGIN_STMT
+  _11 = reg_24 & 65528;
+  _12 = _2->Destination.TransferSize;
+  _28 = _12 & 7;
+  _13 = (short unsigned int) _28;
+  reg_25 = _11 | _13;
+  # DEBUG reg => reg_25
+  # DEBUG BEGIN_STMT
+  _14 = reg_25 & 65287;
+  _15 = _2->Destination.Modulo;
+  _16 = (short unsigned int) _15;
+  _17 = _16 << 3;
+  _18 = _17 & 255;
+  reg_26 = _14 | _18;
+  # DEBUG reg => reg_26
+  # DEBUG BEGIN_STMT
+  ptTcd_20(D)->reg_ATTR = reg_26;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControlAndStatus (struct Dma_Ip_TcdRegType * ptTcd, const struct Dma_Ip_ScatterGatherConfigType * const pxLocScatterGather)
+{
+  uint16 reg;
+  short unsigned int _1;
+  struct Dma_Ip_TransferConfigType * _2;
+  _Bool _3;
+  short unsigned int _4;
+  short unsigned int _5;
+  _Bool _6;
+  short unsigned int _7;
+  _Bool _8;
+  short unsigned int _9;
+  _Bool _10;
+  short unsigned int _11;
+  _Bool _12;
+  short unsigned int _13;
+  unsigned char _14;
+  short unsigned int _15;
+  short unsigned int _16;
+  uint16 iftmp.13_17;
+  uint16 iftmp.14_18;
+  uint16 iftmp.15_19;
+  uint16 iftmp.16_20;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_23 = ptTcd_22(D)->reg_CSR;
+  # DEBUG reg => reg_23
+  # DEBUG BEGIN_STMT
+  _1 = reg_23 & 65534;
+  _2 = pxLocScatterGather_24(D)->TransferConfig;
+  _3 = _2->Control.EnStart;
+  _4 = (short unsigned int) _3;
+  reg_25 = _1 | _4;
+  # DEBUG reg => reg_25
+  # DEBUG BEGIN_STMT
+  _5 = reg_25 & 65533;
+  _6 = _2->Control.EnMajorInt;
+  if (_6 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+
+  <bb 4> [local count: 1073741824]:
+  # iftmp.13_17 = PHI <2(2), 0(3)>
+  reg_26 = _5 | iftmp.13_17;
+  # DEBUG reg => reg_26
+  # DEBUG BEGIN_STMT
+  _7 = reg_26 & 65531;
+  _8 = _2->Control.EnHalfMajorInt;
+  if (_8 != 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 536870913]:
+
+  <bb 6> [local count: 1073741824]:
+  # iftmp.14_18 = PHI <4(4), 0(5)>
+  reg_27 = _7 | iftmp.14_18;
+  # DEBUG reg => reg_27
+  # DEBUG BEGIN_STMT
+  _9 = reg_27 & 65527;
+  _10 = _2->Control.DisAutoHwRequest;
+  if (_10 != 0)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 7>; [50.00%]
+
+  <bb 7> [local count: 536870913]:
+
+  <bb 8> [local count: 1073741824]:
+  # iftmp.15_19 = PHI <8(6), 0(7)>
+  reg_28 = _9 | iftmp.15_19;
+  # DEBUG reg => reg_28
+  # DEBUG BEGIN_STMT
+  _11 = reg_28 & 65471;
+  _12 = _2->Control.EnEndOfPacketSignal;
+  if (_12 != 0)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 9> [local count: 536870913]:
+
+  <bb 10> [local count: 1073741824]:
+  # iftmp.16_20 = PHI <64(8), 0(9)>
+  reg_29 = _11 | iftmp.16_20;
+  # DEBUG reg => reg_29
+  # DEBUG BEGIN_STMT
+  _13 = reg_29 & 16383;
+  _14 = _2->Control.BandwidthControl;
+  _15 = (short unsigned int) _14;
+  _16 = _15 << 14;
+  reg_30 = _13 | _16;
+  # DEBUG reg => reg_30
+  # DEBUG BEGIN_STMT
+  reg_31 = reg_30 & 65407;
+  # DEBUG reg => reg_31
+  # DEBUG BEGIN_STMT
+  ptTcd_22(D)->reg_CSR = reg_31;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetAuxiliary_EnScatterGatherProcessing (struct Dma_Ip_TcdRegType * ptTcd, boolean Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  uint16 iftmp.12_3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_6 = ptTcd_5(D)->reg_CSR;
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _1 = reg_6 & 65519;
+  if (Value_7(D) != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+
+  <bb 4> [local count: 1073741824]:
+  # iftmp.12_3 = PHI <16(2), 0(3)>
+  _2 = _1 | iftmp.12_3;
+  ptTcd_5(D)->reg_CSR = _2;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_GetCurrentIterCount (const struct Dma_Ip_TcdRegType * ptTcd, uint32 * const retValue)
+{
+  short unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  signed short _10;
+  short unsigned int _11;
+  short unsigned int _12;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = ptTcd_6(D)->reg_CITER.reg_ELINKYES;
+  # DEBUG reg => _1 & 32768
+  # DEBUG BEGIN_STMT
+  _10 = (signed short) _1;
+  if (_10 < 0)
+    goto <bb 3>; [41.00%]
+  else
+    goto <bb 4>; [59.00%]
+
+  <bb 3> [local count: 440234144]:
+  # DEBUG BEGIN_STMT
+  _12 = _1 & 511;
+  _2 = (long unsigned int) _12;
+  *retValue_7(D) = _2;
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 633507681]:
+  # DEBUG BEGIN_STMT
+  _11 = _1;
+  _3 = (long unsigned int) _11;
+  *retValue_7(D) = _3;
+
+  <bb 5> [local count: 1073741824]:
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_GetBeginIterCount (const struct Dma_Ip_TcdRegType * ptTcd, uint32 * const retValue)
+{
+  short unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  signed short _10;
+  short unsigned int _11;
+  short unsigned int _12;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = ptTcd_6(D)->reg_BITER.reg_ELINKYES;
+  # DEBUG reg => _1 & 32768
+  # DEBUG BEGIN_STMT
+  _10 = (signed short) _1;
+  if (_10 < 0)
+    goto <bb 3>; [41.00%]
+  else
+    goto <bb 4>; [59.00%]
+
+  <bb 3> [local count: 440234144]:
+  # DEBUG BEGIN_STMT
+  _12 = _1 & 511;
+  _2 = (long unsigned int) _12;
+  *retValue_7(D) = _2;
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 633507681]:
+  # DEBUG BEGIN_STMT
+  _11 = _1;
+  _3 = (long unsigned int) _11;
+  *retValue_7(D) = _3;
+
+  <bb 5> [local count: 1073741824]:
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_BandwidthControl (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptTcd_6(D)->reg_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 16383;
+  _2 = (short unsigned int) Value_8(D);
+  _3 = _2 << 14;
+  _4 = _1 | _3;
+  ptTcd_6(D)->reg_CSR = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_EnEndOfPacketSignal (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_CSR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 65471;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 6;
+  _4 = _3 & 64;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_CSR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_DisAutoHwRequest (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_CSR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 65527;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 3;
+  _4 = _3 & 8;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_CSR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_EnHalfMajor (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_CSR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 65531;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 2;
+  _4 = _3 & 4;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_CSR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_EnMajor (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_CSR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 65533;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 1;
+  _4 = _3 & 2;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_CSR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMajorLoop_Count (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+  short unsigned int _6;
+  short unsigned int _7;
+  short unsigned int _8;
+  short unsigned int _9;
+  short unsigned int _10;
+  short unsigned int _11;
+  short unsigned int _12;
+  short unsigned int _13;
+  short unsigned int _14;
+  short unsigned int _15;
+  signed short _24;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = ptTcd_18(D)->reg_BITER.reg_ELINKYES;
+  _2 = ptTcd_18(D)->reg_CITER.reg_ELINKYES;
+  _3 = _1 | _2;
+  # DEBUG reg => _3 & 32768
+  # DEBUG BEGIN_STMT
+  _24 = (signed short) _3;
+  if (_24 < 0)
+    goto <bb 3>; [41.00%]
+  else
+    goto <bb 4>; [59.00%]
+
+  <bb 3> [local count: 440234144]:
+  # DEBUG BEGIN_STMT
+  # DEBUG reg => _1
+  # DEBUG BEGIN_STMT
+  _4 = _1 & 65024;
+  _5 = (short unsigned int) Value_19(D);
+  _6 = _5 & 511;
+  _7 = _4 | _6;
+  ptTcd_18(D)->reg_BITER.reg_ELINKYES = _7;
+  # DEBUG BEGIN_STMT
+  # DEBUG reg => _2
+  # DEBUG BEGIN_STMT
+  _8 = _2 & 65024;
+  _9 = _6 | _8;
+  ptTcd_18(D)->reg_CITER.reg_ELINKYES = _9;
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 633507681]:
+  # DEBUG BEGIN_STMT
+  # DEBUG reg => _1
+  # DEBUG BEGIN_STMT
+  _10 = _1 & 32768;
+  _11 = (short unsigned int) Value_19(D);
+  _12 = _11 & 32767;
+  _13 = _10 | _12;
+  ptTcd_18(D)->reg_BITER.reg_ELINKNO = _13;
+  # DEBUG BEGIN_STMT
+  # DEBUG reg => _2
+  # DEBUG BEGIN_STMT
+  _14 = _2 & 32768;
+  _15 = _12 | _14;
+  ptTcd_18(D)->reg_CITER.reg_ELINKNO = _15;
+
+  <bb 5> [local count: 1073741824]:
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMajorLoop_LinkCh (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_CSR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 57599;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 8;
+  _4 = _3 & 7936;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_CSR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMajorLoop_EnLink (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_CSR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 65503;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 5;
+  _4 = _3 & 32;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_CSR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMinorLoop_Size (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  long unsigned int _6;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_10 = ptTcd_9(D)->reg_NBYTES.reg_MLOFFNO;
+  # DEBUG reg => reg_10
+  # DEBUG BEGIN_STMT
+  _1 = reg_10 & 3221225472;
+  if (_1 != 0)
+    goto <bb 3>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  _2 = reg_10 & 4294966272;
+  _3 = Value_11(D) & 1023;
+  _4 = _2 | _3;
+  ptTcd_9(D)->reg_NBYTES.reg_MLOFFNO = _4;
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  _5 = Value_11(D) & 1073741823;
+  _6 = _5;
+  ptTcd_9(D)->reg_NBYTES.reg_MLOFFNO = _6;
+
+  <bb 5> [local count: 1073741824]:
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMinorLoop_LinkCh (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+  short unsigned int _6;
+  short unsigned int _7;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_10 = ptTcd_9(D)->reg_BITER.reg_ELINKYES;
+  # DEBUG reg => reg_10
+  # DEBUG BEGIN_STMT
+  _1 = reg_10 & 49663;
+  _2 = (short unsigned int) Value_11(D);
+  _3 = _2 << 9;
+  _4 = _3 & 15872;
+  _5 = _1 | _4;
+  ptTcd_9(D)->reg_BITER.reg_ELINKYES = _5;
+  # DEBUG BEGIN_STMT
+  reg_13 = ptTcd_9(D)->reg_CITER.reg_ELINKYES;
+  # DEBUG reg => reg_13
+  # DEBUG BEGIN_STMT
+  _6 = reg_13 & 49663;
+  _7 = _4 | _6;
+  ptTcd_9(D)->reg_CITER.reg_ELINKYES = _7;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMinorLoop_EnLink (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+  short unsigned int _6;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_9 = ptTcd_8(D)->reg_BITER.reg_ELINKYES;
+  # DEBUG reg => reg_9
+  # DEBUG BEGIN_STMT
+  _1 = reg_9 & 32767;
+  _2 = (short unsigned int) Value_10(D);
+  _3 = _2 << 15;
+  _4 = _1 | _3;
+  ptTcd_8(D)->reg_BITER.reg_ELINKYES = _4;
+  # DEBUG BEGIN_STMT
+  reg_12 = ptTcd_8(D)->reg_CITER.reg_ELINKYES;
+  # DEBUG reg => reg_12
+  # DEBUG BEGIN_STMT
+  _5 = reg_12 & 32767;
+  _6 = _3 | _5;
+  ptTcd_8(D)->reg_CITER.reg_ELINKYES = _6;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMinorLoop_SignedOffset (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptTcd_6(D)->reg_NBYTES.reg_MLOFFYES;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 3221226495;
+  _2 = Value_8(D) << 10;
+  _3 = _2 & 1073740800;
+  _4 = _1 | _3;
+  ptTcd_6(D)->reg_NBYTES.reg_MLOFFYES = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMinorLoop_enDstOffset (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptTcd_6(D)->reg_NBYTES.reg_MLOFFYES;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 3221225471;
+  _2 = Value_8(D) << 30;
+  _3 = _2 & 1073741824;
+  _4 = _1 | _3;
+  ptTcd_6(D)->reg_NBYTES.reg_MLOFFYES = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetMinorLoop_enSrcOffset (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_6 = ptTcd_5(D)->reg_NBYTES.reg_MLOFFYES;
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _1 = reg_6 & 2147483647;
+  _2 = Value_7(D) << 31;
+  _3 = _1 | _2;
+  ptTcd_5(D)->reg_NBYTES.reg_MLOFFYES = _3;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetDestination_Modulo (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 = ptTcd_7(D)->reg_ATTR;
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 65287;
+  _2 = (short unsigned int) Value_9(D);
+  _3 = _2 << 3;
+  _4 = _3 & 255;
+  _5 = _1 | _4;
+  ptTcd_7(D)->reg_ATTR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetDestination_TransferSize (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  uint16 reg;
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptTcd_6(D)->reg_ATTR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 65528;
+  _2 = (short unsigned int) Value_8(D);
+  _3 = _2 & 7;
+  _4 = _1 | _3;
+  ptTcd_6(D)->reg_ATTR = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetSource_Modulo (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = ptTcd_7(D)->reg_ATTR;
+  # DEBUG reg => (uint32) _1
+  # DEBUG BEGIN_STMT
+  _2 = _1 & 2047;
+  _3 = (short unsigned int) Value_8(D);
+  _4 = _3 << 11;
+  _5 = _2 | _4;
+  ptTcd_7(D)->reg_ATTR = _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetSource_TransferSize (struct Dma_Ip_TcdRegType * ptTcd, const uint32 Value)
+{
+  short unsigned int _1;
+  short unsigned int _2;
+  short unsigned int _3;
+  short unsigned int _4;
+  short unsigned int _5;
+  short unsigned int _6;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = ptTcd_8(D)->reg_ATTR;
+  # DEBUG reg => (uint32) _1
+  # DEBUG BEGIN_STMT
+  _2 = _1 & 63743;
+  _3 = (short unsigned int) Value_9(D);
+  _4 = _3 << 8;
+  _5 = _4 & 1792;
+  _6 = _2 | _5;
+  ptTcd_8(D)->reg_ATTR = _6;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetPriority_DisPreempt (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptCh_6(D)->reg_CH_PRI;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 3221225471;
+  _2 = Value_8(D) << 30;
+  _3 = _2 & 1073741824;
+  _4 = _1 | _3;
+  ptCh_6(D)->reg_CH_PRI = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetPriority_EnPreemption (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_6 = ptCh_5(D)->reg_CH_PRI;
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _1 = reg_6 & 2147483647;
+  _2 = Value_7(D) << 31;
+  _3 = _1 | _2;
+  ptCh_5(D)->reg_CH_PRI = _3;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetPriority_Level (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_6 = ptCh_5(D)->reg_CH_PRI;
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _1 = reg_6 & 4294967288;
+  _2 = Value_7(D) & 7;
+  _3 = _1 | _2;
+  ptCh_5(D)->reg_CH_PRI = _3;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetPriority_Group (volatile uint32 * const pGrpri, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_6 ={v} *pGrpri_5(D);
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _1 = reg_6 & 4294967264;
+  _2 = Value_7(D) & 31;
+  _3 = _1 | _2;
+  *pGrpri_5(D) ={v} _3;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetInterrupt_EnError (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptCh_6(D)->reg_CH_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 4294967291;
+  _2 = Value_8(D) << 2;
+  _3 = _2 & 4;
+  _4 = _1 | _3;
+  ptCh_6(D)->reg_CH_CSR = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetRequest_EnHwRequest (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_6 = ptCh_5(D)->reg_CH_CSR;
+  # DEBUG reg => reg_6
+  # DEBUG BEGIN_STMT
+  _1 = reg_6 & 4294967294;
+  _2 = Value_7(D) & 1;
+  _3 = _1 | _2;
+  ptCh_5(D)->reg_CH_CSR = _3;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetRequest_EnHwRequestMux (volatile Dma_Ip_MuxRegType * pMuxChCfg, const uint32 Value)
+{
+  Dma_Ip_MuxRegType reg;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned char _3;
+  unsigned char _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 ={v} *pMuxChCfg_6(D);
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 127;
+  _2 = (unsigned char) Value_8(D);
+  _3 = _2 << 7;
+  _4 = _1 | _3;
+  *pMuxChCfg_6(D) ={v} _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetRequest_EnTriggerMux (volatile Dma_Ip_MuxRegType * pMuxChCfg, uint32 Value)
+{
+  Dma_Ip_MuxRegType reg;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned char _3;
+  unsigned char _4;
+  unsigned char _5;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_8 ={v} *pMuxChCfg_7(D);
+  # DEBUG reg => reg_8
+  # DEBUG BEGIN_STMT
+  _1 = reg_8 & 191;
+  _2 = (unsigned char) Value_9(D);
+  _3 = _2 << 6;
+  _4 = _3 & 64;
+  _5 = _1 | _4;
+  *pMuxChCfg_7(D) ={v} _5;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetRequest_SourceMux (volatile Dma_Ip_MuxRegType * pMuxChCfg, const uint32 Value)
+{
+  Dma_Ip_MuxRegType reg;
+  unsigned char _1;
+  unsigned char _2;
+  unsigned char _3;
+  unsigned char _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 ={v} *pMuxChCfg_6(D);
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 192;
+  _2 = (unsigned char) Value_8(D);
+  _3 = _2 & 63;
+  _4 = _1 | _3;
+  *pMuxChCfg_6(D) ={v} _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_EnBufferedWrites (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptCh_6(D)->reg_CH_CSR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 4294967287;
+  _2 = Value_8(D) << 3;
+  _3 = _2 & 8;
+  _4 = _1 | _3;
+  ptCh_6(D)->reg_CH_CSR = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaCh_SetControl_EnMasterIdReplication (struct Dma_Ip_ChRegType * ptCh, uint32 Value)
+{
+  uint32 reg;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_7 = ptCh_6(D)->reg_CH_SBR;
+  # DEBUG reg => reg_7
+  # DEBUG BEGIN_STMT
+  _1 = reg_7 & 4294901759;
+  _2 = Value_8(D) << 16;
+  _3 = _2 & 65536;
+  _4 = _1 | _3;
+  ptCh_6(D)->reg_CH_SBR = _4;
+  return;
+
+}
+
+
+hwv3AccInlineDmaInst_SetConfig (struct Dma_Ip_Hwv3InstRegType * const ptInst, const struct Dma_Ip_LogicInstanceConfigType * const pxConfig)
+{
+  uint32 reg;
+  long unsigned int _1;
+  _Bool _2;
+  long unsigned int _3;
+  _Bool _4;
+  long unsigned int _5;
+  _Bool _6;
+  long unsigned int _7;
+  _Bool _8;
+  long unsigned int _9;
+  _Bool _10;
+  long unsigned int iftmp.0_11;
+  long unsigned int iftmp.1_12;
+  long unsigned int iftmp.2_13;
+  long unsigned int iftmp.3_14;
+  long unsigned int iftmp.4_15;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  reg_18 ={v} ptInst_17(D)->reg_CSR;
+  # DEBUG reg => reg_18
+  # DEBUG BEGIN_STMT
+  _1 = reg_18 & 4294967293;
+  _2 = pxConfig_19(D)->EnDebug;
+  if (_2 != 0)
+    goto <bb 4>; [50.00%]
+  else
+    goto <bb 3>; [50.00%]
+
+  <bb 3> [local count: 536870913]:
+
+  <bb 4> [local count: 1073741824]:
+  # iftmp.0_11 = PHI <2(2), 0(3)>
+  reg_20 = _1 | iftmp.0_11;
+  # DEBUG reg => reg_20
+  # DEBUG BEGIN_STMT
+  _3 = reg_20 & 4294967291;
+  _4 = pxConfig_19(D)->EnRoundRobin;
+  if (_4 != 0)
+    goto <bb 6>; [50.00%]
+  else
+    goto <bb 5>; [50.00%]
+
+  <bb 5> [local count: 536870913]:
+
+  <bb 6> [local count: 1073741824]:
+  # iftmp.1_12 = PHI <4(4), 0(5)>
+  reg_21 = _3 | iftmp.1_12;
+  # DEBUG reg => reg_21
+  # DEBUG BEGIN_STMT
+  _5 = reg_21 & 4294967279;
+  _6 = pxConfig_19(D)->EnHaltAfterError;
+  if (_6 != 0)
+    goto <bb 8>; [50.00%]
+  else
+    goto <bb 7>; [50.00%]
+
+  <bb 7> [local count: 536870913]:
+
+  <bb 8> [local count: 1073741824]:
+  # iftmp.2_13 = PHI <16(6), 0(7)>
+  reg_22 = _5 | iftmp.2_13;
+  # DEBUG reg => reg_22
+  # DEBUG BEGIN_STMT
+  _7 = reg_22 & 4294967231;
+  _8 = pxConfig_19(D)->EnChLinking;
+  if (_8 != 0)
+    goto <bb 10>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 9> [local count: 536870913]:
+
+  <bb 10> [local count: 1073741824]:
+  # iftmp.3_14 = PHI <64(8), 0(9)>
+  reg_23 = _7 | iftmp.3_14;
+  # DEBUG reg => reg_23
+  # DEBUG BEGIN_STMT
+  _9 = reg_23 & 4294967167;
+  _10 = pxConfig_19(D)->EnGlMasterIdReplication;
+  if (_10 != 0)
+    goto <bb 12>; [50.00%]
+  else
+    goto <bb 11>; [50.00%]
+
+  <bb 11> [local count: 536870913]:
+
+  <bb 12> [local count: 1073741824]:
+  # iftmp.4_15 = PHI <128(10), 0(11)>
+  reg_24 = _9 | iftmp.4_15;
+  # DEBUG reg => reg_24
+  # DEBUG BEGIN_STMT
+  ptInst_17(D)->reg_CSR ={v} reg_24;
+  return;
+
+}
+
+

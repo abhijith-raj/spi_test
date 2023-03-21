@@ -1,0 +1,11 @@
+Callgraph clone;Static_Dma_Ip_SetLogicChannelScatterGatherInit;22;../RTD/src/Dma_Ip.c;1582;26;Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0;65;../RTD/src/Dma_Ip.c;1582;26;constprop
+Callgraph clone;Static_Dma_Ip_SetLogicChannelGlobalConfig;3;../RTD/src/Dma_Ip.c;308;26;Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0;66;../RTD/src/Dma_Ip.c;308;26;constprop
+Callgraph clone;Static_Dma_Ip_ResetConfig;21;../RTD/src/Dma_Ip.c;1575;13;Dma_Ip_LogicChannelDeinit;10;../RTD/src/Dma_Ip.c;835;19;inlining to
+Callgraph clone;Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0;65;../RTD/src/Dma_Ip.c;1582;26;Dma_Ip_LogicChannelInit;9;../RTD/src/Dma_Ip.c;724;19;inlining to
+Callgraph clone;Static_Dma_Ip_SetLogicChannelGlobalList;14;../RTD/src/Dma_Ip.c;1123;13;Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0;66;../RTD/src/Dma_Ip.c;308;26;inlining to
+Callgraph clone;Static_Dma_Ip_SetLogicChannelGlobalList;14;../RTD/src/Dma_Ip.c;1123;13;Dma_Ip_SetLogicChannelGlobalList;13;../RTD/src/Dma_Ip.c;1068;19;inlining to
+Callgraph removal;Static_Dma_Ip_SetLogicChannelScatterGatherInit;22;../RTD/src/Dma_Ip.c;1582;26
+Callgraph removal;Static_Dma_Ip_SetLogicChannelGlobalConfig;3;../RTD/src/Dma_Ip.c;308;26
+Callgraph removal;Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0;65;../RTD/src/Dma_Ip.c;1582;26
+Callgraph removal;Static_Dma_Ip_ResetConfig;21;../RTD/src/Dma_Ip.c;1575;13
+Callgraph removal;Static_Dma_Ip_SetLogicChannelGlobalList;14;../RTD/src/Dma_Ip.c;1123;13

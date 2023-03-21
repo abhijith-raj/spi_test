@@ -1,0 +1,376 @@
+Trivially needed symbols: Flexio_Mcl_Ip_DeinitDevice/3 Flexio_Mcl_Ip_InitDevice/2 Flexio_Ip_baIpIsInitialized/1 Flexio_Ip_paxBase/0
+
+
+Initial Symbol table:
+
+Flexio_Mcl_Ip_SetDebugEnable/6 (Flexio_Mcl_Ip_SetDebugEnable) @05d5cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_SetEnable/5 (Flexio_Mcl_Ip_SetEnable) @05d5ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_Init/4 (Flexio_Mcl_Ip_Init) @05d5c9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_DeinitDevice/3 Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_DeinitDevice/3 (Flexio_Mcl_Ip_DeinitDevice) @05d5c540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @01981040
+  References: Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_Init/4 
+Flexio_Mcl_Ip_InitDevice/2 (Flexio_Mcl_Ip_InitDevice) @05d5c2a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05d5c540
+  References: Flexio_Ip_baIpIsInitialized/1 (read) Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetDebugEnable/6 Flexio_Mcl_Ip_SetEnable/5 Flexio_Mcl_Ip_Init/4 
+Flexio_Ip_baIpIsInitialized/1 (Flexio_Ip_baIpIsInitialized) @05d9b828
+  Type: variable definition analyzed
+  Visibility: public
+  Aux: @05d5c2a0
+  References: 
+  Referring: Flexio_Mcl_Ip_InitDevice/2 (read) Flexio_Mcl_Ip_InitDevice/2 (write) Flexio_Mcl_Ip_DeinitDevice/3 (write) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Ip_paxBase/0 (Flexio_Ip_paxBase) @05d9b7e0
+  Type: variable definition analyzed
+  Visibility: public
+  Aux: @05d9b828
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+Flexio_Mcl_Ip_SetDebugEnable/6 (Flexio_Mcl_Ip_SetDebugEnable) @05d5cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_SetEnable/5 (Flexio_Mcl_Ip_SetEnable) @05d5ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_Init/4 (Flexio_Mcl_Ip_Init) @05d5c9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_DeinitDevice/3 Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_DeinitDevice/3 (Flexio_Mcl_Ip_DeinitDevice) @05d5c540
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_Init/4 
+Flexio_Mcl_Ip_InitDevice/2 (Flexio_Mcl_Ip_InitDevice) @05d5c2a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Ip_baIpIsInitialized/1 (read) Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetDebugEnable/6 Flexio_Mcl_Ip_SetEnable/5 Flexio_Mcl_Ip_Init/4 
+Flexio_Ip_baIpIsInitialized/1 (Flexio_Ip_baIpIsInitialized) @05d9b828
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Flexio_Mcl_Ip_InitDevice/2 (read) Flexio_Mcl_Ip_InitDevice/2 (write) Flexio_Mcl_Ip_DeinitDevice/3 (write) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Ip_paxBase/0 (Flexio_Ip_paxBase) @05d9b7e0
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+
+Initial Symbol table:
+
+Flexio_Mcl_Ip_SetDebugEnable/6 (Flexio_Mcl_Ip_SetDebugEnable) @05d5cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_SetEnable/5 (Flexio_Mcl_Ip_SetEnable) @05d5ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_Init/4 (Flexio_Mcl_Ip_Init) @05d5c9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_DeinitDevice/3 Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_DeinitDevice/3 (Flexio_Mcl_Ip_DeinitDevice) @05d5c540
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_Init/4 
+Flexio_Mcl_Ip_InitDevice/2 (Flexio_Mcl_Ip_InitDevice) @05d5c2a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Ip_baIpIsInitialized/1 (read) Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetDebugEnable/6 Flexio_Mcl_Ip_SetEnable/5 Flexio_Mcl_Ip_Init/4 
+Flexio_Ip_baIpIsInitialized/1 (Flexio_Ip_baIpIsInitialized) @05d9b828
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Flexio_Mcl_Ip_InitDevice/2 (read) Flexio_Mcl_Ip_InitDevice/2 (write) Flexio_Mcl_Ip_DeinitDevice/3 (write) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Ip_paxBase/0 (Flexio_Ip_paxBase) @05d9b7e0
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+Flexio_Mcl_Ip_SetDebugEnable/6 (Flexio_Mcl_Ip_SetDebugEnable) @05d5cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_SetEnable/5 (Flexio_Mcl_Ip_SetEnable) @05d5ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_Init/4 (Flexio_Mcl_Ip_Init) @05d5c9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_DeinitDevice/3 Flexio_Mcl_Ip_InitDevice/2 
+  Calls: 
+Flexio_Mcl_Ip_DeinitDevice/3 (Flexio_Mcl_Ip_DeinitDevice) @05d5c540
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_Init/4 
+Flexio_Mcl_Ip_InitDevice/2 (Flexio_Mcl_Ip_InitDevice) @05d5c2a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Ip_baIpIsInitialized/1 (read) Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetDebugEnable/6 Flexio_Mcl_Ip_SetEnable/5 Flexio_Mcl_Ip_Init/4 
+Flexio_Ip_baIpIsInitialized/1 (Flexio_Ip_baIpIsInitialized) @05d9b828
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Flexio_Mcl_Ip_InitDevice/2 (read) Flexio_Mcl_Ip_InitDevice/2 (write) Flexio_Mcl_Ip_DeinitDevice/3 (write) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Ip_paxBase/0 (Flexio_Ip_paxBase) @05d9b7e0
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+Flexio_Mcl_Ip_SetDebugEnable/6 (Flexio_Mcl_Ip_SetDebugEnable) @05d5cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Mcl_Ip_SetEnable/5 (Flexio_Mcl_Ip_SetEnable) @05d5ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_InitDevice/2 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Mcl_Ip_Init/4 (Flexio_Mcl_Ip_Init) @05d5c9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Mcl_Ip_DeinitDevice/3 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_InitDevice/2 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Mcl_Ip_DeinitDevice/3 (Flexio_Mcl_Ip_DeinitDevice) @05d5c540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_Init/4 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Mcl_Ip_InitDevice/2 (Flexio_Mcl_Ip_InitDevice) @05d5c2a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Ip_baIpIsInitialized/1 (read) Flexio_Ip_baIpIsInitialized/1 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetDebugEnable/6 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_SetEnable/5 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_Init/4 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Ip_baIpIsInitialized/1 (Flexio_Ip_baIpIsInitialized) @05d9b828
+  Type: variable definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: Flexio_Mcl_Ip_InitDevice/2 (write) Flexio_Mcl_Ip_InitDevice/2 (read) Flexio_Mcl_Ip_DeinitDevice/3 (write) 
+  Availability: available
+  Varpool flags:
+Flexio_Ip_paxBase/0 (Flexio_Ip_paxBase) @05d9b7e0
+  Type: variable definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Materializing clones
+Materialization Call site updates done.
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Trivially needed variables: Flexio_Ip_baIpIsInitialized/1 Flexio_Ip_paxBase/0
+Removing variables:
+
+Final Symbol table:
+
+Flexio_Mcl_Ip_SetDebugEnable/6 (Flexio_Mcl_Ip_SetDebugEnable) @05d5cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_SetEnable/5 (Flexio_Mcl_Ip_SetEnable) @05d5ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_Init/4 (Flexio_Mcl_Ip_Init) @05d5c9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_DeinitDevice/3 (Flexio_Mcl_Ip_DeinitDevice) @05d5c540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_InitDevice/2 (Flexio_Mcl_Ip_InitDevice) @05d5c2a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Ip_baIpIsInitialized/1 (Flexio_Ip_baIpIsInitialized) @05d9b828
+  Type: variable definition analyzed
+  Visibility: externally_visible asm_written public
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Flexio_Ip_paxBase/0 (Flexio_Ip_paxBase) @05d9b7e0
+  Type: variable definition analyzed
+  Visibility: externally_visible asm_written public
+  Aux: @05d9b828
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

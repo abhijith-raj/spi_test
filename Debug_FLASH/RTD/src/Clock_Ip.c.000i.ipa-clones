@@ -1,0 +1,14 @@
+Callgraph clone;Clock_Ip_GetPllStatus;10;../RTD/src/Clock_Ip.c;877;24;Clock_Ip_GetPllStatus.part.0;62;../RTD/src/Clock_Ip.c;877;24;part
+Callgraph clone;Clock_Ip_DistributePll;11;../RTD/src/Clock_Ip.c;929;6;Clock_Ip_DistributePll.part.0;63;../RTD/src/Clock_Ip.c;929;6;part
+Callgraph clone;Clock_Ip_GetPllStatus.part.0;62;../RTD/src/Clock_Ip.c;877;24;Clock_Ip_GetPllStatus;10;../RTD/src/Clock_Ip.c;877;24;inlining to
+Callgraph clone;Clock_Ip_UpdateDriverContext;5;../RTD/src/Clock_Ip.c;222;13;Clock_Ip_InitClock;9;../RTD/src/Clock_Ip.c;682;6;inlining to
+Callgraph clone;Clock_Ip_SetWaitStates;18;../RTD/src/Clock_Ip.c;1116;13;Clock_Ip_InitClock;9;../RTD/src/Clock_Ip.c;682;6;inlining to
+Callgraph clone;Clock_Ip_DistributePll.part.0;63;../RTD/src/Clock_Ip.c;929;6;Clock_Ip_DistributePll;11;../RTD/src/Clock_Ip.c;929;6;inlining to
+Callgraph clone;Clock_Ip_ResetClockConfiguration;7;../RTD/src/Clock_Ip.c;564;13;Clock_Ip_InitClock;9;../RTD/src/Clock_Ip.c;682;6;inlining to
+Callgraph clone;Clock_Ip_CallEmptyCallbacks;6;../RTD/src/Clock_Ip.c;528;13;Clock_Ip_InitClock;9;../RTD/src/Clock_Ip.c;682;6;inlining to
+Callgraph removal;Clock_Ip_ResetClockConfiguration;7;../RTD/src/Clock_Ip.c;564;13
+Callgraph removal;Clock_Ip_UpdateDriverContext;5;../RTD/src/Clock_Ip.c;222;13
+Callgraph removal;Clock_Ip_CallEmptyCallbacks;6;../RTD/src/Clock_Ip.c;528;13
+Callgraph removal;Clock_Ip_SetWaitStates;18;../RTD/src/Clock_Ip.c;1116;13
+Callgraph removal;Clock_Ip_GetPllStatus.part.0;62;../RTD/src/Clock_Ip.c;877;24
+Callgraph removal;Clock_Ip_DistributePll.part.0;63;../RTD/src/Clock_Ip.c;929;6

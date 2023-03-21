@@ -1,0 +1,2 @@
+Callgraph clone;IrqHandler;1;../RTD/src/Dma_Ip_Irq.c;360;17;IrqHandler.constprop.0;36;../RTD/src/Dma_Ip_Irq.c;360;17;constprop
+Callgraph removal;IrqHandler;1;../RTD/src/Dma_Ip_Irq.c;360;17

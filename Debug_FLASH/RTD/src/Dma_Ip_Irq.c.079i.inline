@@ -1,0 +1,2008 @@
+IPA function summary for IrqHandler.constprop/36 inlinable
+  global time:     21.633900
+  self size:       31
+  global size:     30
+  min size:       26
+  self stack:      0
+  global stack:    0
+    size:18.000000, time:14.730000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+    size:1.000000, time:1.000000,  nonconst if:(op2 changed)
+  calls:
+    Dma_Ip_ErrorIrqHandler/34 function body not available
+      freq:0.14 loop depth: 0 size: 4 time: 13
+    Dma_Ip_IntIrqHandler/35 function body not available
+      freq:0.16 loop depth: 0 size: 4 time: 13
+
+IPA function summary for Dma0_Ch31_IRQHandler/33 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch30_IRQHandler/32 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch29_IRQHandler/31 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch28_IRQHandler/30 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch27_IRQHandler/29 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch26_IRQHandler/28 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch25_IRQHandler/27 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch24_IRQHandler/26 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch23_IRQHandler/25 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch22_IRQHandler/24 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch21_IRQHandler/23 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch20_IRQHandler/22 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch19_IRQHandler/21 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch18_IRQHandler/20 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch17_IRQHandler/19 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch16_IRQHandler/18 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch15_IRQHandler/17 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch14_IRQHandler/16 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch13_IRQHandler/15 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch12_IRQHandler/14 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch11_IRQHandler/13 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch10_IRQHandler/12 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch9_IRQHandler/11 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch8_IRQHandler/10 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch7_IRQHandler/9 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch6_IRQHandler/8 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch5_IRQHandler/7 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch4_IRQHandler/6 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch3_IRQHandler/5 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch2_IRQHandler/4 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch1_IRQHandler/3 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch0_IRQHandler/2 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 function not considered for inlining
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+
+Flattening functions:
+Overall time estimate: 501.633900 weighted by profile: 0.000000
+
+Deciding on inlining of small functions.  Starting with size 0.
+Enqueueing calls in IrqHandler.constprop/36.
+Enqueueing calls in Dma0_Ch31_IRQHandler/33.
+Enqueueing calls in Dma0_Ch30_IRQHandler/32.
+Enqueueing calls in Dma0_Ch29_IRQHandler/31.
+Enqueueing calls in Dma0_Ch28_IRQHandler/30.
+Enqueueing calls in Dma0_Ch27_IRQHandler/29.
+Enqueueing calls in Dma0_Ch26_IRQHandler/28.
+Enqueueing calls in Dma0_Ch25_IRQHandler/27.
+Enqueueing calls in Dma0_Ch24_IRQHandler/26.
+Enqueueing calls in Dma0_Ch23_IRQHandler/25.
+Enqueueing calls in Dma0_Ch22_IRQHandler/24.
+Enqueueing calls in Dma0_Ch21_IRQHandler/23.
+Enqueueing calls in Dma0_Ch20_IRQHandler/22.
+Enqueueing calls in Dma0_Ch19_IRQHandler/21.
+Enqueueing calls in Dma0_Ch18_IRQHandler/20.
+Enqueueing calls in Dma0_Ch17_IRQHandler/19.
+Enqueueing calls in Dma0_Ch16_IRQHandler/18.
+Enqueueing calls in Dma0_Ch15_IRQHandler/17.
+Enqueueing calls in Dma0_Ch14_IRQHandler/16.
+Enqueueing calls in Dma0_Ch13_IRQHandler/15.
+Enqueueing calls in Dma0_Ch12_IRQHandler/14.
+Enqueueing calls in Dma0_Ch11_IRQHandler/13.
+Enqueueing calls in Dma0_Ch10_IRQHandler/12.
+Enqueueing calls in Dma0_Ch9_IRQHandler/11.
+Enqueueing calls in Dma0_Ch8_IRQHandler/10.
+Enqueueing calls in Dma0_Ch7_IRQHandler/9.
+Enqueueing calls in Dma0_Ch6_IRQHandler/8.
+Enqueueing calls in Dma0_Ch5_IRQHandler/7.
+Enqueueing calls in Dma0_Ch4_IRQHandler/6.
+Enqueueing calls in Dma0_Ch3_IRQHandler/5.
+Enqueueing calls in Dma0_Ch2_IRQHandler/4.
+Enqueueing calls in Dma0_Ch1_IRQHandler/3.
+Enqueueing calls in Dma0_Ch0_IRQHandler/2.
+node context cache: 31 hits, 0 misses, 1 initializations
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Deciding on functions to be inlined into all callers and removing useless speculations:
+Overall time estimate: 501.633900 weighted by profile: 0.000000
+
+Why inlining failed?
+function body not available                       :        2 calls, 0.300300 freq, 0 count
+call is unlikely and code size would grow         :       32 calls, 32.000000 freq, 0 count
+IPA function summary for IrqHandler.constprop/36 inlinable
+  global time:     21.633900
+  self size:       31
+  global size:     30
+  min size:       26
+  self stack:      0
+  global stack:    0
+  estimated growth:674
+    size:18.000000, time:14.730000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+    size:1.000000, time:1.000000,  nonconst if:(op2 changed)
+  calls:
+    Dma_Ip_ErrorIrqHandler/34 function body not available
+      freq:0.14 loop depth: 0 size: 4 time: 13
+    Dma_Ip_IntIrqHandler/35 function body not available
+      freq:0.16 loop depth: 0 size: 4 time: 13
+
+IPA function summary for Dma0_Ch31_IRQHandler/33 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch30_IRQHandler/32 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch29_IRQHandler/31 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch28_IRQHandler/30 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch27_IRQHandler/29 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch26_IRQHandler/28 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch25_IRQHandler/27 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch24_IRQHandler/26 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch23_IRQHandler/25 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch22_IRQHandler/24 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch21_IRQHandler/23 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch20_IRQHandler/22 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch19_IRQHandler/21 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch18_IRQHandler/20 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch17_IRQHandler/19 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch16_IRQHandler/18 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch15_IRQHandler/17 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch14_IRQHandler/16 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch13_IRQHandler/15 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch12_IRQHandler/14 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch11_IRQHandler/13 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch10_IRQHandler/12 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch9_IRQHandler/11 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch8_IRQHandler/10 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch7_IRQHandler/9 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch6_IRQHandler/8 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch5_IRQHandler/7 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch4_IRQHandler/6 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch3_IRQHandler/5 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch2_IRQHandler/4 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch1_IRQHandler/3 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+IPA function summary for Dma0_Ch0_IRQHandler/2 inlinable
+  global time:     15.000000
+  self size:       7
+  global size:     7
+  min size:       4
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    IrqHandler.constprop/36 call is unlikely and code size would grow
+      freq:1.00 loop depth: 0 size: 4 time: 13 callee size:15 stack: 0
+       op0 is compile time invariant
+       op1 is compile time invariant
+       op2 is compile time invariant
+
+Symbol table:
+
+IrqHandler.constprop.0/36 (IrqHandler.constprop) @06dcb2a0
+  Type: function definition analyzed
+  Visibility:
+  References: g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Clone of IrqHandler/1
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: Dma0_Ch0_IRQHandler/2 (1073741824 (estimated locally),1.00 per call) Dma0_Ch1_IRQHandler/3 (1073741824 (estimated locally),1.00 per call) Dma0_Ch2_IRQHandler/4 (1073741824 (estimated locally),1.00 per call) Dma0_Ch3_IRQHandler/5 (1073741824 (estimated locally),1.00 per call) Dma0_Ch4_IRQHandler/6 (1073741824 (estimated locally),1.00 per call) Dma0_Ch5_IRQHandler/7 (1073741824 (estimated locally),1.00 per call) Dma0_Ch6_IRQHandler/8 (1073741824 (estimated locally),1.00 per call) Dma0_Ch7_IRQHandler/9 (1073741824 (estimated locally),1.00 per call) Dma0_Ch8_IRQHandler/10 (1073741824 (estimated locally),1.00 per call) Dma0_Ch9_IRQHandler/11 (1073741824 (estimated locally),1.00 per call) Dma0_Ch10_IRQHandler/12 (1073741824 (estimated locally),1.00 per call) Dma0_Ch11_IRQHandler/13 (1073741824 (estimated locally),1.00 per call) Dma0_Ch12_IRQHandler/14 (1073741824 (estimated locally),1.00 per call) Dma0_Ch13_IRQHandler/15 (1073741824 (estimated locally),1.00 per call) Dma0_Ch14_IRQHandler/16 (1073741824 (estimated locally),1.00 per call) Dma0_Ch15_IRQHandler/17 (1073741824 (estimated locally),1.00 per call) Dma0_Ch16_IRQHandler/18 (1073741824 (estimated locally),1.00 per call) Dma0_Ch17_IRQHandler/19 (1073741824 (estimated locally),1.00 per call) Dma0_Ch18_IRQHandler/20 (1073741824 (estimated locally),1.00 per call) Dma0_Ch19_IRQHandler/21 (1073741824 (estimated locally),1.00 per call) Dma0_Ch20_IRQHandler/22 (1073741824 (estimated locally),1.00 per call) Dma0_Ch21_IRQHandler/23 (1073741824 (estimated locally),1.00 per call) Dma0_Ch22_IRQHandler/24 (1073741824 (estimated locally),1.00 per call) Dma0_Ch23_IRQHandler/25 (1073741824 (estimated locally),1.00 per call) Dma0_Ch24_IRQHandler/26 (1073741824 (estimated locally),1.00 per call) Dma0_Ch25_IRQHandler/27 (1073741824 (estimated locally),1.00 per call) Dma0_Ch26_IRQHandler/28 (1073741824 (estimated locally),1.00 per call) Dma0_Ch27_IRQHandler/29 (1073741824 (estimated locally),1.00 per call) Dma0_Ch28_IRQHandler/30 (1073741824 (estimated locally),1.00 per call) Dma0_Ch29_IRQHandler/31 (1073741824 (estimated locally),1.00 per call) Dma0_Ch30_IRQHandler/32 (1073741824 (estimated locally),1.00 per call) Dma0_Ch31_IRQHandler/33 (1073741824 (estimated locally),1.00 per call) 
+  Calls: Dma_Ip_ErrorIrqHandler/34 (145277267 (estimated locally),0.14 per call) Dma_Ip_IntIrqHandler/35 (177167400 (estimated locally),0.16 per call) 
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: IrqHandler.constprop.0/36 (177167400 (estimated locally),0.16 per call) 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: IrqHandler.constprop.0/36 (145277267 (estimated locally),0.14 per call) 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+IrqHandler/1 (IrqHandler) @06b7b1c0
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: IrqHandler.constprop.0/36 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+
+;; Function IrqHandler.constprop (IrqHandler.constprop.0, funcdef_no=33, decl_uid=6593, cgraph_uid=36, symbol_order=36)
+
+IrqHandler.constprop (const uint32 LocHwCh)
+{
+  uint32 ChIntStatus;
+  uint32 ChErrEnable;
+  const uint32 LocHwVers;
+  const uint32 LocHwInst;
+  struct Dma_Ip_Hwv3ChTcdRegType * _2;
+  long unsigned int _3;
+  long unsigned int _5;
+  short unsigned int _6;
+  short unsigned int _7;
+  long unsigned int _8;
+  signed int _10;
+
+  <bb 10> [local count: 1073741823]:
+  # DEBUG LocHwInst => 0
+  # DEBUG LocHwVers => 3
+
+  <bb 2> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  _2 = g_ptHwChTcdPtrArray[0][LocHwCh_1(D)];
+  _3 = _2->tChReg.reg_CH_INT;
+  ChIntStatus_4 = _3 & 1;
+  # DEBUG ChIntStatus => ChIntStatus_4
+  # DEBUG BEGIN_STMT
+  _5 = _2->tChReg.reg_CH_ES;
+  # DEBUG ChErrStatus => _5 & 2147483648
+  # DEBUG BEGIN_STMT
+  _6 = _2->tTcdReg.reg_CSR;
+  _7 = _6 & 6;
+  # DEBUG ChIntEnable => (uint32) _7
+  # DEBUG BEGIN_STMT
+  _8 = _2->tChReg.reg_CH_CSR;
+  ChErrEnable_9 = _8 & 4;
+  # DEBUG ChErrEnable => ChErrEnable_9
+  # DEBUG BEGIN_STMT
+  _10 = (signed int) _5;
+  if (_10 < 0)
+    goto <bb 3>; [41.00%]
+  else
+    goto <bb 6>; [59.00%]
+
+  <bb 3> [local count: 440234143]:
+  # DEBUG BEGIN_STMT
+  if (ChErrEnable_9 != 0)
+    goto <bb 4>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 4> [local count: 145277267]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_ErrorIrqHandler (3, 0, LocHwCh_1(D));
+
+  <bb 5> [local count: 440234144]:
+  # DEBUG BEGIN_STMT
+  _2->tChReg.reg_CH_ES = 2147483648;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (ChIntStatus_4 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 7> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  _2->tChReg.reg_CH_INT = 1;
+  # DEBUG BEGIN_STMT
+  if (_7 != 0)
+    goto <bb 8>; [33.00%]
+  else
+    goto <bb 9>; [67.00%]
+
+  <bb 8> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_IntIrqHandler (3, 0, LocHwCh_1(D));
+
+  <bb 9> [local count: 1073741824]:
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch0_IRQHandler (Dma0_Ch0_IRQHandler, funcdef_no=1, decl_uid=6155, cgraph_uid=2, symbol_order=2)
+
+Dma0_Ch0_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (0);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch1_IRQHandler (Dma0_Ch1_IRQHandler, funcdef_no=2, decl_uid=6157, cgraph_uid=3, symbol_order=3)
+
+Dma0_Ch1_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (1);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch2_IRQHandler (Dma0_Ch2_IRQHandler, funcdef_no=3, decl_uid=6159, cgraph_uid=4, symbol_order=4)
+
+Dma0_Ch2_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (2);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch3_IRQHandler (Dma0_Ch3_IRQHandler, funcdef_no=4, decl_uid=6161, cgraph_uid=5, symbol_order=5)
+
+Dma0_Ch3_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (3);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch4_IRQHandler (Dma0_Ch4_IRQHandler, funcdef_no=5, decl_uid=6163, cgraph_uid=6, symbol_order=6)
+
+Dma0_Ch4_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (4);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch5_IRQHandler (Dma0_Ch5_IRQHandler, funcdef_no=6, decl_uid=6165, cgraph_uid=7, symbol_order=7)
+
+Dma0_Ch5_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (5);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch6_IRQHandler (Dma0_Ch6_IRQHandler, funcdef_no=7, decl_uid=6167, cgraph_uid=8, symbol_order=8)
+
+Dma0_Ch6_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (6);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch7_IRQHandler (Dma0_Ch7_IRQHandler, funcdef_no=8, decl_uid=6169, cgraph_uid=9, symbol_order=9)
+
+Dma0_Ch7_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (7);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch8_IRQHandler (Dma0_Ch8_IRQHandler, funcdef_no=9, decl_uid=6171, cgraph_uid=10, symbol_order=10)
+
+Dma0_Ch8_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (8);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch9_IRQHandler (Dma0_Ch9_IRQHandler, funcdef_no=10, decl_uid=6173, cgraph_uid=11, symbol_order=11)
+
+Dma0_Ch9_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (9);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch10_IRQHandler (Dma0_Ch10_IRQHandler, funcdef_no=11, decl_uid=6175, cgraph_uid=12, symbol_order=12)
+
+Dma0_Ch10_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (10);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch11_IRQHandler (Dma0_Ch11_IRQHandler, funcdef_no=12, decl_uid=6177, cgraph_uid=13, symbol_order=13)
+
+Dma0_Ch11_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (11);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch12_IRQHandler (Dma0_Ch12_IRQHandler, funcdef_no=13, decl_uid=6179, cgraph_uid=14, symbol_order=14)
+
+Dma0_Ch12_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (12);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch13_IRQHandler (Dma0_Ch13_IRQHandler, funcdef_no=14, decl_uid=6181, cgraph_uid=15, symbol_order=15)
+
+Dma0_Ch13_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (13);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch14_IRQHandler (Dma0_Ch14_IRQHandler, funcdef_no=15, decl_uid=6183, cgraph_uid=16, symbol_order=16)
+
+Dma0_Ch14_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (14);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch15_IRQHandler (Dma0_Ch15_IRQHandler, funcdef_no=16, decl_uid=6185, cgraph_uid=17, symbol_order=17)
+
+Dma0_Ch15_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (15);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch16_IRQHandler (Dma0_Ch16_IRQHandler, funcdef_no=17, decl_uid=6187, cgraph_uid=18, symbol_order=18)
+
+Dma0_Ch16_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (16);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch17_IRQHandler (Dma0_Ch17_IRQHandler, funcdef_no=18, decl_uid=6189, cgraph_uid=19, symbol_order=19)
+
+Dma0_Ch17_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (17);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch18_IRQHandler (Dma0_Ch18_IRQHandler, funcdef_no=19, decl_uid=6191, cgraph_uid=20, symbol_order=20)
+
+Dma0_Ch18_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (18);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch19_IRQHandler (Dma0_Ch19_IRQHandler, funcdef_no=20, decl_uid=6193, cgraph_uid=21, symbol_order=21)
+
+Dma0_Ch19_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (19);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch20_IRQHandler (Dma0_Ch20_IRQHandler, funcdef_no=21, decl_uid=6195, cgraph_uid=22, symbol_order=22)
+
+Dma0_Ch20_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (20);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch21_IRQHandler (Dma0_Ch21_IRQHandler, funcdef_no=22, decl_uid=6197, cgraph_uid=23, symbol_order=23)
+
+Dma0_Ch21_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (21);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch22_IRQHandler (Dma0_Ch22_IRQHandler, funcdef_no=23, decl_uid=6199, cgraph_uid=24, symbol_order=24)
+
+Dma0_Ch22_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (22);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch23_IRQHandler (Dma0_Ch23_IRQHandler, funcdef_no=24, decl_uid=6201, cgraph_uid=25, symbol_order=25)
+
+Dma0_Ch23_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (23);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch24_IRQHandler (Dma0_Ch24_IRQHandler, funcdef_no=25, decl_uid=6203, cgraph_uid=26, symbol_order=26)
+
+Dma0_Ch24_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (24);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch25_IRQHandler (Dma0_Ch25_IRQHandler, funcdef_no=26, decl_uid=6205, cgraph_uid=27, symbol_order=27)
+
+Dma0_Ch25_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (25);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch26_IRQHandler (Dma0_Ch26_IRQHandler, funcdef_no=27, decl_uid=6207, cgraph_uid=28, symbol_order=28)
+
+Dma0_Ch26_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (26);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch27_IRQHandler (Dma0_Ch27_IRQHandler, funcdef_no=28, decl_uid=6209, cgraph_uid=29, symbol_order=29)
+
+Dma0_Ch27_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (27);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch28_IRQHandler (Dma0_Ch28_IRQHandler, funcdef_no=29, decl_uid=6211, cgraph_uid=30, symbol_order=30)
+
+Dma0_Ch28_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (28);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch29_IRQHandler (Dma0_Ch29_IRQHandler, funcdef_no=30, decl_uid=6213, cgraph_uid=31, symbol_order=31)
+
+Dma0_Ch29_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (29);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch30_IRQHandler (Dma0_Ch30_IRQHandler, funcdef_no=31, decl_uid=6215, cgraph_uid=32, symbol_order=32)
+
+Dma0_Ch30_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (30);
+  return;
+
+}
+
+
+
+;; Function Dma0_Ch31_IRQHandler (Dma0_Ch31_IRQHandler, funcdef_no=32, decl_uid=6217, cgraph_uid=33, symbol_order=33)
+
+Dma0_Ch31_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => 3
+  # DEBUG D#4 => 0
+  IrqHandler.constprop (31);
+  return;
+
+}
+
+

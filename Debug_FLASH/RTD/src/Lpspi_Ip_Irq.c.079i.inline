@@ -1,0 +1,199 @@
+IPA function summary for Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/2 inlinable
+  global time:     13.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Lpspi_Ip_IrqRxDmaHandler/5 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 is compile time invariant
+
+IPA function summary for Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/1 inlinable
+  global time:     13.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Lpspi_Ip_IrqTxDmaHandler/4 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 is compile time invariant
+
+IPA function summary for Lpspi_Ip_LPSPI_1_IRQHandler/0 inlinable
+  global time:     13.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Lpspi_Ip_IrqHandler/3 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 is compile time invariant
+
+
+Flattening functions:
+Overall time estimate: 39.000000 weighted by profile: 0.000000
+
+Deciding on inlining of small functions.  Starting with size 0.
+Enqueueing calls in Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/2.
+Enqueueing calls in Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/1.
+Enqueueing calls in Lpspi_Ip_LPSPI_1_IRQHandler/0.
+node context cache: 0 hits, 0 misses, 0 initializations
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+
+Deciding on functions to be inlined into all callers and removing useless speculations:
+Overall time estimate: 39.000000 weighted by profile: 0.000000
+
+Why inlining failed?
+function body not available                       :        3 calls, 3.000000 freq, 0 count
+IPA function summary for Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/2 inlinable
+  global time:     13.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Lpspi_Ip_IrqRxDmaHandler/5 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 is compile time invariant
+
+IPA function summary for Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/1 inlinable
+  global time:     13.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Lpspi_Ip_IrqTxDmaHandler/4 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 is compile time invariant
+
+IPA function summary for Lpspi_Ip_LPSPI_1_IRQHandler/0 inlinable
+  global time:     13.000000
+  self size:       5
+  global size:     5
+  min size:       2
+  self stack:      0
+  global stack:    0
+    size:0.000000, time:0.000000
+    size:3.000000, time:2.000000,  executed if:(not inlined)
+  calls:
+    Lpspi_Ip_IrqHandler/3 function body not available
+      freq:1.00 loop depth: 0 size: 2 time: 11
+       op0 is compile time invariant
+
+Symbol table:
+
+Lpspi_Ip_IrqRxDmaHandler/5 (Lpspi_Ip_IrqRxDmaHandler) @069c97e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/2 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Lpspi_Ip_IrqTxDmaHandler/4 (Lpspi_Ip_IrqTxDmaHandler) @069c92a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/1 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Lpspi_Ip_IrqHandler/3 (Lpspi_Ip_IrqHandler) @069c9e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_LPSPI_1_IRQHandler/0 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/2 (Lpspi_Ip_LPSPI_1_IrqRxDmaHandler) @069c99a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqRxDmaHandler/5 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/1 (Lpspi_Ip_LPSPI_1_IrqTxDmaHandler) @069c9700
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqTxDmaHandler/4 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_LPSPI_1_IRQHandler/0 (Lpspi_Ip_LPSPI_1_IRQHandler) @069c9460
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqHandler/3 (1073741824 (estimated locally),1.00 per call) 
+
+;; Function Lpspi_Ip_LPSPI_1_IRQHandler (Lpspi_Ip_LPSPI_1_IRQHandler, funcdef_no=0, decl_uid=5835, cgraph_uid=1, symbol_order=0)
+
+Lpspi_Ip_LPSPI_1_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_IrqHandler (1);
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+
+;; Function Lpspi_Ip_LPSPI_1_IrqTxDmaHandler (Lpspi_Ip_LPSPI_1_IrqTxDmaHandler, funcdef_no=1, decl_uid=5837, cgraph_uid=2, symbol_order=1)
+
+Lpspi_Ip_LPSPI_1_IrqTxDmaHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_IrqTxDmaHandler (1);
+  return;
+
+}
+
+
+
+;; Function Lpspi_Ip_LPSPI_1_IrqRxDmaHandler (Lpspi_Ip_LPSPI_1_IrqRxDmaHandler, funcdef_no=2, decl_uid=5839, cgraph_uid=3, symbol_order=2)
+
+Lpspi_Ip_LPSPI_1_IrqRxDmaHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  Lpspi_Ip_IrqRxDmaHandler (1);
+  return;
+
+}
+
+

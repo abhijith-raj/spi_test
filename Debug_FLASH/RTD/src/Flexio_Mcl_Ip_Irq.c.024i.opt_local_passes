@@ -1,0 +1,143 @@
+MCL_FLEXIO_ISR ()
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_CommonIrq ();
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Flexio_Mcl_Ip_CommonIrq ()
+{
+  uint8 u8TimerMaskFlag;
+  uint8 u8ShifterErrMaskFlag;
+  uint8 u8ShifterErrEnabledIrq;
+  uint8 u8ShifterEnabledIrq;
+  uint8 u8ShifterMaskFlag;
+  struct FLEXIO_Type * BaseAddr;
+  long unsigned int _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  long unsigned int _5;
+  _Bool _6;
+  long unsigned int _7;
+  unsigned char _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  unsigned char _11;
+  int _12;
+  int _13;
+  unsigned char _14;
+  int _15;
+  int _16;
+  unsigned char _17;
+  int _18;
+  int _19;
+  unsigned char _20;
+  int _21;
+  int _22;
+  long unsigned int _23;
+  long unsigned int _24;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  BaseAddr_28 = Flexio_Ip_paxBase[0];
+  # DEBUG BaseAddr => BaseAddr_28
+  # DEBUG BEGIN_STMT
+  _1 = Flexio_Mcl_Ip_GetAllShifterStatus (BaseAddr_28);
+  u8ShifterMaskFlag_30 = (uint8) _1;
+  # DEBUG u8ShifterMaskFlag => u8ShifterMaskFlag_30
+  # DEBUG BEGIN_STMT
+  _2 = Flexio_Mcl_Ip_GetAllShifterInterrupt (BaseAddr_28);
+  u8ShifterEnabledIrq_32 = (uint8) _2;
+  # DEBUG u8ShifterEnabledIrq => u8ShifterEnabledIrq_32
+  # DEBUG BEGIN_STMT
+  _3 = Flexio_Mcl_Ip_GetAllShifterErrorInterrupt (BaseAddr_28);
+  u8ShifterErrEnabledIrq_34 = (uint8) _3;
+  # DEBUG u8ShifterErrEnabledIrq => u8ShifterErrEnabledIrq_34
+  # DEBUG BEGIN_STMT
+  _4 = Flexio_Mcl_Ip_GetAllShifterErrorStatus (BaseAddr_28);
+  u8ShifterErrMaskFlag_36 = (uint8) _4;
+  # DEBUG u8ShifterErrMaskFlag => u8ShifterErrMaskFlag_36
+  # DEBUG BEGIN_STMT
+  _5 = Flexio_Mcl_Ip_GetAllTimerStatus (BaseAddr_28);
+  u8TimerMaskFlag_38 = (uint8) _5;
+  # DEBUG u8TimerMaskFlag => u8TimerMaskFlag_38
+  # DEBUG BEGIN_STMT
+  _6 = Flexio_Ip_baIpIsInitialized[0];
+  if (_6 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _7 ={v} BaseAddr_28->SHIFTERR;
+  _8 = u8ShifterErrMaskFlag_36 & u8ShifterErrEnabledIrq_34;
+  _9 = (long unsigned int) _8;
+  _10 = _7 | _9;
+  BaseAddr_28->SHIFTERR ={v} _10;
+  # DEBUG BEGIN_STMT
+  _11 = u8ShifterMaskFlag_30 & u8ShifterEnabledIrq_32;
+  _12 = (int) _11;
+  _13 = _12 & 1;
+  if (_13 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  _14 = u8ShifterErrMaskFlag_36 & u8ShifterErrEnabledIrq_34;
+  _15 = (int) _14;
+  _16 = _15 & 1;
+  if (_16 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_IrqHandler (0, u8ShifterMaskFlag_30, u8ShifterErrMaskFlag_36);
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _17 = u8ShifterMaskFlag_30 & u8ShifterEnabledIrq_32;
+  _18 = (int) _17;
+  _19 = _18 & 2;
+  if (_19 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  _20 = u8ShifterErrMaskFlag_36 & u8ShifterErrEnabledIrq_34;
+  _21 = (int) _20;
+  _22 = _21 & 2;
+  if (_22 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_IrqHandler (1, u8ShifterMaskFlag_30, u8ShifterErrMaskFlag_36);
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _23 = (long unsigned int) u8ShifterErrMaskFlag_36;
+  BaseAddr_28->SHIFTERR ={v} _23;
+  # DEBUG BEGIN_STMT
+  _24 = (long unsigned int) u8TimerMaskFlag_38;
+  BaseAddr_28->TIMSTAT ={v} _24;
+
+  <bb 10> :
+  return;
+
+}
+
+

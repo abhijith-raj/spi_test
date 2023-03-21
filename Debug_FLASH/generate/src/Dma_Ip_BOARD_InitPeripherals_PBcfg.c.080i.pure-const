@@ -1,0 +1,58 @@
+callgraph:
+
+Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/12 (Lpspi_Ip_LPSPI_1_IrqRxDmaHandler) @05fab540
+  Type: function
+  Visibility: external public
+  Address is taken.
+  References: 
+  Referring: LogicChannel1ConfigPB/5 (addr) 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/11 (Lpspi_Ip_LPSPI_1_IrqTxDmaHandler) @05fab460
+  Type: function
+  Visibility: external public
+  Address is taken.
+  References: 
+  Referring: LogicChannel0ConfigPB/4 (addr) 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+
+ ordered call graph: reduced for nothrow
+
+
+
+MALLOC LATTICE Initial:
+
+
+MALLOC LATTICE after propagation:
+callgraph:
+
+Lpspi_Ip_LPSPI_1_IrqRxDmaHandler/12 (Lpspi_Ip_LPSPI_1_IrqRxDmaHandler) @05fab540
+  Type: function
+  Visibility: external public
+  Address is taken.
+  References: 
+  Referring: LogicChannel1ConfigPB/5 (addr) 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_LPSPI_1_IrqTxDmaHandler/11 (Lpspi_Ip_LPSPI_1_IrqTxDmaHandler) @05fab460
+  Type: function
+  Visibility: external public
+  Address is taken.
+  References: 
+  Referring: LogicChannel0ConfigPB/4 (addr) 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+
+
+ ordered call graph: reduced
+

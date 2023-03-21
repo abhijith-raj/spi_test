@@ -1,0 +1,317 @@
+
+Marking local functions:
+
+
+Marking externally visible functions: Dma_Ip_SetHwChannelStatePointer/9 Dma_Ip_GetHwChannelStatePointer/8 Dma_Ip_GetHwChannelState/7 Dma_Ip_SetHwChannelState/6
+
+
+Marking externally visible variables:
+
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Symbol table:
+
+fpa_Dma_Ip_HwChannelState.0/10 (fpa_Dma_Ip_HwChannelState) @05fe83a8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Dma_Ip_SetHwChannel_ResetEvent/1 (addr) Dma_Ip_SetHwChannel_ReadyEvent/2 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ResetEvent/1 (addr) Dma_Ip_SetHwChannel_ReadyEvent/2 (addr) Dma_Ip_SetHwChannel_TransferEvent/3 (addr) Dma_Ip_SetHwChannel_ScatterGatherEvent/4 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ResetEvent/1 (addr) Dma_Ip_SetHwChannel_ReadyEvent/2 (addr) Dma_Ip_SetHwChannel_TransferEvent/3 (addr) Dma_Ip_SetHwChannel_ScatterGatherEvent/4 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ResetEvent/1 (addr) Dma_Ip_SetHwChannel_ReadyEvent/2 (addr) Dma_Ip_SetHwChannel_TransferEvent/3 (addr) Dma_Ip_SetHwChannel_ScatterGatherEvent/4 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ResetEvent/1 (addr) Dma_Ip_SetHwChannel_ReadyEvent/2 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) Dma_Ip_SetHwChannel_ErrorEvent/5 (addr) 
+  Referring: Dma_Ip_SetHwChannelState/6 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Dma_Ip_SetHwChannelStatePointer/9 (Dma_Ip_SetHwChannelStatePointer) @05fcfd20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_xHwState/0 (write) 
+  Referring: 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/8 (Dma_Ip_GetHwChannelStatePointer) @05fcf7e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetHwChannelState/7 (Dma_Ip_GetHwChannelState) @05fcf2a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannelState/6 (Dma_Ip_SetHwChannelState) @05fcfee0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_xHwState/0 (read) fpa_Dma_Ip_HwChannelState.0/10 (read) 
+  Referring: 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+   Indirect call Num speculative call targets: 0
+Dma_Ip_SetHwChannel_ErrorEvent/5 (Dma_Ip_SetHwChannel_ErrorEvent) @05fcfc40
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannel_ScatterGatherEvent/4 (Dma_Ip_SetHwChannel_ScatterGatherEvent) @05fcf9a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannel_TransferEvent/3 (Dma_Ip_SetHwChannel_TransferEvent) @05fcf700
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannel_ReadyEvent/2 (Dma_Ip_SetHwChannel_ReadyEvent) @05fcf460
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannel_ResetEvent/1 (Dma_Ip_SetHwChannel_ResetEvent) @05fcf1c0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  Address is taken.
+  References: Dma_Ip_xHwState/0 (read) 
+  Referring: fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) fpa_Dma_Ip_HwChannelState.0/10 (addr) 
+  Availability: available
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_xHwState/0 (Dma_Ip_xHwState) @05fc59d8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Dma_Ip_SetHwChannelState/6 (read) Dma_Ip_SetHwChannel_ScatterGatherEvent/4 (read) Dma_Ip_SetHwChannel_TransferEvent/3 (read) Dma_Ip_SetHwChannel_ErrorEvent/5 (read) Dma_Ip_SetHwChannel_ReadyEvent/2 (read) Dma_Ip_SetHwChannel_ResetEvent/1 (read) Dma_Ip_GetHwChannelState/7 (read) Dma_Ip_GetHwChannelStatePointer/8 (read) Dma_Ip_SetHwChannelStatePointer/9 (write) 
+  Availability: available
+  Varpool flags:
+Dma_Ip_SetHwChannelStatePointer (uint32 LocHwVers, uint32 LocHwInst, uint32 LocHwCh, struct Dma_Ip_HwChannelStateType * StatePointer)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh] = StatePointer;
+
+  <bb 4> :
+  return;
+
+}
+
+
+Dma_Ip_GetHwChannelStatePointer (uint32 LocHwVers, uint32 LocHwInst, uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * PtStatePtr;
+  struct Dma_Ip_HwChannelStateType * D.6467;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  PtStatePtr = 0B;
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  PtStatePtr = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  D.6467 = PtStatePtr;
+  return D.6467;
+
+}
+
+
+Dma_Ip_GetHwChannelState (uint32 LocHwVers, uint32 LocHwInst, uint32 LocHwCh)
+{
+  Dma_Ip_HwChannelStateValueType StateValue;
+  Dma_Ip_HwChannelStateValueType D.6463;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  StateValue = 0;
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  StateValue = _1->StateValue;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  D.6463 = StateValue;
+  return D.6463;
+
+}
+
+
+Dma_Ip_SetHwChannelState (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const Dma_Ip_HwChannelEventValueEnum EventValue)
+{
+  Dma_Ip_HwChannelStateValueType StateValue;
+  static void (*<T5db>) (const uint32, const uint32, const uint32) fpa_Dma_Ip_HwChannelState[5][5] = {{Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_TransferEvent, Dma_Ip_SetHwChannel_ScatterGatherEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_TransferEvent, Dma_Ip_SetHwChannel_ScatterGatherEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_TransferEvent, Dma_Ip_SetHwChannel_ScatterGatherEvent, Dma_Ip_SetHwChannel_ErrorEvent}, {Dma_Ip_SetHwChannel_ResetEvent, Dma_Ip_SetHwChannel_ReadyEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent, Dma_Ip_SetHwChannel_ErrorEvent}};
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  StateValue = 0;
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  StateValue = _1->StateValue;
+  # DEBUG BEGIN_STMT
+  _2 = fpa_Dma_Ip_HwChannelState[StateValue][EventValue];
+  _2 (LocHwVers, LocHwInst, LocHwCh);
+
+  <bb 4> :
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ErrorEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  _1->StateValue = 4;
+
+  <bb 4> :
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ScatterGatherEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  _1->StateValue = 3;
+
+  <bb 4> :
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_TransferEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  _1->StateValue = 2;
+
+  <bb 4> :
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ReadyEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  _1->StateValue = 1;
+
+  <bb 4> :
+  return;
+
+}
+
+
+Dma_Ip_SetHwChannel_ResetEvent (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = Dma_Ip_xHwState.ptHwChV3StateArray[LocHwInst][LocHwCh];
+  _1->StateValue = 0;
+
+  <bb 4> :
+  return;
+
+}
+
+

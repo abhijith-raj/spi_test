@@ -1,0 +1,2362 @@
+Trivially needed symbols: Flexio_Spi_Ip_GetStatus/21 Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_Init/10 Flexio_Spi_Ip_apxStateStructureArray/2
+
+
+Initial Symbol table:
+
+Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (Flexio_Mcl_Ip_GetAllShifterErrorInterrupt) @06175460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (Flexio_Mcl_Ip_GetAllShifterInterrupt) @06175380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16) @061751c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16) @061750e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (Flexio_Mcl_Ip_GetAllShifterErrorStatus) @05f8f9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterStatus/36 (Flexio_Mcl_Ip_GetAllShifterStatus) @05f8f8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterStatus/33 (Flexio_Mcl_Ip_GetShifterStatus) @05f8f2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterStatus/32 (Flexio_Mcl_Ip_ClearShifterStatus) @05f8f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (Flexio_Mcl_Ip_SetShifterErrorInterrupt) @06159d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterDMARequest/30 (Flexio_Mcl_Ip_SetShifterDMARequest) @06159ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterInterrupt/29 (Flexio_Mcl_Ip_SetShifterInterrupt) @06159e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+OsIf_GetElapsed/28 (OsIf_GetElapsed) @06159c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (Flexio_Mcl_Ip_ClearShifterErrorStatus) @06159b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterErrorStatus/26 (Flexio_Mcl_Ip_GetShifterErrorStatus) @06159a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_GetCounter/25 (OsIf_GetCounter) @061599a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17) @061598c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17) @061597e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_MicrosToTicks/22 (OsIf_MicrosToTicks) @06159700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Spi_Ip_GetStatus/21 (Flexio_Spi_Ip_GetStatus) @05ec9b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @01981040
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Flexio_Spi_Ip_IrqHandler/20 (Flexio_Spi_Ip_IrqHandler) @05ec9620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec9b60
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 Flexio_Mcl_Ip_GetAllShifterInterrupt/40 
+Flexio_Spi_Ip_Cancel/19 (Flexio_Spi_Ip_Cancel) @05ec90e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec9620
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateTransferMode/18 (Flexio_Spi_Ip_UpdateTransferMode) @05ec9d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec90e0
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_Init/10 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (Flexio_Spi_Ip_UpdateDefaultTransmitData) @05ec9a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec9d20
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateLsb/16 (Flexio_Spi_Ip_UpdateLsb) @05ec97e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec9a80
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateFrameSize/15 (Flexio_Spi_Ip_UpdateFrameSize) @05ec9540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec97e0
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ManageBuffers/14 (Flexio_Spi_Ip_ManageBuffers) @05ec92a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec9540
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 Flexio_Mcl_Ip_GetAllShifterStatus/36 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_AsyncTransmit/13 (Flexio_Spi_Ip_AsyncTransmit) @05ec9000
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec92a0
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_SyncTransmit/12 (Flexio_Spi_Ip_SyncTransmit) @05eb0b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ec9000
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/28 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Spi_Ip_SyncTransmitProcessData/6 OsIf_GetCounter/25 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/22 
+Flexio_Spi_Ip_DeInit/11 (Flexio_Spi_Ip_DeInit) @05eb0620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05eb0b60
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_Init/10 (Flexio_Spi_Ip_Init) @05eb00e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05eb0620
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_axStateStructure/1 (addr) Flexio_Spi_Ip_apxStateStructureArray/2 (write) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_UpdateTransferMode/18 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (Flexio_Spi_Ip_ClearShifterTimerRegisters) @05eb0d20
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05eb0540
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Spi_Ip_ReadShifterBuffer/8 (Flexio_Spi_Ip_ReadShifterBuffer) @05eb0a80
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05ec9000
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_WriteShifterBuffer/7 (Flexio_Spi_Ip_WriteShifterBuffer) @05eb07e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05eb0a80
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_SyncTransmitProcessData/6 (Flexio_Spi_Ip_SyncTransmitProcessData) @05eb0540
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05ec9000
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Mcl_Ip_GetShifterStatus/33 Flexio_Spi_Ip_WriteShifterBuffer/7 Flexio_Mcl_Ip_GetShifterStatus/33 
+Flexio_Spi_Ip_ConfigExternalDevice/5 (Flexio_Spi_Ip_ConfigExternalDevice) @05eb02a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05eb0540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Spi_Ip_ClearShifterTimerRegisters/9 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 
+Flexio_Spi_Ip_TransferProcess/4 (Flexio_Spi_Ip_TransferProcess) @05eb0000
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05ec9540
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Spi_Ip_WriteShifterBuffer/7 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Flexio_Spi_Ip_apxBases/3 (Flexio_Spi_Ip_apxBases) @05da4ee8
+  Type: variable definition
+  Visibility:
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Flexio_Spi_Ip_apxStateStructureArray/2 (Flexio_Spi_Ip_apxStateStructureArray) @05da4e58
+  Type: variable definition analyzed
+  Visibility: public
+  Aux: @05eb00e0
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_Init/10 (write) Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_DeInit/11 (read) Flexio_Spi_Ip_DeInit/11 (write) Flexio_Spi_Ip_SyncTransmit/12 (read) Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (read) Flexio_Spi_Ip_SyncTransmitProcessData/6 (read) Flexio_Spi_Ip_WriteShifterBuffer/7 (read) Flexio_Spi_Ip_ReadShifterBuffer/8 (read) Flexio_Spi_Ip_AsyncTransmit/13 (read) Flexio_Spi_Ip_ManageBuffers/14 (read) Flexio_Spi_Ip_TransferProcess/4 (read) Flexio_Spi_Ip_UpdateFrameSize/15 (read) Flexio_Spi_Ip_UpdateLsb/16 (read) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (read) Flexio_Spi_Ip_UpdateTransferMode/18 (read) Flexio_Spi_Ip_Cancel/19 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_GetStatus/21 (read) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Spi_Ip_axStateStructure/1 (Flexio_Spi_Ip_axStateStructure) @05da4dc8
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @05e90d20
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @05e90d20
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05eb0620
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_GetStatus/21 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_Init/10 Flexio_Spi_Ip_Init/10 
+  Calls: 
+
+Removing unused symbols: Flexio_Spi_Ip_apxBases/3
+
+Reclaimed Symbol table:
+
+Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (Flexio_Mcl_Ip_GetAllShifterErrorInterrupt) @06175460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (Flexio_Mcl_Ip_GetAllShifterInterrupt) @06175380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16) @061751c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16) @061750e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (Flexio_Mcl_Ip_GetAllShifterErrorStatus) @05f8f9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterStatus/36 (Flexio_Mcl_Ip_GetAllShifterStatus) @05f8f8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterStatus/33 (Flexio_Mcl_Ip_GetShifterStatus) @05f8f2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterStatus/32 (Flexio_Mcl_Ip_ClearShifterStatus) @05f8f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (Flexio_Mcl_Ip_SetShifterErrorInterrupt) @06159d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterDMARequest/30 (Flexio_Mcl_Ip_SetShifterDMARequest) @06159ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterInterrupt/29 (Flexio_Mcl_Ip_SetShifterInterrupt) @06159e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+OsIf_GetElapsed/28 (OsIf_GetElapsed) @06159c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (Flexio_Mcl_Ip_ClearShifterErrorStatus) @06159b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterErrorStatus/26 (Flexio_Mcl_Ip_GetShifterErrorStatus) @06159a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_GetCounter/25 (OsIf_GetCounter) @061599a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17) @061598c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17) @061597e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_MicrosToTicks/22 (OsIf_MicrosToTicks) @06159700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Spi_Ip_GetStatus/21 (Flexio_Spi_Ip_GetStatus) @05ec9b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Flexio_Spi_Ip_IrqHandler/20 (Flexio_Spi_Ip_IrqHandler) @05ec9620
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 Flexio_Mcl_Ip_GetAllShifterInterrupt/40 
+Flexio_Spi_Ip_Cancel/19 (Flexio_Spi_Ip_Cancel) @05ec90e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateTransferMode/18 (Flexio_Spi_Ip_UpdateTransferMode) @05ec9d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_Init/10 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (Flexio_Spi_Ip_UpdateDefaultTransmitData) @05ec9a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateLsb/16 (Flexio_Spi_Ip_UpdateLsb) @05ec97e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateFrameSize/15 (Flexio_Spi_Ip_UpdateFrameSize) @05ec9540
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ManageBuffers/14 (Flexio_Spi_Ip_ManageBuffers) @05ec92a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 Flexio_Mcl_Ip_GetAllShifterStatus/36 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_AsyncTransmit/13 (Flexio_Spi_Ip_AsyncTransmit) @05ec9000
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_SyncTransmit/12 (Flexio_Spi_Ip_SyncTransmit) @05eb0b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/28 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Spi_Ip_SyncTransmitProcessData/6 OsIf_GetCounter/25 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/22 
+Flexio_Spi_Ip_DeInit/11 (Flexio_Spi_Ip_DeInit) @05eb0620
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_Init/10 (Flexio_Spi_Ip_Init) @05eb00e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_axStateStructure/1 (addr) Flexio_Spi_Ip_apxStateStructureArray/2 (write) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_UpdateTransferMode/18 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (Flexio_Spi_Ip_ClearShifterTimerRegisters) @05eb0d20
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Spi_Ip_ReadShifterBuffer/8 (Flexio_Spi_Ip_ReadShifterBuffer) @05eb0a80
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_WriteShifterBuffer/7 (Flexio_Spi_Ip_WriteShifterBuffer) @05eb07e0
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_SyncTransmitProcessData/6 (Flexio_Spi_Ip_SyncTransmitProcessData) @05eb0540
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Mcl_Ip_GetShifterStatus/33 Flexio_Spi_Ip_WriteShifterBuffer/7 Flexio_Mcl_Ip_GetShifterStatus/33 
+Flexio_Spi_Ip_ConfigExternalDevice/5 (Flexio_Spi_Ip_ConfigExternalDevice) @05eb02a0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Spi_Ip_ClearShifterTimerRegisters/9 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 
+Flexio_Spi_Ip_TransferProcess/4 (Flexio_Spi_Ip_TransferProcess) @05eb0000
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Spi_Ip_WriteShifterBuffer/7 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Flexio_Spi_Ip_apxStateStructureArray/2 (Flexio_Spi_Ip_apxStateStructureArray) @05da4e58
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_Init/10 (write) Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_DeInit/11 (read) Flexio_Spi_Ip_DeInit/11 (write) Flexio_Spi_Ip_SyncTransmit/12 (read) Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (read) Flexio_Spi_Ip_SyncTransmitProcessData/6 (read) Flexio_Spi_Ip_WriteShifterBuffer/7 (read) Flexio_Spi_Ip_ReadShifterBuffer/8 (read) Flexio_Spi_Ip_AsyncTransmit/13 (read) Flexio_Spi_Ip_ManageBuffers/14 (read) Flexio_Spi_Ip_TransferProcess/4 (read) Flexio_Spi_Ip_UpdateFrameSize/15 (read) Flexio_Spi_Ip_UpdateLsb/16 (read) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (read) Flexio_Spi_Ip_UpdateTransferMode/18 (read) Flexio_Spi_Ip_Cancel/19 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_GetStatus/21 (read) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Spi_Ip_axStateStructure/1 (Flexio_Spi_Ip_axStateStructure) @05da4dc8
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @05e90d20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_GetStatus/21 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_Init/10 Flexio_Spi_Ip_Init/10 
+  Calls: 
+
+
+Initial Symbol table:
+
+Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (Flexio_Mcl_Ip_GetAllShifterErrorInterrupt) @06175460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (Flexio_Mcl_Ip_GetAllShifterInterrupt) @06175380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16) @061751c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16) @061750e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (Flexio_Mcl_Ip_GetAllShifterErrorStatus) @05f8f9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterStatus/36 (Flexio_Mcl_Ip_GetAllShifterStatus) @05f8f8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterStatus/33 (Flexio_Mcl_Ip_GetShifterStatus) @05f8f2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterStatus/32 (Flexio_Mcl_Ip_ClearShifterStatus) @05f8f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (Flexio_Mcl_Ip_SetShifterErrorInterrupt) @06159d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterDMARequest/30 (Flexio_Mcl_Ip_SetShifterDMARequest) @06159ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterInterrupt/29 (Flexio_Mcl_Ip_SetShifterInterrupt) @06159e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+OsIf_GetElapsed/28 (OsIf_GetElapsed) @06159c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (Flexio_Mcl_Ip_ClearShifterErrorStatus) @06159b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterErrorStatus/26 (Flexio_Mcl_Ip_GetShifterErrorStatus) @06159a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_GetCounter/25 (OsIf_GetCounter) @061599a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17) @061598c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17) @061597e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_MicrosToTicks/22 (OsIf_MicrosToTicks) @06159700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Spi_Ip_GetStatus/21 (Flexio_Spi_Ip_GetStatus) @05ec9b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Flexio_Spi_Ip_IrqHandler/20 (Flexio_Spi_Ip_IrqHandler) @05ec9620
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 Flexio_Mcl_Ip_GetAllShifterInterrupt/40 
+Flexio_Spi_Ip_Cancel/19 (Flexio_Spi_Ip_Cancel) @05ec90e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateTransferMode/18 (Flexio_Spi_Ip_UpdateTransferMode) @05ec9d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_Init/10 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (Flexio_Spi_Ip_UpdateDefaultTransmitData) @05ec9a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateLsb/16 (Flexio_Spi_Ip_UpdateLsb) @05ec97e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateFrameSize/15 (Flexio_Spi_Ip_UpdateFrameSize) @05ec9540
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ManageBuffers/14 (Flexio_Spi_Ip_ManageBuffers) @05ec92a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 Flexio_Mcl_Ip_GetAllShifterStatus/36 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_AsyncTransmit/13 (Flexio_Spi_Ip_AsyncTransmit) @05ec9000
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_SyncTransmit/12 (Flexio_Spi_Ip_SyncTransmit) @05eb0b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/28 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Spi_Ip_SyncTransmitProcessData/6 OsIf_GetCounter/25 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/22 
+Flexio_Spi_Ip_DeInit/11 (Flexio_Spi_Ip_DeInit) @05eb0620
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_Init/10 (Flexio_Spi_Ip_Init) @05eb00e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_axStateStructure/1 (addr) Flexio_Spi_Ip_apxStateStructureArray/2 (write) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_UpdateTransferMode/18 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (Flexio_Spi_Ip_ClearShifterTimerRegisters) @05eb0d20
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Spi_Ip_ReadShifterBuffer/8 (Flexio_Spi_Ip_ReadShifterBuffer) @05eb0a80
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_WriteShifterBuffer/7 (Flexio_Spi_Ip_WriteShifterBuffer) @05eb07e0
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_SyncTransmitProcessData/6 (Flexio_Spi_Ip_SyncTransmitProcessData) @05eb0540
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Mcl_Ip_GetShifterStatus/33 Flexio_Spi_Ip_WriteShifterBuffer/7 Flexio_Mcl_Ip_GetShifterStatus/33 
+Flexio_Spi_Ip_ConfigExternalDevice/5 (Flexio_Spi_Ip_ConfigExternalDevice) @05eb02a0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Spi_Ip_ClearShifterTimerRegisters/9 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 
+Flexio_Spi_Ip_TransferProcess/4 (Flexio_Spi_Ip_TransferProcess) @05eb0000
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Spi_Ip_WriteShifterBuffer/7 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Flexio_Spi_Ip_apxStateStructureArray/2 (Flexio_Spi_Ip_apxStateStructureArray) @05da4e58
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_Init/10 (write) Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_DeInit/11 (read) Flexio_Spi_Ip_DeInit/11 (write) Flexio_Spi_Ip_SyncTransmit/12 (read) Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (read) Flexio_Spi_Ip_SyncTransmitProcessData/6 (read) Flexio_Spi_Ip_WriteShifterBuffer/7 (read) Flexio_Spi_Ip_ReadShifterBuffer/8 (read) Flexio_Spi_Ip_AsyncTransmit/13 (read) Flexio_Spi_Ip_ManageBuffers/14 (read) Flexio_Spi_Ip_TransferProcess/4 (read) Flexio_Spi_Ip_UpdateFrameSize/15 (read) Flexio_Spi_Ip_UpdateLsb/16 (read) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (read) Flexio_Spi_Ip_UpdateTransferMode/18 (read) Flexio_Spi_Ip_Cancel/19 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_GetStatus/21 (read) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Spi_Ip_axStateStructure/1 (Flexio_Spi_Ip_axStateStructure) @05da4dc8
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @05e90d20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_GetStatus/21 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_Init/10 Flexio_Spi_Ip_Init/10 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (Flexio_Mcl_Ip_GetAllShifterErrorInterrupt) @06175460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (Flexio_Mcl_Ip_GetAllShifterInterrupt) @06175380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16) @061751c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16) @061750e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (Flexio_Mcl_Ip_GetAllShifterErrorStatus) @05f8f9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterStatus/36 (Flexio_Mcl_Ip_GetAllShifterStatus) @05f8f8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterStatus/33 (Flexio_Mcl_Ip_GetShifterStatus) @05f8f2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterStatus/32 (Flexio_Mcl_Ip_ClearShifterStatus) @05f8f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (Flexio_Mcl_Ip_SetShifterErrorInterrupt) @06159d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterDMARequest/30 (Flexio_Mcl_Ip_SetShifterDMARequest) @06159ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterInterrupt/29 (Flexio_Mcl_Ip_SetShifterInterrupt) @06159e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+OsIf_GetElapsed/28 (OsIf_GetElapsed) @06159c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (Flexio_Mcl_Ip_ClearShifterErrorStatus) @06159b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_ConfigExternalDevice/5 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterErrorStatus/26 (Flexio_Mcl_Ip_GetShifterErrorStatus) @06159a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_GetCounter/25 (OsIf_GetCounter) @061599a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17) @061598c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17) @061597e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+OsIf_MicrosToTicks/22 (OsIf_MicrosToTicks) @06159700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: 
+Flexio_Spi_Ip_GetStatus/21 (Flexio_Spi_Ip_GetStatus) @05ec9b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Flexio_Spi_Ip_IrqHandler/20 (Flexio_Spi_Ip_IrqHandler) @05ec9620
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 Flexio_Mcl_Ip_GetAllShifterInterrupt/40 
+Flexio_Spi_Ip_Cancel/19 (Flexio_Spi_Ip_Cancel) @05ec90e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateTransferMode/18 (Flexio_Spi_Ip_UpdateTransferMode) @05ec9d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_Init/10 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (Flexio_Spi_Ip_UpdateDefaultTransmitData) @05ec9a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateLsb/16 (Flexio_Spi_Ip_UpdateLsb) @05ec97e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_UpdateFrameSize/15 (Flexio_Spi_Ip_UpdateFrameSize) @05ec9540
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ManageBuffers/14 (Flexio_Spi_Ip_ManageBuffers) @05ec92a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_TransferProcess/4 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 Flexio_Mcl_Ip_GetAllShifterStatus/36 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_AsyncTransmit/13 (Flexio_Spi_Ip_AsyncTransmit) @05ec9000
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 DevAssert/0 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_SyncTransmit/12 (Flexio_Spi_Ip_SyncTransmit) @05eb0b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/28 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Mcl_Ip_GetShifterErrorStatus/26 Flexio_Spi_Ip_SyncTransmitProcessData/6 OsIf_GetCounter/25 Flexio_Spi_Ip_ConfigExternalDevice/5 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/22 
+Flexio_Spi_Ip_DeInit/11 (Flexio_Spi_Ip_DeInit) @05eb0620
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_Init/10 (Flexio_Spi_Ip_Init) @05eb00e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_axStateStructure/1 (addr) Flexio_Spi_Ip_apxStateStructureArray/2 (write) Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_UpdateTransferMode/18 DevAssert/0 DevAssert/0 
+Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (Flexio_Spi_Ip_ClearShifterTimerRegisters) @05eb0d20
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice/5 
+  Calls: 
+Flexio_Spi_Ip_ReadShifterBuffer/8 (Flexio_Spi_Ip_ReadShifterBuffer) @05eb0a80
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_WriteShifterBuffer/7 (Flexio_Spi_Ip_WriteShifterBuffer) @05eb07e0
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_TransferProcess/4 Flexio_Spi_Ip_SyncTransmitProcessData/6 
+  Calls: 
+Flexio_Spi_Ip_SyncTransmitProcessData/6 (Flexio_Spi_Ip_SyncTransmitProcessData) @05eb0540
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Mcl_Ip_GetShifterStatus/33 Flexio_Spi_Ip_WriteShifterBuffer/7 Flexio_Mcl_Ip_GetShifterStatus/33 
+Flexio_Spi_Ip_ConfigExternalDevice/5 (Flexio_Spi_Ip_ConfigExternalDevice) @05eb02a0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Mcl_Ip_ClearShifterErrorStatus/27 Flexio_Spi_Ip_ClearShifterTimerRegisters/9 Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterDMARequest/30 Flexio_Mcl_Ip_SetShifterInterrupt/29 
+Flexio_Spi_Ip_TransferProcess/4 (Flexio_Spi_Ip_TransferProcess) @05eb0000
+  Type: function definition analyzed
+  Visibility:
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 
+  Calls: Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 Flexio_Mcl_Ip_SetShifterInterrupt/29 Flexio_Spi_Ip_ReadShifterBuffer/8 Flexio_Spi_Ip_WriteShifterBuffer/7 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Flexio_Spi_Ip_apxStateStructureArray/2 (Flexio_Spi_Ip_apxStateStructureArray) @05da4e58
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_Init/10 (write) Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_DeInit/11 (read) Flexio_Spi_Ip_DeInit/11 (write) Flexio_Spi_Ip_SyncTransmit/12 (read) Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (read) Flexio_Spi_Ip_SyncTransmitProcessData/6 (read) Flexio_Spi_Ip_WriteShifterBuffer/7 (read) Flexio_Spi_Ip_ReadShifterBuffer/8 (read) Flexio_Spi_Ip_AsyncTransmit/13 (read) Flexio_Spi_Ip_ManageBuffers/14 (read) Flexio_Spi_Ip_TransferProcess/4 (read) Flexio_Spi_Ip_UpdateFrameSize/15 (read) Flexio_Spi_Ip_UpdateLsb/16 (read) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (read) Flexio_Spi_Ip_UpdateTransferMode/18 (read) Flexio_Spi_Ip_Cancel/19 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_GetStatus/21 (read) 
+  Availability: not-ready
+  Varpool flags:
+Flexio_Spi_Ip_axStateStructure/1 (Flexio_Spi_Ip_axStateStructure) @05da4dc8
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @05e90d20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Flexio_Spi_Ip_GetStatus/21 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_Cancel/19 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateTransferMode/18 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateDefaultTransmitData/17 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateLsb/16 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_UpdateFrameSize/15 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_ManageBuffers/14 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_AsyncTransmit/13 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_SyncTransmit/12 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_DeInit/11 Flexio_Spi_Ip_Init/10 Flexio_Spi_Ip_Init/10 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (Flexio_Spi_Ip_ConfigExternalDevice.constprop) @062d5700
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of Flexio_Spi_Ip_ConfigExternalDevice/5
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (114863530 (estimated locally),0.66 per call) Flexio_Spi_Ip_AsyncTransmit/13 (708669601 (estimated locally),0.66 per call) 
+  Calls: Flexio_Mcl_Ip_SetShifterInterrupt/29 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_SetShifterDMARequest/30 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (inlined) (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_ClearShifterStatus/32 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (Flexio_Mcl_Ip_GetAllShifterErrorInterrupt) @06175460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 (193533213 (estimated locally),0.70 per call) 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (Flexio_Mcl_Ip_GetAllShifterInterrupt) @06175380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 (193533213 (estimated locally),0.70 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16) @061751c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16) @061750e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_Cancel/19 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (Flexio_Mcl_Ip_GetAllShifterErrorStatus) @05f8f9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterStatus/36 (Flexio_Mcl_Ip_GetAllShifterStatus) @05f8f8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ManageBuffers/14 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 (708669601 (estimated locally),0.66 per call) Flexio_Spi_Ip_AsyncTransmit/13 (365072224 (estimated locally),0.34 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_AsyncTransmit/13 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterStatus/33 (Flexio_Mcl_Ip_GetShifterStatus) @05f8f2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 (468699707 (estimated locally),2.69 per call) Flexio_Spi_Ip_SyncTransmitProcessData/6 (468699707 (estimated locally),2.69 per call) 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterStatus/32 (Flexio_Mcl_Ip_ClearShifterStatus) @05f8f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_IrqHandler/20 (82942805 (estimated locally),0.30 per call) Flexio_Spi_Ip_IrqHandler/20 (82942805 (estimated locally),0.30 per call) 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (Flexio_Mcl_Ip_SetShifterErrorInterrupt) @06159d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Cancel/19 (217325344 (estimated locally),0.20 per call) Flexio_Spi_Ip_AsyncTransmit/13 (143434726 (estimated locally),0.13 per call) Flexio_Spi_Ip_TransferProcess/4 (219481421 (estimated locally),0.20 per call) 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterDMARequest/30 (Flexio_Mcl_Ip_SetShifterDMARequest) @06159ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Cancel/19 (217325344 (estimated locally),0.20 per call) 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterInterrupt/29 (Flexio_Mcl_Ip_SetShifterInterrupt) @06159e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Cancel/19 (217325344 (estimated locally),0.20 per call) Flexio_Spi_Ip_AsyncTransmit/13 (143434726 (estimated locally),0.13 per call) Flexio_Spi_Ip_TransferProcess/4 (219481421 (estimated locally),0.20 per call) 
+  Calls: 
+OsIf_GetElapsed/28 (OsIf_GetElapsed) @06159c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (958878296 (estimated locally),5.51 per call) 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (Flexio_Mcl_Ip_ClearShifterErrorStatus) @06159b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_ManageBuffers/14 (354334800 (estimated locally),0.33 per call) Flexio_Spi_Ip_ManageBuffers/14 (354334800 (estimated locally),0.33 per call) Flexio_Spi_Ip_SyncTransmit/12 (237322377 (estimated locally),1.36 per call) Flexio_Spi_Ip_SyncTransmit/12 (237322377 (estimated locally),1.36 per call) 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterErrorStatus/26 (Flexio_Mcl_Ip_GetShifterErrorStatus) @06159a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (958878294 (estimated locally),5.51 per call) Flexio_Spi_Ip_SyncTransmit/12 (958878294 (estimated locally),5.51 per call) 
+  Calls: 
+OsIf_GetCounter/25 (OsIf_GetCounter) @061599a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (114863530 (estimated locally),0.66 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17) @061598c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (114863530 (estimated locally),0.66 per call) Flexio_Spi_Ip_SyncTransmit/12 (59172123 (estimated locally),0.34 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17) @061597e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (174035653 (estimated locally),1.00 per call) 
+  Calls: 
+OsIf_MicrosToTicks/22 (OsIf_MicrosToTicks) @06159700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (174035653 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Spi_Ip_GetStatus/21 (Flexio_Spi_Ip_GetStatus) @05ec9b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_IrqHandler/20 (Flexio_Spi_Ip_IrqHandler) @05ec9620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:276476016 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_ClearShifterStatus/32 (82942805 (estimated locally),0.30 per call) Flexio_Mcl_Ip_ClearShifterStatus/32 (82942805 (estimated locally),0.30 per call) Flexio_Spi_Ip_TransferProcess/4 (193533213 (estimated locally),0.70 per call) Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (193533213 (estimated locally),0.70 per call) Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (193533213 (estimated locally),0.70 per call) 
+Flexio_Spi_Ip_Cancel/19 (Flexio_Spi_Ip_Cancel) @05ec90e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (1073741824 (estimated locally),1.00 per call) Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (217325344 (estimated locally),0.20 per call) Flexio_Mcl_Ip_SetShifterDMARequest/30 (217325344 (estimated locally),0.20 per call) Flexio_Mcl_Ip_SetShifterInterrupt/29 (217325344 (estimated locally),0.20 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_UpdateTransferMode/18 (Flexio_Spi_Ip_UpdateTransferMode) @05ec9d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: Flexio_Spi_Ip_Init/10 (1073741824 (estimated locally),1.00 per call) 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (Flexio_Spi_Ip_UpdateDefaultTransmitData) @05ec9a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_UpdateLsb/16 (Flexio_Spi_Ip_UpdateLsb) @05ec97e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_UpdateFrameSize/15 (Flexio_Spi_Ip_UpdateFrameSize) @05ec9540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_ManageBuffers/14 (Flexio_Spi_Ip_ManageBuffers) @05ec92a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_TransferProcess/4 (235632642 (estimated locally),0.22 per call) Flexio_Spi_Ip_TransferProcess/4 (235632641 (estimated locally),0.22 per call) Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (354334800 (estimated locally),0.33 per call) Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (354334800 (estimated locally),0.33 per call) Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (354334800 (estimated locally),0.33 per call) Flexio_Mcl_Ip_GetAllShifterStatus/36 (354334800 (estimated locally),0.33 per call) DevAssert/0 (1073741823 (estimated locally),1.00 per call) DevAssert/0 (1073741823 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_AsyncTransmit/13 (Flexio_Spi_Ip_AsyncTransmit) @05ec9000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Flexio_Mcl_Ip_SetShifterInterrupt/29 (143434726 (estimated locally),0.13 per call) Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (143434726 (estimated locally),0.13 per call) Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (708669601 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (708669601 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (365072224 (estimated locally),0.34 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_SyncTransmit/12 (Flexio_Spi_Ip_SyncTransmit) @05eb0b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:174035653 (estimated locally) body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/28 (958878296 (estimated locally),5.51 per call) Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (237322377 (estimated locally),1.36 per call) Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (237322377 (estimated locally),1.36 per call) Flexio_Mcl_Ip_GetShifterErrorStatus/26 (958878294 (estimated locally),5.51 per call) Flexio_Mcl_Ip_GetShifterErrorStatus/26 (958878294 (estimated locally),5.51 per call) Flexio_Spi_Ip_SyncTransmitProcessData/6 (inlined) (958878294 (estimated locally),5.51 per call) OsIf_GetCounter/25 (114863530 (estimated locally),0.66 per call) Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (114863530 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (114863530 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (59172123 (estimated locally),0.34 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (174035653 (estimated locally),1.00 per call) DevAssert/0 (174035653 (estimated locally),1.00 per call) DevAssert/0 (174035653 (estimated locally),1.00 per call) DevAssert/0 (174035653 (estimated locally),1.00 per call) DevAssert/0 (174035653 (estimated locally),1.00 per call) OsIf_MicrosToTicks/22 (174035653 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_DeInit/11 (Flexio_Spi_Ip_DeInit) @05eb0620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_apxStateStructureArray/2 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_Init/10 (Flexio_Spi_Ip_Init) @05eb00e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) Flexio_Spi_Ip_axStateStructure/1 (addr) Flexio_Spi_Ip_apxStateStructureArray/2 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Flexio_Spi_Ip_UpdateTransferMode/18 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (Flexio_Spi_Ip_ClearShifterTimerRegisters) @05eb0d20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function Flexio_Spi_Ip_ClearShifterTimerRegisters/9 is inline copy in Flexio_Spi_Ip_ConfigExternalDevice.constprop/42
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Flexio_Spi_Ip_ReadShifterBuffer/8 (Flexio_Spi_Ip_ReadShifterBuffer) @05eb0a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 (154670902 (estimated locally),0.89 per call) Flexio_Spi_Ip_TransferProcess/4 (12191952 (estimated locally),0.01 per call) 
+  Calls: 
+Flexio_Spi_Ip_WriteShifterBuffer/7 (Flexio_Spi_Ip_WriteShifterBuffer) @05eb07e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmitProcessData/6 (154670902 (estimated locally),0.89 per call) Flexio_Spi_Ip_TransferProcess/4 (12191952 (estimated locally),0.01 per call) 
+  Calls: 
+Flexio_Spi_Ip_SyncTransmitProcessData/6 (Flexio_Spi_Ip_SyncTransmitProcessData) @05eb0540
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Function Flexio_Spi_Ip_SyncTransmitProcessData/6 is inline copy in Flexio_Spi_Ip_SyncTransmit/12
+  Availability: local
+  Function flags: count:958878294 (estimated locally) body local optimize_size
+  Called by: Flexio_Spi_Ip_SyncTransmit/12 (inlined) (958878294 (estimated locally),5.51 per call) 
+  Calls: Flexio_Spi_Ip_ReadShifterBuffer/8 (154670902 (estimated locally),0.89 per call) Flexio_Mcl_Ip_GetShifterStatus/33 (468699707 (estimated locally),2.69 per call) Flexio_Spi_Ip_WriteShifterBuffer/7 (154670902 (estimated locally),0.89 per call) Flexio_Mcl_Ip_GetShifterStatus/33 (468699707 (estimated locally),2.69 per call) 
+Flexio_Spi_Ip_ConfigExternalDevice/5 (Flexio_Spi_Ip_ConfigExternalDevice) @05eb02a0
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_TransferProcess/4 (Flexio_Spi_Ip_TransferProcess) @05eb0000
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Flexio_Spi_Ip_apxStateStructureArray/2 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local optimize_size
+  Called by: Flexio_Spi_Ip_IrqHandler/20 (193533213 (estimated locally),0.70 per call) Flexio_Spi_Ip_ManageBuffers/14 (235632642 (estimated locally),0.22 per call) Flexio_Spi_Ip_ManageBuffers/14 (235632641 (estimated locally),0.22 per call) 
+  Calls: Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (219481421 (estimated locally),0.20 per call) Flexio_Mcl_Ip_SetShifterInterrupt/29 (219481421 (estimated locally),0.20 per call) Flexio_Spi_Ip_ReadShifterBuffer/8 (12191952 (estimated locally),0.01 per call) Flexio_Spi_Ip_WriteShifterBuffer/7 (12191952 (estimated locally),0.01 per call) 
+   Indirect call(76818498 (estimated locally),0.07 per call)  Num speculative call targets: 0
+   Indirect call(76818498 (estimated locally),0.07 per call)  Num speculative call targets: 0
+Flexio_Spi_Ip_apxStateStructureArray/2 (Flexio_Spi_Ip_apxStateStructureArray) @05da4e58
+  Type: variable definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: Flexio_Spi_Ip_DeInit/11 (read) Flexio_Spi_Ip_Init/10 (read) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (read) Flexio_Spi_Ip_Init/10 (write) Flexio_Spi_Ip_TransferProcess/4 (read) Flexio_Spi_Ip_SyncTransmitProcessData/6 (read) Flexio_Spi_Ip_WriteShifterBuffer/7 (read) Flexio_Spi_Ip_ClearShifterTimerRegisters/9 (read) Flexio_Spi_Ip_Cancel/19 (read) Flexio_Spi_Ip_IrqHandler/20 (read) Flexio_Spi_Ip_DeInit/11 (write) Flexio_Spi_Ip_SyncTransmit/12 (read) Flexio_Spi_Ip_ReadShifterBuffer/8 (read) Flexio_Spi_Ip_AsyncTransmit/13 (read) Flexio_Spi_Ip_ManageBuffers/14 (read) Flexio_Spi_Ip_UpdateFrameSize/15 (read) Flexio_Spi_Ip_UpdateLsb/16 (read) Flexio_Spi_Ip_UpdateTransferMode/18 (read) Flexio_Spi_Ip_GetStatus/21 (read) 
+  Availability: available
+  Varpool flags:
+Flexio_Spi_Ip_axStateStructure/1 (Flexio_Spi_Ip_axStateStructure) @05da4dc8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Flexio_Spi_Ip_Init/10 (addr) 
+  Availability: available
+  Varpool flags: used-by-single-function
+DevAssert/0 (DevAssert) @05e90d20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:21262216 (estimated locally) body local optimize_size
+  Called by: Flexio_Spi_Ip_GetStatus/21 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Cancel/19 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Cancel/19 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Init/10 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_Init/10 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateTransferMode/18 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateTransferMode/18 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateLsb/16 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateLsb/16 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateFrameSize/15 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateFrameSize/15 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateFrameSize/15 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_UpdateFrameSize/15 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_ManageBuffers/14 (1073741823 (estimated locally),1.00 per call) Flexio_Spi_Ip_ManageBuffers/14 (1073741823 (estimated locally),1.00 per call) Flexio_Spi_Ip_AsyncTransmit/13 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_AsyncTransmit/13 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_AsyncTransmit/13 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_SyncTransmit/12 (174035653 (estimated locally),1.00 per call) Flexio_Spi_Ip_SyncTransmit/12 (174035653 (estimated locally),1.00 per call) Flexio_Spi_Ip_SyncTransmit/12 (174035653 (estimated locally),1.00 per call) Flexio_Spi_Ip_SyncTransmit/12 (174035653 (estimated locally),1.00 per call) Flexio_Spi_Ip_DeInit/11 (1073741824 (estimated locally),1.00 per call) Flexio_Spi_Ip_DeInit/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Materializing clones
+cloning Flexio_Spi_Ip_ConfigExternalDevice/5 to Flexio_Spi_Ip_ConfigExternalDevice.constprop/42
+Flexio_Spi_Ip_ConfigExternalDevice (const struct Flexio_Spi_Ip_StateStructureType * State)
+{
+  const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice;
+  uint32 FrameSize;
+  uint32 ClkTimerTrgsel;
+  uint8 InstanceFlexio;
+  uint8 CsTimerIndex;
+  uint8 ClkTimerIndex;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG Base => 1077035008B
+  # DEBUG BEGIN_STMT
+  ExternalDevice_37 = State_36(D)->ExternalDevice;
+  # DEBUG ExternalDevice => ExternalDevice_37
+  # DEBUG BEGIN_STMT
+  InstanceFlexio_38 = ExternalDevice_37->Instance;
+  # DEBUG InstanceFlexio => InstanceFlexio_38
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice_37->DeviceParams;
+  _2 = _1->FrameSize;
+  _3 = (long unsigned int) _2;
+  _4 = _3 * 2;
+  FrameSize_39 = _4 + 4294967295;
+  # DEBUG FrameSize => FrameSize_39
+  # DEBUG BEGIN_STMT
+  _5 = State_36(D)->PhyUnitConfig;
+  TxShifterIndex_40 = _5->TxShifterIndex;
+  # DEBUG TxShifterIndex => TxShifterIndex_40
+  # DEBUG BEGIN_STMT
+  RxShifterIndex_41 = _5->RxShifterIndex;
+  # DEBUG RxShifterIndex => RxShifterIndex_41
+  # DEBUG BEGIN_STMT
+  ClkTimerIndex_42 = _5->ClkTimerIndex;
+  # DEBUG ClkTimerIndex => ClkTimerIndex_42
+  # DEBUG BEGIN_STMT
+  CsTimerIndex_43 = _5->CsTimerIndex;
+  # DEBUG CsTimerIndex => CsTimerIndex_43
+  # DEBUG BEGIN_STMT
+  _6 = (long unsigned int) TxShifterIndex_40;
+  _7 = _6 * 4;
+  ClkTimerTrgsel_44 = _7 + 1;
+  # DEBUG ClkTimerTrgsel => ClkTimerTrgsel_44
+  # DEBUG BEGIN_STMT
+  _8 = (int) TxShifterIndex_40;
+  _9 = 1 << _8;
+  _10 = (unsigned char) _9;
+  _11 = (int) RxShifterIndex_41;
+  _12 = 1 << _11;
+  _13 = (unsigned char) _12;
+  _14 = _10 | _13;
+  Flexio_Mcl_Ip_SetShifterInterrupt (1077035008B, _14, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_SetShifterDMARequest (1077035008B, _14, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_SetShifterErrorInterrupt (1077035008B, _14, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ClearShifterTimerRegisters (InstanceFlexio_38);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (1077035008B, TxShifterIndex_40);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (1077035008B, RxShifterIndex_41);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterStatus (1077035008B, RxShifterIndex_41);
+  # DEBUG BEGIN_STMT
+  _15 = ExternalDevice_37->TxShiftCtl;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCTL[_8] ={v} _15;
+  # DEBUG BEGIN_STMT
+  _16 = ExternalDevice_37->TxShiftCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCFG[_8] ={v} _16;
+  # DEBUG BEGIN_STMT
+  _17 = ExternalDevice_37->RxShiftCtl;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCTL[_11] ={v} _17;
+  # DEBUG BEGIN_STMT
+  _18 = ExternalDevice_37->RxShiftCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCFG[_11] ={v} _18;
+  # DEBUG BEGIN_STMT
+  FrameSize_56 = FrameSize_39 << 8;
+  # DEBUG FrameSize => FrameSize_56
+  # DEBUG BEGIN_STMT
+  _19 = (int) ClkTimerIndex_42;
+  _20 = ExternalDevice_37->ClkTimeCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_19] ={v} _20;
+  # DEBUG BEGIN_STMT
+  _21 = ExternalDevice_37->ClkTimeCmpBaudRate;
+  _22 = _21 & 255;
+  _23 = FrameSize_56 & 65535;
+  _24 = _22 | _23;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCMP[_19] ={v} _24;
+  # DEBUG BEGIN_STMT
+  _25 ={v} MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_19];
+  _26 = ExternalDevice_37->ClkTimeCfgTimDec;
+  _27 = _25 | _26;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_19] ={v} _27;
+  # DEBUG BEGIN_STMT
+  _28 = ExternalDevice_37->ClkTimeCtl;
+  _29 = ClkTimerTrgsel_44 << 24;
+  _30 = _28 | _29;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCTL[_19] ={v} _30;
+  # DEBUG BEGIN_STMT
+  _31 = (int) CsTimerIndex_43;
+  _32 = ExternalDevice_37->CsTimeCmp;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCMP[_31] ={v} _32;
+  # DEBUG BEGIN_STMT
+  _33 = ExternalDevice_37->CsTimeCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_31] ={v} _33;
+  # DEBUG BEGIN_STMT
+  _34 = ExternalDevice_37->CsTimeCtl;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCTL[_31] ={v} _34;
+  return;
+
+}
+
+
+Flexio_Spi_Ip_ConfigExternalDevice.constprop (const struct Flexio_Spi_Ip_StateStructureType * State)
+{
+  uint8 TxShifterIndex;
+  uint8 RxShifterIndex;
+  uint8 ClkTimerIndex;
+  uint8 CsTimerIndex;
+  uint8 InstanceFlexio;
+  uint32 ClkTimerTrgsel;
+  uint32 FrameSize;
+  const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice;
+
+  <bb 3> [local count: 1073741824]:
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG Base => 1077035008B
+  # DEBUG BEGIN_STMT
+  ExternalDevice_2 = State_1(D)->ExternalDevice;
+  # DEBUG ExternalDevice => ExternalDevice_2
+  # DEBUG BEGIN_STMT
+  InstanceFlexio_3 = ExternalDevice_2->Instance;
+  # DEBUG InstanceFlexio => InstanceFlexio_3
+  # DEBUG BEGIN_STMT
+  _4 = ExternalDevice_2->DeviceParams;
+  _5 = _4->FrameSize;
+  _6 = (long unsigned int) _5;
+  _7 = _6 * 2;
+  FrameSize_8 = _7 + 4294967295;
+  # DEBUG FrameSize => FrameSize_8
+  # DEBUG BEGIN_STMT
+  _9 = State_1(D)->PhyUnitConfig;
+  TxShifterIndex_10 = _9->TxShifterIndex;
+  # DEBUG TxShifterIndex => TxShifterIndex_10
+  # DEBUG BEGIN_STMT
+  RxShifterIndex_11 = _9->RxShifterIndex;
+  # DEBUG RxShifterIndex => RxShifterIndex_11
+  # DEBUG BEGIN_STMT
+  ClkTimerIndex_12 = _9->ClkTimerIndex;
+  # DEBUG ClkTimerIndex => ClkTimerIndex_12
+  # DEBUG BEGIN_STMT
+  CsTimerIndex_13 = _9->CsTimerIndex;
+  # DEBUG CsTimerIndex => CsTimerIndex_13
+  # DEBUG BEGIN_STMT
+  _14 = (long unsigned int) TxShifterIndex_10;
+  _15 = _14 * 4;
+  ClkTimerTrgsel_16 = _15 + 1;
+  # DEBUG ClkTimerTrgsel => ClkTimerTrgsel_16
+  # DEBUG BEGIN_STMT
+  _17 = (int) TxShifterIndex_10;
+  _18 = 1 << _17;
+  _19 = (unsigned char) _18;
+  _20 = (int) RxShifterIndex_11;
+  _21 = 1 << _20;
+  _22 = (unsigned char) _21;
+  _23 = _19 | _22;
+  Flexio_Mcl_Ip_SetShifterInterrupt (1077035008B, _23, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_SetShifterDMARequest (1077035008B, _23, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_SetShifterErrorInterrupt (1077035008B, _23, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ClearShifterTimerRegisters (InstanceFlexio_3);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (1077035008B, TxShifterIndex_10);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (1077035008B, RxShifterIndex_11);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterStatus (1077035008B, RxShifterIndex_11);
+  # DEBUG BEGIN_STMT
+  _24 = ExternalDevice_2->TxShiftCtl;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCTL[_17] ={v} _24;
+  # DEBUG BEGIN_STMT
+  _25 = ExternalDevice_2->TxShiftCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCFG[_17] ={v} _25;
+  # DEBUG BEGIN_STMT
+  _26 = ExternalDevice_2->RxShiftCtl;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCTL[_20] ={v} _26;
+  # DEBUG BEGIN_STMT
+  _27 = ExternalDevice_2->RxShiftCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].SHIFTCFG[_20] ={v} _27;
+  # DEBUG BEGIN_STMT
+  FrameSize_28 = FrameSize_8 << 8;
+  # DEBUG FrameSize => FrameSize_28
+  # DEBUG BEGIN_STMT
+  _29 = (int) ClkTimerIndex_12;
+  _30 = ExternalDevice_2->ClkTimeCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_29] ={v} _30;
+  # DEBUG BEGIN_STMT
+  _31 = ExternalDevice_2->ClkTimeCmpBaudRate;
+  _32 = _31 & 255;
+  _33 = FrameSize_28 & 65535;
+  _34 = _32 | _33;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCMP[_29] ={v} _34;
+  # DEBUG BEGIN_STMT
+  _35 ={v} MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_29];
+  _36 = ExternalDevice_2->ClkTimeCfgTimDec;
+  _37 = _35 | _36;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_29] ={v} _37;
+  # DEBUG BEGIN_STMT
+  _38 = ExternalDevice_2->ClkTimeCtl;
+  _39 = ClkTimerTrgsel_16 << 24;
+  _40 = _38 | _39;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCTL[_29] ={v} _40;
+  # DEBUG BEGIN_STMT
+  _41 = (int) CsTimerIndex_13;
+  _42 = ExternalDevice_2->CsTimeCmp;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCMP[_41] ={v} _42;
+  # DEBUG BEGIN_STMT
+  _43 = ExternalDevice_2->CsTimeCfg;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCFG[_41] ={v} _43;
+  # DEBUG BEGIN_STMT
+  _44 = ExternalDevice_2->CsTimeCtl;
+  MEM[(struct FLEXIO_Type *)1077035008B].TIMCTL[_41] ={v} _44;
+  return;
+
+}
+
+
+Materialization Call site updates done.
+
+Reclaiming functions: Flexio_Spi_Ip_ConfigExternalDevice/5
+Reclaiming variables:
+Clearing address taken flags:
+updating call of Flexio_Spi_Ip_SyncTransmit/12 -> Flexio_Spi_Ip_ConfigExternalDevice.constprop/42: Flexio_Spi_Ip_ConfigExternalDevice (State_40);
+  updated to:Flexio_Spi_Ip_ConfigExternalDevice.constprop (State_40);
+updating call of Flexio_Spi_Ip_AsyncTransmit/13 -> Flexio_Spi_Ip_ConfigExternalDevice.constprop/42: Flexio_Spi_Ip_ConfigExternalDevice (State_30);
+  updated to:Flexio_Spi_Ip_ConfigExternalDevice.constprop (State_30);
+Trivially needed variables: Flexio_Spi_Ip_apxStateStructureArray/2 Flexio_Spi_Ip_axStateStructure/1
+Removing variables:
+
+Final Symbol table:
+
+Flexio_Spi_Ip_ConfigExternalDevice.constprop.0/42 (Flexio_Spi_Ip_ConfigExternalDevice.constprop) @062d5700
+  Type: function definition analyzed
+  Visibility: asm_written artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorInterrupt/41 (Flexio_Mcl_Ip_GetAllShifterErrorInterrupt) @06175460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterInterrupt/40 (Flexio_Mcl_Ip_GetAllShifterInterrupt) @06175380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16/39 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16) @061751c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16/38 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16) @061750e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterErrorStatus/37 (Flexio_Mcl_Ip_GetAllShifterErrorStatus) @05f8f9a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_GetAllShifterStatus/36 (Flexio_Mcl_Ip_GetAllShifterStatus) @05f8f8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18/35 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18/34 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18) @05f8f620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterStatus/33 (Flexio_Mcl_Ip_GetShifterStatus) @05f8f2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterStatus/32 (Flexio_Mcl_Ip_ClearShifterStatus) @05f8f000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterErrorInterrupt/31 (Flexio_Mcl_Ip_SetShifterErrorInterrupt) @06159d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterDMARequest/30 (Flexio_Mcl_Ip_SetShifterDMARequest) @06159ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_SetShifterInterrupt/29 (Flexio_Mcl_Ip_SetShifterInterrupt) @06159e00
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_GetElapsed/28 (OsIf_GetElapsed) @06159c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_ClearShifterErrorStatus/27 (Flexio_Mcl_Ip_ClearShifterErrorStatus) @06159b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Mcl_Ip_GetShifterErrorStatus/26 (Flexio_Mcl_Ip_GetShifterErrorStatus) @06159a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_GetCounter/25 (OsIf_GetCounter) @061599a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17/24 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17) @061598c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17/23 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17) @061597e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_MicrosToTicks/22 (OsIf_MicrosToTicks) @06159700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_GetStatus/21 (Flexio_Spi_Ip_GetStatus) @05ec9b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_IrqHandler/20 (Flexio_Spi_Ip_IrqHandler) @05ec9620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:276476016 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_Cancel/19 (Flexio_Spi_Ip_Cancel) @05ec90e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_UpdateTransferMode/18 (Flexio_Spi_Ip_UpdateTransferMode) @05ec9d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_UpdateDefaultTransmitData/17 (Flexio_Spi_Ip_UpdateDefaultTransmitData) @05ec9a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_UpdateLsb/16 (Flexio_Spi_Ip_UpdateLsb) @05ec97e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_UpdateFrameSize/15 (Flexio_Spi_Ip_UpdateFrameSize) @05ec9540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_ManageBuffers/14 (Flexio_Spi_Ip_ManageBuffers) @05ec92a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_AsyncTransmit/13 (Flexio_Spi_Ip_AsyncTransmit) @05ec9000
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_SyncTransmit/12 (Flexio_Spi_Ip_SyncTransmit) @05eb0b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:174035653 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_DeInit/11 (Flexio_Spi_Ip_DeInit) @05eb0620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_Init/10 (Flexio_Spi_Ip_Init) @05eb00e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_ReadShifterBuffer/8 (Flexio_Spi_Ip_ReadShifterBuffer) @05eb0a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_WriteShifterBuffer/7 (Flexio_Spi_Ip_WriteShifterBuffer) @05eb07e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_TransferProcess/4 (Flexio_Spi_Ip_TransferProcess) @05eb0000
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Flexio_Spi_Ip_apxStateStructureArray/2 (Flexio_Spi_Ip_apxStateStructureArray) @05da4e58
+  Type: variable definition analyzed
+  Visibility: externally_visible asm_written public
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Flexio_Spi_Ip_axStateStructure/1 (Flexio_Spi_Ip_axStateStructure) @05da4dc8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @05da4e58
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: used-by-single-function
+DevAssert/0 (DevAssert) @05e90d20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:21262216 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 

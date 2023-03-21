@@ -1,0 +1,2711 @@
+Static_Dma_Ip_GetLogicChannelError (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, uint32 * LocLogicChErrors)
+{
+  uint32 LocError;
+  long unsigned int _1;
+  long unsigned int LocError.21_2;
+  long unsigned int _3;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocError = 0;
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_GetStatus_Error (LocHwVers_6(D), LocHwInst_7(D), LocHwCh_8(D), &LocError);
+  # DEBUG BEGIN_STMT
+  _1 = *LocLogicChErrors_10(D);
+  LocError.21_2 = LocError;
+  _3 = _1 | LocError.21_2;
+  *LocLogicChErrors_10(D) = _3;
+  LocError ={v} {CLOBBER};
+  return;
+
+}
+
+
+Dma_Ip_ErrorIrqHandler (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  uint32 * _1;
+  long unsigned int _2;
+  const struct Dma_Ip_LogicChannelIdType * _3;
+  void (*<T51b>) (void) _4;
+  const struct Dma_Ip_LogicChannelIdType * _5;
+  void (*<T51b>) (void) _6;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  LocChState_14 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_10(D), LocHwInst_11(D), LocHwCh_12(D));
+  # DEBUG LocChState => LocChState_14
+  # DEBUG BEGIN_STMT
+  if (LocChState_14 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = &LocChState_14->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_10(D), LocHwInst_11(D), LocHwCh_12(D), _1);
+  # DEBUG BEGIN_STMT
+  _2 = LocChState_14->LogicChErrors;
+  if (_2 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_10(D), LocHwInst_11(D), LocHwCh_12(D), 4);
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _3 = LocChState_14->LogicChId;
+  _4 = _3->ErrIntCallback;
+  if (_4 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _5 = LocChState_14->LogicChId;
+  _6 = _5->ErrIntCallback;
+  _6 ();
+
+  <bb 7> :
+  return;
+
+}
+
+
+Dma_Ip_IntIrqHandler (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  const struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * _1;
+  void (*<T51b>) (void) _2;
+  const struct Dma_Ip_LogicChannelIdType * _3;
+  void (*<T51b>) (void) _4;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  LocChState_11 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_7(D), LocHwInst_8(D), LocHwCh_9(D));
+  # DEBUG LocChState => LocChState_11
+  # DEBUG BEGIN_STMT
+  if (LocChState_11 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = LocChState_11->LogicChId;
+  _2 = _1->IntCallback;
+  if (_2 != 0B)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _3 = LocChState_11->LogicChId;
+  _4 = _3->IntCallback;
+  _4 ();
+
+  <bb 5> :
+  return;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelScatterGatherInit (const uint32 LogicCh, const uint32 Element)
+{
+  uint32 LocElement;
+  uint32 LocLoopCheck;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  struct Dma_Ip_ScatterGatherConfigType * LocCurrentConfig;
+  struct Dma_Ip_ScatterGatherConfigType * LocScatterGather;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.19_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.20_6;
+  const struct Dma_Ip_LogicChannelConfigType * const * _7;
+  long unsigned int _8;
+  const struct Dma_Ip_LogicChannelConfigType * const * _9;
+  const struct Dma_Ip_LogicChannelConfigType * _10;
+  struct Dma_Ip_ScatterGatherConfigType * * _11;
+  long unsigned int _12;
+  struct Dma_Ip_ScatterGatherConfigType * * _13;
+  unsigned char _14;
+  unsigned char _15;
+  unsigned char _16;
+  uint32 * _17;
+  <unnamed type> _18;
+  _Bool _19;
+  struct Dma_Ip_ScatterGatherConfigType * _20;
+  _Bool _21;
+  _Bool _22;
+  Dma_Ip_ReturnType _58;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_31 = 0;
+  # DEBUG LocStatus => LocStatus_31
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.19_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.19_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_33(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_34 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_34
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.20_6 = Dma_Ip_pxInit;
+  _7 = Dma_Ip_pxInit.20_6->ppxLogicChannelConfigArray;
+  _8 = LogicCh_33(D) * 4;
+  _9 = _7 + _8;
+  _10 = *_9;
+  _11 = _10->ppxScatterGatherConfigArray;
+  _12 = Element_35(D) * 4;
+  _13 = _11 + _12;
+  LocScatterGather_36 = *_13;
+  # DEBUG LocScatterGather => LocScatterGather_36
+  # DEBUG BEGIN_STMT
+  _14 = LocLogicChId_34->HwVersId;
+  LocHwVers_37 = (uint32) _14;
+  # DEBUG LocHwVers => LocHwVers_37
+  # DEBUG BEGIN_STMT
+  _15 = LocLogicChId_34->HwInstId;
+  LocHwInst_38 = (uint32) _15;
+  # DEBUG LocHwInst => LocHwInst_38
+  # DEBUG BEGIN_STMT
+  _16 = LocLogicChId_34->HwChId;
+  LocHwCh_39 = (uint32) _16;
+  # DEBUG LocHwCh => LocHwCh_39
+  # DEBUG BEGIN_STMT
+  LocLoopCheck_40 = 0;
+  # DEBUG LocLoopCheck => LocLoopCheck_40
+  # DEBUG BEGIN_STMT
+  LocElement_41 = Element_35(D);
+  # DEBUG LocElement => LocElement_41
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  LocChState_44 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_37, LocHwInst_38, LocHwCh_39);
+  # DEBUG LocChState => LocChState_44
+  # DEBUG BEGIN_STMT
+  _17 = &LocChState_44->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_37, LocHwInst_38, LocHwCh_39, _17);
+  # DEBUG BEGIN_STMT
+  _18 = LocChState_44->StateValue;
+  if (_18 == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_46 = LocScatterGather_36;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_46
+  # DEBUG BEGIN_STMT
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_23->Loaded = 0;
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_48 = LocCurrentConfig_23->NextConfig;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_48
+
+  <bb 5> :
+  # LocCurrentConfig_23 = PHI <LocCurrentConfig_46(3), LocCurrentConfig_48(4)>
+  # DEBUG LocCurrentConfig => LocCurrentConfig_23
+  # DEBUG BEGIN_STMT
+  if (LocCurrentConfig_23 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  _19 = LocCurrentConfig_23->Loaded;
+  if (_19 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_49 = LocScatterGather_36;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_49
+  # DEBUG BEGIN_STMT
+  goto <bb 12>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_24->Loaded = 1;
+  # DEBUG BEGIN_STMT
+  _20 = LocCurrentConfig_24->NextConfig;
+  if (_20 == 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadConfigIntoSoftwareTcd (LocHwVers_37, LocCurrentConfig_24, LocElement_26, 0);
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadConfigIntoSoftwareTcd (LocHwVers_37, LocCurrentConfig_24, LocElement_26, 1);
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_53 = LocCurrentConfig_24->NextConfig;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_53
+  # DEBUG BEGIN_STMT
+  LocLoopCheck_54 = LocLoopCheck_25 + 1;
+  # DEBUG LocLoopCheck => LocLoopCheck_54
+  # DEBUG BEGIN_STMT
+  LocElement_55 = LocElement_26 + 1;
+  # DEBUG LocElement => LocElement_55
+
+  <bb 12> :
+  # LocCurrentConfig_24 = PHI <LocCurrentConfig_49(7), LocCurrentConfig_53(11)>
+  # LocLoopCheck_25 = PHI <LocLoopCheck_40(7), LocLoopCheck_54(11)>
+  # LocElement_26 = PHI <LocElement_41(7), LocElement_55(11)>
+  # DEBUG LocElement => LocElement_26
+  # DEBUG LocLoopCheck => LocLoopCheck_25
+  # DEBUG LocCurrentConfig => LocCurrentConfig_24
+  # DEBUG BEGIN_STMT
+  if (LocCurrentConfig_24 != 0B)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  _21 = LocCurrentConfig_24->Loaded;
+  _22 = ~_21;
+  if (_22 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd (LocLogicChId_34, LocScatterGather_36);
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  _58 = LocStatus_31;
+  return _58;
+
+}
+
+
+Static_Dma_Ip_ResetConfig (const uint32 LogicCh)
+{
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.35_1;
+  const struct Dma_Ip_LogicChannelConfigType * _2;
+  const struct Dma_Ip_GlobalConfigType * _3;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.36_4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  const struct Dma_Ip_TransferConfigType * _6;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.35_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.35_1->pxLogicChannelResetConfig;
+  _3 = _2->pxGlobalConfig;
+  Static_Dma_Ip_SetLogicChannelGlobalConfig (LogicCh_8(D), _3, 1);
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.36_4 = Dma_Ip_pxInit;
+  _5 = Dma_Ip_pxInit.36_4->pxLogicChannelResetConfig;
+  _6 = _5->pxTransferConfig;
+  Static_Dma_Ip_SetLogicChannelTransferConfig (LogicCh_8(D), _6);
+  return;
+
+}
+
+
+Dma_Ip_SetLogicChannelScatterGatherConfig (const uint32 LogicCh, const uint32 Element)
+{
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_ScatterGatherConfigType * LocScatterGather;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.45_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.46_6;
+  const struct Dma_Ip_LogicChannelConfigType * const * _7;
+  long unsigned int _8;
+  const struct Dma_Ip_LogicChannelConfigType * const * _9;
+  const struct Dma_Ip_LogicChannelConfigType * _10;
+  struct Dma_Ip_ScatterGatherConfigType * * _11;
+  long unsigned int _12;
+  struct Dma_Ip_ScatterGatherConfigType * * _13;
+  unsigned char _14;
+  unsigned char _15;
+  unsigned char _16;
+  uint32 * _17;
+  long unsigned int _18;
+  <unnamed type> _19;
+  <unnamed type> _20;
+  unsigned int _21;
+  Dma_Ip_ReturnType _44;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_24 = 0;
+  # DEBUG LocStatus => LocStatus_24
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.45_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.45_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_26(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_27 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_27
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.46_6 = Dma_Ip_pxInit;
+  _7 = Dma_Ip_pxInit.46_6->ppxLogicChannelConfigArray;
+  _8 = LogicCh_26(D) * 4;
+  _9 = _7 + _8;
+  _10 = *_9;
+  _11 = _10->ppxScatterGatherConfigArray;
+  _12 = Element_28(D) * 4;
+  _13 = _11 + _12;
+  LocScatterGather_29 = *_13;
+  # DEBUG LocScatterGather => LocScatterGather_29
+  # DEBUG BEGIN_STMT
+  _14 = LocLogicChId_27->HwVersId;
+  LocHwVers_30 = (uint32) _14;
+  # DEBUG LocHwVers => LocHwVers_30
+  # DEBUG BEGIN_STMT
+  _15 = LocLogicChId_27->HwInstId;
+  LocHwInst_31 = (uint32) _15;
+  # DEBUG LocHwInst => LocHwInst_31
+  # DEBUG BEGIN_STMT
+  _16 = LocLogicChId_27->HwChId;
+  LocHwCh_32 = (uint32) _16;
+  # DEBUG LocHwCh => LocHwCh_32
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11 ();
+  # DEBUG BEGIN_STMT
+  LocChState_35 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_30, LocHwInst_31, LocHwCh_32);
+  # DEBUG LocChState => LocChState_35
+  # DEBUG BEGIN_STMT
+  _17 = &LocChState_35->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_30, LocHwInst_31, LocHwCh_32, _17);
+  # DEBUG BEGIN_STMT
+  _18 = LocChState_35->LogicChErrors;
+  if (_18 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_30, LocHwInst_31, LocHwCh_32, 4);
+  # DEBUG BEGIN_STMT
+  LocStatus_42 = 1;
+  # DEBUG LocStatus => LocStatus_42
+  goto <bb 9>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _19 = LocChState_35->StateValue;
+  if (_19 == 3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd (LocLogicChId_27, LocScatterGather_29);
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _20 = LocChState_35->StateValue;
+  _21 = _20 + 4294967295;
+  if (_21 <= 1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_30, LocHwInst_31, LocHwCh_32, 3);
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd (LocLogicChId_27, LocScatterGather_29);
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  LocStatus_37 = 2;
+  # DEBUG LocStatus => LocStatus_37
+
+  <bb 9> :
+  # LocStatus_22 = PHI <LocStatus_42(3), LocStatus_24(5), LocStatus_24(7), LocStatus_37(8)>
+  # DEBUG LocStatus => LocStatus_22
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11 ();
+  # DEBUG BEGIN_STMT
+  _44 = LocStatus_22;
+  return _44;
+
+}
+
+
+Dma_Ip_GetLogicChannelParam (const uint32 LogicCh, const Dma_Ip_LogicChannelInfoParamType Param, uint32 * const Value)
+{
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.44_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  Dma_Ip_ReturnType _19;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_9 = 0;
+  # DEBUG LocStatus => LocStatus_9
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.44_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.44_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_11(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_12 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_12
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_12->HwVersId;
+  LocHwVers_13 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_13
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_12->HwInstId;
+  LocHwInst_14 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_14
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_12->HwChId;
+  LocHwCh_15 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_15
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_GetParam (Param_16(D), LocHwVers_13, LocHwInst_14, LocHwCh_15, Value_17(D));
+  # DEBUG BEGIN_STMT
+  _19 = LocStatus_9;
+  return _19;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelScatterGatherList (const uint32 LogicCh, struct Dma_Ip_SwTcdRegType * PxSwTcd, const struct Dma_Ip_LogicChannelScatterGatherListType * List, const uint32 ListDimension)
+{
+  uint32 LocHwVers;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  uint32 LocParamIdx;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.43_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  long unsigned int _7;
+  const struct Dma_Ip_LogicChannelScatterGatherListType * _8;
+  <unnamed type> _9;
+  long unsigned int _10;
+  const struct Dma_Ip_LogicChannelScatterGatherListType * _11;
+  long unsigned int _12;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.43_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.43_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_16(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_17 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_17
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_17->HwVersId;
+  LocHwVers_18 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_18
+  # DEBUG BEGIN_STMT
+  LocParamIdx_19 = 0;
+  # DEBUG LocParamIdx => LocParamIdx_19
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _7 = LocParamIdx_13 * 8;
+  _8 = List_21(D) + _7;
+  _9 = _8->Param;
+  _10 = LocParamIdx_13 * 8;
+  _11 = List_21(D) + _10;
+  _12 = _11->Value;
+  HwAccDmaCh_SetTransferParam (_9, LocHwVers_18, PxSwTcd_22(D), _12);
+  # DEBUG BEGIN_STMT
+  LocParamIdx_24 = LocParamIdx_13 + 1;
+  # DEBUG LocParamIdx => LocParamIdx_24
+
+  <bb 4> :
+  # LocParamIdx_13 = PHI <LocParamIdx_19(2), LocParamIdx_24(3)>
+  # DEBUG LocParamIdx => LocParamIdx_13
+  # DEBUG BEGIN_STMT
+  if (LocParamIdx_13 < ListDimension_20(D))
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  return;
+
+}
+
+
+Dma_Ip_SetLogicChannelScatterGatherList (const uint32 LogicCh, const uint32 Element, const struct Dma_Ip_LogicChannelScatterGatherListType * List, const uint32 ListDimension)
+{
+  struct Dma_Ip_SwTcdRegType * PxSwTcd;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.41_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  uint32 * _9;
+  long unsigned int _10;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.42_11;
+  const struct Dma_Ip_LogicChannelConfigType * const * _12;
+  long unsigned int _13;
+  const struct Dma_Ip_LogicChannelConfigType * const * _14;
+  const struct Dma_Ip_LogicChannelConfigType * _15;
+  struct Dma_Ip_ScatterGatherConfigType * * _16;
+  long unsigned int _17;
+  struct Dma_Ip_ScatterGatherConfigType * * _18;
+  struct Dma_Ip_ScatterGatherConfigType * _19;
+  <unnamed type> _20;
+  <unnamed type> _21;
+  unsigned int _22;
+  Dma_Ip_ReturnType _47;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_25 = 0;
+  # DEBUG LocStatus => LocStatus_25
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.41_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.41_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_27(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_28 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_28
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_28->HwVersId;
+  LocHwVers_29 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_29
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_28->HwInstId;
+  LocHwInst_30 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_30
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_28->HwChId;
+  LocHwCh_31 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_31
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  LocChState_34 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_29, LocHwInst_30, LocHwCh_31);
+  # DEBUG LocChState => LocChState_34
+  # DEBUG BEGIN_STMT
+  _9 = &LocChState_34->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_29, LocHwInst_30, LocHwCh_31, _9);
+  # DEBUG BEGIN_STMT
+  _10 = LocChState_34->LogicChErrors;
+  if (_10 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_29, LocHwInst_30, LocHwCh_31, 4);
+  # DEBUG BEGIN_STMT
+  LocStatus_45 = 1;
+  # DEBUG LocStatus => LocStatus_45
+  goto <bb 9>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.42_11 = Dma_Ip_pxInit;
+  _12 = Dma_Ip_pxInit.42_11->ppxLogicChannelConfigArray;
+  _13 = LogicCh_27(D) * 4;
+  _14 = _12 + _13;
+  _15 = *_14;
+  _16 = _15->ppxScatterGatherConfigArray;
+  _17 = Element_36(D) * 4;
+  _18 = _16 + _17;
+  _19 = *_18;
+  PxSwTcd_37 = _19->Stcd;
+  # DEBUG PxSwTcd => PxSwTcd_37
+  # DEBUG BEGIN_STMT
+  _20 = LocChState_34->StateValue;
+  if (_20 == 3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelScatterGatherList (LogicCh_27(D), PxSwTcd_37, List_40(D), ListDimension_41(D));
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _21 = LocChState_34->StateValue;
+  _22 = _21 + 4294967295;
+  if (_22 <= 1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_29, LocHwInst_30, LocHwCh_31, 3);
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelScatterGatherList (LogicCh_27(D), PxSwTcd_37, List_40(D), ListDimension_41(D));
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  LocStatus_38 = 2;
+  # DEBUG LocStatus => LocStatus_38
+
+  <bb 9> :
+  # LocStatus_23 = PHI <LocStatus_45(3), LocStatus_25(5), LocStatus_25(7), LocStatus_38(8)>
+  # DEBUG LocStatus => LocStatus_23
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09 ();
+  # DEBUG BEGIN_STMT
+  _47 = LocStatus_23;
+  return _47;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelTransferList (const uint32 LogicCh, struct Dma_Ip_TcdRegType * PxTcd, const struct Dma_Ip_LogicChannelTransferListType * List, const uint32 ListDimension)
+{
+  uint32 LocHwVers;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  uint32 LocParamIdx;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.24_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  long unsigned int _7;
+  const struct Dma_Ip_LogicChannelTransferListType * _8;
+  <unnamed type> _9;
+  long unsigned int _10;
+  const struct Dma_Ip_LogicChannelTransferListType * _11;
+  long unsigned int _12;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.24_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.24_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_16(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_17 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_17
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_17->HwVersId;
+  LocHwVers_18 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_18
+  # DEBUG BEGIN_STMT
+  LocParamIdx_19 = 0;
+  # DEBUG LocParamIdx => LocParamIdx_19
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _7 = LocParamIdx_13 * 8;
+  _8 = List_21(D) + _7;
+  _9 = _8->Param;
+  _10 = LocParamIdx_13 * 8;
+  _11 = List_21(D) + _10;
+  _12 = _11->Value;
+  HwAccDmaCh_SetTransferParam (_9, LocHwVers_18, PxTcd_22(D), _12);
+  # DEBUG BEGIN_STMT
+  LocParamIdx_24 = LocParamIdx_13 + 1;
+  # DEBUG LocParamIdx => LocParamIdx_24
+
+  <bb 4> :
+  # LocParamIdx_13 = PHI <LocParamIdx_19(2), LocParamIdx_24(3)>
+  # DEBUG LocParamIdx => LocParamIdx_13
+  # DEBUG BEGIN_STMT
+  if (LocParamIdx_13 < ListDimension_20(D))
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  return;
+
+}
+
+
+Dma_Ip_SetLogicChannelTransferList (const uint32 LogicCh, const struct Dma_Ip_LogicChannelTransferListType * List, const uint32 ListDimension)
+{
+  struct Dma_Ip_TcdRegType * PxTcd;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.40_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  uint32 * _9;
+  long unsigned int _10;
+  struct Dma_Ip_Hwv3ChTcdRegType * _11;
+  <unnamed type> _12;
+  <unnamed type> _13;
+  <unnamed type> _14;
+  Dma_Ip_ReturnType _45;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_18 = 0;
+  # DEBUG LocStatus => LocStatus_18
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  PxTcd_19 = 0B;
+  # DEBUG PxTcd => PxTcd_19
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.40_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.40_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_21(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_22 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_22
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_22->HwVersId;
+  LocHwVers_23 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_23
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_22->HwInstId;
+  LocHwInst_24 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_24
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_22->HwChId;
+  LocHwCh_25 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_25
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  LocChState_28 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_23, LocHwInst_24, LocHwCh_25);
+  # DEBUG LocChState => LocChState_28
+  # DEBUG BEGIN_STMT
+  _9 = &LocChState_28->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_23, LocHwInst_24, LocHwCh_25, _9);
+  # DEBUG BEGIN_STMT
+  _10 = LocChState_28->LogicChErrors;
+  if (_10 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_23, LocHwInst_24, LocHwCh_25, 4);
+  # DEBUG BEGIN_STMT
+  LocStatus_43 = 1;
+  # DEBUG LocStatus => LocStatus_43
+  goto <bb 13>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_23 == 3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _11 = g_ptHwChTcdPtrArray[LocHwInst_24][LocHwCh_25];
+  PxTcd_30 = &_11->tTcdReg;
+  # DEBUG PxTcd => PxTcd_30
+
+  <bb 6> :
+  # PxTcd_16 = PHI <PxTcd_19(4), PxTcd_30(5)>
+  # DEBUG PxTcd => PxTcd_16
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetCommand (3, LocHwVers_23, LocHwInst_24, LocHwCh_25);
+  # DEBUG BEGIN_STMT
+  _12 = LocChState_28->StateValue;
+  if (_12 == 2)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelTransferList (LogicCh_21(D), PxTcd_16, List_36(D), ListDimension_37(D));
+  goto <bb 13>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetControl_EnScatterGatherProcessing (LocHwVers_23, PxTcd_16, 0);
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetControl_ScatterGatherAddress (LocHwVers_23, PxTcd_16, 0);
+  # DEBUG BEGIN_STMT
+  _13 = LocChState_28->StateValue;
+  if (_13 == 3)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_23, LocHwInst_24, LocHwCh_25, 2);
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelTransferList (LogicCh_21(D), PxTcd_16, List_36(D), ListDimension_37(D));
+  goto <bb 13>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _14 = LocChState_28->StateValue;
+  if (_14 == 1)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_23, LocHwInst_24, LocHwCh_25, 2);
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelTransferList (LogicCh_21(D), PxTcd_16, List_36(D), ListDimension_37(D));
+  goto <bb 13>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  LocStatus_34 = 2;
+  # DEBUG LocStatus => LocStatus_34
+
+  <bb 13> :
+  # LocStatus_15 = PHI <LocStatus_43(3), LocStatus_18(7), LocStatus_18(9), LocStatus_18(11), LocStatus_34(12)>
+  # DEBUG LocStatus => LocStatus_15
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08 ();
+  # DEBUG BEGIN_STMT
+  _45 = LocStatus_15;
+  return _45;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelGlobalList (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh, const struct Dma_Ip_LogicChannelGlobalListType * List, const uint32 ListDimension)
+{
+  uint32 LocParamIdx;
+  long unsigned int _1;
+  const struct Dma_Ip_LogicChannelGlobalListType * _2;
+  <unnamed type> _3;
+  long unsigned int _4;
+  const struct Dma_Ip_LogicChannelGlobalListType * _5;
+  long unsigned int _6;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  LocParamIdx_9 = 0;
+  # DEBUG LocParamIdx => LocParamIdx_9
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _1 = LocParamIdx_7 * 8;
+  _2 = List_12(D) + _1;
+  _3 = _2->Param;
+  _4 = LocParamIdx_7 * 8;
+  _5 = List_12(D) + _4;
+  _6 = _5->Value;
+  HwAccDmaCh_SetGlobalParam (_3, LocHwVers_13(D), LocHwInst_14(D), LocHwCh_15(D), _6);
+  # DEBUG BEGIN_STMT
+  LocParamIdx_17 = LocParamIdx_7 + 1;
+  # DEBUG LocParamIdx => LocParamIdx_17
+
+  <bb 4> :
+  # LocParamIdx_7 = PHI <LocParamIdx_9(2), LocParamIdx_17(3)>
+  # DEBUG LocParamIdx => LocParamIdx_7
+  # DEBUG BEGIN_STMT
+  if (LocParamIdx_7 < ListDimension_11(D))
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  return;
+
+}
+
+
+Dma_Ip_SetLogicChannelGlobalList (const uint32 LogicCh, const struct Dma_Ip_LogicChannelGlobalListType * List, const uint32 ListDimension)
+{
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.39_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  uint32 * _9;
+  long unsigned int _10;
+  <unnamed type> _11;
+  unsigned int _12;
+  Dma_Ip_ReturnType _33;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_15 = 0;
+  # DEBUG LocStatus => LocStatus_15
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.39_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.39_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_17(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_18 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_18
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_18->HwVersId;
+  LocHwVers_19 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_19
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_18->HwInstId;
+  LocHwInst_20 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_20
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_18->HwChId;
+  LocHwCh_21 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_21
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07 ();
+  # DEBUG BEGIN_STMT
+  LocChState_24 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_19, LocHwInst_20, LocHwCh_21);
+  # DEBUG LocChState => LocChState_24
+  # DEBUG BEGIN_STMT
+  _9 = &LocChState_24->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_19, LocHwInst_20, LocHwCh_21, _9);
+  # DEBUG BEGIN_STMT
+  _10 = LocChState_24->LogicChErrors;
+  if (_10 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_19, LocHwInst_20, LocHwCh_21, 4);
+  # DEBUG BEGIN_STMT
+  LocStatus_31 = 1;
+  # DEBUG LocStatus => LocStatus_31
+  goto <bb 7>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _11 = LocChState_24->StateValue;
+  _12 = _11 + 4294967295;
+  if (_12 <= 2)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelGlobalList (LocHwVers_19, LocHwInst_20, LocHwCh_21, List_27(D), ListDimension_28(D));
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  LocStatus_26 = 2;
+  # DEBUG LocStatus => LocStatus_26
+
+  <bb 7> :
+  # LocStatus_13 = PHI <LocStatus_31(3), LocStatus_15(5), LocStatus_26(6)>
+  # DEBUG LocStatus => LocStatus_13
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07 ();
+  # DEBUG BEGIN_STMT
+  _33 = LocStatus_13;
+  return _33;
+
+}
+
+
+Dma_Ip_GetLogicChannelStatus (const uint32 LogicCh, struct Dma_Ip_LogicChannelStatusType * const ChStatus)
+{
+  uint8 LocHwCh;
+  uint8 LocHwInst;
+  uint8 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.38_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  long unsigned int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  uint32 * _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  long unsigned int _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  <unnamed type> _20;
+  Dma_Ip_ReturnType _38;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_21 = 0;
+  # DEBUG LocStatus => LocStatus_21
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.38_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.38_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_23(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_24 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_24
+  # DEBUG BEGIN_STMT
+  LocHwVers_25 = LocLogicChId_24->HwVersId;
+  # DEBUG LocHwVers => LocHwVers_25
+  # DEBUG BEGIN_STMT
+  LocHwInst_26 = LocLogicChId_24->HwInstId;
+  # DEBUG LocHwInst => LocHwInst_26
+  # DEBUG BEGIN_STMT
+  LocHwCh_27 = LocLogicChId_24->HwChId;
+  # DEBUG LocHwCh => LocHwCh_27
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06 ();
+  # DEBUG BEGIN_STMT
+  _6 = (long unsigned int) LocHwVers_25;
+  _7 = (long unsigned int) LocHwInst_26;
+  _8 = (long unsigned int) LocHwCh_27;
+  LocChState_30 = Dma_Ip_GetHwChannelStatePointer (_6, _7, _8);
+  # DEBUG LocChState => LocChState_30
+  # DEBUG BEGIN_STMT
+  _9 = (long unsigned int) LocHwVers_25;
+  _10 = (long unsigned int) LocHwInst_26;
+  _11 = (long unsigned int) LocHwCh_27;
+  _12 = &LocChState_30->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (_9, _10, _11, _12);
+  # DEBUG BEGIN_STMT
+  _13 = LocChState_30->LogicChErrors;
+  ChStatus_32(D)->Errors = _13;
+  # DEBUG BEGIN_STMT
+  _14 = (long unsigned int) LocHwVers_25;
+  _15 = (long unsigned int) LocHwInst_26;
+  _16 = (long unsigned int) LocHwCh_27;
+  HwAccDmaCh_GetStatus (_14, _15, _16, ChStatus_32(D));
+  # DEBUG BEGIN_STMT
+  _17 = (long unsigned int) LocHwVers_25;
+  _18 = (long unsigned int) LocHwInst_26;
+  _19 = (long unsigned int) LocHwCh_27;
+  _20 = Dma_Ip_GetHwChannelState (_17, _18, _19);
+  ChStatus_32(D)->ChStateValue = _20;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06 ();
+  # DEBUG BEGIN_STMT
+  _38 = LocStatus_21;
+  return _38;
+
+}
+
+
+Dma_Ip_SetLogicChannelCommand (const uint32 LogicCh, const Dma_Ip_LogicChannelCmdType Command)
+{
+  uint8 LocHwCh;
+  uint8 LocHwInst;
+  uint8 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.37_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  long unsigned int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  long unsigned int _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  long unsigned int _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  uint32 * _18;
+  long unsigned int _19;
+  long unsigned int _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  <unnamed type> _23;
+  unsigned int _24;
+  long unsigned int _25;
+  long unsigned int _26;
+  long unsigned int _27;
+  Dma_Ip_ReturnType _50;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_30 = 0;
+  # DEBUG LocStatus => LocStatus_30
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.37_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.37_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_32(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_33 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_33
+  # DEBUG BEGIN_STMT
+  LocHwVers_34 = LocLogicChId_33->HwVersId;
+  # DEBUG LocHwVers => LocHwVers_34
+  # DEBUG BEGIN_STMT
+  LocHwInst_35 = LocLogicChId_33->HwInstId;
+  # DEBUG LocHwInst => LocHwInst_35
+  # DEBUG BEGIN_STMT
+  LocHwCh_36 = LocLogicChId_33->HwChId;
+  # DEBUG LocHwCh => LocHwCh_36
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05 ();
+  # DEBUG BEGIN_STMT
+  _6 = (long unsigned int) LocHwVers_34;
+  _7 = (long unsigned int) LocHwInst_35;
+  _8 = (long unsigned int) LocHwCh_36;
+  LocChState_39 = Dma_Ip_GetHwChannelStatePointer (_6, _7, _8);
+  # DEBUG LocChState => LocChState_39
+  # DEBUG BEGIN_STMT
+  if (Command_40(D) == 4)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  LocChState_39->LogicChErrors = 0;
+  # DEBUG BEGIN_STMT
+  _9 = (long unsigned int) LocHwVers_34;
+  _10 = (long unsigned int) LocHwInst_35;
+  _11 = (long unsigned int) LocHwCh_36;
+  Dma_Ip_SetHwChannelState (_9, _10, _11, 1);
+  # DEBUG BEGIN_STMT
+  _12 = (long unsigned int) LocHwVers_34;
+  _13 = (long unsigned int) LocHwInst_35;
+  _14 = (long unsigned int) LocHwCh_36;
+  HwAccDmaCh_SetCommand (Command_40(D), _12, _13, _14);
+  goto <bb 9>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _15 = (long unsigned int) LocHwVers_34;
+  _16 = (long unsigned int) LocHwInst_35;
+  _17 = (long unsigned int) LocHwCh_36;
+  _18 = &LocChState_39->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (_15, _16, _17, _18);
+  # DEBUG BEGIN_STMT
+  _19 = LocChState_39->LogicChErrors;
+  if (_19 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _20 = (long unsigned int) LocHwVers_34;
+  _21 = (long unsigned int) LocHwInst_35;
+  _22 = (long unsigned int) LocHwCh_36;
+  Dma_Ip_SetHwChannelState (_20, _21, _22, 4);
+  # DEBUG BEGIN_STMT
+  LocStatus_45 = 1;
+  # DEBUG LocStatus => LocStatus_45
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _23 = LocChState_39->StateValue;
+  _24 = _23 + 4294967294;
+  if (_24 <= 1)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _25 = (long unsigned int) LocHwVers_34;
+  _26 = (long unsigned int) LocHwInst_35;
+  _27 = (long unsigned int) LocHwCh_36;
+  HwAccDmaCh_SetCommand (Command_40(D), _25, _26, _27);
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  LocStatus_42 = 2;
+  # DEBUG LocStatus => LocStatus_42
+
+  <bb 9> :
+  # LocStatus_28 = PHI <LocStatus_30(3), LocStatus_45(5), LocStatus_30(7), LocStatus_42(8)>
+  # DEBUG LocStatus => LocStatus_28
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05 ();
+  # DEBUG BEGIN_STMT
+  _50 = LocStatus_28;
+  return _50;
+
+}
+
+
+Dma_Ip_LogicChannelDeinit (const uint32 LogicCh)
+{
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.34_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  Dma_Ip_ReturnType _24;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_9 = 0;
+  # DEBUG LocStatus => LocStatus_9
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.34_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.34_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_11(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_12 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_12
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_12->HwVersId;
+  LocHwVers_13 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_13
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_12->HwInstId;
+  LocHwInst_14 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_14
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_12->HwChId;
+  LocHwCh_15 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_15
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04 ();
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_13, LocHwInst_14, LocHwCh_15, 0);
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_ResetConfig (LogicCh_11(D));
+  # DEBUG BEGIN_STMT
+  LocChState_20 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_13, LocHwInst_14, LocHwCh_15);
+  # DEBUG LocChState => LocChState_20
+  # DEBUG BEGIN_STMT
+  LocChState_20->LogicChErrors = 0;
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetCommand (4, LocHwVers_13, LocHwInst_14, LocHwCh_15);
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04 ();
+  # DEBUG BEGIN_STMT
+  _24 = LocStatus_9;
+  return _24;
+
+}
+
+
+Dma_Ip_LogicChannelInit (const uint32 LogicCh)
+{
+  struct Dma_Ip_TcdRegType * PxTcd;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.11_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  <unnamed type> _9;
+  struct Dma_Ip_Hwv3ChTcdRegType * _10;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.12_11;
+  const struct Dma_Ip_LogicChannelConfigType * const * _12;
+  long unsigned int _13;
+  const struct Dma_Ip_LogicChannelConfigType * const * _14;
+  const struct Dma_Ip_LogicChannelConfigType * _15;
+  const struct Dma_Ip_TransferConfigType * _16;
+  long unsigned int _17;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.13_18;
+  const struct Dma_Ip_LogicChannelConfigType * const * _19;
+  long unsigned int _20;
+  const struct Dma_Ip_LogicChannelConfigType * const * _21;
+  const struct Dma_Ip_LogicChannelConfigType * _22;
+  const struct Dma_Ip_TransferConfigType * _23;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.14_24;
+  const struct Dma_Ip_LogicChannelConfigType * const * _25;
+  long unsigned int _26;
+  const struct Dma_Ip_LogicChannelConfigType * const * _27;
+  const struct Dma_Ip_LogicChannelConfigType * _28;
+  struct Dma_Ip_ScatterGatherConfigType * * _29;
+  long unsigned int _30;
+  long unsigned int _31;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.15_32;
+  const struct Dma_Ip_LogicChannelConfigType * _33;
+  const struct Dma_Ip_TransferConfigType * _34;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.16_35;
+  const struct Dma_Ip_LogicChannelConfigType * const * _36;
+  long unsigned int _37;
+  const struct Dma_Ip_LogicChannelConfigType * const * _38;
+  const struct Dma_Ip_LogicChannelConfigType * _39;
+  const struct Dma_Ip_GlobalConfigType * _40;
+  long unsigned int _41;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.17_42;
+  const struct Dma_Ip_LogicChannelConfigType * const * _43;
+  long unsigned int _44;
+  const struct Dma_Ip_LogicChannelConfigType * const * _45;
+  const struct Dma_Ip_LogicChannelConfigType * _46;
+  const struct Dma_Ip_GlobalConfigType * _47;
+  long unsigned int _48;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.18_49;
+  const struct Dma_Ip_LogicChannelConfigType * _50;
+  const struct Dma_Ip_GlobalConfigType * _51;
+  Dma_Ip_ReturnType _89;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_58 = 0;
+  # DEBUG LocStatus => LocStatus_58
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  PxTcd_59 = 0B;
+  # DEBUG PxTcd => PxTcd_59
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.11_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.11_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_61(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_62 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_62
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_62->HwVersId;
+  LocHwVers_63 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_63
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_62->HwInstId;
+  LocHwInst_64 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_64
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_62->HwChId;
+  LocHwCh_65 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_65
+  # DEBUG BEGIN_STMT
+  LocChState_67 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_63, LocHwInst_64, LocHwCh_65);
+  # DEBUG LocChState => LocChState_67
+  # DEBUG BEGIN_STMT
+  _9 = LocChState_67->StateValue;
+  if (_9 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  LocStatus_87 = 2;
+  # DEBUG LocStatus => LocStatus_87
+  goto <bb 15>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_63 == 3)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _10 = g_ptHwChTcdPtrArray[LocHwInst_64][LocHwCh_65];
+  PxTcd_68 = &_10->tTcdReg;
+  # DEBUG PxTcd => PxTcd_68
+
+  <bb 6> :
+  # PxTcd_54 = PHI <PxTcd_59(4), PxTcd_68(5)>
+  # DEBUG PxTcd => PxTcd_54
+  # DEBUG BEGIN_STMT
+  LocChState_67->LogicChId = LocLogicChId_62;
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_63, LocHwInst_64, LocHwCh_65, 1);
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.12_11 = Dma_Ip_pxInit;
+  _12 = Dma_Ip_pxInit.12_11->ppxLogicChannelConfigArray;
+  _13 = LogicCh_61(D) * 4;
+  _14 = _12 + _13;
+  _15 = *_14;
+  _16 = _15->pxTransferConfig;
+  if (_16 != 0B)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetControl_EnScatterGatherProcessing (LocHwVers_63, PxTcd_54, 0);
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetControl_ScatterGatherAddress (LocHwVers_63, PxTcd_54, 0);
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_63, LocHwInst_64, LocHwCh_65, 2);
+  # DEBUG BEGIN_STMT
+  _17 = LocLogicChId_62->LogicChId;
+  Dma_Ip_pxInit.13_18 = Dma_Ip_pxInit;
+  _19 = Dma_Ip_pxInit.13_18->ppxLogicChannelConfigArray;
+  _20 = LogicCh_61(D) * 4;
+  _21 = _19 + _20;
+  _22 = *_21;
+  _23 = _22->pxTransferConfig;
+  LocStatus_82 = Static_Dma_Ip_SetLogicChannelTransferConfig (_17, _23);
+  # DEBUG LocStatus => LocStatus_82
+  goto <bb 11>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.14_24 = Dma_Ip_pxInit;
+  _25 = Dma_Ip_pxInit.14_24->ppxLogicChannelConfigArray;
+  _26 = LogicCh_61(D) * 4;
+  _27 = _25 + _26;
+  _28 = *_27;
+  _29 = _28->ppxScatterGatherConfigArray;
+  if (_29 != 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetControl_EnScatterGatherProcessing (LocHwVers_63, PxTcd_54, 0);
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetControl_ScatterGatherAddress (LocHwVers_63, PxTcd_54, 0);
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_63, LocHwInst_64, LocHwCh_65, 3);
+  # DEBUG BEGIN_STMT
+  _30 = LocLogicChId_62->LogicChId;
+  LocStatus_77 = Static_Dma_Ip_SetLogicChannelScatterGatherInit (_30, 0);
+  # DEBUG LocStatus => LocStatus_77
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _31 = LocLogicChId_62->LogicChId;
+  Dma_Ip_pxInit.15_32 = Dma_Ip_pxInit;
+  _33 = Dma_Ip_pxInit.15_32->pxLogicChannelResetConfig;
+  _34 = _33->pxTransferConfig;
+  LocStatus_72 = Static_Dma_Ip_SetLogicChannelTransferConfig (_31, _34);
+  # DEBUG LocStatus => LocStatus_72
+
+  <bb 11> :
+  # LocStatus_52 = PHI <LocStatus_82(7), LocStatus_77(9), LocStatus_72(10)>
+  # DEBUG LocStatus => LocStatus_52
+  # DEBUG BEGIN_STMT
+  if (LocStatus_52 == 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.16_35 = Dma_Ip_pxInit;
+  _36 = Dma_Ip_pxInit.16_35->ppxLogicChannelConfigArray;
+  _37 = LogicCh_61(D) * 4;
+  _38 = _36 + _37;
+  _39 = *_38;
+  _40 = _39->pxGlobalConfig;
+  if (_40 != 0B)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  _41 = LocLogicChId_62->LogicChId;
+  Dma_Ip_pxInit.17_42 = Dma_Ip_pxInit;
+  _43 = Dma_Ip_pxInit.17_42->ppxLogicChannelConfigArray;
+  _44 = LogicCh_61(D) * 4;
+  _45 = _43 + _44;
+  _46 = *_45;
+  _47 = _46->pxGlobalConfig;
+  LocStatus_86 = Static_Dma_Ip_SetLogicChannelGlobalConfig (_41, _47, 0);
+  # DEBUG LocStatus => LocStatus_86
+  goto <bb 15>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  _48 = LocLogicChId_62->LogicChId;
+  Dma_Ip_pxInit.18_49 = Dma_Ip_pxInit;
+  _50 = Dma_Ip_pxInit.18_49->pxLogicChannelResetConfig;
+  _51 = _50->pxGlobalConfig;
+  LocStatus_84 = Static_Dma_Ip_SetLogicChannelGlobalConfig (_48, _51, 1);
+  # DEBUG LocStatus => LocStatus_84
+
+  <bb 15> :
+  # LocStatus_53 = PHI <LocStatus_87(3), LocStatus_52(11), LocStatus_86(13), LocStatus_84(14)>
+  # DEBUG LocStatus => LocStatus_53
+  # DEBUG BEGIN_STMT
+  if (LocStatus_53 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_SetHwChannelState (LocHwVers_63, LocHwInst_64, LocHwCh_65, 4);
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  _89 = LocStatus_53;
+  return _89;
+
+}
+
+
+Dma_Ip_GetLogicInstanceStatus (const uint32 LogicInst, struct Dma_Ip_LogicInstanceStatusType * const Status)
+{
+  const struct Dma_Ip_LogicInstanceIdType * PaxLogicInst;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.10_1;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _4;
+  const struct Dma_Ip_LogicInstanceConfigType * _5;
+  Dma_Ip_ReturnType _12;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_6 = 0;
+  # DEBUG LocStatus => LocStatus_6
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.10_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.10_1->ppxLogicInstConfigArray;
+  _3 = LogicInst_8(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  PaxLogicInst_9 = &_5->LogicInstId;
+  # DEBUG PaxLogicInst => PaxLogicInst_9
+  # DEBUG BEGIN_STMT
+  HwAccDmaInst_GetStatus (PaxLogicInst_9, Status_10(D));
+  # DEBUG BEGIN_STMT
+  _12 = LocStatus_6;
+  return _12;
+
+}
+
+
+Dma_Ip_SetLogicInstanceCommand (const uint32 LogicInst, const Dma_Ip_LogicInstanceCmdType Command)
+{
+  const struct Dma_Ip_LogicInstanceIdType * PaxLogicInst;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.9_1;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _4;
+  const struct Dma_Ip_LogicInstanceConfigType * _5;
+  Dma_Ip_ReturnType _14;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_6 = 0;
+  # DEBUG LocStatus => LocStatus_6
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.9_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.9_1->ppxLogicInstConfigArray;
+  _3 = LogicInst_8(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  PaxLogicInst_9 = &_5->LogicInstId;
+  # DEBUG PaxLogicInst => PaxLogicInst_9
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02 ();
+  # DEBUG BEGIN_STMT
+  HwAccDmaInst_SetCommand (Command_11(D), PaxLogicInst_9);
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02 ();
+  # DEBUG BEGIN_STMT
+  _14 = LocStatus_6;
+  return _14;
+
+}
+
+
+Dma_Ip_Deinit ()
+{
+  uint32 LocCfgIdx;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.7_1;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _4;
+  const struct Dma_Ip_LogicInstanceConfigType * _5;
+  const struct Dma_Ip_LogicInstanceIdType * _6;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.8_7;
+  const struct Dma_Ip_LogicInstanceConfigType * _8;
+  Dma_Ip_ReturnType _19;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_13 = 0;
+  # DEBUG LocStatus => LocStatus_13
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01 ();
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_16 = 0;
+  # DEBUG LocCfgIdx => LocCfgIdx_16
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.7_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.7_1->ppxLogicInstConfigArray;
+  _3 = LocCfgIdx_9 * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  _6 = &_5->LogicInstId;
+  Dma_Ip_pxInit.8_7 = Dma_Ip_pxInit;
+  _8 = Dma_Ip_pxInit.8_7->pxLogicInstanceResetConfig;
+  HwAccDmaInst_SetConfig (_6, _8);
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_23 = LocCfgIdx_9 + 1;
+  # DEBUG LocCfgIdx => LocCfgIdx_23
+
+  <bb 4> :
+  # LocCfgIdx_9 = PHI <LocCfgIdx_16(2), LocCfgIdx_23(3)>
+  # DEBUG LocCfgIdx => LocCfgIdx_9
+  # DEBUG BEGIN_STMT
+  if (LocCfgIdx_9 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01 ();
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_18 = 0;
+  # DEBUG LocCfgIdx => LocCfgIdx_18
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_LogicChannelDeinit (LocCfgIdx_10);
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_21 = LocCfgIdx_10 + 1;
+  # DEBUG LocCfgIdx => LocCfgIdx_21
+
+  <bb 7> :
+  # LocCfgIdx_10 = PHI <LocCfgIdx_18(5), LocCfgIdx_21(6)>
+  # DEBUG LocCfgIdx => LocCfgIdx_10
+  # DEBUG BEGIN_STMT
+  if (LocCfgIdx_10 <= 1)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _19 = LocStatus_13;
+  return _19;
+
+}
+
+
+Dma_Ip_Init (const struct Dma_Ip_InitType * const DmaInit)
+{
+  const struct Dma_Ip_HwChannelStateType * pLocChState;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  uint32 LocCfgIdx;
+  Dma_Ip_ReturnType LocStatus;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.1_1;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _4;
+  const struct Dma_Ip_LogicInstanceConfigType * _5;
+  const struct Dma_Ip_LogicInstanceIdType * _6;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.2_7;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _8;
+  long unsigned int _9;
+  const struct Dma_Ip_LogicInstanceConfigType * const * _10;
+  const struct Dma_Ip_LogicInstanceConfigType * _11;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.3_12;
+  const struct Dma_Ip_LogicChannelConfigType * const * _13;
+  long unsigned int _14;
+  const struct Dma_Ip_LogicChannelConfigType * const * _15;
+  const struct Dma_Ip_LogicChannelConfigType * _16;
+  unsigned char _17;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.4_18;
+  const struct Dma_Ip_LogicChannelConfigType * const * _19;
+  long unsigned int _20;
+  const struct Dma_Ip_LogicChannelConfigType * const * _21;
+  const struct Dma_Ip_LogicChannelConfigType * _22;
+  unsigned char _23;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.5_24;
+  const struct Dma_Ip_LogicChannelConfigType * const * _25;
+  long unsigned int _26;
+  const struct Dma_Ip_LogicChannelConfigType * const * _27;
+  const struct Dma_Ip_LogicChannelConfigType * _28;
+  unsigned char _29;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.6_30;
+  struct Dma_Ip_HwChannelStateType * * _31;
+  long unsigned int _32;
+  struct Dma_Ip_HwChannelStateType * * _33;
+  struct Dma_Ip_HwChannelStateType * _34;
+  <unnamed type> _35;
+  Dma_Ip_ReturnType _51;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  LocStatus_43 = 0;
+  # DEBUG LocStatus => LocStatus_43
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit = DmaInit_45(D);
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00 ();
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_48 = 0;
+  # DEBUG LocCfgIdx => LocCfgIdx_48
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.1_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.1_1->ppxLogicInstConfigArray;
+  _3 = LocCfgIdx_38 * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  _6 = &_5->LogicInstId;
+  Dma_Ip_pxInit.2_7 = Dma_Ip_pxInit;
+  _8 = Dma_Ip_pxInit.2_7->ppxLogicInstConfigArray;
+  _9 = LocCfgIdx_38 * 4;
+  _10 = _8 + _9;
+  _11 = *_10;
+  HwAccDmaInst_SetConfig (_6, _11);
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_63 = LocCfgIdx_38 + 1;
+  # DEBUG LocCfgIdx => LocCfgIdx_63
+
+  <bb 4> :
+  # LocCfgIdx_38 = PHI <LocCfgIdx_48(2), LocCfgIdx_63(3)>
+  # DEBUG LocCfgIdx => LocCfgIdx_38
+  # DEBUG BEGIN_STMT
+  if (LocCfgIdx_38 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00 ();
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_50 = 0;
+  # DEBUG LocCfgIdx => LocCfgIdx_50
+  goto <bb 10>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.3_12 = Dma_Ip_pxInit;
+  _13 = Dma_Ip_pxInit.3_12->ppxLogicChannelConfigArray;
+  _14 = LocCfgIdx_39 * 4;
+  _15 = _13 + _14;
+  _16 = *_15;
+  _17 = _16->LogicChId.HwVersId;
+  LocHwVers_52 = (uint32) _17;
+  # DEBUG LocHwVers => LocHwVers_52
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.4_18 = Dma_Ip_pxInit;
+  _19 = Dma_Ip_pxInit.4_18->ppxLogicChannelConfigArray;
+  _20 = LocCfgIdx_39 * 4;
+  _21 = _19 + _20;
+  _22 = *_21;
+  _23 = _22->LogicChId.HwInstId;
+  LocHwInst_53 = (uint32) _23;
+  # DEBUG LocHwInst => LocHwInst_53
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.5_24 = Dma_Ip_pxInit;
+  _25 = Dma_Ip_pxInit.5_24->ppxLogicChannelConfigArray;
+  _26 = LocCfgIdx_39 * 4;
+  _27 = _25 + _26;
+  _28 = *_27;
+  _29 = _28->LogicChId.HwChId;
+  LocHwCh_54 = (uint32) _29;
+  # DEBUG LocHwCh => LocHwCh_54
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.6_30 = Dma_Ip_pxInit;
+  _31 = Dma_Ip_pxInit.6_30->ppxChStateArray;
+  _32 = LocCfgIdx_39 * 4;
+  _33 = _31 + _32;
+  _34 = *_33;
+  Dma_Ip_SetHwChannelStatePointer (LocHwVers_52, LocHwInst_53, LocHwCh_54, _34);
+  # DEBUG BEGIN_STMT
+  pLocChState_57 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_52, LocHwInst_53, LocHwCh_54);
+  # DEBUG pLocChState => pLocChState_57
+  # DEBUG BEGIN_STMT
+  _35 = pLocChState_57->StateValue;
+  if (_35 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  LocStatus_60 = 2;
+  # DEBUG LocStatus => LocStatus_60
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  LocStatus_59 = Dma_Ip_LogicChannelInit (LocCfgIdx_39);
+  # DEBUG LocStatus => LocStatus_59
+
+  <bb 9> :
+  # LocStatus_36 = PHI <LocStatus_60(7), LocStatus_59(8)>
+  # DEBUG LocStatus => LocStatus_36
+  # DEBUG BEGIN_STMT
+  LocCfgIdx_61 = LocCfgIdx_39 + 1;
+  # DEBUG LocCfgIdx => LocCfgIdx_61
+
+  <bb 10> :
+  # LocStatus_37 = PHI <LocStatus_43(5), LocStatus_36(9)>
+  # LocCfgIdx_39 = PHI <LocCfgIdx_50(5), LocCfgIdx_61(9)>
+  # DEBUG LocCfgIdx => LocCfgIdx_39
+  # DEBUG LocStatus => LocStatus_37
+  # DEBUG BEGIN_STMT
+  if (LocCfgIdx_39 <= 1)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _51 = LocStatus_37;
+  return _51;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelTransferConfig (const uint32 LogicCh, const struct Dma_Ip_TransferConfigType * const TransferConfig)
+{
+  struct Dma_Ip_TcdRegType * PxTcd;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  struct Dma_Ip_LogicChannelTransferListType LocList[25];
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.22_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  long unsigned int _9;
+  short int _10;
+  long unsigned int _11;
+  long int _12;
+  long unsigned int _13;
+  unsigned char _14;
+  long unsigned int _15;
+  unsigned char _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  short int _19;
+  long unsigned int _20;
+  long int _21;
+  long unsigned int _22;
+  unsigned char _23;
+  long unsigned int _24;
+  unsigned char _25;
+  long unsigned int _26;
+  _Bool _27;
+  _Bool _28;
+  long unsigned int _29;
+  _Bool _30;
+  _Bool _31;
+  long unsigned int _32;
+  long int _33;
+  long unsigned int _34;
+  _Bool _35;
+  _Bool _36;
+  long unsigned int _37;
+  unsigned char _38;
+  long unsigned int _39;
+  long unsigned int _40;
+  _Bool _41;
+  _Bool _42;
+  long unsigned int _43;
+  unsigned char _44;
+  long unsigned int _45;
+  long unsigned int _46;
+  _Bool _47;
+  _Bool _48;
+  long unsigned int _49;
+  _Bool _50;
+  _Bool _51;
+  long unsigned int _52;
+  _Bool _53;
+  _Bool _54;
+  long unsigned int _55;
+  _Bool _56;
+  unsigned char _57;
+  long unsigned int _58;
+  _Bool _59;
+  _Bool _60;
+  long unsigned int _61;
+  struct Dma_Ip_Hwv3ChTcdRegType * _62;
+  uint32 iftmp.23_64;
+  uint32 iftmp.23_119;
+  uint32 iftmp.23_120;
+  Dma_Ip_ReturnType _129;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  PxTcd_66 = 0B;
+  # DEBUG PxTcd => PxTcd_66
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.22_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.22_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_68(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_69 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_69
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_69->HwVersId;
+  LocHwVers_70 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_70
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_69->HwInstId;
+  LocHwInst_71 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_71
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_69->HwChId;
+  LocHwCh_72 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_72
+  # DEBUG BEGIN_STMT
+  LocList[0].Param = 0;
+  # DEBUG BEGIN_STMT
+  _9 = TransferConfig_74(D)->Source.Addr;
+  LocList[0].Value = _9;
+  # DEBUG BEGIN_STMT
+  LocList[1].Param = 1;
+  # DEBUG BEGIN_STMT
+  _10 = TransferConfig_74(D)->Source.SignedOffset;
+  _11 = (long unsigned int) _10;
+  LocList[1].Value = _11;
+  # DEBUG BEGIN_STMT
+  LocList[2].Param = 2;
+  # DEBUG BEGIN_STMT
+  _12 = TransferConfig_74(D)->Source.LastAddrAdj;
+  _13 = (long unsigned int) _12;
+  LocList[2].Value = _13;
+  # DEBUG BEGIN_STMT
+  LocList[3].Param = 3;
+  # DEBUG BEGIN_STMT
+  _14 = TransferConfig_74(D)->Source.TransferSize;
+  _15 = (long unsigned int) _14;
+  LocList[3].Value = _15;
+  # DEBUG BEGIN_STMT
+  LocList[4].Param = 4;
+  # DEBUG BEGIN_STMT
+  _16 = TransferConfig_74(D)->Source.Modulo;
+  _17 = (long unsigned int) _16;
+  LocList[4].Value = _17;
+  # DEBUG BEGIN_STMT
+  LocList[5].Param = 5;
+  # DEBUG BEGIN_STMT
+  _18 = TransferConfig_74(D)->Destination.Addr;
+  LocList[5].Value = _18;
+  # DEBUG BEGIN_STMT
+  LocList[6].Param = 6;
+  # DEBUG BEGIN_STMT
+  _19 = TransferConfig_74(D)->Destination.SignedOffset;
+  _20 = (long unsigned int) _19;
+  LocList[6].Value = _20;
+  # DEBUG BEGIN_STMT
+  LocList[7].Param = 7;
+  # DEBUG BEGIN_STMT
+  _21 = TransferConfig_74(D)->Destination.LastAddrAdj;
+  _22 = (long unsigned int) _21;
+  LocList[7].Value = _22;
+  # DEBUG BEGIN_STMT
+  LocList[8].Param = 8;
+  # DEBUG BEGIN_STMT
+  _23 = TransferConfig_74(D)->Destination.TransferSize;
+  _24 = (long unsigned int) _23;
+  LocList[8].Value = _24;
+  # DEBUG BEGIN_STMT
+  LocList[9].Param = 9;
+  # DEBUG BEGIN_STMT
+  _25 = TransferConfig_74(D)->Destination.Modulo;
+  _26 = (long unsigned int) _25;
+  LocList[9].Value = _26;
+  # DEBUG BEGIN_STMT
+  LocList[10].Param = 10;
+  # DEBUG BEGIN_STMT
+  _27 = TransferConfig_74(D)->MinorLoop.EnSrcOffset;
+  _28 = _27;
+  _29 = (long unsigned int) _28;
+  LocList[10].Value = _29;
+  # DEBUG BEGIN_STMT
+  LocList[11].Param = 11;
+  # DEBUG BEGIN_STMT
+  _30 = TransferConfig_74(D)->MinorLoop.EnDstOffset;
+  _31 = _30;
+  _32 = (long unsigned int) _31;
+  LocList[11].Value = _32;
+  # DEBUG BEGIN_STMT
+  LocList[12].Param = 12;
+  # DEBUG BEGIN_STMT
+  _33 = TransferConfig_74(D)->MinorLoop.Offset;
+  _34 = (long unsigned int) _33;
+  LocList[12].Value = _34;
+  # DEBUG BEGIN_STMT
+  LocList[13].Param = 13;
+  # DEBUG BEGIN_STMT
+  _35 = TransferConfig_74(D)->MinorLoop.EnLink;
+  _36 = _35;
+  _37 = (long unsigned int) _36;
+  LocList[13].Value = _37;
+  # DEBUG BEGIN_STMT
+  LocList[14].Param = 14;
+  # DEBUG BEGIN_STMT
+  _38 = TransferConfig_74(D)->MinorLoop.LogicLinkCh;
+  _39 = (long unsigned int) _38;
+  LocList[14].Value = _39;
+  # DEBUG BEGIN_STMT
+  LocList[15].Param = 15;
+  # DEBUG BEGIN_STMT
+  _40 = TransferConfig_74(D)->MinorLoop.Size;
+  LocList[15].Value = _40;
+  # DEBUG BEGIN_STMT
+  LocList[16].Param = 16;
+  # DEBUG BEGIN_STMT
+  _41 = TransferConfig_74(D)->MajorLoop.EnLink;
+  _42 = _41;
+  _43 = (long unsigned int) _42;
+  LocList[16].Value = _43;
+  # DEBUG BEGIN_STMT
+  LocList[17].Param = 17;
+  # DEBUG BEGIN_STMT
+  _44 = TransferConfig_74(D)->MajorLoop.LogicLinkCh;
+  _45 = (long unsigned int) _44;
+  LocList[17].Value = _45;
+  # DEBUG BEGIN_STMT
+  LocList[18].Param = 18;
+  # DEBUG BEGIN_STMT
+  _46 = TransferConfig_74(D)->MajorLoop.Count;
+  LocList[18].Value = _46;
+  # DEBUG BEGIN_STMT
+  LocList[19].Param = 21;
+  # DEBUG BEGIN_STMT
+  _47 = TransferConfig_74(D)->Control.EnMajorInt;
+  _48 = _47;
+  _49 = (long unsigned int) _48;
+  LocList[19].Value = _49;
+  # DEBUG BEGIN_STMT
+  LocList[20].Param = 22;
+  # DEBUG BEGIN_STMT
+  _50 = TransferConfig_74(D)->Control.EnHalfMajorInt;
+  _51 = _50;
+  _52 = (long unsigned int) _51;
+  LocList[20].Value = _52;
+  # DEBUG BEGIN_STMT
+  LocList[21].Param = 23;
+  # DEBUG BEGIN_STMT
+  _53 = TransferConfig_74(D)->Control.DisAutoHwRequest;
+  _54 = _53;
+  _55 = (long unsigned int) _54;
+  LocList[21].Value = _55;
+  # DEBUG BEGIN_STMT
+  LocList[22].Param = 24;
+  # DEBUG BEGIN_STMT
+  _56 = TransferConfig_74(D)->Control.EnEndOfPacketSignal;
+  if (_56 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  iftmp.23_120 = 1;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  iftmp.23_119 = 0;
+
+  <bb 5> :
+  # iftmp.23_64 = PHI <iftmp.23_120(3), iftmp.23_119(4)>
+  LocList[22].Value = iftmp.23_64;
+  # DEBUG BEGIN_STMT
+  LocList[23].Param = 25;
+  # DEBUG BEGIN_STMT
+  _57 = TransferConfig_74(D)->Control.BandwidthControl;
+  _58 = (long unsigned int) _57;
+  LocList[23].Value = _58;
+  # DEBUG BEGIN_STMT
+  LocList[24].Param = 20;
+  # DEBUG BEGIN_STMT
+  _59 = TransferConfig_74(D)->Control.EnStart;
+  _60 = _59;
+  _61 = (long unsigned int) _60;
+  LocList[24].Value = _61;
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_70 == 3)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _62 = g_ptHwChTcdPtrArray[LocHwInst_71][LocHwCh_72];
+  PxTcd_126 = &_62->tTcdReg;
+  # DEBUG PxTcd => PxTcd_126
+
+  <bb 7> :
+  # PxTcd_63 = PHI <PxTcd_66(5), PxTcd_126(6)>
+  # DEBUG PxTcd => PxTcd_63
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_SetCommand (3, LocHwVers_70, LocHwInst_71, LocHwCh_72);
+  # DEBUG BEGIN_STMT
+  if (PxTcd_63 != 0B)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelTransferList (LogicCh_68(D), PxTcd_63, &LocList, 25);
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _129 = 0;
+  LocList ={v} {CLOBBER};
+  return _129;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelGlobalConfig (const uint32 LogicCh, const struct Dma_Ip_GlobalConfigType * const GlobalConfig, boolean ResetState)
+{
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  struct Dma_Ip_LogicChannelGlobalListType LocListHwv3[11];
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.25_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  unsigned char _7;
+  unsigned char _8;
+  _Bool _9;
+  _Bool _10;
+  _Bool _11;
+  unsigned char _12;
+  long unsigned int _13;
+  _Bool _14;
+  _Bool _15;
+  unsigned char _16;
+  long unsigned int _17;
+  unsigned char _18;
+  long unsigned int _19;
+  _Bool _20;
+  _Bool _21;
+  _Bool _22;
+  uint32 iftmp.26_23;
+  uint32 iftmp.27_24;
+  uint32 iftmp.28_25;
+  uint32 iftmp.29_26;
+  uint32 iftmp.30_27;
+  uint32 iftmp.31_28;
+  uint32 iftmp.32_29;
+  uint32 iftmp.33_30;
+  uint32 iftmp.26_40;
+  uint32 iftmp.26_41;
+  uint32 iftmp.27_44;
+  uint32 iftmp.27_45;
+  uint32 iftmp.28_48;
+  uint32 iftmp.28_49;
+  uint32 iftmp.29_54;
+  uint32 iftmp.29_55;
+  uint32 iftmp.30_58;
+  uint32 iftmp.30_59;
+  uint32 iftmp.31_66;
+  uint32 iftmp.31_67;
+  uint32 iftmp.32_70;
+  uint32 iftmp.32_71;
+  uint32 iftmp.33_74;
+  uint32 iftmp.33_75;
+  Dma_Ip_ReturnType _78;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.25_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.25_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_33(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_34 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_34
+  # DEBUG BEGIN_STMT
+  _6 = LocLogicChId_34->HwVersId;
+  LocHwVers_35 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_35
+  # DEBUG BEGIN_STMT
+  _7 = LocLogicChId_34->HwInstId;
+  LocHwInst_36 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_36
+  # DEBUG BEGIN_STMT
+  _8 = LocLogicChId_34->HwChId;
+  LocHwCh_37 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_37
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_35 == 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 28>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  LocListHwv3[0].Param = 0;
+  # DEBUG BEGIN_STMT
+  _9 = GlobalConfig_39(D)->Control.EnMasterIdReplication;
+  if (_9 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  iftmp.26_41 = 1;
+  goto <bb 6>; [INV]
+
+  <bb 5> :
+  iftmp.26_40 = 0;
+
+  <bb 6> :
+  # iftmp.26_23 = PHI <iftmp.26_41(4), iftmp.26_40(5)>
+  LocListHwv3[0].Value = iftmp.26_23;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[1].Param = 1;
+  # DEBUG BEGIN_STMT
+  _10 = GlobalConfig_39(D)->Control.EnBufferedWrites;
+  if (_10 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  iftmp.27_45 = 1;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  iftmp.27_44 = 0;
+
+  <bb 9> :
+  # iftmp.27_24 = PHI <iftmp.27_45(7), iftmp.27_44(8)>
+  LocListHwv3[1].Value = iftmp.27_24;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[2].Param = 2;
+  # DEBUG BEGIN_STMT
+  _11 = GlobalConfig_39(D)->Request.EnSourceMux;
+  if (_11 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  iftmp.28_49 = 1;
+  goto <bb 12>; [INV]
+
+  <bb 11> :
+  iftmp.28_48 = 0;
+
+  <bb 12> :
+  # iftmp.28_25 = PHI <iftmp.28_49(10), iftmp.28_48(11)>
+  LocListHwv3[2].Value = iftmp.28_25;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[3].Param = 3;
+  # DEBUG BEGIN_STMT
+  _12 = GlobalConfig_39(D)->Request.SourceMux;
+  _13 = (long unsigned int) _12;
+  LocListHwv3[3].Value = _13;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[4].Param = 4;
+  # DEBUG BEGIN_STMT
+  _14 = GlobalConfig_39(D)->Request.EnTriggerMux;
+  if (_14 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  iftmp.29_55 = 1;
+  goto <bb 15>; [INV]
+
+  <bb 14> :
+  iftmp.29_54 = 0;
+
+  <bb 15> :
+  # iftmp.29_26 = PHI <iftmp.29_55(13), iftmp.29_54(14)>
+  LocListHwv3[4].Value = iftmp.29_26;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[5].Param = 6;
+  # DEBUG BEGIN_STMT
+  _15 = GlobalConfig_39(D)->Interrupt.EnErrorInt;
+  if (_15 != 0)
+    goto <bb 16>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 16> :
+  iftmp.30_59 = 1;
+  goto <bb 18>; [INV]
+
+  <bb 17> :
+  iftmp.30_58 = 0;
+
+  <bb 18> :
+  # iftmp.30_27 = PHI <iftmp.30_59(16), iftmp.30_58(17)>
+  LocListHwv3[5].Value = iftmp.30_27;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[6].Param = 7;
+  # DEBUG BEGIN_STMT
+  _16 = GlobalConfig_39(D)->Priority.Group;
+  _17 = (long unsigned int) _16;
+  LocListHwv3[6].Value = _17;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[7].Param = 8;
+  # DEBUG BEGIN_STMT
+  _18 = GlobalConfig_39(D)->Priority.Level;
+  _19 = (long unsigned int) _18;
+  LocListHwv3[7].Value = _19;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[8].Param = 9;
+  # DEBUG BEGIN_STMT
+  _20 = GlobalConfig_39(D)->Priority.EnPreemption;
+  if (_20 != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  iftmp.31_67 = 1;
+  goto <bb 21>; [INV]
+
+  <bb 20> :
+  iftmp.31_66 = 0;
+
+  <bb 21> :
+  # iftmp.31_28 = PHI <iftmp.31_67(19), iftmp.31_66(20)>
+  LocListHwv3[8].Value = iftmp.31_28;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[9].Param = 10;
+  # DEBUG BEGIN_STMT
+  _21 = GlobalConfig_39(D)->Priority.DisPreempt;
+  if (_21 != 0)
+    goto <bb 22>; [INV]
+  else
+    goto <bb 23>; [INV]
+
+  <bb 22> :
+  iftmp.32_71 = 1;
+  goto <bb 24>; [INV]
+
+  <bb 23> :
+  iftmp.32_70 = 0;
+
+  <bb 24> :
+  # iftmp.32_29 = PHI <iftmp.32_71(22), iftmp.32_70(23)>
+  LocListHwv3[9].Value = iftmp.32_29;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[10].Param = 5;
+  # DEBUG BEGIN_STMT
+  _22 = GlobalConfig_39(D)->Request.EnRequest;
+  if (_22 != 0)
+    goto <bb 25>; [INV]
+  else
+    goto <bb 26>; [INV]
+
+  <bb 25> :
+  iftmp.33_75 = 1;
+  goto <bb 27>; [INV]
+
+  <bb 26> :
+  iftmp.33_74 = 0;
+
+  <bb 27> :
+  # iftmp.33_30 = PHI <iftmp.33_75(25), iftmp.33_74(26)>
+  LocListHwv3[10].Value = iftmp.33_30;
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelGlobalList (LocHwVers_35, LocHwInst_36, LocHwCh_37, &LocListHwv3, 11);
+
+  <bb 28> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _78 = 0;
+  LocListHwv3 ={v} {CLOBBER};
+  return _78;
+
+}
+
+
+Dma_Ip_ConvertLogicChToHwCh (uint32 LogicCh)
+{
+  uint32 LocHwCh;
+  const struct Dma_Ip_InitType * Dma_Ip_pxInit.0_1;
+  const struct Dma_Ip_LogicChannelConfigType * const * _2;
+  long unsigned int _3;
+  const struct Dma_Ip_LogicChannelConfigType * const * _4;
+  const struct Dma_Ip_LogicChannelConfigType * _5;
+  unsigned char _6;
+  uint32 _10;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.0_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.0_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_8(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  _6 = _5->LogicChId.HwChId;
+  LocHwCh_9 = (uint32) _6;
+  # DEBUG LocHwCh => LocHwCh_9
+  # DEBUG BEGIN_STMT
+  _10 = LocHwCh_9;
+  return _10;
+
+}
+
+

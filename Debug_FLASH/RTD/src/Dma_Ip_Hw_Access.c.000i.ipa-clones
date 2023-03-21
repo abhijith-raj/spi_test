@@ -1,0 +1,191 @@
+Callgraph clone;hwv3AccInlineDmaInst_CmdCancelTransfer;2;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;166;20;hwAccDmaInst_CmdCancelTransfer;72;../RTD/src/Dma_Ip_Hw_Access.c;353;6;inlining to
+Callgraph removal;hwv3AccInlineDmaInst_CmdCancelTransfer;2;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;166;20
+Callgraph clone;hwAccDmaInst_CmdCancelTransfer;72;../RTD/src/Dma_Ip_Hw_Access.c;353;6;hwAccDmaInst_CmdCancelTransfer.part.0;144;../RTD/src/Dma_Ip_Hw_Access.c;353;6;part
+Callgraph clone;hwv3AccInlineDmaInst_CmdCancelTransferWithError;3;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;173;20;hwAccDmaInst_CmdCancelTransferWithError;73;../RTD/src/Dma_Ip_Hw_Access.c;374;6;inlining to
+Callgraph removal;hwv3AccInlineDmaInst_CmdCancelTransferWithError;3;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;173;20
+Callgraph clone;hwAccDmaInst_CmdCancelTransferWithError;73;../RTD/src/Dma_Ip_Hw_Access.c;374;6;hwAccDmaInst_CmdCancelTransferWithError.part.0;145;../RTD/src/Dma_Ip_Hw_Access.c;374;6;part
+Callgraph clone;hwv3AccInlineDmaInst_CmdHalt;4;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;180;20;hwAccDmaInst_CmdHalt;74;../RTD/src/Dma_Ip_Hw_Access.c;395;6;inlining to
+Callgraph removal;hwv3AccInlineDmaInst_CmdHalt;4;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;180;20
+Callgraph clone;hwAccDmaInst_CmdHalt;74;../RTD/src/Dma_Ip_Hw_Access.c;395;6;hwAccDmaInst_CmdHalt.part.0;146;../RTD/src/Dma_Ip_Hw_Access.c;395;6;part
+Callgraph clone;hwv3AccInlineDmaInst_CmdResume;5;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;187;20;hwAccDmaInst_CmdResume;75;../RTD/src/Dma_Ip_Hw_Access.c;416;6;inlining to
+Callgraph removal;hwv3AccInlineDmaInst_CmdResume;5;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;187;20
+Callgraph clone;hwAccDmaInst_CmdResume;75;../RTD/src/Dma_Ip_Hw_Access.c;416;6;hwAccDmaInst_CmdResume.part.0;147;../RTD/src/Dma_Ip_Hw_Access.c;416;6;part
+Callgraph clone;hwv3AccInlineDmaCh_CmdSetRequest;9;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;217;20;HwAccDmaCh_CmdSetHwRequest;78;../RTD/src/Dma_Ip_Hw_Access.c;482;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_CmdSetRequest;9;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;217;20
+Callgraph clone;hwv3AccInlineDmaCh_CmdClearRequest;10;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;224;20;HwAccDmaCh_CmdClearHwRequest;79;../RTD/src/Dma_Ip_Hw_Access.c;500;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_CmdClearRequest;10;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;224;20
+Callgraph clone;hwv3AccInlineDmaCh_CmdSwReqStart;11;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;231;20;HwAccDmaCh_CmdSetSwRequest;80;../RTD/src/Dma_Ip_Hw_Access.c;518;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_CmdSwReqStart;11;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;231;20
+Callgraph clone;hwv3AccInlineDmaCh_CmdClearDone;12;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;238;20;HwAccDmaCh_CmdClearDone;81;../RTD/src/Dma_Ip_Hw_Access.c;536;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_CmdClearDone;148;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;238;20
+Callgraph clone;hwv3AccInlineDmaCh_CmdClearError;13;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;245;20;HwAccDmaCh_CmdClearError;82;../RTD/src/Dma_Ip_Hw_Access.c;554;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_CmdClearError;13;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;245;20
+Callgraph clone;HwAccDmaCh_SetRequest_EnMuxSource;88;../RTD/src/Dma_Ip_Hw_Access.c;673;6;HwAccDmaCh_SetRequest_EnMuxSource.part.0;149;../RTD/src/Dma_Ip_Hw_Access.c;673;6;part
+Callgraph clone;HwAccDmaCh_SetRequest_MuxSource;89;../RTD/src/Dma_Ip_Hw_Access.c;706;6;HwAccDmaCh_SetRequest_MuxSource.part.0;150;../RTD/src/Dma_Ip_Hw_Access.c;706;6;part
+Callgraph clone;HwAccDmaCh_SetRequest_EnMuxTrigger;90;../RTD/src/Dma_Ip_Hw_Access.c;739;6;HwAccDmaCh_SetRequest_EnMuxTrigger.part.0;151;../RTD/src/Dma_Ip_Hw_Access.c;739;6;part
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_Address;28;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;357;20;HwAccDmaCh_SetSource_Address;98;../RTD/src/Dma_Ip_Hw_Access.c;937;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_SignedOffset;29;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;363;20;HwAccDmaCh_SetSource_SignedOffset;99;../RTD/src/Dma_Ip_Hw_Access.c;959;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_SignedLastAddrAdj;30;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;369;20;HwAccDmaCh_SetSource_LastAddrAdj;100;../RTD/src/Dma_Ip_Hw_Access.c;977;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetAuxiliary_EnDestinationStoreAddress;64;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;624;20;HwAccDmaCh_SetSource_LastAddrAdj;100;../RTD/src/Dma_Ip_Hw_Access.c;977;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_Address;33;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;387;20;HwAccDmaCh_SetDestination_Address;103;../RTD/src/Dma_Ip_Hw_Access.c;1032;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_SignedOffset;34;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;393;20;HwAccDmaCh_SetDestination_SignedOffset;104;../RTD/src/Dma_Ip_Hw_Access.c;1054;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_LastAddrAdj;35;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;399;20;HwAccDmaCh_SetDestination_LastAddrAdj;105;../RTD/src/Dma_Ip_Hw_Access.c;1072;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_SetDestination_LastAddrAdj;35;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;399;20
+Callgraph clone;hwv3AccInlineDmaCh_SetAuxiliary_EnDestinationStoreAddress;64;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;624;20;HwAccDmaCh_SetControl_StoreDestinationAddress;117;../RTD/src/Dma_Ip_Hw_Access.c;1293;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_StoreDestinationAddress;48;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;503;20;HwAccDmaCh_SetControl_StoreDestinationAddress;117;../RTD/src/Dma_Ip_Hw_Access.c;1293;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_SetAuxiliary_EnDestinationStoreAddress;64;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;624;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_StoreDestinationAddress;48;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;503;20
+Callgraph clone;HwAccDmaCh_SetControl_StoreDestinationAddress;117;../RTD/src/Dma_Ip_Hw_Access.c;1293;6;HwAccDmaCh_SetControl_StoreDestinationAddress.part.0;158;../RTD/src/Dma_Ip_Hw_Access.c;1293;6;part
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_EnStart;49;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;510;20;HwAccDmaCh_SetControl_EnStart;118;../RTD/src/Dma_Ip_Hw_Access.c;1317;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_EnStart;49;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;510;20
+Callgraph clone;HwAccDmaCh_SetControl_EnStart;118;../RTD/src/Dma_Ip_Hw_Access.c;1317;6;HwAccDmaCh_SetControl_EnStart.part.0;159;../RTD/src/Dma_Ip_Hw_Access.c;1317;6;part
+Callgraph clone;hwv3AccInlineDmaCh_GetSourceAddress;55;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;553;20;HwAccDmaCh_GetSourceAddress;125;../RTD/src/Dma_Ip_Hw_Access.c;1476;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetSourceAddress;55;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;553;20
+Callgraph clone;hwv3AccInlineDmaCh_GetDestinationAddress;56;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;558;20;HwAccDmaCh_GetDestinationAddress;126;../RTD/src/Dma_Ip_Hw_Access.c;1501;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetDestinationAddress;56;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;558;20
+Callgraph clone;hwv3AccInlineDmaCh_GetStoreDstAddress;59;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;590;20;HwAccDmaCh_GetStoreDstAddress;129;../RTD/src/Dma_Ip_Hw_Access.c;1564;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetStoreDstAddress;59;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;590;20
+Callgraph clone;hwv3AccInlineDmaCh_GetMasterId;60;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;597;20;HwAccDmaCh_GetMasterId;130;../RTD/src/Dma_Ip_Hw_Access.c;1591;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetMasterId;60;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;597;20
+Callgraph clone;hwv3AccInlineDmaCh_GetIntMajor;61;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;603;20;HwAccDmaCh_GetIntMajor;131;../RTD/src/Dma_Ip_Hw_Access.c;1610;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetIntMajor;61;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;603;20
+Callgraph clone;hwv3AccInlineDmaCh_GetIntHalfMajor;62;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;608;20;HwAccDmaCh_GetIntHalfMajor;132;../RTD/src/Dma_Ip_Hw_Access.c;1628;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetIntHalfMajor;62;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;608;20
+Callgraph clone;hwv3AccInlineDmaInst_GetActiveStatus;8;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;208;20;HwAccDmaInst_GetStatus;77;../RTD/src/Dma_Ip_Hw_Access.c;455;6;inlining to
+Callgraph clone;hwv3AccInlineDmaInst_GetActiveIdStatus;7;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;203;20;HwAccDmaInst_GetStatus;77;../RTD/src/Dma_Ip_Hw_Access.c;455;6;inlining to
+Callgraph clone;hwv3AccInlineDmaInst_GetErrorStatus;6;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;198;20;HwAccDmaInst_GetStatus;77;../RTD/src/Dma_Ip_Hw_Access.c;455;6;inlining to
+Callgraph removal;hwv3AccInlineDmaInst_GetActiveStatus;8;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;208;20
+Callgraph removal;hwv3AccInlineDmaInst_GetActiveIdStatus;7;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;203;20
+Callgraph removal;hwv3AccInlineDmaInst_GetErrorStatus;6;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;198;20
+Callgraph clone;hwv3AccInlineDmaCh_GetDoneStatus;16;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;266;20;HwAccDmaCh_GetStatus;84;../RTD/src/Dma_Ip_Hw_Access.c;591;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_GetActiveStatus;15;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;261;20;HwAccDmaCh_GetStatus;84;../RTD/src/Dma_Ip_Hw_Access.c;591;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetDoneStatus;16;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;266;20
+Callgraph removal;hwv3AccInlineDmaCh_GetActiveStatus;15;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;261;20
+Callgraph clone;hwv3AccInlineDmaCh_GetErrorStatus;14;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;256;20;HwAccDmaCh_GetStatus_Error;85;../RTD/src/Dma_Ip_Hw_Access.c;610;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_GetErrorStatus;14;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;256;20
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_SignedLastAddrAdj;30;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;369;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_SignedOffset;34;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;393;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_Address;33;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;387;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_SignedOffset;29;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;363;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_Address;28;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;357;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress;47;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;496;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress;47;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;496;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_SetDestination_SignedOffset;34;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;393;20
+Callgraph removal;hwv3AccInlineDmaCh_SetDestination_Address;33;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;387;20
+Callgraph removal;hwv3AccInlineDmaCh_SetSource_SignedOffset;29;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;363;20
+Callgraph removal;hwv3AccInlineDmaCh_SetSource_Address;28;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;357;20
+Callgraph removal;hwv3AccInlineDmaCh_SetSource_SignedLastAddrAdj;30;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;369;20
+Callgraph clone;hwv3AccInlineDmaCh_CmdClearDone;12;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;238;20;HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd;135;../RTD/src/Dma_Ip_Hw_Access.c;1741;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_CmdClearDone;12;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;238;20
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress;47;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;496;20;HwAccDmaCh_SetControl_ScatterGatherAddress;136;../RTD/src/Dma_Ip_Hw_Access.c;1778;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_ScatterGatherAddress;47;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;496;20
+Callgraph clone;hwv3AccInlineDmaInst_SetConfig;1;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;151;20;hwv3AccInlineDmaInst_SetConfig.constprop.0;162;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;151;20;constprop
+Callgraph clone;hwv3AccInlineDmaCh_SetSignedMinorLoopOffset;67;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;668;20;hwv3AccInlineDmaCh_SetSignedMinorLoopOffset.isra.0;163;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;668;20;isra
+Callgraph clone;hwv3AccInlineDmaCh_SetTransferAttributes;66;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;654;20;hwv3AccInlineDmaCh_SetTransferAttributes.isra.0;164;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;654;20;isra
+Callgraph clone;hwv3AccInlineDmaCh_SetControlAndStatus;65;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;634;20;hwv3AccInlineDmaCh_SetControlAndStatus.isra.0;165;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;634;20;isra
+Callgraph clone;hwv3AccInlineDmaCh_GetCurrentIterCount;58;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;576;20;hwv3AccInlineDmaCh_GetCurrentIterCount.isra.0;166;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;576;20;isra
+Callgraph clone;hwv3AccInlineDmaCh_GetBeginIterCount;57;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;563;20;hwv3AccInlineDmaCh_GetBeginIterCount.isra.0;167;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;563;20;isra
+Callgraph clone;HwAccDmaCh_SetControl_ScatterGatherAddress;136;../RTD/src/Dma_Ip_Hw_Access.c;1778;6;HwAccDmaCh_SetDestination_LastAddrAdj;105;../RTD/src/Dma_Ip_Hw_Access.c;1072;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetRequest_EnHwRequestMux;21;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;305;20;HwAccDmaCh_SetRequest_EnMuxSource.part.0;149;../RTD/src/Dma_Ip_Hw_Access.c;673;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetRequest_SourceMux;19;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;293;20;HwAccDmaCh_SetRequest_MuxSource.part.0;150;../RTD/src/Dma_Ip_Hw_Access.c;706;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetRequest_EnTriggerMux;20;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;299;20;HwAccDmaCh_SetRequest_EnMuxTrigger.part.0;151;../RTD/src/Dma_Ip_Hw_Access.c;739;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_TransferSize;36;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;405;20;HwAccDmaCh_SetDestination_TransferSize;106;../RTD/src/Dma_Ip_Hw_Access.c;1090;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_enSrcOffset;38;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;417;20;HwAccDmaCh_SetMinorLoop_enSrcOffset;108;../RTD/src/Dma_Ip_Hw_Access.c;1126;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_BandwidthControl;54;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;542;20;HwAccDmaCh_SetControl_BandwidthControl;123;../RTD/src/Dma_Ip_Hw_Access.c;1409;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetPriority_Group;24;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;325;20;HwAccDmaCh_SetPriority_Group;93;../RTD/src/Dma_Ip_Hw_Access.c;809;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_Modulo;32;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;381;20;HwAccDmaCh_SetSource_Modulo;102;../RTD/src/Dma_Ip_Hw_Access.c;1014;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetPriority_Level;25;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;331;20;HwAccDmaCh_SetPriority_Level;94;../RTD/src/Dma_Ip_Hw_Access.c;828;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetPriority_EnPreemption;26;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;338;20;HwAccDmaCh_SetPriority_EnPreemption;95;../RTD/src/Dma_Ip_Hw_Access.c;847;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetRequest_EnHwRequest;22;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;313;20;HwAccDmaCh_SetRequest_EnRequest;91;../RTD/src/Dma_Ip_Hw_Access.c;773;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSource_TransferSize;31;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;375;20;HwAccDmaCh_SetSource_TransferSize;101;../RTD/src/Dma_Ip_Hw_Access.c;996;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetAuxiliary_EnScatterGatherProcessing;63;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;618;20;HwAccDmaCh_SetControl_EnScatterGatherProcessing;137;../RTD/src/Dma_Ip_Hw_Access.c;1796;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetDestination_Modulo;37;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;411;20;HwAccDmaCh_SetDestination_Modulo;107;../RTD/src/Dma_Ip_Hw_Access.c;1108;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_enDstOffset;39;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;423;20;HwAccDmaCh_SetMinorLoop_enDstOffset;109;../RTD/src/Dma_Ip_Hw_Access.c;1144;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_DisAutoHwRequest;52;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;528;20;HwAccDmaCh_SetControl_DisAutoHwRequest;121;../RTD/src/Dma_Ip_Hw_Access.c;1371;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_EnEndOfPacketSignal;53;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;535;20;HwAccDmaCh_SetControl_EnEndOfPacketSignal;122;../RTD/src/Dma_Ip_Hw_Access.c;1390;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_EnMajor;50;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;516;20;HwAccDmaCh_SetControl_EnMajor;119;../RTD/src/Dma_Ip_Hw_Access.c;1335;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_EnHalfMajor;51;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;522;20;HwAccDmaCh_SetControl_EnHalfMajor;120;../RTD/src/Dma_Ip_Hw_Access.c;1353;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_SignedOffset;40;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;429;20;HwAccDmaCh_SetMinorLoop_Offset;110;../RTD/src/Dma_Ip_Hw_Access.c;1162;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMajorLoop_EnLink;44;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;464;20;HwAccDmaCh_SetMajorLoop_EnLink;114;../RTD/src/Dma_Ip_Hw_Access.c;1236;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_GetBeginIterCount.isra.0;167;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;563;20;HwAccDmaCh_GetBeginIterCount;127;../RTD/src/Dma_Ip_Hw_Access.c;1526;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetInterrupt_EnError;23;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;319;20;HwAccDmaCh_SetInterrupt_EnError;92;../RTD/src/Dma_Ip_Hw_Access.c;790;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetPriority_DisPreempt;27;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;346;20;HwAccDmaCh_SetPriority_DisPreempt;96;../RTD/src/Dma_Ip_Hw_Access.c;867;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_GetCurrentIterCount.isra.0;166;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;576;20;HwAccDmaCh_GetCurrentIterCount;128;../RTD/src/Dma_Ip_Hw_Access.c;1544;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_EnMasterIdReplication;17;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;276;20;HwAccDmaCh_SetControl_EnMasterIdReplication;86;../RTD/src/Dma_Ip_Hw_Access.c;633;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControl_EnBufferedWrites;18;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;284;20;HwAccDmaCh_SetControl_EnBufferedWrites;87;../RTD/src/Dma_Ip_Hw_Access.c;653;6;inlining to
+Callgraph clone;HwAccDmaCh_SetControl_StoreDestinationAddress.part.0;158;../RTD/src/Dma_Ip_Hw_Access.c;1293;6;HwAccDmaCh_SetControl_StoreDestinationAddress;117;../RTD/src/Dma_Ip_Hw_Access.c;1293;6;inlining to
+Callgraph clone;HwAccDmaCh_SetControl_EnStart.part.0;159;../RTD/src/Dma_Ip_Hw_Access.c;1317;6;HwAccDmaCh_SetControl_EnStart;118;../RTD/src/Dma_Ip_Hw_Access.c;1317;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_EnLink;41;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;435;20;HwAccDmaCh_SetMinorLoop_EnLink;111;../RTD/src/Dma_Ip_Hw_Access.c;1180;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_LinkCh;42;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;443;20;HwAccDmaCh_SetMinorLoop_LogicLinkCh;112;../RTD/src/Dma_Ip_Hw_Access.c;1198;6;inlining to
+Callgraph clone;hwAccDmaInst_CmdCancelTransfer.part.0;144;../RTD/src/Dma_Ip_Hw_Access.c;353;6;hwAccDmaInst_CmdCancelTransfer;72;../RTD/src/Dma_Ip_Hw_Access.c;353;6;inlining to
+Callgraph clone;hwAccDmaInst_CmdResume.part.0;147;../RTD/src/Dma_Ip_Hw_Access.c;416;6;hwAccDmaInst_CmdResume;75;../RTD/src/Dma_Ip_Hw_Access.c;416;6;inlining to
+Callgraph clone;hwAccDmaInst_CmdCancelTransferWithError.part.0;145;../RTD/src/Dma_Ip_Hw_Access.c;374;6;hwAccDmaInst_CmdCancelTransferWithError;73;../RTD/src/Dma_Ip_Hw_Access.c;374;6;inlining to
+Callgraph clone;hwAccDmaInst_CmdHalt.part.0;146;../RTD/src/Dma_Ip_Hw_Access.c;395;6;hwAccDmaInst_CmdHalt;74;../RTD/src/Dma_Ip_Hw_Access.c;395;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetAuxiliary_EnScatterGatherProcessing;63;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;618;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMajorLoop_EnLink;44;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;464;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_EnLink;41;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;435;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaInst_SetConfig.constprop.0;162;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;151;20;HwAccDmaInst_SetConfig;71;../RTD/src/Dma_Ip_Hw_Access.c;328;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_LinkCh;42;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;443;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;HwAccDmaCh_SetRequest_EnMuxSource.part.0;149;../RTD/src/Dma_Ip_Hw_Access.c;673;6;HwAccDmaCh_SetRequest_EnMuxSource;88;../RTD/src/Dma_Ip_Hw_Access.c;673;6;inlining to
+Callgraph clone;HwAccDmaCh_SetRequest_MuxSource.part.0;150;../RTD/src/Dma_Ip_Hw_Access.c;706;6;HwAccDmaCh_SetRequest_MuxSource;89;../RTD/src/Dma_Ip_Hw_Access.c;706;6;inlining to
+Callgraph clone;HwAccDmaCh_SetRequest_EnMuxTrigger.part.0;151;../RTD/src/Dma_Ip_Hw_Access.c;739;6;HwAccDmaCh_SetRequest_EnMuxTrigger;90;../RTD/src/Dma_Ip_Hw_Access.c;739;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetSignedMinorLoopOffset.isra.0;163;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;668;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetTransferAttributes.isra.0;164;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;654;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetControlAndStatus.isra.0;165;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;634;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMajorLoop_LinkCh;45;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;470;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMajorLoop_LinkCh;45;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;470;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMajorLoop_LinkCh;45;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;470;20;HwAccDmaCh_SetMajorLoop_LogicLinkCh;115;../RTD/src/Dma_Ip_Hw_Access.c;1254;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_Size;43;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;451;20;HwAccDmaCh_LoadConfigIntoSoftwareTcd;134;../RTD/src/Dma_Ip_Hw_Access.c;1678;6;inlining to
+Callgraph clone;hwv3AccInlineDmaCh_SetMinorLoop_Size;43;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;451;20;HwAccDmaCh_SetMinorLoop_Size;113;../RTD/src/Dma_Ip_Hw_Access.c;1218;6;inlining to
+Callgraph removal;hwv3AccInlineDmaCh_SetSignedMinorLoopOffset;67;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;668;20
+Callgraph removal;hwv3AccInlineDmaCh_SetTransferAttributes;66;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;654;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControlAndStatus;65;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;634;20
+Callgraph removal;hwv3AccInlineDmaCh_GetCurrentIterCount;58;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;576;20
+Callgraph removal;hwv3AccInlineDmaCh_GetBeginIterCount;57;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;563;20
+Callgraph removal;hwv3AccInlineDmaInst_SetConfig;1;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;151;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_EnMasterIdReplication;17;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;276;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_EnBufferedWrites;18;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;284;20
+Callgraph removal;hwv3AccInlineDmaCh_SetRequest_EnHwRequest;22;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;313;20
+Callgraph removal;hwv3AccInlineDmaCh_SetInterrupt_EnError;23;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;319;20
+Callgraph removal;hwv3AccInlineDmaCh_SetPriority_Group;24;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;325;20
+Callgraph removal;hwv3AccInlineDmaCh_SetPriority_Level;25;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;331;20
+Callgraph removal;hwv3AccInlineDmaCh_SetPriority_EnPreemption;26;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;338;20
+Callgraph removal;hwv3AccInlineDmaCh_SetPriority_DisPreempt;27;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;346;20
+Callgraph removal;hwv3AccInlineDmaCh_SetSource_TransferSize;31;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;375;20
+Callgraph removal;hwv3AccInlineDmaCh_SetSource_Modulo;32;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;381;20
+Callgraph removal;hwv3AccInlineDmaCh_SetDestination_TransferSize;36;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;405;20
+Callgraph removal;hwv3AccInlineDmaCh_SetDestination_Modulo;37;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;411;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMinorLoop_enSrcOffset;38;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;417;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMinorLoop_enDstOffset;39;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;423;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMinorLoop_SignedOffset;40;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;429;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMinorLoop_Size;43;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;451;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_EnMajor;50;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;516;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_EnHalfMajor;51;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;522;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_DisAutoHwRequest;52;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;528;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_EnEndOfPacketSignal;53;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;535;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControl_BandwidthControl;54;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;542;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMajorLoop_LinkCh;45;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;470;20
+Callgraph removal;hwAccDmaInst_CmdCancelTransfer.part.0;144;../RTD/src/Dma_Ip_Hw_Access.c;353;6
+Callgraph removal;hwAccDmaInst_CmdCancelTransferWithError.part.0;145;../RTD/src/Dma_Ip_Hw_Access.c;374;6
+Callgraph removal;hwAccDmaInst_CmdHalt.part.0;146;../RTD/src/Dma_Ip_Hw_Access.c;395;6
+Callgraph removal;hwAccDmaInst_CmdResume.part.0;147;../RTD/src/Dma_Ip_Hw_Access.c;416;6
+Callgraph removal;HwAccDmaCh_SetRequest_EnMuxSource.part.0;149;../RTD/src/Dma_Ip_Hw_Access.c;673;6
+Callgraph removal;hwv3AccInlineDmaCh_SetRequest_EnHwRequestMux;21;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;305;20
+Callgraph removal;HwAccDmaCh_SetRequest_MuxSource.part.0;150;../RTD/src/Dma_Ip_Hw_Access.c;706;6
+Callgraph removal;hwv3AccInlineDmaCh_SetRequest_SourceMux;19;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;293;20
+Callgraph removal;HwAccDmaCh_SetRequest_EnMuxTrigger.part.0;151;../RTD/src/Dma_Ip_Hw_Access.c;739;6
+Callgraph removal;hwv3AccInlineDmaCh_SetRequest_EnTriggerMux;20;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;299;20
+Callgraph removal;HwAccDmaCh_SetControl_StoreDestinationAddress.part.0;158;../RTD/src/Dma_Ip_Hw_Access.c;1293;6
+Callgraph removal;HwAccDmaCh_SetControl_EnStart.part.0;159;../RTD/src/Dma_Ip_Hw_Access.c;1317;6
+Callgraph removal;hwv3AccInlineDmaCh_GetCurrentIterCount.isra.0;166;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;576;20
+Callgraph removal;hwv3AccInlineDmaCh_GetBeginIterCount.isra.0;167;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;563;20
+Callgraph removal;HwAccDmaCh_SetControl_ScatterGatherAddress;168;../RTD/src/Dma_Ip_Hw_Access.c;1778;6
+Callgraph removal;hwv3AccInlineDmaCh_SetMajorLoop_EnLink;170;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;464;20
+Callgraph removal;hwv3AccInlineDmaInst_SetConfig.constprop.0;162;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;151;20
+Callgraph removal;hwv3AccInlineDmaCh_SetAuxiliary_EnScatterGatherProcessing;63;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;618;20
+Callgraph removal;hwv3AccInlineDmaCh_SetSignedMinorLoopOffset.isra.0;163;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;668;20
+Callgraph removal;hwv3AccInlineDmaCh_SetTransferAttributes.isra.0;164;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;654;20
+Callgraph removal;hwv3AccInlineDmaCh_SetControlAndStatus.isra.0;165;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;634;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMinorLoop_LinkCh;42;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;443;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMinorLoop_EnLink;41;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;435;20
+Callgraph removal;hwv3AccInlineDmaCh_SetMajorLoop_EnLink;44;../RTD/include/Dma_Ip_Hwv3_AccessInline.h;464;20

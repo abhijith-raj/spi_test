@@ -1,0 +1,4 @@
+../src/main.c:155:5:iotsm_uart_tx	0	static
+../src/main.c:173:5:iotsm_dbg_log	276	static
+../src/main.c:205:15:reverseBits	8	static
+../src/main.c:217:5:main	48	static

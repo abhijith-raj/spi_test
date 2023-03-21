@@ -1,0 +1,17 @@
+C:/nxp/S32DS.3.5/S32DS/software/PlatformSDK_S32K3_2022_07/SW32K3_RTD_4_4_2_0_1_D2207/Base_TS_T40D34M20I1R0/include/Devassert.h:85:20:DevAssert	8	static
+../RTD/src/Flexio_Spi_Ip.c:984:13:Flexio_Spi_Ip_WriteShifterBuffer	16	static
+../RTD/src/Flexio_Spi_Ip.c:1031:13:Flexio_Spi_Ip_ReadShifterBuffer	8	static
+../RTD/src/Flexio_Spi_Ip.c:302:13:Flexio_Spi_Ip_TransferProcess	40	static
+../RTD/src/Flexio_Spi_Ip.c:390:13:Flexio_Spi_Ip_ConfigExternalDevice.constprop	48	static
+../RTD/src/Flexio_Spi_Ip.c:1156:26:Flexio_Spi_Ip_DeInit	8	static
+../RTD/src/Flexio_Spi_Ip.c:1189:26:Flexio_Spi_Ip_SyncTransmit	64	static
+../RTD/src/Flexio_Spi_Ip.c:1321:26:Flexio_Spi_Ip_AsyncTransmit	40	static
+../RTD/src/Flexio_Spi_Ip.c:1436:6:Flexio_Spi_Ip_ManageBuffers	32	static
+../RTD/src/Flexio_Spi_Ip.c:1506:26:Flexio_Spi_Ip_UpdateFrameSize	8	static
+../RTD/src/Flexio_Spi_Ip.c:1532:26:Flexio_Spi_Ip_UpdateLsb	8	static
+../RTD/src/Flexio_Spi_Ip.c:1556:26:Flexio_Spi_Ip_UpdateDefaultTransmitData	8	static
+../RTD/src/Flexio_Spi_Ip.c:1580:26:Flexio_Spi_Ip_UpdateTransferMode	8	static
+../RTD/src/Flexio_Spi_Ip.c:1118:26:Flexio_Spi_Ip_Init	16	static
+../RTD/src/Flexio_Spi_Ip.c:1627:6:Flexio_Spi_Ip_Cancel	32	static
+../RTD/src/Flexio_Spi_Ip.c:1686:6:Flexio_Spi_Ip_IrqHandler	40	static
+../RTD/src/Flexio_Spi_Ip.c:1735:28:Flexio_Spi_Ip_GetStatus	8	static

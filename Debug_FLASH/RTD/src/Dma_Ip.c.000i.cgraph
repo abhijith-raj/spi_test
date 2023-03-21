@@ -1,0 +1,4059 @@
+Trivially needed symbols: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_IntIrqHandler/23 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_GetLogicChannelParam/19 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Dma_Ip_LogicChannelInit/9 Dma_Ip_GetLogicInstanceStatus/8 Dma_Ip_SetLogicInstanceCommand/7 Dma_Ip_Deinit/6 Dma_Ip_Init/5 Dma_Ip_ConvertLogicChToHwCh/2
+
+
+Initial Symbol table:
+
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11) @06f041c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11) @06f040e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+HwAccDmaCh_GetParam/62 (HwAccDmaCh_GetParam) @06ef4ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelParam/19 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef49a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef48c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef4460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+Dma_Ip_GetHwChannelState/54 (Dma_Ip_GetHwChannelState) @06ef4380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+HwAccDmaCh_GetStatus/53 (HwAccDmaCh_GetStatus) @06ef42a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef41c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05) @06ef4000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05) @06edd380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+HwAccDmaCh_SetGlobalParam/47 (HwAccDmaCh_SetGlobalParam) @06edda80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+  Calls: 
+HwAccDmaCh_SetTransferParam/46 (HwAccDmaCh_SetTransferParam) @06edd620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Static_Dma_Ip_SetLogicChannelTransferList/16 
+  Calls: 
+HwAccDmaCh_SetCommand/45 (HwAccDmaCh_SetCommand) @06edd460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: 
+HwAccDmaCh_GetStatus_Error/44 (HwAccDmaCh_GetStatus_Error) @06edd2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_GetLogicChannelError/25 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12) @06edd0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd) @06edd000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (HwAccDmaCh_LoadConfigIntoSoftwareTcd) @06e8cd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12) @06e8cee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_SetControl_ScatterGatherAddress/39 (HwAccDmaCh_SetControl_ScatterGatherAddress) @06e8cc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (HwAccDmaCh_SetControl_EnScatterGatherProcessing) @06e8cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+Dma_Ip_SetHwChannelState/37 (Dma_Ip_SetHwChannelState) @06e8ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaInst_GetStatus/36 (HwAccDmaInst_GetStatus) @06e8c8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicInstanceStatus/8 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+HwAccDmaInst_SetCommand/34 (HwAccDmaInst_SetCommand) @06e8c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/30 (Dma_Ip_GetHwChannelStatePointer) @06e8c0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_IntIrqHandler/23 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_LogicChannelInit/9 Dma_Ip_Init/5 
+  Calls: 
+Dma_Ip_SetHwChannelStatePointer/29 (Dma_Ip_SetHwChannelStatePointer) @06e8c000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00) @06d70620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+HwAccDmaInst_SetConfig/27 (HwAccDmaInst_SetConfig) @06d70380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 Dma_Ip_Init/5 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00) @06d700e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+Static_Dma_Ip_GetLogicChannelError/25 (Static_Dma_Ip_GetLogicChannelError) @06d70a80
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d642a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: HwAccDmaCh_GetStatus_Error/44 
+Dma_Ip_ErrorIrqHandler/24 (Dma_Ip_ErrorIrqHandler) @06d707e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @01981040
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Dma_Ip_IntIrqHandler/23 (Dma_Ip_IntIrqHandler) @06d70540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06d707e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (Static_Dma_Ip_SetLogicChannelScatterGatherInit) @06d702a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d642a0
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelInit/9 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 
+Static_Dma_Ip_ResetConfig/21 (Static_Dma_Ip_ResetConfig) @06d70000
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d64b60
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+Dma_Ip_SetLogicChannelScatterGatherConfig/20 (Dma_Ip_SetLogicChannelScatterGatherConfig) @06bc1b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06d70540
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 
+Dma_Ip_GetLogicChannelParam/19 (Dma_Ip_GetLogicChannelParam) @06bc1620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06bc1b60
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaCh_GetParam/62 
+Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (Static_Dma_Ip_SetLogicChannelScatterGatherList) @06bc10e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06bc1620
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelScatterGatherList/17 (Dma_Ip_SetLogicChannelScatterGatherList) @06bc1d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06bc1620
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 
+Static_Dma_Ip_SetLogicChannelTransferList/16 (Static_Dma_Ip_SetLogicChannelTransferList) @06bc1a80
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d64000
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelTransferList/15 (Dma_Ip_SetLogicChannelTransferList) @06bc17e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06bc1d20
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 
+Static_Dma_Ip_SetLogicChannelGlobalList/14 (Static_Dma_Ip_SetLogicChannelGlobalList) @06bc1540
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d64620
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+  Calls: HwAccDmaCh_SetGlobalParam/47 
+Dma_Ip_SetLogicChannelGlobalList/13 (Dma_Ip_SetLogicChannelGlobalList) @06bc12a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06bc17e0
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 Static_Dma_Ip_SetLogicChannelGlobalList/14 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 
+Dma_Ip_GetLogicChannelStatus/12 (Dma_Ip_GetLogicChannelStatus) @06bc1000
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06bc12a0
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 Dma_Ip_GetHwChannelState/54 HwAccDmaCh_GetStatus/53 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 
+Dma_Ip_SetLogicChannelCommand/11 (Dma_Ip_SetLogicChannelCommand) @04d64b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06bc1000
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 
+Dma_Ip_LogicChannelDeinit/10 (Dma_Ip_LogicChannelDeinit) @04d64620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d64b60
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 HwAccDmaCh_SetCommand/45 Dma_Ip_GetHwChannelStatePointer/30 Static_Dma_Ip_ResetConfig/21 Dma_Ip_SetHwChannelState/37 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 
+Dma_Ip_LogicChannelInit/9 (Dma_Ip_LogicChannelInit) @04d640e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d64620
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 
+Dma_Ip_GetLogicInstanceStatus/8 (Dma_Ip_GetLogicInstanceStatus) @04d64d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d640e0
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaInst_GetStatus/36 
+Dma_Ip_SetLogicInstanceCommand/7 (Dma_Ip_SetLogicInstanceCommand) @04d64a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d64d20
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 HwAccDmaInst_SetCommand/34 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 
+Dma_Ip_Deinit/6 (Dma_Ip_Deinit) @04d647e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d64a80
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelDeinit/10 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 
+Dma_Ip_Init/5 (Dma_Ip_Init) @04d64540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d647e0
+  References: Dma_Ip_pxInit/1 (write) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelInit/9 Dma_Ip_GetHwChannelStatePointer/30 Dma_Ip_SetHwChannelStatePointer/29 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 
+Static_Dma_Ip_SetLogicChannelTransferConfig/4 (Static_Dma_Ip_SetLogicChannelTransferConfig) @04d642a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d64000
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 
+Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (Static_Dma_Ip_SetLogicChannelGlobalConfig) @04d64000
+  Type: function definition analyzed
+  Visibility:
+  Aux: @04d64620
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+Dma_Ip_ConvertLogicChToHwCh/2 (Dma_Ip_ConvertLogicChToHwCh) @06ba8ee0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @04d64540
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_pxInit/1 (Dma_Ip_pxInit) @06bad318
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @04d64540
+  References: 
+  Referring: Dma_Ip_ConvertLogicChToHwCh/2 (read) Dma_Ip_Init/5 (write) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_SetLogicInstanceCommand/7 (read) Dma_Ip_GetLogicInstanceStatus/8 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Static_Dma_Ip_SetLogicChannelTransferList/16 (read) Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (read) Dma_Ip_LogicChannelDeinit/10 (read) Static_Dma_Ip_ResetConfig/21 (read) Static_Dma_Ip_ResetConfig/21 (read) Dma_Ip_SetLogicChannelCommand/11 (read) Dma_Ip_GetLogicChannelStatus/12 (read) Dma_Ip_SetLogicChannelGlobalList/13 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (read) Dma_Ip_GetLogicChannelParam/19 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06b85678
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @06d702a0
+  References: 
+  Referring: Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11) @06f041c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11) @06f040e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+HwAccDmaCh_GetParam/62 (HwAccDmaCh_GetParam) @06ef4ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelParam/19 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef49a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef48c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef4460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+Dma_Ip_GetHwChannelState/54 (Dma_Ip_GetHwChannelState) @06ef4380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+HwAccDmaCh_GetStatus/53 (HwAccDmaCh_GetStatus) @06ef42a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef41c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05) @06ef4000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05) @06edd380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+HwAccDmaCh_SetGlobalParam/47 (HwAccDmaCh_SetGlobalParam) @06edda80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+  Calls: 
+HwAccDmaCh_SetTransferParam/46 (HwAccDmaCh_SetTransferParam) @06edd620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Static_Dma_Ip_SetLogicChannelTransferList/16 
+  Calls: 
+HwAccDmaCh_SetCommand/45 (HwAccDmaCh_SetCommand) @06edd460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: 
+HwAccDmaCh_GetStatus_Error/44 (HwAccDmaCh_GetStatus_Error) @06edd2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_GetLogicChannelError/25 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12) @06edd0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd) @06edd000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (HwAccDmaCh_LoadConfigIntoSoftwareTcd) @06e8cd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12) @06e8cee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_SetControl_ScatterGatherAddress/39 (HwAccDmaCh_SetControl_ScatterGatherAddress) @06e8cc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (HwAccDmaCh_SetControl_EnScatterGatherProcessing) @06e8cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+Dma_Ip_SetHwChannelState/37 (Dma_Ip_SetHwChannelState) @06e8ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaInst_GetStatus/36 (HwAccDmaInst_GetStatus) @06e8c8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicInstanceStatus/8 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+HwAccDmaInst_SetCommand/34 (HwAccDmaInst_SetCommand) @06e8c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/30 (Dma_Ip_GetHwChannelStatePointer) @06e8c0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_IntIrqHandler/23 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_LogicChannelInit/9 Dma_Ip_Init/5 
+  Calls: 
+Dma_Ip_SetHwChannelStatePointer/29 (Dma_Ip_SetHwChannelStatePointer) @06e8c000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00) @06d70620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+HwAccDmaInst_SetConfig/27 (HwAccDmaInst_SetConfig) @06d70380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 Dma_Ip_Init/5 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00) @06d700e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+Static_Dma_Ip_GetLogicChannelError/25 (Static_Dma_Ip_GetLogicChannelError) @06d70a80
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: HwAccDmaCh_GetStatus_Error/44 
+Dma_Ip_ErrorIrqHandler/24 (Dma_Ip_ErrorIrqHandler) @06d707e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Dma_Ip_IntIrqHandler/23 (Dma_Ip_IntIrqHandler) @06d70540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (Static_Dma_Ip_SetLogicChannelScatterGatherInit) @06d702a0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelInit/9 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 
+Static_Dma_Ip_ResetConfig/21 (Static_Dma_Ip_ResetConfig) @06d70000
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+Dma_Ip_SetLogicChannelScatterGatherConfig/20 (Dma_Ip_SetLogicChannelScatterGatherConfig) @06bc1b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 
+Dma_Ip_GetLogicChannelParam/19 (Dma_Ip_GetLogicChannelParam) @06bc1620
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaCh_GetParam/62 
+Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (Static_Dma_Ip_SetLogicChannelScatterGatherList) @06bc10e0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelScatterGatherList/17 (Dma_Ip_SetLogicChannelScatterGatherList) @06bc1d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 
+Static_Dma_Ip_SetLogicChannelTransferList/16 (Static_Dma_Ip_SetLogicChannelTransferList) @06bc1a80
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelTransferList/15 (Dma_Ip_SetLogicChannelTransferList) @06bc17e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 
+Static_Dma_Ip_SetLogicChannelGlobalList/14 (Static_Dma_Ip_SetLogicChannelGlobalList) @06bc1540
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+  Calls: HwAccDmaCh_SetGlobalParam/47 
+Dma_Ip_SetLogicChannelGlobalList/13 (Dma_Ip_SetLogicChannelGlobalList) @06bc12a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 Static_Dma_Ip_SetLogicChannelGlobalList/14 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 
+Dma_Ip_GetLogicChannelStatus/12 (Dma_Ip_GetLogicChannelStatus) @06bc1000
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 Dma_Ip_GetHwChannelState/54 HwAccDmaCh_GetStatus/53 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 
+Dma_Ip_SetLogicChannelCommand/11 (Dma_Ip_SetLogicChannelCommand) @04d64b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 
+Dma_Ip_LogicChannelDeinit/10 (Dma_Ip_LogicChannelDeinit) @04d64620
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 HwAccDmaCh_SetCommand/45 Dma_Ip_GetHwChannelStatePointer/30 Static_Dma_Ip_ResetConfig/21 Dma_Ip_SetHwChannelState/37 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 
+Dma_Ip_LogicChannelInit/9 (Dma_Ip_LogicChannelInit) @04d640e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 
+Dma_Ip_GetLogicInstanceStatus/8 (Dma_Ip_GetLogicInstanceStatus) @04d64d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaInst_GetStatus/36 
+Dma_Ip_SetLogicInstanceCommand/7 (Dma_Ip_SetLogicInstanceCommand) @04d64a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 HwAccDmaInst_SetCommand/34 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 
+Dma_Ip_Deinit/6 (Dma_Ip_Deinit) @04d647e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelDeinit/10 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 
+Dma_Ip_Init/5 (Dma_Ip_Init) @04d64540
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (write) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelInit/9 Dma_Ip_GetHwChannelStatePointer/30 Dma_Ip_SetHwChannelStatePointer/29 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 
+Static_Dma_Ip_SetLogicChannelTransferConfig/4 (Static_Dma_Ip_SetLogicChannelTransferConfig) @04d642a0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 
+Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (Static_Dma_Ip_SetLogicChannelGlobalConfig) @04d64000
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+Dma_Ip_ConvertLogicChToHwCh/2 (Dma_Ip_ConvertLogicChToHwCh) @06ba8ee0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_pxInit/1 (Dma_Ip_pxInit) @06bad318
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Dma_Ip_ConvertLogicChToHwCh/2 (read) Dma_Ip_Init/5 (write) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_SetLogicInstanceCommand/7 (read) Dma_Ip_GetLogicInstanceStatus/8 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Static_Dma_Ip_SetLogicChannelTransferList/16 (read) Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (read) Dma_Ip_LogicChannelDeinit/10 (read) Static_Dma_Ip_ResetConfig/21 (read) Static_Dma_Ip_ResetConfig/21 (read) Dma_Ip_SetLogicChannelCommand/11 (read) Dma_Ip_GetLogicChannelStatus/12 (read) Dma_Ip_SetLogicChannelGlobalList/13 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (read) Dma_Ip_GetLogicChannelParam/19 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06b85678
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+
+Initial Symbol table:
+
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11) @06f041c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11) @06f040e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+HwAccDmaCh_GetParam/62 (HwAccDmaCh_GetParam) @06ef4ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelParam/19 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef49a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef48c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef4460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+Dma_Ip_GetHwChannelState/54 (Dma_Ip_GetHwChannelState) @06ef4380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+HwAccDmaCh_GetStatus/53 (HwAccDmaCh_GetStatus) @06ef42a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef41c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05) @06ef4000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05) @06edd380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+HwAccDmaCh_SetGlobalParam/47 (HwAccDmaCh_SetGlobalParam) @06edda80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+  Calls: 
+HwAccDmaCh_SetTransferParam/46 (HwAccDmaCh_SetTransferParam) @06edd620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Static_Dma_Ip_SetLogicChannelTransferList/16 
+  Calls: 
+HwAccDmaCh_SetCommand/45 (HwAccDmaCh_SetCommand) @06edd460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: 
+HwAccDmaCh_GetStatus_Error/44 (HwAccDmaCh_GetStatus_Error) @06edd2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_GetLogicChannelError/25 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12) @06edd0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd) @06edd000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (HwAccDmaCh_LoadConfigIntoSoftwareTcd) @06e8cd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12) @06e8cee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_SetControl_ScatterGatherAddress/39 (HwAccDmaCh_SetControl_ScatterGatherAddress) @06e8cc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (HwAccDmaCh_SetControl_EnScatterGatherProcessing) @06e8cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+Dma_Ip_SetHwChannelState/37 (Dma_Ip_SetHwChannelState) @06e8ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaInst_GetStatus/36 (HwAccDmaInst_GetStatus) @06e8c8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicInstanceStatus/8 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+HwAccDmaInst_SetCommand/34 (HwAccDmaInst_SetCommand) @06e8c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/30 (Dma_Ip_GetHwChannelStatePointer) @06e8c0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_IntIrqHandler/23 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_LogicChannelInit/9 Dma_Ip_Init/5 
+  Calls: 
+Dma_Ip_SetHwChannelStatePointer/29 (Dma_Ip_SetHwChannelStatePointer) @06e8c000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00) @06d70620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+HwAccDmaInst_SetConfig/27 (HwAccDmaInst_SetConfig) @06d70380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 Dma_Ip_Init/5 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00) @06d700e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+Static_Dma_Ip_GetLogicChannelError/25 (Static_Dma_Ip_GetLogicChannelError) @06d70a80
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: HwAccDmaCh_GetStatus_Error/44 
+Dma_Ip_ErrorIrqHandler/24 (Dma_Ip_ErrorIrqHandler) @06d707e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Dma_Ip_IntIrqHandler/23 (Dma_Ip_IntIrqHandler) @06d70540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (Static_Dma_Ip_SetLogicChannelScatterGatherInit) @06d702a0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelInit/9 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 
+Static_Dma_Ip_ResetConfig/21 (Static_Dma_Ip_ResetConfig) @06d70000
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+Dma_Ip_SetLogicChannelScatterGatherConfig/20 (Dma_Ip_SetLogicChannelScatterGatherConfig) @06bc1b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 
+Dma_Ip_GetLogicChannelParam/19 (Dma_Ip_GetLogicChannelParam) @06bc1620
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaCh_GetParam/62 
+Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (Static_Dma_Ip_SetLogicChannelScatterGatherList) @06bc10e0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelScatterGatherList/17 (Dma_Ip_SetLogicChannelScatterGatherList) @06bc1d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 
+Static_Dma_Ip_SetLogicChannelTransferList/16 (Static_Dma_Ip_SetLogicChannelTransferList) @06bc1a80
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelTransferList/15 (Dma_Ip_SetLogicChannelTransferList) @06bc17e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 
+Static_Dma_Ip_SetLogicChannelGlobalList/14 (Static_Dma_Ip_SetLogicChannelGlobalList) @06bc1540
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+  Calls: HwAccDmaCh_SetGlobalParam/47 
+Dma_Ip_SetLogicChannelGlobalList/13 (Dma_Ip_SetLogicChannelGlobalList) @06bc12a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 Static_Dma_Ip_SetLogicChannelGlobalList/14 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 
+Dma_Ip_GetLogicChannelStatus/12 (Dma_Ip_GetLogicChannelStatus) @06bc1000
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 Dma_Ip_GetHwChannelState/54 HwAccDmaCh_GetStatus/53 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 
+Dma_Ip_SetLogicChannelCommand/11 (Dma_Ip_SetLogicChannelCommand) @04d64b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 
+Dma_Ip_LogicChannelDeinit/10 (Dma_Ip_LogicChannelDeinit) @04d64620
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 HwAccDmaCh_SetCommand/45 Dma_Ip_GetHwChannelStatePointer/30 Static_Dma_Ip_ResetConfig/21 Dma_Ip_SetHwChannelState/37 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 
+Dma_Ip_LogicChannelInit/9 (Dma_Ip_LogicChannelInit) @04d640e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 
+Dma_Ip_GetLogicInstanceStatus/8 (Dma_Ip_GetLogicInstanceStatus) @04d64d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaInst_GetStatus/36 
+Dma_Ip_SetLogicInstanceCommand/7 (Dma_Ip_SetLogicInstanceCommand) @04d64a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 HwAccDmaInst_SetCommand/34 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 
+Dma_Ip_Deinit/6 (Dma_Ip_Deinit) @04d647e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelDeinit/10 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 
+Dma_Ip_Init/5 (Dma_Ip_Init) @04d64540
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (write) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelInit/9 Dma_Ip_GetHwChannelStatePointer/30 Dma_Ip_SetHwChannelStatePointer/29 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 
+Static_Dma_Ip_SetLogicChannelTransferConfig/4 (Static_Dma_Ip_SetLogicChannelTransferConfig) @04d642a0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 
+Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (Static_Dma_Ip_SetLogicChannelGlobalConfig) @04d64000
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+Dma_Ip_ConvertLogicChToHwCh/2 (Dma_Ip_ConvertLogicChToHwCh) @06ba8ee0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_pxInit/1 (Dma_Ip_pxInit) @06bad318
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Dma_Ip_ConvertLogicChToHwCh/2 (read) Dma_Ip_Init/5 (write) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_SetLogicInstanceCommand/7 (read) Dma_Ip_GetLogicInstanceStatus/8 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Static_Dma_Ip_SetLogicChannelTransferList/16 (read) Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (read) Dma_Ip_LogicChannelDeinit/10 (read) Static_Dma_Ip_ResetConfig/21 (read) Static_Dma_Ip_ResetConfig/21 (read) Dma_Ip_SetLogicChannelCommand/11 (read) Dma_Ip_GetLogicChannelStatus/12 (read) Dma_Ip_SetLogicChannelGlobalList/13 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (read) Dma_Ip_GetLogicChannelParam/19 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06b85678
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11) @06f041c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11) @06f040e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 
+  Calls: 
+HwAccDmaCh_GetParam/62 (HwAccDmaCh_GetParam) @06ef4ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelParam/19 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef49a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef48c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef4460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+Dma_Ip_GetHwChannelState/54 (Dma_Ip_GetHwChannelState) @06ef4380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+HwAccDmaCh_GetStatus/53 (HwAccDmaCh_GetStatus) @06ef42a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef41c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05) @06ef4000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05) @06edd380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: 
+HwAccDmaCh_SetGlobalParam/47 (HwAccDmaCh_SetGlobalParam) @06edda80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+  Calls: 
+HwAccDmaCh_SetTransferParam/46 (HwAccDmaCh_SetTransferParam) @06edd620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Static_Dma_Ip_SetLogicChannelTransferList/16 
+  Calls: 
+HwAccDmaCh_SetCommand/45 (HwAccDmaCh_SetCommand) @06edd460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: 
+HwAccDmaCh_GetStatus_Error/44 (HwAccDmaCh_GetStatus_Error) @06edd2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_GetLogicChannelError/25 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12) @06edd0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd) @06edd000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (HwAccDmaCh_LoadConfigIntoSoftwareTcd) @06e8cd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12) @06e8cee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: 
+HwAccDmaCh_SetControl_ScatterGatherAddress/39 (HwAccDmaCh_SetControl_ScatterGatherAddress) @06e8cc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (HwAccDmaCh_SetControl_EnScatterGatherProcessing) @06e8cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+Dma_Ip_SetHwChannelState/37 (Dma_Ip_SetHwChannelState) @06e8ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: 
+HwAccDmaInst_GetStatus/36 (HwAccDmaInst_GetStatus) @06e8c8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicInstanceStatus/8 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+HwAccDmaInst_SetCommand/34 (HwAccDmaInst_SetCommand) @06e8c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/30 (Dma_Ip_GetHwChannelStatePointer) @06e8c0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_IntIrqHandler/23 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Dma_Ip_LogicChannelDeinit/10 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_LogicChannelInit/9 Dma_Ip_Init/5 
+  Calls: 
+Dma_Ip_SetHwChannelStatePointer/29 (Dma_Ip_SetHwChannelStatePointer) @06e8c000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00) @06d70620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+HwAccDmaInst_SetConfig/27 (HwAccDmaInst_SetConfig) @06d70380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 Dma_Ip_Init/5 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00) @06d700e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: 
+Static_Dma_Ip_GetLogicChannelError/25 (Static_Dma_Ip_GetLogicChannelError) @06d70a80
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 Dma_Ip_SetLogicChannelScatterGatherConfig/20 Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelGlobalList/13 Dma_Ip_GetLogicChannelStatus/12 Dma_Ip_SetLogicChannelCommand/11 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 
+  Calls: HwAccDmaCh_GetStatus_Error/44 
+Dma_Ip_ErrorIrqHandler/24 (Dma_Ip_ErrorIrqHandler) @06d707e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Dma_Ip_IntIrqHandler/23 (Dma_Ip_IntIrqHandler) @06d70540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_GetHwChannelStatePointer/30 
+   Indirect call Num speculative call targets: 0
+Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (Static_Dma_Ip_SetLogicChannelScatterGatherInit) @06d702a0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelInit/9 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 
+Static_Dma_Ip_ResetConfig/21 (Static_Dma_Ip_ResetConfig) @06d70000
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+Dma_Ip_SetLogicChannelScatterGatherConfig/20 (Dma_Ip_SetLogicChannelScatterGatherConfig) @06bc1b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 
+Dma_Ip_GetLogicChannelParam/19 (Dma_Ip_GetLogicChannelParam) @06bc1620
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaCh_GetParam/62 
+Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (Static_Dma_Ip_SetLogicChannelScatterGatherList) @06bc10e0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 Dma_Ip_SetLogicChannelScatterGatherList/17 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelScatterGatherList/17 (Dma_Ip_SetLogicChannelScatterGatherList) @06bc1d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelScatterGatherList/18 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 
+Static_Dma_Ip_SetLogicChannelTransferList/16 (Static_Dma_Ip_SetLogicChannelTransferList) @06bc1a80
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Dma_Ip_SetLogicChannelTransferList/15 Static_Dma_Ip_SetLogicChannelTransferConfig/4 
+  Calls: HwAccDmaCh_SetTransferParam/46 
+Dma_Ip_SetLogicChannelTransferList/15 (Dma_Ip_SetLogicChannelTransferList) @06bc17e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelTransferList/16 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 
+Static_Dma_Ip_SetLogicChannelGlobalList/14 (Static_Dma_Ip_SetLogicChannelGlobalList) @06bc1540
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 
+  Calls: HwAccDmaCh_SetGlobalParam/47 
+Dma_Ip_SetLogicChannelGlobalList/13 (Dma_Ip_SetLogicChannelGlobalList) @06bc12a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 Static_Dma_Ip_SetLogicChannelGlobalList/14 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 
+Dma_Ip_GetLogicChannelStatus/12 (Dma_Ip_GetLogicChannelStatus) @06bc1000
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 Dma_Ip_GetHwChannelState/54 HwAccDmaCh_GetStatus/53 Static_Dma_Ip_GetLogicChannelError/25 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 
+Dma_Ip_SetLogicChannelCommand/11 (Dma_Ip_SetLogicChannelCommand) @04d64b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_GetLogicChannelError/25 HwAccDmaCh_SetCommand/45 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 
+Dma_Ip_LogicChannelDeinit/10 (Dma_Ip_LogicChannelDeinit) @04d64620
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Deinit/6 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 HwAccDmaCh_SetCommand/45 Dma_Ip_GetHwChannelStatePointer/30 Static_Dma_Ip_ResetConfig/21 Dma_Ip_SetHwChannelState/37 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 
+Dma_Ip_LogicChannelInit/9 (Dma_Ip_LogicChannelInit) @04d640e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma_Ip_Init/5 
+  Calls: Dma_Ip_SetHwChannelState/37 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelGlobalConfig/3 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Static_Dma_Ip_SetLogicChannelTransferConfig/4 Dma_Ip_SetHwChannelState/37 HwAccDmaCh_SetControl_ScatterGatherAddress/39 HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 Dma_Ip_SetHwChannelState/37 Dma_Ip_GetHwChannelStatePointer/30 
+Dma_Ip_GetLogicInstanceStatus/8 (Dma_Ip_GetLogicInstanceStatus) @04d64d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: HwAccDmaInst_GetStatus/36 
+Dma_Ip_SetLogicInstanceCommand/7 (Dma_Ip_SetLogicInstanceCommand) @04d64a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 HwAccDmaInst_SetCommand/34 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 
+Dma_Ip_Deinit/6 (Dma_Ip_Deinit) @04d647e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelDeinit/10 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 
+Dma_Ip_Init/5 (Dma_Ip_Init) @04d64540
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (write) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelInit/9 Dma_Ip_GetHwChannelStatePointer/30 Dma_Ip_SetHwChannelStatePointer/29 SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 HwAccDmaInst_SetConfig/27 SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 
+Static_Dma_Ip_SetLogicChannelTransferConfig/4 (Static_Dma_Ip_SetLogicChannelTransferConfig) @04d642a0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferList/16 HwAccDmaCh_SetCommand/45 
+Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (Static_Dma_Ip_SetLogicChannelGlobalConfig) @04d64000
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 Dma_Ip_LogicChannelInit/9 Dma_Ip_LogicChannelInit/9 
+  Calls: Static_Dma_Ip_SetLogicChannelGlobalList/14 
+Dma_Ip_ConvertLogicChToHwCh/2 (Dma_Ip_ConvertLogicChToHwCh) @06ba8ee0
+  Type: function definition analyzed
+  Visibility: public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_pxInit/1 (Dma_Ip_pxInit) @06bad318
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Dma_Ip_ConvertLogicChToHwCh/2 (read) Dma_Ip_Init/5 (write) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Init/5 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_SetLogicInstanceCommand/7 (read) Dma_Ip_GetLogicInstanceStatus/8 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Static_Dma_Ip_SetLogicChannelTransferList/16 (read) Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (read) Dma_Ip_LogicChannelDeinit/10 (read) Static_Dma_Ip_ResetConfig/21 (read) Static_Dma_Ip_ResetConfig/21 (read) Dma_Ip_SetLogicChannelCommand/11 (read) Dma_Ip_GetLogicChannelStatus/12 (read) Dma_Ip_SetLogicChannelGlobalList/13 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (read) Dma_Ip_GetLogicChannelParam/19 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) 
+  Availability: not-ready
+  Varpool flags:
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06b85678
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+Static_Dma_Ip_SetLogicChannelGlobalList/67 (Static_Dma_Ip_SetLogicChannelGlobalList) @07047d20
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 14
+  References: 
+  Referring: 
+  Function Static_Dma_Ip_SetLogicChannelGlobalList/67 is inline copy in Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop/66
+  Clone of Static_Dma_Ip_SetLogicChannelGlobalList/14
+  Availability: local
+  Function flags: count:365072224 (estimated locally) body local optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (inlined) (365072224 (estimated locally),0.34 per call) 
+  Calls: HwAccDmaCh_SetGlobalParam/47 (2953766197 (estimated locally),2.75 per call) 
+Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop) @070478c0
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Clone of Static_Dma_Ip_SetLogicChannelGlobalConfig/3
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: Static_Dma_Ip_ResetConfig/21 (1073741824 (estimated locally),1.00 per call) Dma_Ip_LogicChannelInit/9 (251792459 (estimated locally),0.23 per call) Dma_Ip_LogicChannelInit/9 (107911053 (estimated locally),0.10 per call) 
+  Calls: Static_Dma_Ip_SetLogicChannelGlobalList/67 (inlined) (365072224 (estimated locally),0.34 per call) 
+Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop) @07047b60
+  Type: function definition analyzed
+  Visibility:
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop/65 is inline copy in Dma_Ip_LogicChannelInit/9
+  Clone of Static_Dma_Ip_SetLogicChannelScatterGatherInit/22
+  Availability: local
+  Function flags: count:234318063 (estimated locally) local optimize_size
+  Called by: Dma_Ip_LogicChannelInit/9 (inlined) (234318063 (estimated locally),0.22 per call) 
+  Calls: SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (234318063 (estimated locally),0.22 per call) Dma_Ip_GetHwChannelStatePointer/30 (234318063 (estimated locally),0.22 per call) Static_Dma_Ip_GetLogicChannelError/25 (234318063 (estimated locally),0.22 per call) HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (199520384 (estimated locally),0.19 per call) HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (465547570 (estimated locally),0.43 per call) HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (79668143 (estimated locally),0.07 per call) SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (234318064 (estimated locally),0.22 per call) 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11) @06f041c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11) @06f040e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherConfig/20 (1073741823 (estimated locally),1.00 per call) 
+  Calls: 
+HwAccDmaCh_GetParam/62 (HwAccDmaCh_GetParam) @06ef4ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelParam/19 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 (1073741823 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef49a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef48c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 (1073741823 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef4460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Dma_Ip_GetHwChannelState/54 (Dma_Ip_GetHwChannelState) @06ef4380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+HwAccDmaCh_GetStatus/53 (HwAccDmaCh_GetStatus) @06ef42a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef41c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicChannelStatus/12 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05) @06ef4000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05) @06edd380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelCommand/11 (1073741823 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+HwAccDmaCh_SetGlobalParam/47 (HwAccDmaCh_SetGlobalParam) @06edda80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelGlobalList/67 (2953766197 (estimated locally),2.75 per call) Static_Dma_Ip_SetLogicChannelGlobalList/14 (2780527801 (estimated locally),2.59 per call) 
+  Calls: 
+HwAccDmaCh_SetTransferParam/46 (HwAccDmaCh_SetTransferParam) @06edd620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelTransferList/16 (955630225 (estimated locally),8.09 per call) 
+  Calls: 
+HwAccDmaCh_SetCommand/45 (HwAccDmaCh_SetCommand) @06edd460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 (719407025 (estimated locally),0.67 per call) Dma_Ip_SetLogicChannelCommand/11 (184510634 (estimated locally),0.17 per call) Dma_Ip_SetLogicChannelCommand/11 (365072224 (estimated locally),0.34 per call) Dma_Ip_LogicChannelDeinit/10 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+HwAccDmaCh_GetStatus_Error/44 (HwAccDmaCh_GetStatus_Error) @06edd2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_GetLogicChannelError/25 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12) @06edd0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (234318064 (estimated locally),0.22 per call) 
+  Calls: 
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd) @06edd000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (79668143 (estimated locally),0.07 per call) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (222978307 (estimated locally),0.21 per call) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (145607981 (estimated locally),0.14 per call) 
+  Calls: 
+HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (HwAccDmaCh_LoadConfigIntoSoftwareTcd) @06e8cd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (199520384 (estimated locally),0.19 per call) Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (465547570 (estimated locally),0.43 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12) @06e8cee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (234318063 (estimated locally),0.22 per call) 
+  Calls: 
+HwAccDmaCh_SetControl_ScatterGatherAddress/39 (HwAccDmaCh_SetControl_ScatterGatherAddress) @06e8cc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 (474808633 (estimated locally),0.44 per call) Dma_Ip_LogicChannelInit/9 (234318063 (estimated locally),0.22 per call) Dma_Ip_LogicChannelInit/9 (384666934 (estimated locally),0.36 per call) 
+  Calls: 
+HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (HwAccDmaCh_SetControl_EnScatterGatherProcessing) @06e8cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 (474808633 (estimated locally),0.44 per call) Dma_Ip_LogicChannelInit/9 (234318063 (estimated locally),0.22 per call) Dma_Ip_LogicChannelInit/9 (384666934 (estimated locally),0.36 per call) 
+  Calls: 
+Dma_Ip_SetHwChannelState/37 (Dma_Ip_SetHwChannelState) @06e8ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_ErrorIrqHandler/24 (189462817 (estimated locally),0.18 per call) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (222978307 (estimated locally),0.21 per call) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (354334800 (estimated locally),0.33 per call) Dma_Ip_SetLogicChannelScatterGatherList/17 (222978307 (estimated locally),0.21 per call) Dma_Ip_SetLogicChannelScatterGatherList/17 (354334800 (estimated locally),0.33 per call) Dma_Ip_SetLogicChannelTransferList/15 (121299969 (estimated locally),0.11 per call) Dma_Ip_SetLogicChannelTransferList/15 (96101267 (estimated locally),0.09 per call) Dma_Ip_SetLogicChannelTransferList/15 (354334800 (estimated locally),0.33 per call) Dma_Ip_SetLogicChannelGlobalList/13 (354334800 (estimated locally),0.33 per call) Dma_Ip_SetLogicChannelCommand/11 (233860966 (estimated locally),0.22 per call) Dma_Ip_SetLogicChannelCommand/11 (365072224 (estimated locally),0.34 per call) Dma_Ip_LogicChannelDeinit/10 (1073741824 (estimated locally),1.00 per call) Dma_Ip_LogicChannelInit/9 (714038312 (estimated locally),0.67 per call) Dma_Ip_LogicChannelInit/9 (234318063 (estimated locally),0.22 per call) Dma_Ip_LogicChannelInit/9 (384666934 (estimated locally),0.36 per call) Dma_Ip_LogicChannelInit/9 (719407023 (estimated locally),0.67 per call) 
+  Calls: 
+HwAccDmaInst_GetStatus/36 (HwAccDmaInst_GetStatus) @06e8c8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_GetLogicInstanceStatus/8 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+HwAccDmaInst_SetCommand/34 (HwAccDmaInst_SetCommand) @06e8c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_SetLogicInstanceCommand/7 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 (357878152 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 (357878152 (estimated locally),1.00 per call) 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/30 (Dma_Ip_GetHwChannelStatePointer) @06e8c0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (234318063 (estimated locally),0.22 per call) Dma_Ip_ErrorIrqHandler/24 (1073741823 (estimated locally),1.00 per call) Dma_Ip_IntIrqHandler/23 (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (1073741823 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelScatterGatherList/17 (1073741823 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelTransferList/15 (1073741823 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelGlobalList/13 (1073741824 (estimated locally),1.00 per call) Dma_Ip_GetLogicChannelStatus/12 (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelCommand/11 (1073741823 (estimated locally),1.00 per call) Dma_Ip_LogicChannelDeinit/10 (1073741824 (estimated locally),1.00 per call) Dma_Ip_Init/5 (715863673 (estimated locally),2.00 per call) Dma_Ip_LogicChannelInit/9 (1073741821 (estimated locally),1.00 per call) 
+  Calls: 
+Dma_Ip_SetHwChannelStatePointer/29 (Dma_Ip_SetHwChannelStatePointer) @06e8c000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 (715863673 (estimated locally),2.00 per call) 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00) @06d70620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 (357878152 (estimated locally),1.00 per call) 
+  Calls: 
+HwAccDmaInst_SetConfig/27 (HwAccDmaInst_SetConfig) @06d70380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_Deinit/6 (357878152 (estimated locally),1.00 per call) Dma_Ip_Init/5 (357878152 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00) @06d700e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Dma_Ip_Init/5 (357878152 (estimated locally),1.00 per call) 
+  Calls: 
+Static_Dma_Ip_GetLogicChannelError/25 (Static_Dma_Ip_GetLogicChannelError) @06d70a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (234318063 (estimated locally),0.22 per call) Dma_Ip_ErrorIrqHandler/24 (574129752 (estimated locally),0.53 per call) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (1073741823 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelScatterGatherList/17 (1073741823 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelTransferList/15 (1073741823 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelGlobalList/13 (1073741824 (estimated locally),1.00 per call) Dma_Ip_GetLogicChannelStatus/12 (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelCommand/11 (708669600 (estimated locally),0.66 per call) 
+  Calls: HwAccDmaCh_GetStatus_Error/44 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_ErrorIrqHandler/24 (Dma_Ip_ErrorIrqHandler) @06d707e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Dma_Ip_SetHwChannelState/37 (189462817 (estimated locally),0.18 per call) Static_Dma_Ip_GetLogicChannelError/25 (574129752 (estimated locally),0.53 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741823 (estimated locally),1.00 per call) 
+   Indirect call(401890829 (estimated locally),0.37 per call)  Num speculative call targets: 0
+Dma_Ip_IntIrqHandler/23 (Dma_Ip_IntIrqHandler) @06d70540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Dma_Ip_GetHwChannelStatePointer/30 (1073741824 (estimated locally),1.00 per call) 
+   Indirect call(526133498 (estimated locally),0.49 per call)  Num speculative call targets: 0
+Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 (Static_Dma_Ip_SetLogicChannelScatterGatherInit) @06d702a0
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:337833906 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Static_Dma_Ip_ResetConfig/21 (Static_Dma_Ip_ResetConfig) @06d70000
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Function Static_Dma_Ip_ResetConfig/21 is inline copy in Dma_Ip_LogicChannelDeinit/10
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: Dma_Ip_LogicChannelDeinit/10 (inlined) (1073741824 (estimated locally),1.00 per call) 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferConfig/4 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_SetLogicChannelScatterGatherConfig/20 (Dma_Ip_SetLogicChannelScatterGatherConfig) @06bc1b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (1073741824 (estimated locally),1.00 per call) HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (222978307 (estimated locally),0.21 per call) Dma_Ip_SetHwChannelState/37 (222978307 (estimated locally),0.21 per call) HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (145607981 (estimated locally),0.14 per call) Dma_Ip_SetHwChannelState/37 (354334800 (estimated locally),0.33 per call) Static_Dma_Ip_GetLogicChannelError/25 (1073741823 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741823 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (1073741823 (estimated locally),1.00 per call) 
+Dma_Ip_GetLogicChannelParam/19 (Dma_Ip_GetLogicChannelParam) @06bc1620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: HwAccDmaCh_GetParam/62 (1073741824 (estimated locally),1.00 per call) 
+Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (Static_Dma_Ip_SetLogicChannelScatterGatherList) @06bc10e0
+  Type: function definition analyzed alias
+  Visibility: prevailing_def_ironly
+  References: Static_Dma_Ip_SetLogicChannelTransferList/16 (alias) 
+  Referring: 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) local icf_merged optimize_size
+  Called by: Dma_Ip_SetLogicChannelScatterGatherList/17 (222978307 (estimated locally),0.21 per call) Dma_Ip_SetLogicChannelScatterGatherList/17 (145607981 (estimated locally),0.14 per call) 
+  Calls: 
+Dma_Ip_SetLogicChannelScatterGatherList/17 (Dma_Ip_SetLogicChannelScatterGatherList) @06bc1d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (222978307 (estimated locally),0.21 per call) Dma_Ip_SetHwChannelState/37 (222978307 (estimated locally),0.21 per call) Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (145607981 (estimated locally),0.14 per call) Dma_Ip_SetHwChannelState/37 (354334800 (estimated locally),0.33 per call) Static_Dma_Ip_GetLogicChannelError/25 (1073741823 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741823 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (1073741823 (estimated locally),1.00 per call) 
+Static_Dma_Ip_SetLogicChannelTransferList/16 (Static_Dma_Ip_SetLogicChannelTransferList) @06bc1a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (alias) 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) body local icf_merged optimize_size
+  Called by: Dma_Ip_SetLogicChannelTransferList/15 (121299969 (estimated locally),0.11 per call) Dma_Ip_SetLogicChannelTransferList/15 (96101267 (estimated locally),0.09 per call) Dma_Ip_SetLogicChannelTransferList/15 (244598391 (estimated locally),0.23 per call) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (574129753 (estimated locally),0.53 per call) 
+  Calls: HwAccDmaCh_SetTransferParam/46 (955630225 (estimated locally),8.09 per call) 
+Dma_Ip_SetLogicChannelTransferList/15 (Dma_Ip_SetLogicChannelTransferList) @06bc17e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_SetLogicChannelTransferList/16 (121299969 (estimated locally),0.11 per call) Dma_Ip_SetHwChannelState/37 (121299969 (estimated locally),0.11 per call) Static_Dma_Ip_SetLogicChannelTransferList/16 (96101267 (estimated locally),0.09 per call) Dma_Ip_SetHwChannelState/37 (96101267 (estimated locally),0.09 per call) HwAccDmaCh_SetControl_ScatterGatherAddress/39 (474808633 (estimated locally),0.44 per call) HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (474808633 (estimated locally),0.44 per call) Static_Dma_Ip_SetLogicChannelTransferList/16 (244598391 (estimated locally),0.23 per call) HwAccDmaCh_SetCommand/45 (719407025 (estimated locally),0.67 per call) Dma_Ip_SetHwChannelState/37 (354334800 (estimated locally),0.33 per call) Static_Dma_Ip_GetLogicChannelError/25 (1073741823 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741823 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (1073741823 (estimated locally),1.00 per call) 
+Static_Dma_Ip_SetLogicChannelGlobalList/14 (Static_Dma_Ip_SetLogicChannelGlobalList) @06bc1540
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  previous sharing asm name: 67
+  References: 
+  Referring: 
+  Function Static_Dma_Ip_SetLogicChannelGlobalList/14 is inline copy in Dma_Ip_SetLogicChannelGlobalList/13
+  Availability: local
+  Function flags: count:343660737 (estimated locally) body local optimize_size
+  Called by: Dma_Ip_SetLogicChannelGlobalList/13 (inlined) (343660737 (estimated locally),0.32 per call) 
+  Calls: HwAccDmaCh_SetGlobalParam/47 (2780527801 (estimated locally),2.59 per call) 
+Dma_Ip_SetLogicChannelGlobalList/13 (Dma_Ip_SetLogicChannelGlobalList) @06bc12a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_SetLogicChannelGlobalList/14 (inlined) (343660737 (estimated locally),0.32 per call) Dma_Ip_SetHwChannelState/37 (354334800 (estimated locally),0.33 per call) Static_Dma_Ip_GetLogicChannelError/25 (1073741824 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741824 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_GetLogicChannelStatus/12 (Dma_Ip_GetLogicChannelStatus) @06bc1000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (1073741824 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelState/54 (1073741824 (estimated locally),1.00 per call) HwAccDmaCh_GetStatus/53 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_GetLogicChannelError/25 (1073741824 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741824 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_SetLogicChannelCommand/11 (Dma_Ip_SetLogicChannelCommand) @04d64b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (1073741824 (estimated locally),1.00 per call) HwAccDmaCh_SetCommand/45 (184510634 (estimated locally),0.17 per call) Dma_Ip_SetHwChannelState/37 (233860966 (estimated locally),0.22 per call) Static_Dma_Ip_GetLogicChannelError/25 (708669600 (estimated locally),0.66 per call) HwAccDmaCh_SetCommand/45 (365072224 (estimated locally),0.34 per call) Dma_Ip_SetHwChannelState/37 (365072224 (estimated locally),0.34 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741823 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (1073741823 (estimated locally),1.00 per call) 
+Dma_Ip_LogicChannelDeinit/10 (Dma_Ip_LogicChannelDeinit) @04d64620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: Dma_Ip_Deinit/6 (715863673 (estimated locally),2.00 per call) 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (1073741824 (estimated locally),1.00 per call) HwAccDmaCh_SetCommand/45 (1073741824 (estimated locally),1.00 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741824 (estimated locally),1.00 per call) Static_Dma_Ip_ResetConfig/21 (inlined) (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetHwChannelState/37 (1073741824 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_LogicChannelInit/9 (Dma_Ip_LogicChannelInit) @04d640e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741821 (estimated locally) body optimize_size
+  Called by: Dma_Ip_Init/5 (236235011 (estimated locally),0.66 per call) 
+  Calls: Dma_Ip_SetHwChannelState/37 (714038312 (estimated locally),0.67 per call) Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (107911053 (estimated locally),0.10 per call) Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (251792459 (estimated locally),0.23 per call) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (100422026 (estimated locally),0.09 per call) Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (inlined) (234318063 (estimated locally),0.22 per call) Dma_Ip_SetHwChannelState/37 (234318063 (estimated locally),0.22 per call) HwAccDmaCh_SetControl_ScatterGatherAddress/39 (234318063 (estimated locally),0.22 per call) HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (234318063 (estimated locally),0.22 per call) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (384666934 (estimated locally),0.36 per call) Dma_Ip_SetHwChannelState/37 (384666934 (estimated locally),0.36 per call) HwAccDmaCh_SetControl_ScatterGatherAddress/39 (384666934 (estimated locally),0.36 per call) HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (384666934 (estimated locally),0.36 per call) Dma_Ip_SetHwChannelState/37 (719407023 (estimated locally),0.67 per call) Dma_Ip_GetHwChannelStatePointer/30 (1073741821 (estimated locally),1.00 per call) 
+Dma_Ip_GetLogicInstanceStatus/8 (Dma_Ip_GetLogicInstanceStatus) @04d64d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: HwAccDmaInst_GetStatus/36 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_SetLogicInstanceCommand/7 (Dma_Ip_SetLogicInstanceCommand) @04d64a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (1073741824 (estimated locally),1.00 per call) HwAccDmaInst_SetCommand/34 (1073741824 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (1073741824 (estimated locally),1.00 per call) 
+Dma_Ip_Deinit/6 (Dma_Ip_Deinit) @04d647e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:357878152 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelDeinit/10 (715863673 (estimated locally),2.00 per call) SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (357878152 (estimated locally),1.00 per call) HwAccDmaInst_SetConfig/27 (357878152 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (357878152 (estimated locally),1.00 per call) 
+Dma_Ip_Init/5 (Dma_Ip_Init) @04d64540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (write) Dma_Ip_pxInit/1 (read) Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:357878152 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Dma_Ip_LogicChannelInit/9 (236235011 (estimated locally),0.66 per call) Dma_Ip_GetHwChannelStatePointer/30 (715863673 (estimated locally),2.00 per call) Dma_Ip_SetHwChannelStatePointer/29 (715863673 (estimated locally),2.00 per call) SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (357878152 (estimated locally),1.00 per call) HwAccDmaInst_SetConfig/27 (357878152 (estimated locally),1.00 per call) SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (357878152 (estimated locally),1.00 per call) 
+Static_Dma_Ip_SetLogicChannelTransferConfig/4 (Static_Dma_Ip_SetLogicChannelTransferConfig) @04d642a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Dma_Ip_pxInit/1 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: Dma_Ip_LogicChannelInit/9 (100422026 (estimated locally),0.09 per call) Dma_Ip_LogicChannelInit/9 (384666934 (estimated locally),0.36 per call) Static_Dma_Ip_ResetConfig/21 (1073741824 (estimated locally),1.00 per call) 
+  Calls: Static_Dma_Ip_SetLogicChannelTransferList/16 (574129753 (estimated locally),0.53 per call) HwAccDmaCh_SetCommand/45 (1073741824 (estimated locally),1.00 per call) 
+Static_Dma_Ip_SetLogicChannelGlobalConfig/3 (Static_Dma_Ip_SetLogicChannelGlobalConfig) @04d64000
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_ConvertLogicChToHwCh/2 (Dma_Ip_ConvertLogicChToHwCh) @06ba8ee0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Dma_Ip_pxInit/1 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_pxInit/1 (Dma_Ip_pxInit) @06bad318
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop.0/65 (read) Dma_Ip_Deinit/6 (read) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Dma_Ip_SetLogicChannelScatterGatherConfig/20 (read) Dma_Ip_LogicChannelDeinit/10 (read) Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_ResetConfig/21 (read) Dma_Ip_GetLogicInstanceStatus/8 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_Init/5 (read) Static_Dma_Ip_ResetConfig/21 (read) Dma_Ip_ConvertLogicChToHwCh/2 (read) Dma_Ip_SetLogicChannelCommand/11 (read) Dma_Ip_GetLogicChannelStatus/12 (read) Dma_Ip_Init/5 (read) Dma_Ip_SetLogicChannelGlobalList/13 (read) Static_Dma_Ip_SetLogicChannelTransferList/16 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) Dma_Ip_LogicChannelInit/9 (read) Dma_Ip_SetLogicInstanceCommand/7 (read) Dma_Ip_Init/5 (write) Dma_Ip_SetLogicChannelScatterGatherList/17 (read) Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (read) Dma_Ip_GetLogicChannelParam/19 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Dma_Ip_LogicChannelInit/9 (read) 
+  Availability: available
+  Varpool flags:
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06b85678
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Dma_Ip_LogicChannelInit/9 (read) Static_Dma_Ip_SetLogicChannelTransferConfig/4 (read) Dma_Ip_SetLogicChannelTransferList/15 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Materializing clones
+cloning Static_Dma_Ip_SetLogicChannelGlobalConfig/3 to Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop/66
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+Static_Dma_Ip_SetLogicChannelGlobalConfig (const uint32 LogicCh, const struct Dma_Ip_GlobalConfigType * const GlobalConfig, boolean ResetState)
+{
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_LogicChannelGlobalListType LocListHwv3[11];
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.25_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.25_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_33(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  # DEBUG D#4 => &_5->LogicChId
+  # DEBUG LocLogicChId => D#4
+  # DEBUG BEGIN_STMT
+  _6 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_5].HwVersId;
+  LocHwVers_34 = (uint32) _6;
+  # DEBUG LocHwVers => LocHwVers_34
+  # DEBUG BEGIN_STMT
+  _7 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_5].HwInstId;
+  LocHwInst_35 = (uint32) _7;
+  # DEBUG LocHwInst => LocHwInst_35
+  # DEBUG BEGIN_STMT
+  _8 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_5].HwChId;
+  LocHwCh_36 = (uint32) _8;
+  # DEBUG LocHwCh => LocHwCh_36
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_34 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 20>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  LocListHwv3[0].Param = 0;
+  # DEBUG BEGIN_STMT
+  _9 = GlobalConfig_38(D)->Control.EnMasterIdReplication;
+  if (_9 != 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 4> [local count: 182536112]:
+
+  <bb 5> [local count: 365072224]:
+  # iftmp.26_23 = PHI <1(3), 0(4)>
+  LocListHwv3[0].Value = iftmp.26_23;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[1].Param = 1;
+  # DEBUG BEGIN_STMT
+  _10 = GlobalConfig_38(D)->Control.EnBufferedWrites;
+  if (_10 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 6> [local count: 182536112]:
+
+  <bb 7> [local count: 365072224]:
+  # iftmp.27_24 = PHI <1(5), 0(6)>
+  LocListHwv3[1].Value = iftmp.27_24;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[2].Param = 2;
+  # DEBUG BEGIN_STMT
+  _11 = GlobalConfig_38(D)->Request.EnSourceMux;
+  if (_11 != 0)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 8> [local count: 182536112]:
+
+  <bb 9> [local count: 365072224]:
+  # iftmp.28_25 = PHI <1(7), 0(8)>
+  LocListHwv3[2].Value = iftmp.28_25;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[3].Param = 3;
+  # DEBUG BEGIN_STMT
+  _12 = GlobalConfig_38(D)->Request.SourceMux;
+  _13 = (long unsigned int) _12;
+  LocListHwv3[3].Value = _13;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[4].Param = 4;
+  # DEBUG BEGIN_STMT
+  _14 = GlobalConfig_38(D)->Request.EnTriggerMux;
+  if (_14 != 0)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 10> [local count: 182536112]:
+
+  <bb 11> [local count: 365072224]:
+  # iftmp.29_26 = PHI <1(9), 0(10)>
+  LocListHwv3[4].Value = iftmp.29_26;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[5].Param = 6;
+  # DEBUG BEGIN_STMT
+  _15 = GlobalConfig_38(D)->Interrupt.EnErrorInt;
+  if (_15 != 0)
+    goto <bb 13>; [50.00%]
+  else
+    goto <bb 12>; [50.00%]
+
+  <bb 12> [local count: 182536112]:
+
+  <bb 13> [local count: 365072224]:
+  # iftmp.30_27 = PHI <1(11), 0(12)>
+  LocListHwv3[5].Value = iftmp.30_27;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[6].Param = 7;
+  # DEBUG BEGIN_STMT
+  _16 = GlobalConfig_38(D)->Priority.Group;
+  _17 = (long unsigned int) _16;
+  LocListHwv3[6].Value = _17;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[7].Param = 8;
+  # DEBUG BEGIN_STMT
+  _18 = GlobalConfig_38(D)->Priority.Level;
+  _19 = (long unsigned int) _18;
+  LocListHwv3[7].Value = _19;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[8].Param = 9;
+  # DEBUG BEGIN_STMT
+  _20 = GlobalConfig_38(D)->Priority.EnPreemption;
+  if (_20 != 0)
+    goto <bb 15>; [50.00%]
+  else
+    goto <bb 14>; [50.00%]
+
+  <bb 14> [local count: 182536112]:
+
+  <bb 15> [local count: 365072224]:
+  # iftmp.31_28 = PHI <1(13), 0(14)>
+  LocListHwv3[8].Value = iftmp.31_28;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[9].Param = 10;
+  # DEBUG BEGIN_STMT
+  _21 = GlobalConfig_38(D)->Priority.DisPreempt;
+  if (_21 != 0)
+    goto <bb 17>; [50.00%]
+  else
+    goto <bb 16>; [50.00%]
+
+  <bb 16> [local count: 182536112]:
+
+  <bb 17> [local count: 365072224]:
+  # iftmp.32_29 = PHI <1(15), 0(16)>
+  LocListHwv3[9].Value = iftmp.32_29;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[10].Param = 5;
+  # DEBUG BEGIN_STMT
+  _22 = GlobalConfig_38(D)->Request.EnRequest;
+  if (_22 != 0)
+    goto <bb 19>; [50.00%]
+  else
+    goto <bb 18>; [50.00%]
+
+  <bb 18> [local count: 182536112]:
+
+  <bb 19> [local count: 365072224]:
+  # iftmp.33_30 = PHI <1(17), 0(18)>
+  LocListHwv3[10].Value = iftmp.33_30;
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelGlobalList (3, LocHwInst_35, LocHwCh_36, &LocListHwv3, 11);
+
+  <bb 20> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  LocListHwv3 ={v} {CLOBBER};
+  return 0;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop (const uint32 LogicCh, const struct Dma_Ip_GlobalConfigType * const GlobalConfig)
+{
+  struct Dma_Ip_LogicChannelGlobalListType LocListHwv3[11];
+  uint32 LocHwVers;
+  uint32 LocHwInst;
+  uint32 LocHwCh;
+  boolean ResetState;
+
+  <bb 21> [local count: 1073741824]:
+  # DEBUG D#13 s=> ResetState
+  # DEBUG ResetState => D#13
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.25_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.25_1->ppxLogicChannelConfigArray;
+  _4 = LogicCh_3(D) * 4;
+  _5 = _2 + _4;
+  _6 = *_5;
+  # DEBUG D#4 => &_6->LogicChId
+  # DEBUG LocLogicChId => D#4
+  # DEBUG BEGIN_STMT
+  _7 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_6].HwVersId;
+  LocHwVers_8 = (uint32) _7;
+  # DEBUG LocHwVers => LocHwVers_8
+  # DEBUG BEGIN_STMT
+  _9 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_6].HwInstId;
+  LocHwInst_10 = (uint32) _9;
+  # DEBUG LocHwInst => LocHwInst_10
+  # DEBUG BEGIN_STMT
+  _11 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_6].HwChId;
+  LocHwCh_12 = (uint32) _11;
+  # DEBUG LocHwCh => LocHwCh_12
+  # DEBUG BEGIN_STMT
+  if (LocHwVers_8 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 20>; [66.00%]
+
+  <bb 3> [local count: 365072224]:
+  # DEBUG BEGIN_STMT
+  LocListHwv3[0].Param = 0;
+  # DEBUG BEGIN_STMT
+  _14 = GlobalConfig_13(D)->Control.EnMasterIdReplication;
+  if (_14 != 0)
+    goto <bb 5>; [50.00%]
+  else
+    goto <bb 4>; [50.00%]
+
+  <bb 4> [local count: 182536112]:
+
+  <bb 5> [local count: 365072224]:
+  # iftmp.26_15 = PHI <1(3), 0(4)>
+  LocListHwv3[0].Value = iftmp.26_15;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[1].Param = 1;
+  # DEBUG BEGIN_STMT
+  _16 = GlobalConfig_13(D)->Control.EnBufferedWrites;
+  if (_16 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 6>; [50.00%]
+
+  <bb 6> [local count: 182536112]:
+
+  <bb 7> [local count: 365072224]:
+  # iftmp.27_17 = PHI <1(5), 0(6)>
+  LocListHwv3[1].Value = iftmp.27_17;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[2].Param = 2;
+  # DEBUG BEGIN_STMT
+  _18 = GlobalConfig_13(D)->Request.EnSourceMux;
+  if (_18 != 0)
+    goto <bb 9>; [50.00%]
+  else
+    goto <bb 8>; [50.00%]
+
+  <bb 8> [local count: 182536112]:
+
+  <bb 9> [local count: 365072224]:
+  # iftmp.28_19 = PHI <1(7), 0(8)>
+  LocListHwv3[2].Value = iftmp.28_19;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[3].Param = 3;
+  # DEBUG BEGIN_STMT
+  _20 = GlobalConfig_13(D)->Request.SourceMux;
+  _21 = (long unsigned int) _20;
+  LocListHwv3[3].Value = _21;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[4].Param = 4;
+  # DEBUG BEGIN_STMT
+  _22 = GlobalConfig_13(D)->Request.EnTriggerMux;
+  if (_22 != 0)
+    goto <bb 11>; [50.00%]
+  else
+    goto <bb 10>; [50.00%]
+
+  <bb 10> [local count: 182536112]:
+
+  <bb 11> [local count: 365072224]:
+  # iftmp.29_23 = PHI <1(9), 0(10)>
+  LocListHwv3[4].Value = iftmp.29_23;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[5].Param = 6;
+  # DEBUG BEGIN_STMT
+  _24 = GlobalConfig_13(D)->Interrupt.EnErrorInt;
+  if (_24 != 0)
+    goto <bb 13>; [50.00%]
+  else
+    goto <bb 12>; [50.00%]
+
+  <bb 12> [local count: 182536112]:
+
+  <bb 13> [local count: 365072224]:
+  # iftmp.30_25 = PHI <1(11), 0(12)>
+  LocListHwv3[5].Value = iftmp.30_25;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[6].Param = 7;
+  # DEBUG BEGIN_STMT
+  _26 = GlobalConfig_13(D)->Priority.Group;
+  _27 = (long unsigned int) _26;
+  LocListHwv3[6].Value = _27;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[7].Param = 8;
+  # DEBUG BEGIN_STMT
+  _28 = GlobalConfig_13(D)->Priority.Level;
+  _29 = (long unsigned int) _28;
+  LocListHwv3[7].Value = _29;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[8].Param = 9;
+  # DEBUG BEGIN_STMT
+  _30 = GlobalConfig_13(D)->Priority.EnPreemption;
+  if (_30 != 0)
+    goto <bb 15>; [50.00%]
+  else
+    goto <bb 14>; [50.00%]
+
+  <bb 14> [local count: 182536112]:
+
+  <bb 15> [local count: 365072224]:
+  # iftmp.31_31 = PHI <1(13), 0(14)>
+  LocListHwv3[8].Value = iftmp.31_31;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[9].Param = 10;
+  # DEBUG BEGIN_STMT
+  _32 = GlobalConfig_13(D)->Priority.DisPreempt;
+  if (_32 != 0)
+    goto <bb 17>; [50.00%]
+  else
+    goto <bb 16>; [50.00%]
+
+  <bb 16> [local count: 182536112]:
+
+  <bb 17> [local count: 365072224]:
+  # iftmp.32_33 = PHI <1(15), 0(16)>
+  LocListHwv3[9].Value = iftmp.32_33;
+  # DEBUG BEGIN_STMT
+  LocListHwv3[10].Param = 5;
+  # DEBUG BEGIN_STMT
+  _34 = GlobalConfig_13(D)->Request.EnRequest;
+  if (_34 != 0)
+    goto <bb 19>; [50.00%]
+  else
+    goto <bb 18>; [50.00%]
+
+  <bb 18> [local count: 182536112]:
+
+  <bb 19> [local count: 365072224]:
+  # iftmp.33_35 = PHI <1(17), 0(18)>
+  LocListHwv3[10].Value = iftmp.33_35;
+  # DEBUG BEGIN_STMT
+  Static_Dma_Ip_SetLogicChannelGlobalList (3, LocHwInst_10, LocHwCh_12, &LocListHwv3, 11);
+
+  <bb 20> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  LocListHwv3 ={v} {CLOBBER};
+  return 0;
+
+}
+
+
+cloning Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 to Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop/65
+   replace map: 1 -> 0
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+Static_Dma_Ip_SetLogicChannelScatterGatherInit (const uint32 LogicCh, const uint32 Element)
+{
+  uint32 LocElement;
+  uint32 LocHwCh;
+  uint32 LocHwInst;
+  uint32 LocHwVers;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  struct Dma_Ip_ScatterGatherConfigType * LocCurrentConfig;
+  struct Dma_Ip_ScatterGatherConfigType * LocScatterGather;
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+
+  <bb 2> [local count: 337833906]:
+  # DEBUG BEGIN_STMT
+  # DEBUG LocStatus => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.19_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.19_1->ppxLogicChannelConfigArray;
+  _3 = LogicCh_26(D) * 4;
+  _4 = _2 + _3;
+  _5 = *_4;
+  LocLogicChId_27 = &_5->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_27
+  # DEBUG BEGIN_STMT
+  _7 = _5->ppxScatterGatherConfigArray;
+  _8 = Element_28(D) * 4;
+  _9 = _7 + _8;
+  LocScatterGather_29 = *_9;
+  # DEBUG LocScatterGather => LocScatterGather_29
+  # DEBUG BEGIN_STMT
+  _10 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_5].HwVersId;
+  LocHwVers_30 = (uint32) _10;
+  # DEBUG LocHwVers => LocHwVers_30
+  # DEBUG BEGIN_STMT
+  _11 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_5].HwInstId;
+  LocHwInst_31 = (uint32) _11;
+  # DEBUG LocHwInst => LocHwInst_31
+  # DEBUG BEGIN_STMT
+  _12 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_5].HwChId;
+  LocHwCh_32 = (uint32) _12;
+  # DEBUG LocHwCh => LocHwCh_32
+  # DEBUG BEGIN_STMT
+  # DEBUG LocLoopCheck => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocElement => Element_28(D)
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  LocChState_35 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_30, LocHwInst_31, LocHwCh_32);
+  # DEBUG LocChState => LocChState_35
+  # DEBUG BEGIN_STMT
+  _13 = &LocChState_35->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_30, LocHwInst_31, LocHwCh_32, _13);
+  # DEBUG BEGIN_STMT
+  _14 = LocChState_35->StateValue;
+  if (_14 == 3)
+    goto <bb 15>; [34.00%]
+  else
+    goto <bb 14>; [66.00%]
+
+  <bb 15> [local count: 114863529]:
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 958878286]:
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_18->Loaded = 0;
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_39 = LocCurrentConfig_18->NextConfig;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_39
+
+  <bb 4> [local count: 1073741816]:
+  # LocCurrentConfig_18 = PHI <LocCurrentConfig_39(3), LocScatterGather_29(15)>
+  # DEBUG LocCurrentConfig => LocCurrentConfig_18
+  # DEBUG BEGIN_STMT
+  if (LocCurrentConfig_18 != 0B)
+    goto <bb 6>; [94.50%]
+  else
+    goto <bb 5>; [5.50%]
+
+  <bb 5> [local count: 114863530]:
+  # LocCurrentConfig_37 = PHI <LocScatterGather_29(4), LocScatterGather_29(6)>
+  # LocElement_6 = PHI <Element_28(D)(4), Element_28(D)(6)>
+  goto <bb 11>; [100.00%]
+
+  <bb 6> [local count: 1014686016]:
+  _15 = LocCurrentConfig_18->Loaded;
+  if (_15 != 0)
+    goto <bb 3>; [94.50%]
+  else
+    goto <bb 5>; [5.50%]
+
+  <bb 7> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_19->Loaded = 1;
+  # DEBUG BEGIN_STMT
+  _16 = LocCurrentConfig_19->NextConfig;
+  if (_16 == 0B)
+    goto <bb 8>; [30.00%]
+  else
+    goto <bb 9>; [70.00%]
+
+  <bb 8> [local count: 287663485]:
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadConfigIntoSoftwareTcd (LocHwVers_30, LocCurrentConfig_19, LocElement_20, 0);
+  goto <bb 10>; [100.00%]
+
+  <bb 9> [local count: 671214809]:
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadConfigIntoSoftwareTcd (LocHwVers_30, LocCurrentConfig_19, LocElement_20, 1);
+
+  <bb 10> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_43 = LocCurrentConfig_19->NextConfig;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_43
+  # DEBUG BEGIN_STMT
+  # DEBUG LocLoopCheck => NULL
+  # DEBUG BEGIN_STMT
+  LocElement_44 = LocElement_20 + 1;
+  # DEBUG LocElement => LocElement_44
+
+  <bb 11> [local count: 1073741824]:
+  # LocCurrentConfig_19 = PHI <LocCurrentConfig_37(5), LocCurrentConfig_43(10)>
+  # LocElement_20 = PHI <LocElement_6(5), LocElement_44(10)>
+  # DEBUG LocElement => LocElement_20
+  # DEBUG LocLoopCheck => NULL
+  # DEBUG LocCurrentConfig => LocCurrentConfig_19
+  # DEBUG BEGIN_STMT
+  if (LocCurrentConfig_19 != 0B)
+    goto <bb 12>; [94.50%]
+  else
+    goto <bb 13>; [5.50%]
+
+  <bb 12> [local count: 1014686025]:
+  _17 = LocCurrentConfig_19->Loaded;
+  if (_17 != 0)
+    goto <bb 13>; [5.50%]
+  else
+    goto <bb 7>; [94.50%]
+
+  <bb 13> [local count: 114863531]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd (LocLogicChId_27, LocScatterGather_29);
+
+  <bb 14> [local count: 337833908]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop (const uint32 LogicCh)
+{
+  const struct Dma_Ip_LogicChannelIdType * LocLogicChId;
+  struct Dma_Ip_ScatterGatherConfigType * LocScatterGather;
+  struct Dma_Ip_ScatterGatherConfigType * LocCurrentConfig;
+  struct Dma_Ip_HwChannelStateType * LocChState;
+  uint32 LocHwVers;
+  uint32 LocHwInst;
+  uint32 LocHwCh;
+  uint32 LocElement;
+  const uint32 Element;
+
+  <bb 16> [local count: 337833906]:
+  # DEBUG Element => 0
+
+  <bb 2> [local count: 337833906]:
+  # DEBUG BEGIN_STMT
+  # DEBUG LocStatus => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Dma_Ip_pxInit.19_1 = Dma_Ip_pxInit;
+  _2 = Dma_Ip_pxInit.19_1->ppxLogicChannelConfigArray;
+  _4 = LogicCh_3(D) * 4;
+  _5 = _2 + _4;
+  _6 = *_5;
+  LocLogicChId_7 = &_6->LogicChId;
+  # DEBUG LocLogicChId => LocLogicChId_7
+  # DEBUG BEGIN_STMT
+  _8 = _6->ppxScatterGatherConfigArray;
+  _9 = 0;
+  _10 = _8 + _9;
+  LocScatterGather_11 = *_10;
+  # DEBUG LocScatterGather => LocScatterGather_11
+  # DEBUG BEGIN_STMT
+  _12 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_6].HwVersId;
+  LocHwVers_13 = (uint32) _12;
+  # DEBUG LocHwVers => LocHwVers_13
+  # DEBUG BEGIN_STMT
+  _14 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_6].HwInstId;
+  LocHwInst_15 = (uint32) _14;
+  # DEBUG LocHwInst => LocHwInst_15
+  # DEBUG BEGIN_STMT
+  _16 = MEM[(const struct Dma_Ip_LogicChannelIdType *)_6].HwChId;
+  LocHwCh_17 = (uint32) _16;
+  # DEBUG LocHwCh => LocHwCh_17
+  # DEBUG BEGIN_STMT
+  # DEBUG LocLoopCheck => 0
+  # DEBUG BEGIN_STMT
+  # DEBUG LocElement => 0
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  LocChState_18 = Dma_Ip_GetHwChannelStatePointer (LocHwVers_13, LocHwInst_15, LocHwCh_17);
+  # DEBUG LocChState => LocChState_18
+  # DEBUG BEGIN_STMT
+  _19 = &LocChState_18->LogicChErrors;
+  Static_Dma_Ip_GetLogicChannelError (LocHwVers_13, LocHwInst_15, LocHwCh_17, _19);
+  # DEBUG BEGIN_STMT
+  _20 = LocChState_18->StateValue;
+  if (_20 == 3)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 15>; [66.00%]
+
+  <bb 3> [local count: 114863529]:
+  goto <bb 5>; [100.00%]
+
+  <bb 4> [local count: 958878286]:
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_21->Loaded = 0;
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_22 = LocCurrentConfig_21->NextConfig;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_22
+
+  <bb 5> [local count: 1073741816]:
+  # LocCurrentConfig_21 = PHI <LocScatterGather_11(3), LocCurrentConfig_22(4)>
+  # DEBUG LocCurrentConfig => LocCurrentConfig_21
+  # DEBUG BEGIN_STMT
+  if (LocCurrentConfig_21 != 0B)
+    goto <bb 7>; [94.50%]
+  else
+    goto <bb 6>; [5.50%]
+
+  <bb 6> [local count: 114863530]:
+  # LocCurrentConfig_30 = PHI <LocScatterGather_11(5), LocScatterGather_11(7)>
+  # LocElement_31 = PHI <0(5), 0(7)>
+  goto <bb 12>; [100.00%]
+
+  <bb 7> [local count: 1014686016]:
+  _23 = LocCurrentConfig_21->Loaded;
+  if (_23 != 0)
+    goto <bb 4>; [94.50%]
+  else
+    goto <bb 6>; [5.50%]
+
+  <bb 8> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_24->Loaded = 1;
+  # DEBUG BEGIN_STMT
+  _25 = LocCurrentConfig_24->NextConfig;
+  if (_25 == 0B)
+    goto <bb 9>; [30.00%]
+  else
+    goto <bb 10>; [70.00%]
+
+  <bb 9> [local count: 287663485]:
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadConfigIntoSoftwareTcd (LocHwVers_13, LocCurrentConfig_24, LocElement_26, 0);
+  goto <bb 11>; [100.00%]
+
+  <bb 10> [local count: 671214809]:
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadConfigIntoSoftwareTcd (LocHwVers_13, LocCurrentConfig_24, LocElement_26, 1);
+
+  <bb 11> [local count: 958878295]:
+  # DEBUG BEGIN_STMT
+  LocCurrentConfig_27 = LocCurrentConfig_24->NextConfig;
+  # DEBUG LocCurrentConfig => LocCurrentConfig_27
+  # DEBUG BEGIN_STMT
+  # DEBUG LocLoopCheck => NULL
+  # DEBUG BEGIN_STMT
+  LocElement_28 = LocElement_26 + 1;
+  # DEBUG LocElement => LocElement_28
+
+  <bb 12> [local count: 1073741824]:
+  # LocCurrentConfig_24 = PHI <LocCurrentConfig_30(6), LocCurrentConfig_27(11)>
+  # LocElement_26 = PHI <LocElement_31(6), LocElement_28(11)>
+  # DEBUG LocElement => LocElement_26
+  # DEBUG LocLoopCheck => NULL
+  # DEBUG LocCurrentConfig => LocCurrentConfig_24
+  # DEBUG BEGIN_STMT
+  if (LocCurrentConfig_24 != 0B)
+    goto <bb 13>; [94.50%]
+  else
+    goto <bb 14>; [5.50%]
+
+  <bb 13> [local count: 1014686025]:
+  _29 = LocCurrentConfig_24->Loaded;
+  if (_29 != 0)
+    goto <bb 14>; [5.50%]
+  else
+    goto <bb 8>; [94.50%]
+
+  <bb 14> [local count: 114863531]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd (LocLogicChId_7, LocScatterGather_11);
+
+  <bb 15> [local count: 337833908]:
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12 ();
+  # DEBUG BEGIN_STMT
+  return 0;
+
+}
+
+
+Materialization Call site updates done.
+
+Reclaiming functions: Static_Dma_Ip_SetLogicChannelScatterGatherInit/22 Static_Dma_Ip_SetLogicChannelGlobalConfig/3
+Reclaiming variables:
+Clearing address taken flags:
+updating call of Dma_Ip_LogicChannelInit/9 -> Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop/66: LocStatus_66 = Static_Dma_Ip_SetLogicChannelGlobalConfig (_33, _35, 1);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:LocStatus_66 = Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop (_33, _35);
+updating call of Dma_Ip_LogicChannelInit/9 -> Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop/66: LocStatus_68 = Static_Dma_Ip_SetLogicChannelGlobalConfig (_32, _31, 0);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:LocStatus_68 = Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop (_32, _31);
+updating call of Dma_Ip_LogicChannelInit/9 -> Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop/65: LocStatus_59 = Static_Dma_Ip_SetLogicChannelScatterGatherInit (_23, 0);
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+  updated to:LocStatus_59 = Static_Dma_Ip_SetLogicChannelScatterGatherInit.constprop (_23);
+updating call of Dma_Ip_LogicChannelDeinit/10 -> Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop/66: Static_Dma_Ip_SetLogicChannelGlobalConfig (LogicCh_10(D), _24, 1);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop (LogicCh_10(D), _24);
+Trivially needed variables: Dma_Ip_pxInit/1 g_ptHwChTcdPtrArray/0
+Removing variables:
+
+Final Symbol table:
+
+Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop.0/66 (Static_Dma_Ip_SetLogicChannelGlobalConfig.constprop) @070478c0
+  Type: function definition analyzed
+  Visibility: asm_written artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11/64 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_11) @06f041c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11/63 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_11) @06f040e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_GetParam/62 (HwAccDmaCh_GetParam) @06ef4ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09/61 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4c40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09/60 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_09) @06ef4b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08/59 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef49a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08/58 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_08) @06ef48c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07/57 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07/56 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_07) @06ef4620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06/55 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef4460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetHwChannelState/54 (Dma_Ip_GetHwChannelState) @06ef4380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_GetStatus/53 (HwAccDmaCh_GetStatus) @06ef42a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06/52 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_06) @06ef41c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05/51 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_05) @06ef4000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05/50 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_05) @06edd380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04/49 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04/48 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_04) @06eddc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_SetGlobalParam/47 (HwAccDmaCh_SetGlobalParam) @06edda80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_SetTransferParam/46 (HwAccDmaCh_SetTransferParam) @06edd620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_SetCommand/45 (HwAccDmaCh_SetCommand) @06edd460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_GetStatus_Error/44 (HwAccDmaCh_GetStatus_Error) @06edd2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12/43 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_12) @06edd0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd/42 (HwAccDmaCh_LoadSoftwareTcdIntoHardwareTcd) @06edd000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_LoadConfigIntoSoftwareTcd/41 (HwAccDmaCh_LoadConfigIntoSoftwareTcd) @06e8cd20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12/40 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_12) @06e8cee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_SetControl_ScatterGatherAddress/39 (HwAccDmaCh_SetControl_ScatterGatherAddress) @06e8cc40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaCh_SetControl_EnScatterGatherProcessing/38 (HwAccDmaCh_SetControl_EnScatterGatherProcessing) @06e8cb60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannelState/37 (Dma_Ip_SetHwChannelState) @06e8ca80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaInst_GetStatus/36 (HwAccDmaInst_GetStatus) @06e8c8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02/35 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaInst_SetCommand/34 (HwAccDmaInst_SetCommand) @06e8c620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02/33 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_02) @06e8c540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01/32 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01/31 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_01) @06e8c2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetHwChannelStatePointer/30 (Dma_Ip_GetHwChannelStatePointer) @06e8c0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetHwChannelStatePointer/29 (Dma_Ip_SetHwChannelStatePointer) @06e8c000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00/28 (SchM_Exit_Mcl_MCL_EXCLUSIVE_AREA_00) @06d70620
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+HwAccDmaInst_SetConfig/27 (HwAccDmaInst_SetConfig) @06d70380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00/26 (SchM_Enter_Mcl_MCL_EXCLUSIVE_AREA_00) @06d700e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Static_Dma_Ip_GetLogicChannelError/25 (Static_Dma_Ip_GetLogicChannelError) @06d70a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/24 (Dma_Ip_ErrorIrqHandler) @06d707e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_IntIrqHandler/23 (Dma_Ip_IntIrqHandler) @06d70540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelScatterGatherConfig/20 (Dma_Ip_SetLogicChannelScatterGatherConfig) @06bc1b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetLogicChannelParam/19 (Dma_Ip_GetLogicChannelParam) @06bc1620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (Static_Dma_Ip_SetLogicChannelScatterGatherList) @06bc10e0
+  Type: function definition analyzed alias
+  Visibility: prevailing_def_ironly asm_written
+  References: Static_Dma_Ip_SetLogicChannelTransferList/16 (alias) 
+  Referring: 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) local icf_merged optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelScatterGatherList/17 (Dma_Ip_SetLogicChannelScatterGatherList) @06bc1d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Static_Dma_Ip_SetLogicChannelTransferList/16 (Static_Dma_Ip_SetLogicChannelTransferList) @06bc1a80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: Static_Dma_Ip_SetLogicChannelScatterGatherList/18 (alias) 
+  Availability: local
+  Function flags: count:118111600 (estimated locally) local icf_merged optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/15 (Dma_Ip_SetLogicChannelTransferList) @06bc17e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelGlobalList/13 (Dma_Ip_SetLogicChannelGlobalList) @06bc12a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/12 (Dma_Ip_GetLogicChannelStatus) @06bc1000
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/11 (Dma_Ip_SetLogicChannelCommand) @04d64b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_LogicChannelDeinit/10 (Dma_Ip_LogicChannelDeinit) @04d64620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_LogicChannelInit/9 (Dma_Ip_LogicChannelInit) @04d640e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741821 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetLogicInstanceStatus/8 (Dma_Ip_GetLogicInstanceStatus) @04d64d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicInstanceCommand/7 (Dma_Ip_SetLogicInstanceCommand) @04d64a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_Deinit/6 (Dma_Ip_Deinit) @04d647e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:357878152 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_Init/5 (Dma_Ip_Init) @04d64540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:357878152 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Static_Dma_Ip_SetLogicChannelTransferConfig/4 (Static_Dma_Ip_SetLogicChannelTransferConfig) @04d642a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_ConvertLogicChToHwCh/2 (Dma_Ip_ConvertLogicChToHwCh) @06ba8ee0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_pxInit/1 (Dma_Ip_pxInit) @06bad318
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06b85678
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @06bad318
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known

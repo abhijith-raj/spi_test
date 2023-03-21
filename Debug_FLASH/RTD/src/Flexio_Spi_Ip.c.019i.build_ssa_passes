@@ -1,0 +1,1737 @@
+Flexio_Spi_Ip_GetStatus (uint8 Instance)
+{
+  Flexio_Spi_Ip_HwStatusType Status;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_HwStatusType D.6431;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _2 = Instance <= 3;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  if (State != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Status = State->Status;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  D.6431 = Status;
+  return D.6431;
+
+}
+
+
+Flexio_Spi_Ip_IrqHandler (uint8 ShifterIndex, uint8 ShifterMaskFlag, uint8 ShifterErrMaskFlag)
+{
+  uint8 ShifterErrEnabledIrqFlag;
+  uint8 ShifterEnabledIsrFlag;
+  uint8 ShifterErrEnabledIrq;
+  uint8 ShifterEnabledIrq;
+  uint8 Instance;
+  uint8 Count;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  struct FLEXIO_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  State = 0B;
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  Count = 0;
+  # DEBUG BEGIN_STMT
+  Instance = 0;
+  # DEBUG BEGIN_STMT
+  ShifterEnabledIrq = 0;
+  # DEBUG BEGIN_STMT
+  ShifterErrEnabledIrq = 0;
+  # DEBUG BEGIN_STMT
+  ShifterEnabledIsrFlag = 0;
+  # DEBUG BEGIN_STMT
+  ShifterErrEnabledIrqFlag = 0;
+  # DEBUG BEGIN_STMT
+  Count = 0;
+  goto <bb 7>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Count;
+  _2 = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  _3 = _2->PhyUnitConfig;
+  TxShifterIndex = _3->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _4 = (int) Count;
+  _5 = Flexio_Spi_Ip_apxStateStructureArray[_4];
+  _6 = _5->PhyUnitConfig;
+  RxShifterIndex = _6->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  if (ShifterIndex == TxShifterIndex)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  if (ShifterIndex == RxShifterIndex)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Instance = Count;
+  # DEBUG BEGIN_STMT
+  _7 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_7];
+  # DEBUG BEGIN_STMT
+  goto <bb 8>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  Count.1_8 = Count;
+  Count = Count.1_8 + 1;
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  if (Count <= 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  if (State != 0B)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _9 = Flexio_Mcl_Ip_GetAllShifterInterrupt (Base);
+  ShifterEnabledIrq = (uint8) _9;
+  # DEBUG BEGIN_STMT
+  _10 = (int) ShifterIndex;
+  _11 = 1 << _10;
+  _12 = (unsigned char) _11;
+  _13 = ShifterEnabledIrq & _12;
+  ShifterEnabledIsrFlag = ShifterMaskFlag & _13;
+  # DEBUG BEGIN_STMT
+  _14 = Flexio_Mcl_Ip_GetAllShifterErrorInterrupt (Base);
+  ShifterErrEnabledIrq = (uint8) _14;
+  # DEBUG BEGIN_STMT
+  _15 = (int) ShifterIndex;
+  _16 = 1 << _15;
+  _17 = (unsigned char) _16;
+  _18 = ShifterErrEnabledIrq & _17;
+  ShifterErrEnabledIrqFlag = ShifterErrMaskFlag & _18;
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_TransferProcess (Instance, ShifterIndex, ShifterEnabledIsrFlag, ShifterErrEnabledIrqFlag);
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterStatus (Base, TxShifterIndex);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterStatus (Base, RxShifterIndex);
+
+  <bb 11> :
+  return;
+
+}
+
+
+Flexio_Spi_Ip_Cancel (uint8 Instance)
+{
+  uint8 ClkTimerIndex;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+  struct FLEXIO_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  ClkTimerIndex = 0;
+  # DEBUG BEGIN_STMT
+  _2 = Instance <= 3;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = State != 0B;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_16 ();
+  # DEBUG BEGIN_STMT
+  _4 = State->Status;
+  if (_4 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _5 = State->PhyUnitConfig;
+  TxShifterIndex = _5->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _6 = State->PhyUnitConfig;
+  RxShifterIndex = _6->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _7 = State->PhyUnitConfig;
+  ClkTimerIndex = _7->ClkTimerIndex;
+  # DEBUG BEGIN_STMT
+  _8 = (int) TxShifterIndex;
+  _9 = 1 << _8;
+  _10 = (unsigned char) _9;
+  _11 = (int) RxShifterIndex;
+  _12 = 1 << _11;
+  _13 = (unsigned char) _12;
+  _14 = _10 | _13;
+  Flexio_Mcl_Ip_SetShifterInterrupt (Base, _14, 0);
+  # DEBUG BEGIN_STMT
+  _15 = (int) TxShifterIndex;
+  _16 = 1 << _15;
+  _17 = (unsigned char) _16;
+  _18 = (int) RxShifterIndex;
+  _19 = 1 << _18;
+  _20 = (unsigned char) _19;
+  _21 = _17 | _20;
+  Flexio_Mcl_Ip_SetShifterDMARequest (Base, _21, 0);
+  # DEBUG BEGIN_STMT
+  _22 = (int) TxShifterIndex;
+  _23 = 1 << _22;
+  _24 = (unsigned char) _23;
+  _25 = (int) RxShifterIndex;
+  _26 = 1 << _25;
+  _27 = (unsigned char) _26;
+  _28 = _24 | _27;
+  Flexio_Mcl_Ip_SetShifterErrorInterrupt (Base, _28, 0);
+  # DEBUG BEGIN_STMT
+  _29 = (int) ClkTimerIndex;
+  Base->TIMCMP[_29] = 0;
+  # DEBUG BEGIN_STMT
+  _30 = (int) ClkTimerIndex;
+  Base->TIMCFG[_30] = 0;
+  # DEBUG BEGIN_STMT
+  _31 = (int) ClkTimerIndex;
+  Base->TIMCTL[_31] = 0;
+  # DEBUG BEGIN_STMT
+  _32 = (int) TxShifterIndex;
+  Base->SHIFTBUF[_32] = 0;
+  # DEBUG BEGIN_STMT
+  _33 = (int) RxShifterIndex;
+  Base->SHIFTBUF[_33] = 0;
+  # DEBUG BEGIN_STMT
+  _34 = (int) TxShifterIndex;
+  Base->SHIFTBUFBIS[_34] = 0;
+  # DEBUG BEGIN_STMT
+  _35 = (int) RxShifterIndex;
+  Base->SHIFTBUFBIS[_35] = 0;
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_16 ();
+  return;
+
+}
+
+
+Flexio_Spi_Ip_UpdateTransferMode (uint8 Instance, Flexio_Spi_Ip_ModeType Mode)
+{
+  Flexio_Spi_Ip_StatusType Status;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6419;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _2 = Instance <= 3;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = State != 0B;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = State->Status;
+  if (_4 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  State->TransferMode = Mode;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.6419 = Status;
+  return D.6419;
+
+}
+
+
+Flexio_Spi_Ip_UpdateDefaultTransmitData (const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice, uint32 DefaultData)
+{
+  Flexio_Spi_Ip_StatusType Status;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6414;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = ExternalDevice->Instance;
+  _3 = (int) _2;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = ExternalDevice->DeviceParams;
+  _6->DefaultData = DefaultData;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.6414 = Status;
+  return D.6414;
+
+}
+
+
+Flexio_Spi_Ip_UpdateLsb (const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice, boolean Lsb)
+{
+  Flexio_Spi_Ip_StatusType Status;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6409;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = ExternalDevice->Instance;
+  _3 = (int) _2;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _6 = ExternalDevice->DeviceParams;
+  _6->Lsb = Lsb;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.6409 = Status;
+  return D.6409;
+
+}
+
+
+Flexio_Spi_Ip_UpdateFrameSize (const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice, uint8 FrameSize)
+{
+  Flexio_Spi_Ip_StatusType Status;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6404;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = FrameSize <= 32;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = FrameSize > 3;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = ExternalDevice->Instance;
+  _5 = (int) _4;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_5];
+  # DEBUG BEGIN_STMT
+  _6 = State != 0B;
+  DevAssert (_6);
+  # DEBUG BEGIN_STMT
+  _7 = State->Status;
+  if (_7 != 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _8 = ExternalDevice->DeviceParams;
+  _8->FrameSize = FrameSize;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.6404 = Status;
+  return D.6404;
+
+}
+
+
+Flexio_Spi_Ip_ManageBuffers (uint8 Instance)
+{
+  uint8 TxRxMask;
+  uint8 ShifterErrMaskFlag;
+  uint8 ShifterMaskFlag;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  struct FLEXIO_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  ShifterMaskFlag = 0;
+  # DEBUG BEGIN_STMT
+  ShifterErrMaskFlag = 0;
+  # DEBUG BEGIN_STMT
+  TxRxMask = 0;
+  # DEBUG BEGIN_STMT
+  _2 = Instance <= 3;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = State != 0B;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = State->TransferMode;
+  if (_4 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _5 = State->PhyUnitConfig;
+  TxShifterIndex = _5->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _6 = State->PhyUnitConfig;
+  RxShifterIndex = _6->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _7 = (int) TxShifterIndex;
+  _8 = 1 << _7;
+  _9 = (unsigned char) _8;
+  _10 = (int) RxShifterIndex;
+  _11 = 1 << _10;
+  _12 = (unsigned char) _11;
+  TxRxMask = _9 | _12;
+  # DEBUG BEGIN_STMT
+  _13 = Flexio_Mcl_Ip_GetAllShifterStatus (Base);
+  _14 = (unsigned char) _13;
+  ShifterMaskFlag = TxRxMask & _14;
+  # DEBUG BEGIN_STMT
+  _15 = Flexio_Mcl_Ip_GetAllShifterErrorStatus (Base);
+  _16 = (unsigned char) _15;
+  ShifterErrMaskFlag = TxRxMask & _16;
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (Base, TxShifterIndex);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (Base, RxShifterIndex);
+  # DEBUG BEGIN_STMT
+  _17 = (unsigned int) ShifterMaskFlag;
+  _18 = (int) TxShifterIndex;
+  _19 = _17 >> _18;
+  _20 = _19 & 1;
+  if (_20 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  _21 = (unsigned int) ShifterErrMaskFlag;
+  _22 = (int) TxShifterIndex;
+  _23 = _21 >> _22;
+  _24 = _23 & 1;
+  if (_24 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_TransferProcess (Instance, TxShifterIndex, ShifterMaskFlag, ShifterErrMaskFlag);
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _25 = (unsigned int) ShifterMaskFlag;
+  _26 = (int) RxShifterIndex;
+  _27 = _25 >> _26;
+  _28 = _27 & 1;
+  if (_28 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  _29 = (unsigned int) ShifterErrMaskFlag;
+  _30 = (int) RxShifterIndex;
+  _31 = _29 >> _30;
+  _32 = _31 & 1;
+  if (_32 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_TransferProcess (Instance, RxShifterIndex, ShifterMaskFlag, ShifterErrMaskFlag);
+
+  <bb 9> :
+  return;
+
+}
+
+
+Flexio_Spi_Ip_AsyncTransmit (const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice, uint8 * TxBuffer, uint8 * RxBuffer, uint16 Length, void (*Flexio_Spi_Ip_CallbackType) (uint8, Flexio_Spi_Ip_EventType) EndCallback)
+{
+  uint8 InstanceFlexio;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  Flexio_Spi_Ip_StatusType Status;
+  struct FLEXIO_Type * Base;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6364;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  InstanceFlexio = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = Length != 0;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  InstanceFlexio = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _3 = (int) InstanceFlexio;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_3];
+  # DEBUG BEGIN_STMT
+  _4 = State != 0B;
+  DevAssert (_4);
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_18 ();
+  # DEBUG BEGIN_STMT
+  _5 = State->Status;
+  if (_5 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18 ();
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 11>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 2;
+  # DEBUG BEGIN_STMT
+  State->ExternalDevice = ExternalDevice;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_18 ();
+  # DEBUG BEGIN_STMT
+  _6 = State->PhyUnitConfig;
+  TxShifterIndex = _6->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _7 = State->PhyUnitConfig;
+  RxShifterIndex = _7->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _8 = State->ExternalDevice;
+  _9 = _8->DeviceParams;
+  _10 = _9->FrameSize;
+  if (_10 <= 8)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  State->ExpectedFifoWrites = Length;
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _11 = State->ExternalDevice;
+  _12 = _11->DeviceParams;
+  _13 = _12->FrameSize;
+  if (_13 <= 16)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _14 = Length / 2;
+  State->ExpectedFifoWrites = _14;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _15 = Length / 4;
+  State->ExpectedFifoWrites = _15;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _16 = State->ExpectedFifoWrites;
+  State->ExpectedFifoReads = _16;
+  # DEBUG BEGIN_STMT
+  State->TxIndex = 0;
+  # DEBUG BEGIN_STMT
+  State->TxBuffer = TxBuffer;
+  # DEBUG BEGIN_STMT
+  State->RxIndex = 0;
+  # DEBUG BEGIN_STMT
+  State->RxBuffer = RxBuffer;
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ConfigExternalDevice (State);
+  # DEBUG BEGIN_STMT
+  State->Callback = EndCallback;
+  # DEBUG BEGIN_STMT
+  _17 = State->TransferMode;
+  switch (_17) <default: <L14> [INV], case 1: <L9> [INV]>
+
+  <bb 10> :
+<L9>:
+  # DEBUG BEGIN_STMT
+  _18 = (int) TxShifterIndex;
+  _19 = 1 << _18;
+  _20 = (unsigned char) _19;
+  _21 = (int) RxShifterIndex;
+  _22 = 1 << _21;
+  _23 = (unsigned char) _22;
+  _24 = _20 | _23;
+  Flexio_Mcl_Ip_SetShifterErrorInterrupt (Base, _24, 1);
+  # DEBUG BEGIN_STMT
+  _25 = (int) TxShifterIndex;
+  _26 = 1 << _25;
+  _27 = (unsigned char) _26;
+  _28 = (int) RxShifterIndex;
+  _29 = 1 << _28;
+  _30 = (unsigned char) _29;
+  _31 = _27 | _30;
+  Flexio_Mcl_Ip_SetShifterInterrupt (Base, _31, 1);
+  # DEBUG BEGIN_STMT
+
+  <bb 11> :
+<L14>:
+  # DEBUG BEGIN_STMT
+  D.6364 = Status;
+  return D.6364;
+
+}
+
+
+Flexio_Spi_Ip_SyncTransmit (const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice, uint8 * TxBuffer, uint8 * RxBuffer, uint16 Length, uint32 TimeOut)
+{
+  boolean RxShifterError;
+  boolean TxShifterError;
+  uint8 InstanceFlexio;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  uint32 ElapsedTicks;
+  uint32 CurrentTicks;
+  uint32 TimeoutTicks;
+  Flexio_Spi_Ip_StatusType Status;
+  struct FLEXIO_Type * Base;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6320;
+  long unsigned int D.6312;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  TimeoutTicks = OsIf_MicrosToTicks (TimeOut, 0);
+  # DEBUG BEGIN_STMT
+  CurrentTicks = 0;
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  InstanceFlexio = 0;
+  # DEBUG BEGIN_STMT
+  TxShifterError = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterError = 0;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  _2 = Length != 0;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = TimeOut != 0;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  InstanceFlexio = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _4 = (int) InstanceFlexio;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_4];
+  # DEBUG BEGIN_STMT
+  _5 = State != 0B;
+  DevAssert (_5);
+  # DEBUG BEGIN_STMT
+  SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_17 ();
+  # DEBUG BEGIN_STMT
+  _6 = State->Status;
+  if (_6 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17 ();
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 21>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  State->Status = 2;
+  # DEBUG BEGIN_STMT
+  State->ExternalDevice = ExternalDevice;
+  # DEBUG BEGIN_STMT
+  SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_17 ();
+  # DEBUG BEGIN_STMT
+  _7 = State->PhyUnitConfig;
+  TxShifterIndex = _7->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _8 = State->PhyUnitConfig;
+  RxShifterIndex = _8->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _9 = State->ExternalDevice;
+  _10 = _9->DeviceParams;
+  _11 = _10->FrameSize;
+  if (_11 <= 8)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  State->ExpectedFifoWrites = Length;
+  goto <bb 9>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _12 = State->ExternalDevice;
+  _13 = _12->DeviceParams;
+  _14 = _13->FrameSize;
+  if (_14 <= 16)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _15 = Length / 2;
+  State->ExpectedFifoWrites = _15;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _16 = Length / 4;
+  State->ExpectedFifoWrites = _16;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _17 = State->ExpectedFifoWrites;
+  State->ExpectedFifoReads = _17;
+  # DEBUG BEGIN_STMT
+  State->TxIndex = 0;
+  # DEBUG BEGIN_STMT
+  State->TxBuffer = TxBuffer;
+  # DEBUG BEGIN_STMT
+  State->RxIndex = 0;
+  # DEBUG BEGIN_STMT
+  State->RxBuffer = RxBuffer;
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ConfigExternalDevice (State);
+  # DEBUG BEGIN_STMT
+  _18 = OsIf_GetCounter (0);
+  CurrentTicks = _18;
+  # DEBUG BEGIN_STMT
+  goto <bb 19>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  ElapsedTicks = 0;
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_SyncTransmitProcessData (InstanceFlexio);
+  # DEBUG BEGIN_STMT
+  TxShifterError = Flexio_Mcl_Ip_GetShifterErrorStatus (Base, TxShifterIndex);
+  # DEBUG BEGIN_STMT
+  RxShifterError = Flexio_Mcl_Ip_GetShifterErrorStatus (Base, RxShifterIndex);
+  # DEBUG BEGIN_STMT
+  if (TxShifterError != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 11> :
+  if (RxShifterError != 0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 17>; [INV]
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  if (TxShifterError != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+
+  <bb 13> :
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (Base, TxShifterIndex);
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  if (RxShifterError != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (Base, RxShifterIndex);
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  Status = 2;
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  D.6312 = OsIf_GetElapsed (&CurrentTicks, 0);
+  ElapsedTicks = D.6312 + ElapsedTicks;
+  # DEBUG BEGIN_STMT
+  if (ElapsedTicks >= TimeoutTicks)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 19>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  Status = 3;
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _19 = BIT_FIELD_REF <*State, 32, 192>;
+  _20 = _19;
+  _21 = BIT_FIELD_REF <*State, 32, 224>;
+  _22 = _21;
+  if (_20 != _22)
+    goto <bb 20>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 20> :
+  if (Status == 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 21> :
+  # DEBUG BEGIN_STMT
+  if (Status != 0)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 22> :
+  if (Length == 0)
+    goto <bb 23>; [INV]
+  else
+    goto <bb 24>; [INV]
+
+  <bb 23> :
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  goto <bb 25>; [INV]
+
+  <bb 24> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 25> :
+  # DEBUG BEGIN_STMT
+  D.6320 = Status;
+  CurrentTicks = {CLOBBER};
+  return D.6320;
+
+}
+
+
+Flexio_Spi_Ip_DeInit (uint8 Instance)
+{
+  Flexio_Spi_Ip_StatusType Status;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6294;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  _2 = Instance <= 3;
+  DevAssert (_2);
+  # DEBUG BEGIN_STMT
+  _3 = State != 0B;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = State->Status;
+  if (_4 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  Status = 1;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _5 = (int) Instance;
+  Flexio_Spi_Ip_apxStateStructureArray[_5] = 0B;
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  D.6294 = Status;
+  return D.6294;
+
+}
+
+
+Flexio_Spi_Ip_Init (const struct Flexio_Spi_Ip_ConfigType * PhyUnitConfigPtr)
+{
+  uint8 FlexioInstance;
+  Flexio_Spi_Ip_StatusType Status;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+  Flexio_Spi_Ip_StatusType D.6286;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Status = 0;
+  # DEBUG BEGIN_STMT
+  FlexioInstance = 0;
+  # DEBUG BEGIN_STMT
+  _1 = PhyUnitConfigPtr != 0B;
+  DevAssert (_1);
+  # DEBUG BEGIN_STMT
+  FlexioInstance = PhyUnitConfigPtr->Instance;
+  # DEBUG BEGIN_STMT
+  _2 = (int) FlexioInstance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_2];
+  # DEBUG BEGIN_STMT
+  _3 = State == 0B;
+  DevAssert (_3);
+  # DEBUG BEGIN_STMT
+  _4 = PhyUnitConfigPtr->StateIndex;
+  _5 = (int) _4;
+  _6 = (int) FlexioInstance;
+  _7 = &Flexio_Spi_Ip_axStateStructure[_5];
+  Flexio_Spi_Ip_apxStateStructureArray[_6] = _7;
+  # DEBUG BEGIN_STMT
+  _8 = (int) FlexioInstance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_8];
+  # DEBUG BEGIN_STMT
+  State->PhyUnitConfig = PhyUnitConfigPtr;
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_UpdateTransferMode (FlexioInstance, 0);
+  # DEBUG BEGIN_STMT
+  D.6286 = Status;
+  return D.6286;
+
+}
+
+
+Flexio_Spi_Ip_ClearShifterTimerRegisters (uint8 Instance)
+{
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  struct FLEXIO_Type * Base;
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  _2 = State->PhyUnitConfig;
+  TxShifterIndex = _2->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _3 = State->PhyUnitConfig;
+  RxShifterIndex = _3->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _4 = (int) TxShifterIndex;
+  Base->SHIFTCTL[_4] = 0;
+  # DEBUG BEGIN_STMT
+  _5 = (int) RxShifterIndex;
+  Base->SHIFTCTL[_5] = 0;
+  # DEBUG BEGIN_STMT
+  _6 = (int) TxShifterIndex;
+  Base->SHIFTCFG[_6] = 0;
+  # DEBUG BEGIN_STMT
+  _7 = (int) RxShifterIndex;
+  Base->SHIFTCFG[_7] = 0;
+  return;
+
+}
+
+
+Flexio_Spi_Ip_ReadShifterBuffer (uint8 Instance, uint8 RxShifterIndex)
+{
+  const struct FLEXIO_Type * Base;
+  uint32 Data;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Data = 0;
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  _2 = State->ExternalDevice;
+  _3 = _2->DeviceParams;
+  _4 = _3->Lsb;
+  if (_4 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _5 = (int) RxShifterIndex;
+  Data = Base->SHIFTBUF[_5];
+  # DEBUG BEGIN_STMT
+  _6 = State->ExternalDevice;
+  _7 = _6->DeviceParams;
+  _8 = _7->FrameSize;
+  _9 = (unsigned int) _8;
+  _10 = 32 - _9;
+  Data = Data >> _10;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _11 = (int) RxShifterIndex;
+  Data = Base->SHIFTBUFBIS[_11];
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _12 = State->RxBuffer;
+  if (_12 != 0B)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _13 = State->ExternalDevice;
+  _14 = _13->DeviceParams;
+  _15 = _14->FrameSize;
+  if (_15 <= 8)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _16 = State->RxBuffer;
+  _17 = State->RxIndex;
+  _18 = (sizetype) _17;
+  _19 = _16 + _18;
+  _20 = (unsigned char) Data;
+  *_19 = _20;
+  goto <bb 11>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _21 = State->ExternalDevice;
+  _22 = _21->DeviceParams;
+  _23 = _22->FrameSize;
+  if (_23 <= 16)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _24 = State->RxBuffer;
+  _25 = State->RxIndex;
+  _26 = (unsigned int) _25;
+  _27 = _26 * 2;
+  _28 = _24 + _27;
+  _29 = (short unsigned int) Data;
+  MEM[(uint16 *)_28] = _29;
+  goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _30 = State->RxBuffer;
+  _31 = State->RxIndex;
+  _32 = (unsigned int) _31;
+  _33 = _32 * 4;
+  _34 = _30 + _33;
+  MEM[(uint32 *)_34] = Data;
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  _35 = State->RxIndex;
+  _36 = _35;
+  _37 = _36 + 1;
+  State->RxIndex = _37;
+  return;
+
+}
+
+
+Flexio_Spi_Ip_WriteShifterBuffer (uint8 Instance, uint8 TxShifterIndex)
+{
+  struct FLEXIO_Type * Base;
+  uint32 Data;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  _2 = State->TxBuffer;
+  if (_2 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _3 = State->ExternalDevice;
+  _4 = _3->DeviceParams;
+  _5 = _4->FrameSize;
+  if (_5 <= 8)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  _6 = State->TxBuffer;
+  _7 = State->TxIndex;
+  _8 = (sizetype) _7;
+  _9 = _6 + _8;
+  _10 = *_9;
+  Data = (uint32) _10;
+  goto <bb 9>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _11 = State->ExternalDevice;
+  _12 = _11->DeviceParams;
+  _13 = _12->FrameSize;
+  if (_13 <= 16)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _14 = State->TxBuffer;
+  _15 = State->TxIndex;
+  _16 = (unsigned int) _15;
+  _17 = _16 * 2;
+  _18 = _14 + _17;
+  _19 = MEM[(uint16 *)_18];
+  Data = (uint32) _19;
+  goto <bb 9>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  _20 = State->TxBuffer;
+  _21 = State->TxIndex;
+  _22 = (unsigned int) _21;
+  _23 = _22 * 4;
+  _24 = _20 + _23;
+  Data = MEM[(uint32 *)_24];
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  _25 = State->ExternalDevice;
+  _26 = _25->DeviceParams;
+  Data = _26->DefaultData;
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _27 = State->ExternalDevice;
+  _28 = _27->DeviceParams;
+  _29 = _28->Lsb;
+  if (_29 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  _30 = (int) TxShifterIndex;
+  Base->SHIFTBUF[_30] = Data;
+  goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  _31 = State->ExternalDevice;
+  _32 = _31->DeviceParams;
+  _33 = _32->FrameSize;
+  _34 = (unsigned int) _33;
+  _35 = 32 - _34;
+  Data = Data << _35;
+  # DEBUG BEGIN_STMT
+  _36 = (int) TxShifterIndex;
+  Base->SHIFTBUFBIS[_36] = Data;
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _37 = State->TxIndex;
+  _38 = _37;
+  _39 = _38 + 1;
+  State->TxIndex = _39;
+  return;
+
+}
+
+
+Flexio_Spi_Ip_SyncTransmitProcessData (const uint8 InstanceFlexio)
+{
+  const struct Flexio_Spi_Ip_StateStructureType * State;
+  const struct FLEXIO_Type * Base;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  boolean IsShifterFlagRaised;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  _1 = (int) InstanceFlexio;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  _2 = State->PhyUnitConfig;
+  TxShifterIndex = _2->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _3 = State->PhyUnitConfig;
+  RxShifterIndex = _3->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _4 = State->TxIndex;
+  _5 = State->ExpectedFifoWrites;
+  if (_4 != _5)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  IsShifterFlagRaised = Flexio_Mcl_Ip_GetShifterStatus (Base, TxShifterIndex);
+  # DEBUG BEGIN_STMT
+  if (IsShifterFlagRaised != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_WriteShifterBuffer (InstanceFlexio, TxShifterIndex);
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  _6 = State->RxIndex;
+  _7 = State->ExpectedFifoReads;
+  if (_6 != _7)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  IsShifterFlagRaised = Flexio_Mcl_Ip_GetShifterStatus (Base, RxShifterIndex);
+  # DEBUG BEGIN_STMT
+  if (IsShifterFlagRaised != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ReadShifterBuffer (InstanceFlexio, RxShifterIndex);
+
+  <bb 8> :
+  return;
+
+}
+
+
+Flexio_Spi_Ip_ConfigExternalDevice (const struct Flexio_Spi_Ip_StateStructureType * State)
+{
+  struct FLEXIO_Type * Base;
+  const struct Flexio_Spi_Ip_ExternalDeviceType * ExternalDevice;
+  uint32 FrameSize;
+  uint32 ClkTimerTrgsel;
+  uint8 InstanceFlexio;
+  uint8 CsTimerIndex;
+  uint8 ClkTimerIndex;
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  ExternalDevice = State->ExternalDevice;
+  # DEBUG BEGIN_STMT
+  InstanceFlexio = ExternalDevice->Instance;
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice->DeviceParams;
+  _2 = _1->FrameSize;
+  _3 = (long unsigned int) _2;
+  _4 = _3 * 2;
+  FrameSize = _4 + 4294967295;
+  # DEBUG BEGIN_STMT
+  _5 = State->PhyUnitConfig;
+  TxShifterIndex = _5->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _6 = State->PhyUnitConfig;
+  RxShifterIndex = _6->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _7 = State->PhyUnitConfig;
+  ClkTimerIndex = _7->ClkTimerIndex;
+  # DEBUG BEGIN_STMT
+  _8 = State->PhyUnitConfig;
+  CsTimerIndex = _8->CsTimerIndex;
+  # DEBUG BEGIN_STMT
+  _9 = (long unsigned int) TxShifterIndex;
+  _10 = _9 * 4;
+  ClkTimerTrgsel = _10 + 1;
+  # DEBUG BEGIN_STMT
+  _11 = (int) TxShifterIndex;
+  _12 = 1 << _11;
+  _13 = (unsigned char) _12;
+  _14 = (int) RxShifterIndex;
+  _15 = 1 << _14;
+  _16 = (unsigned char) _15;
+  _17 = _13 | _16;
+  Flexio_Mcl_Ip_SetShifterInterrupt (Base, _17, 0);
+  # DEBUG BEGIN_STMT
+  _18 = (int) TxShifterIndex;
+  _19 = 1 << _18;
+  _20 = (unsigned char) _19;
+  _21 = (int) RxShifterIndex;
+  _22 = 1 << _21;
+  _23 = (unsigned char) _22;
+  _24 = _20 | _23;
+  Flexio_Mcl_Ip_SetShifterDMARequest (Base, _24, 0);
+  # DEBUG BEGIN_STMT
+  _25 = (int) TxShifterIndex;
+  _26 = 1 << _25;
+  _27 = (unsigned char) _26;
+  _28 = (int) RxShifterIndex;
+  _29 = 1 << _28;
+  _30 = (unsigned char) _29;
+  _31 = _27 | _30;
+  Flexio_Mcl_Ip_SetShifterErrorInterrupt (Base, _31, 0);
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ClearShifterTimerRegisters (InstanceFlexio);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (Base, TxShifterIndex);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterErrorStatus (Base, RxShifterIndex);
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_ClearShifterStatus (Base, RxShifterIndex);
+  # DEBUG BEGIN_STMT
+  _32 = (int) TxShifterIndex;
+  _33 = ExternalDevice->TxShiftCtl;
+  Base->SHIFTCTL[_32] = _33;
+  # DEBUG BEGIN_STMT
+  _34 = (int) TxShifterIndex;
+  _35 = ExternalDevice->TxShiftCfg;
+  Base->SHIFTCFG[_34] = _35;
+  # DEBUG BEGIN_STMT
+  _36 = (int) RxShifterIndex;
+  _37 = ExternalDevice->RxShiftCtl;
+  Base->SHIFTCTL[_36] = _37;
+  # DEBUG BEGIN_STMT
+  _38 = (int) RxShifterIndex;
+  _39 = ExternalDevice->RxShiftCfg;
+  Base->SHIFTCFG[_38] = _39;
+  # DEBUG BEGIN_STMT
+  FrameSize = FrameSize << 8;
+  # DEBUG BEGIN_STMT
+  _40 = (int) ClkTimerIndex;
+  _41 = ExternalDevice->ClkTimeCfg;
+  Base->TIMCFG[_40] = _41;
+  # DEBUG BEGIN_STMT
+  _42 = ExternalDevice->ClkTimeCmpBaudRate;
+  _43 = _42 & 255;
+  _44 = FrameSize & 65280;
+  _45 = _43 | _44;
+  _46 = (int) ClkTimerIndex;
+  _47 = _45 & 65535;
+  Base->TIMCMP[_46] = _47;
+  # DEBUG BEGIN_STMT
+  _48 = (int) ClkTimerIndex;
+  _49 = Base->TIMCFG[_48];
+  _50 = ExternalDevice->ClkTimeCfgTimDec;
+  _51 = (int) ClkTimerIndex;
+  _52 = _49 | _50;
+  Base->TIMCFG[_51] = _52;
+  # DEBUG BEGIN_STMT
+  _53 = ExternalDevice->ClkTimeCtl;
+  _54 = ClkTimerTrgsel << 24;
+  _55 = (int) ClkTimerIndex;
+  _56 = _53 | _54;
+  Base->TIMCTL[_55] = _56;
+  # DEBUG BEGIN_STMT
+  _57 = (int) CsTimerIndex;
+  _58 = ExternalDevice->CsTimeCmp;
+  Base->TIMCMP[_57] = _58;
+  # DEBUG BEGIN_STMT
+  _59 = (int) CsTimerIndex;
+  _60 = ExternalDevice->CsTimeCfg;
+  Base->TIMCFG[_59] = _60;
+  # DEBUG BEGIN_STMT
+  _61 = (int) CsTimerIndex;
+  _62 = ExternalDevice->CsTimeCtl;
+  Base->TIMCTL[_61] = _62;
+  return;
+
+}
+
+
+Flexio_Spi_Ip_TransferProcess (uint8 Instance, uint8 ShifterIndex, uint8 ShifterMaskFlag, uint8 ShifterErrMaskFlag)
+{
+  uint8 RxShifterIndex;
+  uint8 TxShifterIndex;
+  boolean ErrorFlag;
+  struct Flexio_Spi_Ip_StateStructureType * State;
+  struct FLEXIO_Type * Base;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Base = 1077035008B;
+  # DEBUG BEGIN_STMT
+  _1 = (int) Instance;
+  State = Flexio_Spi_Ip_apxStateStructureArray[_1];
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 0;
+  # DEBUG BEGIN_STMT
+  TxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  RxShifterIndex = 0;
+  # DEBUG BEGIN_STMT
+  _2 = State->Status;
+  if (_2 == 2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _3 = State->PhyUnitConfig;
+  TxShifterIndex = _3->TxShifterIndex;
+  # DEBUG BEGIN_STMT
+  _4 = State->PhyUnitConfig;
+  RxShifterIndex = _4->RxShifterIndex;
+  # DEBUG BEGIN_STMT
+  if (ShifterErrMaskFlag != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  ErrorFlag = 1;
+  goto <bb 12>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  if (ShifterMaskFlag != 0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _5 = State->TxIndex;
+  _6 = State->ExpectedFifoWrites;
+  if (_5 != _6)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 7> :
+  # DEBUG BEGIN_STMT
+  if (ShifterIndex == TxShifterIndex)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_WriteShifterBuffer (Instance, TxShifterIndex);
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _7 = State->RxIndex;
+  _8 = State->ExpectedFifoReads;
+  if (_7 != _8)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 10> :
+  # DEBUG BEGIN_STMT
+  if (ShifterIndex == RxShifterIndex)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+
+  <bb 11> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_ReadShifterBuffer (Instance, RxShifterIndex);
+
+  <bb 12> :
+  # DEBUG BEGIN_STMT
+  _9 = State->RxIndex;
+  _10 = State->ExpectedFifoReads;
+  if (_9 == _10)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 13> :
+  if (ErrorFlag != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 14> :
+  # DEBUG BEGIN_STMT
+  _11 = (int) TxShifterIndex;
+  _12 = 1 << _11;
+  _13 = (unsigned char) _12;
+  _14 = (int) RxShifterIndex;
+  _15 = 1 << _14;
+  _16 = (unsigned char) _15;
+  _17 = _13 | _16;
+  Flexio_Mcl_Ip_SetShifterInterrupt (Base, _17, 0);
+  # DEBUG BEGIN_STMT
+  _18 = (int) TxShifterIndex;
+  _19 = 1 << _18;
+  _20 = (unsigned char) _19;
+  _21 = (int) RxShifterIndex;
+  _22 = 1 << _21;
+  _23 = (unsigned char) _22;
+  _24 = _20 | _23;
+  Flexio_Mcl_Ip_SetShifterErrorInterrupt (Base, _24, 0);
+  # DEBUG BEGIN_STMT
+  if (ErrorFlag != 0)
+    goto <bb 15>; [INV]
+  else
+    goto <bb 16>; [INV]
+
+  <bb 15> :
+  # DEBUG BEGIN_STMT
+  State->Status = 3;
+  goto <bb 17>; [INV]
+
+  <bb 16> :
+  # DEBUG BEGIN_STMT
+  State->Status = 1;
+
+  <bb 17> :
+  # DEBUG BEGIN_STMT
+  _25 = State->Callback;
+  if (_25 != 0B)
+    goto <bb 18>; [INV]
+  else
+    goto <bb 21>; [INV]
+
+  <bb 18> :
+  # DEBUG BEGIN_STMT
+  if (ErrorFlag != 0)
+    goto <bb 19>; [INV]
+  else
+    goto <bb 20>; [INV]
+
+  <bb 19> :
+  # DEBUG BEGIN_STMT
+  _26 = State->Callback;
+  _26 (Instance, 1);
+  goto <bb 21>; [INV]
+
+  <bb 20> :
+  # DEBUG BEGIN_STMT
+  _27 = State->Callback;
+  _27 (Instance, 0);
+
+  <bb 21> :
+  return;
+
+}
+
+
+DevAssert (volatile boolean x)
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  x.0_1 = x;
+  if (x.0_1 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 3>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  __asm__ __volatile__("BKPT #0");
+  # DEBUG BEGIN_STMT
+  goto <bb 3>; [INV]
+
+  <bb 4> :
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+

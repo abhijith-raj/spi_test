@@ -1,0 +1,3 @@
+../RTD/src/Lpspi_Ip_Irq.c:185:1:Lpspi_Ip_LPSPI_1_IRQHandler	0	static
+../RTD/src/Lpspi_Ip_Irq.c:191:6:Lpspi_Ip_LPSPI_1_IrqTxDmaHandler	0	static
+../RTD/src/Lpspi_Ip_Irq.c:195:6:Lpspi_Ip_LPSPI_1_IrqRxDmaHandler	0	static

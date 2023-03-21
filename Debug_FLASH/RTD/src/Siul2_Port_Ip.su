@@ -1,0 +1,8 @@
+../RTD/src/Siul2_Port_Ip.c:263:13:Siul2_Port_Ip_PinInit	12	static
+../RTD/src/Siul2_Port_Ip.c:564:30:Siul2_Port_Ip_Init	24	static
+../RTD/src/Siul2_Port_Ip.c:596:6:Siul2_Port_Ip_SetPullSel	16	static
+../RTD/src/Siul2_Port_Ip.c:670:6:Siul2_Port_Ip_SetOutputBuffer	24	static
+../RTD/src/Siul2_Port_Ip.c:702:6:Siul2_Port_Ip_SetInputBuffer	24	static
+../RTD/src/Siul2_Port_Ip.c:763:6:Siul2_Port_Ip_SetPinDirection	16	static
+../RTD/src/Siul2_Port_Ip.c:809:8:Siul2_Port_Ip_RevertPinConfiguration	24	static
+../RTD/src/Siul2_Port_Ip.c:863:6:Siul2_Port_Ip_GetPinConfiguration	24	static

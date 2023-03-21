@@ -1,0 +1,6 @@
+Callgraph clone;IntCtrl_Ip_DisableIrq;15;../RTD/src/IntCtrl_Ip.c;729;6;IntCtrl_Ip_Init;11;../RTD/src/IntCtrl_Ip.c;642;23;inlining to
+Callgraph clone;IntCtrl_Ip_EnableIrq;14;../RTD/src/IntCtrl_Ip.c;719;6;IntCtrl_Ip_Init;11;../RTD/src/IntCtrl_Ip.c;642;23;inlining to
+Callgraph clone;IntCtrl_Ip_SetPriority;16;../RTD/src/IntCtrl_Ip.c;739;6;IntCtrl_Ip_Init;11;../RTD/src/IntCtrl_Ip.c;642;23;inlining to
+Callgraph clone;IntCtrl_Ip_ClearPending;18;../RTD/src/IntCtrl_Ip.c;759;6;IntCtrl_Ip_Init;11;../RTD/src/IntCtrl_Ip.c;642;23;inlining to
+Callgraph clone;IntCtrl_Ip_InstallHandler;13;../RTD/src/IntCtrl_Ip.c;707;6;IntCtrl_Ip_ConfigIrqRouting;12;../RTD/src/IntCtrl_Ip.c;679;23;inlining to
+Callgraph clone;IntCtrl_Ip_SetTargetCores;22;../RTD/src/IntCtrl_Ip.c;806;6;IntCtrl_Ip_ConfigIrqRouting;12;../RTD/src/IntCtrl_Ip.c;679;23;inlining to

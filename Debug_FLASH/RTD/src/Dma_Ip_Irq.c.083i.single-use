@@ -1,0 +1,321 @@
+Variable g_ptHwChTcdPtrArray/0 is used by single function
+Dma0_Ch31_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 31);
+  return;
+
+}
+
+
+Dma0_Ch30_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 30);
+  return;
+
+}
+
+
+Dma0_Ch29_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 29);
+  return;
+
+}
+
+
+Dma0_Ch28_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 28);
+  return;
+
+}
+
+
+Dma0_Ch27_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 27);
+  return;
+
+}
+
+
+Dma0_Ch26_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 26);
+  return;
+
+}
+
+
+Dma0_Ch25_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 25);
+  return;
+
+}
+
+
+Dma0_Ch24_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 24);
+  return;
+
+}
+
+
+Dma0_Ch23_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 23);
+  return;
+
+}
+
+
+Dma0_Ch22_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 22);
+  return;
+
+}
+
+
+Dma0_Ch21_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 21);
+  return;
+
+}
+
+
+Dma0_Ch20_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 20);
+  return;
+
+}
+
+
+Dma0_Ch19_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 19);
+  return;
+
+}
+
+
+Dma0_Ch18_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 18);
+  return;
+
+}
+
+
+Dma0_Ch17_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 17);
+  return;
+
+}
+
+
+Dma0_Ch16_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 16);
+  return;
+
+}
+
+
+Dma0_Ch15_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 15);
+  return;
+
+}
+
+
+Dma0_Ch14_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 14);
+  return;
+
+}
+
+
+Dma0_Ch13_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 13);
+  return;
+
+}
+
+
+Dma0_Ch12_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 12);
+  return;
+
+}
+
+
+Dma0_Ch11_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 11);
+  return;
+
+}
+
+
+Dma0_Ch10_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 10);
+  return;
+
+}
+
+
+Dma0_Ch9_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 9);
+  return;
+
+}
+
+
+Dma0_Ch8_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 8);
+  return;
+
+}
+
+
+Dma0_Ch7_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 7);
+  return;
+
+}
+
+
+Dma0_Ch6_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 6);
+  return;
+
+}
+
+
+Dma0_Ch5_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 5);
+  return;
+
+}
+
+
+Dma0_Ch4_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 4);
+  return;
+
+}
+
+
+Dma0_Ch3_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 3);
+  return;
+
+}
+
+
+Dma0_Ch2_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 2);
+  return;
+
+}
+
+
+Dma0_Ch1_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 1);
+  return;
+
+}
+
+
+Dma0_Ch0_IRQHandler ()
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  IrqHandler (3, 0, 0);
+  return;
+
+}
+
+

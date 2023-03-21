@@ -1,0 +1,3518 @@
+Trivially needed symbols: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_apUserConfig/30 Lpuart_Uart_Ip_apStateStructure/28
+
+
+Initial Symbol table:
+
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03) @060269a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03) @060268c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+*.LC2/69 (*.LC2) @06028090
+  Type: variable definition analyzed
+  Visibility: artificial
+  Aux: @06028000
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC1/68 (*.LC1) @06028000
+  Type: variable definition analyzed
+  Visibility: artificial
+  Aux: @06021f30
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC0/67 (*.LC0) @06021f30
+  Type: variable definition analyzed
+  Visibility: artificial
+  Aux: @05e48e00
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02) @06026000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02) @06011ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01) @060118c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01) @060117e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00) @060110e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00) @06011000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+OsIf_GetElapsed/60 (OsIf_GetElapsed) @05fa0d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_CheckTimeout/24 
+  Calls: 
+OsIf_MicrosToTicks/59 (OsIf_MicrosToTicks) @05fa0b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+OsIf_GetCounter/58 (OsIf_GetCounter) @05fa0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+Lpuart_Uart_Ip_GetData/57 (Lpuart_Uart_Ip_GetData) @05f8d2a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e25a80
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_StartGetData/39 
+  Calls: Lpuart_Uart_Ip_Getchar10/18 Lpuart_Uart_Ip_Getchar9/17 Lpuart_Uart_Ip_Getchar/16 
+Lpuart_Uart_Ip_PutData/56 (Lpuart_Uart_Ip_PutData) @05f8dee0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e488c0
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: Lpuart_Uart_Ip_Putchar10/15 Lpuart_Uart_Ip_Putchar9/14 Lpuart_Uart_Ip_Putchar/13 
+Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (Lpuart_Uart_Ip_CompleteReceiveDataUsingInt) @05f8dc40
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05f7f460
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_AbortReceivingData/42 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (Lpuart_Uart_Ip_StartReceiveDataUsingInt) @05f8d9a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e69e00
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 
+Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (Lpuart_Uart_Ip_CompleteSendDataUsingInt) @05f8d700
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e508c0
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartSendDataUsingInt/52 (Lpuart_Uart_Ip_StartSendDataUsingInt) @05f8d460
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e697e0
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetTransmitterCmd/1 
+Lpuart_Uart_Ip_ErrIrqHandler/51 (Lpuart_Uart_Ip_ErrIrqHandler) @05f8d1c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05f7f2a0
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (Lpuart_Uart_Ip_TxCompleteIrqHandler) @05f7fd20
+  Type: function definition analyzed
+  Visibility:
+  Aux: @01981040
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (Lpuart_Uart_Ip_TxEmptyIrqHandler) @05f7f7e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e31620
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_PutData/56 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_RxIrqHandler/48 (Lpuart_Uart_Ip_RxIrqHandler) @05f7f2a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05f7f7e0
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_IrqHandler/47 (Lpuart_Uart_Ip_IrqHandler) @05f7fee0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @01981040
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_Getchar/16 DevAssert/27 
+Lpuart_Uart_Ip_SetRxBuffer/46 (Lpuart_Uart_Ip_SetRxBuffer) @05f7fc40
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05f7fee0
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetTxBuffer/45 (Lpuart_Uart_Ip_SetTxBuffer) @05f7f9a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05f7fc40
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetBaudRate/44 (Lpuart_Uart_Ip_GetBaudRate) @05f7f700
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05f7f9a0
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetBaudRate/43 (Lpuart_Uart_Ip_SetBaudRate) @05f7f460
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05f7f700
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortReceivingData/42 (Lpuart_Uart_Ip_AbortReceivingData) @05f7f1c0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05f7f460
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetReceiveStatus/41 (Lpuart_Uart_Ip_GetReceiveStatus) @05e69e00
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05f7f1c0
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncReceive/40 (Lpuart_Uart_Ip_AsyncReceive) @05e698c0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e69e00
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_StartGetData/39 (Lpuart_Uart_Ip_StartGetData) @05e69000
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e25a80
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) *.LC0/67 (read) *.LC1/68 (read) *.LC2/69 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 
+Lpuart_Uart_Ip_SyncReceive/38 (Lpuart_Uart_Ip_SyncReceive) @05e69d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e698c0
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortSendingData/37 (Lpuart_Uart_Ip_AbortSendingData) @05e69a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e69d20
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushTxBuffer/25 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetTransmitStatus/36 (Lpuart_Uart_Ip_GetTransmitStatus) @05e697e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e69a80
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncSend/35 (Lpuart_Uart_Ip_AsyncSend) @05e69540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e697e0
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartSendDataUsingInt/52 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SyncSend/34 (Lpuart_Uart_Ip_SyncSend) @05e691c0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e69540
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_PutData/56 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Deinit/33 (Lpuart_Uart_Ip_Deinit) @05ee6e00
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05e691c0
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartTimeout/23 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Init/32 (Lpuart_Uart_Ip_Init) @05ee6d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @05ee6e00
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetStopBitCount/10 Lpuart_Uart_Ip_SetParityMode/9 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 Lpuart_Uart_Ip_Hw_Init/0 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_apBases/31 (Lpuart_Uart_Ip_apBases) @05edea68
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @05ede900
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpuart_Uart_Ip_apUserConfig/30 (Lpuart_Uart_Ip_apUserConfig) @05ede990
+  Type: variable definition analyzed
+  Visibility: public
+  Aux: @05ee6d20
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructuresArray/29 (Lpuart_Uart_Ip_apStateStructuresArray) @05ede900
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @05dbb7e0
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (write) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_GetBaudRate/44 (read) Lpuart_Uart_Ip_SetTxBuffer/45 (read) Lpuart_Uart_Ip_SetRxBuffer/46 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructure/28 (Lpuart_Uart_Ip_apStateStructure) @05ede870
+  Type: variable definition analyzed
+  Visibility: public
+  Aux: @05ede990
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/27 (DevAssert) @05dbb7e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e25540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_FlushRxBuffer/26 (Lpuart_Uart_Ip_FlushRxBuffer) @05e50b60
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e69e00
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_FlushTxBuffer/25 (Lpuart_Uart_Ip_FlushTxBuffer) @05e508c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e69d20
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: 
+Lpuart_Uart_Ip_CheckTimeout/24 (Lpuart_Uart_Ip_CheckTimeout) @05e50620
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e31380
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_GetElapsed/60 
+Lpuart_Uart_Ip_StartTimeout/23 (Lpuart_Uart_Ip_StartTimeout) @05e50380
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e50620
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_MicrosToTicks/59 OsIf_GetCounter/58 
+Lpuart_Uart_Ip_ClearErrorFlags/22 (Lpuart_Uart_Ip_ClearErrorFlags) @05e500e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e50b60
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 (Lpuart_Uart_Ip_ClearStatusFlagWithMask) @05e48e00
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05f8d2a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_StartGetData/39 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlag/20 (Lpuart_Uart_Ip_ClearStatusFlag) @05e48b60
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05f7f2a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 
+  Calls: 
+Lpuart_Uart_Ip_GetStatusFlag/19 (Lpuart_Uart_Ip_GetStatusFlag) @05e488c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e257e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Getchar10/18 (Lpuart_Uart_Ip_Getchar10) @05e48620
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e25a80
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar9/17 (Lpuart_Uart_Ip_Getchar9) @05e48380
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e48620
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar/16 (Lpuart_Uart_Ip_Getchar) @05e480e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e698c0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_Putchar10/15 (Lpuart_Uart_Ip_Putchar10) @05e31e00
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e488c0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar9/14 (Lpuart_Uart_Ip_Putchar9) @05e31b60
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e31e00
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar/13 (Lpuart_Uart_Ip_Putchar) @05e318c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e31b60
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_GetIntMode/12 (Lpuart_Uart_Ip_GetIntMode) @05e31620
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05f7fd20
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: 
+Lpuart_Uart_Ip_SetIntMode/11 (Lpuart_Uart_Ip_SetIntMode) @05e31380
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e691c0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: 
+Lpuart_Uart_Ip_SetStopBitCount/10 (Lpuart_Uart_Ip_SetStopBitCount) @05e310e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05ee6e00
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetParityMode/9 (Lpuart_Uart_Ip_SetParityMode) @05e2ce00
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e310e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBitCountPerChar/8 (Lpuart_Uart_Ip_SetBitCountPerChar) @05e2cb60
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e2ce00
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 (Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd) @05e2c8c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e2c380
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_GetOversamplingRatio/6 (Lpuart_Uart_Ip_GetOversamplingRatio) @05e2c620
+  Type: function definition
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SetOversamplingRatio/5 (Lpuart_Uart_Ip_SetOversamplingRatio) @05e2c380
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e25d20
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_GetBaudRateDivisor/4 (Lpuart_Uart_Ip_GetBaudRateDivisor) @05e2c000
+  Type: function definition
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRateDivisor/3 (Lpuart_Uart_Ip_SetBaudRateDivisor) @05e25d20
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e2cb60
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetReceiverCmd/2 (Lpuart_Uart_Ip_SetReceiverCmd) @05e25a80
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e480e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_SetTransmitterCmd/1 (Lpuart_Uart_Ip_SetTransmitterCmd) @05e257e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e69540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Hw_Init/0 (Lpuart_Uart_Ip_Hw_Init) @05e25540
+  Type: function definition analyzed
+  Visibility:
+  Aux: @05e2c8c0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+
+Removing unused symbols: Lpuart_Uart_Ip_GetOversamplingRatio/6 Lpuart_Uart_Ip_GetBaudRateDivisor/4
+
+Reclaimed Symbol table:
+
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03) @060269a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03) @060268c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+*.LC2/69 (*.LC2) @06028090
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC1/68 (*.LC1) @06028000
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC0/67 (*.LC0) @06021f30
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02) @06026000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02) @06011ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01) @060118c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01) @060117e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00) @060110e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00) @06011000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+OsIf_GetElapsed/60 (OsIf_GetElapsed) @05fa0d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_CheckTimeout/24 
+  Calls: 
+OsIf_MicrosToTicks/59 (OsIf_MicrosToTicks) @05fa0b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+OsIf_GetCounter/58 (OsIf_GetCounter) @05fa0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+Lpuart_Uart_Ip_GetData/57 (Lpuart_Uart_Ip_GetData) @05f8d2a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_StartGetData/39 
+  Calls: Lpuart_Uart_Ip_Getchar10/18 Lpuart_Uart_Ip_Getchar9/17 Lpuart_Uart_Ip_Getchar/16 
+Lpuart_Uart_Ip_PutData/56 (Lpuart_Uart_Ip_PutData) @05f8dee0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: Lpuart_Uart_Ip_Putchar10/15 Lpuart_Uart_Ip_Putchar9/14 Lpuart_Uart_Ip_Putchar/13 
+Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (Lpuart_Uart_Ip_CompleteReceiveDataUsingInt) @05f8dc40
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_AbortReceivingData/42 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (Lpuart_Uart_Ip_StartReceiveDataUsingInt) @05f8d9a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 
+Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (Lpuart_Uart_Ip_CompleteSendDataUsingInt) @05f8d700
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartSendDataUsingInt/52 (Lpuart_Uart_Ip_StartSendDataUsingInt) @05f8d460
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetTransmitterCmd/1 
+Lpuart_Uart_Ip_ErrIrqHandler/51 (Lpuart_Uart_Ip_ErrIrqHandler) @05f8d1c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (Lpuart_Uart_Ip_TxCompleteIrqHandler) @05f7fd20
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (Lpuart_Uart_Ip_TxEmptyIrqHandler) @05f7f7e0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_PutData/56 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_RxIrqHandler/48 (Lpuart_Uart_Ip_RxIrqHandler) @05f7f2a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_IrqHandler/47 (Lpuart_Uart_Ip_IrqHandler) @05f7fee0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_Getchar/16 DevAssert/27 
+Lpuart_Uart_Ip_SetRxBuffer/46 (Lpuart_Uart_Ip_SetRxBuffer) @05f7fc40
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetTxBuffer/45 (Lpuart_Uart_Ip_SetTxBuffer) @05f7f9a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetBaudRate/44 (Lpuart_Uart_Ip_GetBaudRate) @05f7f700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetBaudRate/43 (Lpuart_Uart_Ip_SetBaudRate) @05f7f460
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortReceivingData/42 (Lpuart_Uart_Ip_AbortReceivingData) @05f7f1c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetReceiveStatus/41 (Lpuart_Uart_Ip_GetReceiveStatus) @05e69e00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncReceive/40 (Lpuart_Uart_Ip_AsyncReceive) @05e698c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_StartGetData/39 (Lpuart_Uart_Ip_StartGetData) @05e69000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) *.LC0/67 (read) *.LC1/68 (read) *.LC2/69 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 
+Lpuart_Uart_Ip_SyncReceive/38 (Lpuart_Uart_Ip_SyncReceive) @05e69d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortSendingData/37 (Lpuart_Uart_Ip_AbortSendingData) @05e69a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushTxBuffer/25 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetTransmitStatus/36 (Lpuart_Uart_Ip_GetTransmitStatus) @05e697e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncSend/35 (Lpuart_Uart_Ip_AsyncSend) @05e69540
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartSendDataUsingInt/52 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SyncSend/34 (Lpuart_Uart_Ip_SyncSend) @05e691c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_PutData/56 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Deinit/33 (Lpuart_Uart_Ip_Deinit) @05ee6e00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartTimeout/23 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Init/32 (Lpuart_Uart_Ip_Init) @05ee6d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetStopBitCount/10 Lpuart_Uart_Ip_SetParityMode/9 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 Lpuart_Uart_Ip_Hw_Init/0 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_apBases/31 (Lpuart_Uart_Ip_apBases) @05edea68
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpuart_Uart_Ip_apUserConfig/30 (Lpuart_Uart_Ip_apUserConfig) @05ede990
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructuresArray/29 (Lpuart_Uart_Ip_apStateStructuresArray) @05ede900
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (write) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_GetBaudRate/44 (read) Lpuart_Uart_Ip_SetTxBuffer/45 (read) Lpuart_Uart_Ip_SetRxBuffer/46 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructure/28 (Lpuart_Uart_Ip_apStateStructure) @05ede870
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/27 (DevAssert) @05dbb7e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_FlushRxBuffer/26 (Lpuart_Uart_Ip_FlushRxBuffer) @05e50b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_FlushTxBuffer/25 (Lpuart_Uart_Ip_FlushTxBuffer) @05e508c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: 
+Lpuart_Uart_Ip_CheckTimeout/24 (Lpuart_Uart_Ip_CheckTimeout) @05e50620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_GetElapsed/60 
+Lpuart_Uart_Ip_StartTimeout/23 (Lpuart_Uart_Ip_StartTimeout) @05e50380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_MicrosToTicks/59 OsIf_GetCounter/58 
+Lpuart_Uart_Ip_ClearErrorFlags/22 (Lpuart_Uart_Ip_ClearErrorFlags) @05e500e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 (Lpuart_Uart_Ip_ClearStatusFlagWithMask) @05e48e00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_StartGetData/39 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlag/20 (Lpuart_Uart_Ip_ClearStatusFlag) @05e48b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 
+  Calls: 
+Lpuart_Uart_Ip_GetStatusFlag/19 (Lpuart_Uart_Ip_GetStatusFlag) @05e488c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Getchar10/18 (Lpuart_Uart_Ip_Getchar10) @05e48620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar9/17 (Lpuart_Uart_Ip_Getchar9) @05e48380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar/16 (Lpuart_Uart_Ip_Getchar) @05e480e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_Putchar10/15 (Lpuart_Uart_Ip_Putchar10) @05e31e00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar9/14 (Lpuart_Uart_Ip_Putchar9) @05e31b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar/13 (Lpuart_Uart_Ip_Putchar) @05e318c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_GetIntMode/12 (Lpuart_Uart_Ip_GetIntMode) @05e31620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: 
+Lpuart_Uart_Ip_SetIntMode/11 (Lpuart_Uart_Ip_SetIntMode) @05e31380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: 
+Lpuart_Uart_Ip_SetStopBitCount/10 (Lpuart_Uart_Ip_SetStopBitCount) @05e310e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetParityMode/9 (Lpuart_Uart_Ip_SetParityMode) @05e2ce00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBitCountPerChar/8 (Lpuart_Uart_Ip_SetBitCountPerChar) @05e2cb60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 (Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd) @05e2c8c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetOversamplingRatio/5 (Lpuart_Uart_Ip_SetOversamplingRatio) @05e2c380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRateDivisor/3 (Lpuart_Uart_Ip_SetBaudRateDivisor) @05e25d20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetReceiverCmd/2 (Lpuart_Uart_Ip_SetReceiverCmd) @05e25a80
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_SetTransmitterCmd/1 (Lpuart_Uart_Ip_SetTransmitterCmd) @05e257e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Hw_Init/0 (Lpuart_Uart_Ip_Hw_Init) @05e25540
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+
+
+Initial Symbol table:
+
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03) @060269a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03) @060268c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+*.LC2/69 (*.LC2) @06028090
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC1/68 (*.LC1) @06028000
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC0/67 (*.LC0) @06021f30
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02) @06026000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02) @06011ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01) @060118c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01) @060117e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00) @060110e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00) @06011000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+OsIf_GetElapsed/60 (OsIf_GetElapsed) @05fa0d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_CheckTimeout/24 
+  Calls: 
+OsIf_MicrosToTicks/59 (OsIf_MicrosToTicks) @05fa0b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+OsIf_GetCounter/58 (OsIf_GetCounter) @05fa0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+Lpuart_Uart_Ip_GetData/57 (Lpuart_Uart_Ip_GetData) @05f8d2a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_StartGetData/39 
+  Calls: Lpuart_Uart_Ip_Getchar10/18 Lpuart_Uart_Ip_Getchar9/17 Lpuart_Uart_Ip_Getchar/16 
+Lpuart_Uart_Ip_PutData/56 (Lpuart_Uart_Ip_PutData) @05f8dee0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: Lpuart_Uart_Ip_Putchar10/15 Lpuart_Uart_Ip_Putchar9/14 Lpuart_Uart_Ip_Putchar/13 
+Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (Lpuart_Uart_Ip_CompleteReceiveDataUsingInt) @05f8dc40
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_AbortReceivingData/42 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (Lpuart_Uart_Ip_StartReceiveDataUsingInt) @05f8d9a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 
+Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (Lpuart_Uart_Ip_CompleteSendDataUsingInt) @05f8d700
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartSendDataUsingInt/52 (Lpuart_Uart_Ip_StartSendDataUsingInt) @05f8d460
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetTransmitterCmd/1 
+Lpuart_Uart_Ip_ErrIrqHandler/51 (Lpuart_Uart_Ip_ErrIrqHandler) @05f8d1c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (Lpuart_Uart_Ip_TxCompleteIrqHandler) @05f7fd20
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (Lpuart_Uart_Ip_TxEmptyIrqHandler) @05f7f7e0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_PutData/56 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_RxIrqHandler/48 (Lpuart_Uart_Ip_RxIrqHandler) @05f7f2a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_IrqHandler/47 (Lpuart_Uart_Ip_IrqHandler) @05f7fee0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_Getchar/16 DevAssert/27 
+Lpuart_Uart_Ip_SetRxBuffer/46 (Lpuart_Uart_Ip_SetRxBuffer) @05f7fc40
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetTxBuffer/45 (Lpuart_Uart_Ip_SetTxBuffer) @05f7f9a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetBaudRate/44 (Lpuart_Uart_Ip_GetBaudRate) @05f7f700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetBaudRate/43 (Lpuart_Uart_Ip_SetBaudRate) @05f7f460
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortReceivingData/42 (Lpuart_Uart_Ip_AbortReceivingData) @05f7f1c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetReceiveStatus/41 (Lpuart_Uart_Ip_GetReceiveStatus) @05e69e00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncReceive/40 (Lpuart_Uart_Ip_AsyncReceive) @05e698c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_StartGetData/39 (Lpuart_Uart_Ip_StartGetData) @05e69000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) *.LC0/67 (read) *.LC1/68 (read) *.LC2/69 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 
+Lpuart_Uart_Ip_SyncReceive/38 (Lpuart_Uart_Ip_SyncReceive) @05e69d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortSendingData/37 (Lpuart_Uart_Ip_AbortSendingData) @05e69a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushTxBuffer/25 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetTransmitStatus/36 (Lpuart_Uart_Ip_GetTransmitStatus) @05e697e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncSend/35 (Lpuart_Uart_Ip_AsyncSend) @05e69540
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartSendDataUsingInt/52 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SyncSend/34 (Lpuart_Uart_Ip_SyncSend) @05e691c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_PutData/56 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Deinit/33 (Lpuart_Uart_Ip_Deinit) @05ee6e00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartTimeout/23 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Init/32 (Lpuart_Uart_Ip_Init) @05ee6d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetStopBitCount/10 Lpuart_Uart_Ip_SetParityMode/9 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 Lpuart_Uart_Ip_Hw_Init/0 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_apBases/31 (Lpuart_Uart_Ip_apBases) @05edea68
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpuart_Uart_Ip_apUserConfig/30 (Lpuart_Uart_Ip_apUserConfig) @05ede990
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructuresArray/29 (Lpuart_Uart_Ip_apStateStructuresArray) @05ede900
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (write) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_GetBaudRate/44 (read) Lpuart_Uart_Ip_SetTxBuffer/45 (read) Lpuart_Uart_Ip_SetRxBuffer/46 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructure/28 (Lpuart_Uart_Ip_apStateStructure) @05ede870
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/27 (DevAssert) @05dbb7e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_FlushRxBuffer/26 (Lpuart_Uart_Ip_FlushRxBuffer) @05e50b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_FlushTxBuffer/25 (Lpuart_Uart_Ip_FlushTxBuffer) @05e508c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: 
+Lpuart_Uart_Ip_CheckTimeout/24 (Lpuart_Uart_Ip_CheckTimeout) @05e50620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_GetElapsed/60 
+Lpuart_Uart_Ip_StartTimeout/23 (Lpuart_Uart_Ip_StartTimeout) @05e50380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_MicrosToTicks/59 OsIf_GetCounter/58 
+Lpuart_Uart_Ip_ClearErrorFlags/22 (Lpuart_Uart_Ip_ClearErrorFlags) @05e500e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 (Lpuart_Uart_Ip_ClearStatusFlagWithMask) @05e48e00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_StartGetData/39 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlag/20 (Lpuart_Uart_Ip_ClearStatusFlag) @05e48b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 
+  Calls: 
+Lpuart_Uart_Ip_GetStatusFlag/19 (Lpuart_Uart_Ip_GetStatusFlag) @05e488c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Getchar10/18 (Lpuart_Uart_Ip_Getchar10) @05e48620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar9/17 (Lpuart_Uart_Ip_Getchar9) @05e48380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar/16 (Lpuart_Uart_Ip_Getchar) @05e480e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_Putchar10/15 (Lpuart_Uart_Ip_Putchar10) @05e31e00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar9/14 (Lpuart_Uart_Ip_Putchar9) @05e31b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar/13 (Lpuart_Uart_Ip_Putchar) @05e318c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_GetIntMode/12 (Lpuart_Uart_Ip_GetIntMode) @05e31620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: 
+Lpuart_Uart_Ip_SetIntMode/11 (Lpuart_Uart_Ip_SetIntMode) @05e31380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: 
+Lpuart_Uart_Ip_SetStopBitCount/10 (Lpuart_Uart_Ip_SetStopBitCount) @05e310e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetParityMode/9 (Lpuart_Uart_Ip_SetParityMode) @05e2ce00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBitCountPerChar/8 (Lpuart_Uart_Ip_SetBitCountPerChar) @05e2cb60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 (Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd) @05e2c8c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetOversamplingRatio/5 (Lpuart_Uart_Ip_SetOversamplingRatio) @05e2c380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRateDivisor/3 (Lpuart_Uart_Ip_SetBaudRateDivisor) @05e25d20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetReceiverCmd/2 (Lpuart_Uart_Ip_SetReceiverCmd) @05e25a80
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_SetTransmitterCmd/1 (Lpuart_Uart_Ip_SetTransmitterCmd) @05e257e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Hw_Init/0 (Lpuart_Uart_Ip_Hw_Init) @05e25540
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03) @060269a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03) @060268c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: 
+*.LC2/69 (*.LC2) @06028090
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC1/68 (*.LC1) @06028000
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+*.LC0/67 (*.LC0) @06021f30
+  Type: variable definition analyzed
+  Visibility: artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02) @06026000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02) @06011ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01) @060118c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01) @060117e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00) @060110e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00) @06011000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+OsIf_GetElapsed/60 (OsIf_GetElapsed) @05fa0d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_CheckTimeout/24 
+  Calls: 
+OsIf_MicrosToTicks/59 (OsIf_MicrosToTicks) @05fa0b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+OsIf_GetCounter/58 (OsIf_GetCounter) @05fa0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout/23 
+  Calls: 
+Lpuart_Uart_Ip_GetData/57 (Lpuart_Uart_Ip_GetData) @05f8d2a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_StartGetData/39 
+  Calls: Lpuart_Uart_Ip_Getchar10/18 Lpuart_Uart_Ip_Getchar9/17 Lpuart_Uart_Ip_Getchar/16 
+Lpuart_Uart_Ip_PutData/56 (Lpuart_Uart_Ip_PutData) @05f8dee0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: Lpuart_Uart_Ip_Putchar10/15 Lpuart_Uart_Ip_Putchar9/14 Lpuart_Uart_Ip_Putchar/13 
+Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (Lpuart_Uart_Ip_CompleteReceiveDataUsingInt) @05f8dc40
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_AbortReceivingData/42 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (Lpuart_Uart_Ip_StartReceiveDataUsingInt) @05f8d9a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 
+Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (Lpuart_Uart_Ip_CompleteSendDataUsingInt) @05f8d700
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 
+Lpuart_Uart_Ip_StartSendDataUsingInt/52 (Lpuart_Uart_Ip_StartSendDataUsingInt) @05f8d460
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetTransmitterCmd/1 
+Lpuart_Uart_Ip_ErrIrqHandler/51 (Lpuart_Uart_Ip_ErrIrqHandler) @05f8d1c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_ClearStatusFlag/20 Lpuart_Uart_Ip_GetStatusFlag/19 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (Lpuart_Uart_Ip_TxCompleteIrqHandler) @05f7fd20
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (Lpuart_Uart_Ip_TxEmptyIrqHandler) @05f7f7e0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_PutData/56 
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_RxIrqHandler/48 (Lpuart_Uart_Ip_RxIrqHandler) @05f7f2a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpuart_Uart_Ip_IrqHandler/47 (Lpuart_Uart_Ip_IrqHandler) @05f7fee0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_RxIrqHandler/48 Lpuart_Uart_Ip_GetIntMode/12 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_Getchar/16 DevAssert/27 
+Lpuart_Uart_Ip_SetRxBuffer/46 (Lpuart_Uart_Ip_SetRxBuffer) @05f7fc40
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetTxBuffer/45 (Lpuart_Uart_Ip_SetTxBuffer) @05f7f9a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetBaudRate/44 (Lpuart_Uart_Ip_GetBaudRate) @05f7f700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SetBaudRate/43 (Lpuart_Uart_Ip_SetBaudRate) @05f7f460
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortReceivingData/42 (Lpuart_Uart_Ip_AbortReceivingData) @05f7f1c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushRxBuffer/26 Lpuart_Uart_Ip_ClearErrorFlags/22 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetReceiveStatus/41 (Lpuart_Uart_Ip_GetReceiveStatus) @05e69e00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncReceive/40 (Lpuart_Uart_Ip_AsyncReceive) @05e698c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_StartGetData/39 (Lpuart_Uart_Ip_StartGetData) @05e69000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) *.LC0/67 (read) *.LC1/68 (read) *.LC2/69 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 
+Lpuart_Uart_Ip_SyncReceive/38 (Lpuart_Uart_Ip_SyncReceive) @05e69d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_Getchar/16 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetReceiverCmd/2 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AbortSendingData/37 (Lpuart_Uart_Ip_AbortSendingData) @05e69a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_FlushTxBuffer/25 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_GetTransmitStatus/36 (Lpuart_Uart_Ip_GetTransmitStatus) @05e697e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_AsyncSend/35 (Lpuart_Uart_Ip_AsyncSend) @05e69540
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartSendDataUsingInt/52 DevAssert/27 DevAssert/27 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_SyncSend/34 (Lpuart_Uart_Ip_SyncSend) @05e691c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_GetStatusFlag/19 Lpuart_Uart_Ip_PutData/56 Lpuart_Uart_Ip_StartTimeout/23 Lpuart_Uart_Ip_SetTransmitterCmd/1 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Deinit/33 (Lpuart_Uart_Ip_Deinit) @05ee6e00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_SetIntMode/11 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartTimeout/23 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_Init/32 (Lpuart_Uart_Ip_Init) @05ee6d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetStopBitCount/10 Lpuart_Uart_Ip_SetParityMode/9 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBitCountPerChar/8 Lpuart_Uart_Ip_SetBaudRateDivisor/3 Lpuart_Uart_Ip_SetOversamplingRatio/5 Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 Lpuart_Uart_Ip_Hw_Init/0 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 DevAssert/27 
+Lpuart_Uart_Ip_apBases/31 (Lpuart_Uart_Ip_apBases) @05edea68
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpuart_Uart_Ip_apUserConfig/30 (Lpuart_Uart_Ip_apUserConfig) @05ede990
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructuresArray/29 (Lpuart_Uart_Ip_apStateStructuresArray) @05ede900
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_Deinit/33 (write) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_GetBaudRate/44 (read) Lpuart_Uart_Ip_SetTxBuffer/45 (read) Lpuart_Uart_Ip_SetRxBuffer/46 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructure/28 (Lpuart_Uart_Ip_apStateStructure) @05ede870
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/27 (DevAssert) @05dbb7e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetRxBuffer/46 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_SetTxBuffer/45 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_GetBaudRate/44 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_GetReceiveStatus/41 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_AsyncReceive/40 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_AbortSendingData/37 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_GetTransmitStatus/36 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_AsyncSend/35 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_FlushRxBuffer/26 (Lpuart_Uart_Ip_FlushRxBuffer) @05e50b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_FlushTxBuffer/25 (Lpuart_Uart_Ip_FlushTxBuffer) @05e508c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_AbortSendingData/37 
+  Calls: 
+Lpuart_Uart_Ip_CheckTimeout/24 (Lpuart_Uart_Ip_CheckTimeout) @05e50620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_GetElapsed/60 
+Lpuart_Uart_Ip_StartTimeout/23 (Lpuart_Uart_Ip_StartTimeout) @05e50380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 
+  Calls: OsIf_MicrosToTicks/59 OsIf_GetCounter/58 
+Lpuart_Uart_Ip_ClearErrorFlags/22 (Lpuart_Uart_Ip_ClearErrorFlags) @05e500e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_AbortReceivingData/42 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlagWithMask/21 (Lpuart_Uart_Ip_ClearStatusFlagWithMask) @05e48e00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_StartGetData/39 
+  Calls: 
+Lpuart_Uart_Ip_ClearStatusFlag/20 (Lpuart_Uart_Ip_ClearStatusFlag) @05e48b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 
+  Calls: 
+Lpuart_Uart_Ip_GetStatusFlag/19 (Lpuart_Uart_Ip_GetStatusFlag) @05e488c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Getchar10/18 (Lpuart_Uart_Ip_Getchar10) @05e48620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar9/17 (Lpuart_Uart_Ip_Getchar9) @05e48380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 
+  Calls: 
+Lpuart_Uart_Ip_Getchar/16 (Lpuart_Uart_Ip_Getchar) @05e480e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_GetData/57 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_Putchar10/15 (Lpuart_Uart_Ip_Putchar10) @05e31e00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar9/14 (Lpuart_Uart_Ip_Putchar9) @05e31b60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_Putchar/13 (Lpuart_Uart_Ip_Putchar) @05e318c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 
+  Calls: 
+Lpuart_Uart_Ip_GetIntMode/12 (Lpuart_Uart_Ip_GetIntMode) @05e31620
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_ErrIrqHandler/51 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 Lpuart_Uart_Ip_IrqHandler/47 
+  Calls: 
+Lpuart_Uart_Ip_SetIntMode/11 (Lpuart_Uart_Ip_SetIntMode) @05e31380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_TxEmptyIrqHandler/49 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 Lpuart_Uart_Ip_Deinit/33 
+  Calls: 
+Lpuart_Uart_Ip_SetStopBitCount/10 (Lpuart_Uart_Ip_SetStopBitCount) @05e310e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetParityMode/9 (Lpuart_Uart_Ip_SetParityMode) @05e2ce00
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBitCountPerChar/8 (Lpuart_Uart_Ip_SetBitCountPerChar) @05e2cb60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd/7 (Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd) @05e2c8c0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetOversamplingRatio/5 (Lpuart_Uart_Ip_SetOversamplingRatio) @05e2c380
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRateDivisor/3 (Lpuart_Uart_Ip_SetBaudRateDivisor) @05e25d20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 Lpuart_Uart_Ip_Init/32 
+  Calls: 
+Lpuart_Uart_Ip_SetReceiverCmd/2 (Lpuart_Uart_Ip_SetReceiverCmd) @05e25a80
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 Lpuart_Uart_Ip_StartGetData/39 Lpuart_Uart_Ip_SyncReceive/38 Lpuart_Uart_Ip_SyncReceive/38 
+  Calls: 
+Lpuart_Uart_Ip_SetTransmitterCmd/1 (Lpuart_Uart_Ip_SetTransmitterCmd) @05e257e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 Lpuart_Uart_Ip_StartSendDataUsingInt/52 Lpuart_Uart_Ip_SyncSend/34 Lpuart_Uart_Ip_SyncSend/34 
+  Calls: 
+Lpuart_Uart_Ip_Hw_Init/0 (Lpuart_Uart_Ip_Hw_Init) @05e25540
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 
+  Calls: 
+updating call of Lpuart_Uart_Ip_ErrIrqHandler/51 -> __builtin_unreachable/102: Lpuart_Uart_Ip_ClearStatusFlag.part.0 (Base_42);
+  updated to:__builtin_unreachable ();
+updating call of Lpuart_Uart_Ip_ErrIrqHandler/51 -> __builtin_unreachable/102: Lpuart_Uart_Ip_ClearStatusFlag.part.0 (Base_42);
+  updated to:__builtin_unreachable ();
+updating call of Lpuart_Uart_Ip_ErrIrqHandler/51 -> __builtin_unreachable/102: Lpuart_Uart_Ip_ClearStatusFlag.part.0 (Base_42);
+  updated to:__builtin_unreachable ();
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+Lpuart_Uart_Ip_SetBitCountPerChar/137 (Lpuart_Uart_Ip_SetBitCountPerChar) @0626f9a0
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 8
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetBitCountPerChar/137 is inline copy in Lpuart_Uart_Ip_Init/32
+  Clone of Lpuart_Uart_Ip_SetBitCountPerChar/8
+  Availability: local
+  Function flags: count:16267188 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 (inlined) (16267188 (estimated locally),0.50 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetOversamplingRatio/136 (Lpuart_Uart_Ip_SetOversamplingRatio) @0626fe00
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 5
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetOversamplingRatio/136 is inline copy in Lpuart_Uart_Ip_Init/32
+  Clone of Lpuart_Uart_Ip_SetOversamplingRatio/5
+  Availability: local
+  Function flags: count:32534376 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 (inlined) (32534376 (estimated locally),1.00 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRateDivisor/135 (Lpuart_Uart_Ip_SetBaudRateDivisor) @064692a0
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 3
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetBaudRateDivisor/135 is inline copy in Lpuart_Uart_Ip_Init/32
+  Clone of Lpuart_Uart_Ip_SetBaudRateDivisor/3
+  Availability: local
+  Function flags: count:32534376 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 (inlined) (32534376 (estimated locally),1.00 per call) 
+  Calls: 
+Lpuart_Uart_Ip_ClearErrorFlags/134 (Lpuart_Uart_Ip_ClearErrorFlags) @064690e0
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 133
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_ClearErrorFlags/134 is inline copy in Lpuart_Uart_Ip_AbortReceivingData/42
+  Clone of Lpuart_Uart_Ip_ClearErrorFlags/22
+  Availability: local
+  Function flags: count:536870913 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_AbortReceivingData/42 (inlined) (536870913 (estimated locally),0.50 per call) 
+  Calls: 
+Lpuart_Uart_Ip_ClearErrorFlags/133 (Lpuart_Uart_Ip_ClearErrorFlags) @0639c000
+  Type: function definition analyzed
+  Visibility:
+  next sharing asm name: 22
+  previous sharing asm name: 134
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_ClearErrorFlags/133 is inline copy in Lpuart_Uart_Ip_AsyncReceive/40
+  Clone of Lpuart_Uart_Ip_ClearErrorFlags/22
+  Availability: local
+  Function flags: count:71717363 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (inlined) (71717363 (estimated locally),0.07 per call) 
+  Calls: 
+Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (Lpuart_Uart_Ip_StartTimeout.constprop) @0626f7e0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of Lpuart_Uart_Ip_StartTimeout/23
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (114863530 (estimated locally),1.00 per call) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (114863530 (estimated locally),0.20 per call) Lpuart_Uart_Ip_Deinit/33 (96446980 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncSend/34 (8893213 (estimated locally),0.33 per call) Lpuart_Uart_Ip_SyncReceive/38 (354334800 (estimated locally),0.33 per call) 
+  Calls: OsIf_GetCounter/58 (1073741824 (estimated locally),1.00 per call) OsIf_MicrosToTicks/59 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (Lpuart_Uart_Ip_CheckTimeout.constprop) @0626fb60
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of Lpuart_Uart_Ip_CheckTimeout/24
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (1014686026 (estimated locally),8.83 per call) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (114863531 (estimated locally),1.00 per call) Lpuart_Uart_Ip_StartGetData/39 (27451520058 (estimated locally),25.57 per call) Lpuart_Uart_Ip_StartGetData/39 (3225597974 (estimated locally),3.00 per call) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (1014686025 (estimated locally),1.79 per call) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (114863531 (estimated locally),0.20 per call) Lpuart_Uart_Ip_Deinit/33 (1034174439 (estimated locally),10.72 per call) Lpuart_Uart_Ip_Deinit/33 (96446980 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncSend/34 (1014686025 (estimated locally),37.65 per call) Lpuart_Uart_Ip_SyncSend/34 (119227247 (estimated locally),4.42 per call) Lpuart_Uart_Ip_SyncSend/34 (8893214 (estimated locally),0.33 per call) Lpuart_Uart_Ip_SyncReceive/38 (354334800 (estimated locally),0.33 per call) 
+  Calls: OsIf_GetElapsed/60 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_ClearStatusFlag.part.0/72 (Lpuart_Uart_Ip_ClearStatusFlag.part.0) @0639c540
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_ClearStatusFlag.part.0/72 is inline copy in Lpuart_Uart_Ip_IrqHandler/47
+  Availability: local
+  Function flags: count:124017181 (estimated locally) body local split_part nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_ErrIrqHandler/51 (inlined) (124017181 (estimated locally),0.12 per call) 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03) @060269a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_AsyncReceive/40 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03) @060268c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+*.LC2/69 (*.LC2) @06028090
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+*.LC1/68 (*.LC1) @06028000
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+*.LC0/67 (*.LC0) @06021f30
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly artificial
+  References: 
+  Referring: Lpuart_Uart_Ip_StartGetData/39 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02) @06026000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_SyncReceive/38 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02) @06011ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01) @060118c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_AsyncSend/35 (354334800 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01) @060117e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00) @060110e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 (8893213 (estimated locally),0.33 per call) Lpuart_Uart_Ip_SyncSend/34 (8893213 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00) @06011000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 (26949131 (estimated locally),1.00 per call) 
+  Calls: 
+OsIf_GetElapsed/60 (OsIf_GetElapsed) @05fa0d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+OsIf_MicrosToTicks/59 (OsIf_MicrosToTicks) @05fa0b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+OsIf_GetCounter/58 (OsIf_GetCounter) @05fa0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+Lpuart_Uart_Ip_GetData/57 (Lpuart_Uart_Ip_GetData) @05f8d2a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_RxIrqHandler/48 (124017180 (estimated locally),0.12 per call) Lpuart_Uart_Ip_StartGetData/39 (2993805098 (estimated locally),2.79 per call) 
+  Calls: Lpuart_Uart_Ip_Getchar10/18 (inlined) (418115066 (estimated locally),0.39 per call) Lpuart_Uart_Ip_Getchar9/17 (inlined) (215392613 (estimated locally),0.20 per call) 
+Lpuart_Uart_Ip_PutData/56 (Lpuart_Uart_Ip_PutData) @05f8dee0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_SyncSend/34 (114863530 (estimated locally),4.26 per call) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (20462835 (estimated locally),0.02 per call) 
+  Calls: Lpuart_Uart_Ip_Putchar10/15 (inlined) (418115066 (estimated locally),0.39 per call) Lpuart_Uart_Ip_Putchar9/14 (inlined) (215392613 (estimated locally),0.20 per call) 
+Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (Lpuart_Uart_Ip_CompleteReceiveDataUsingInt) @05f8dc40
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:567507563 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_AbortReceivingData/42 (108662672 (estimated locally),0.10 per call) Lpuart_Uart_Ip_RxIrqHandler/48 (40925669 (estimated locally),0.04 per call) Lpuart_Uart_Ip_ErrIrqHandler/51 (38031935 (estimated locally),0.04 per call) 
+  Calls: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (114863531 (estimated locally),0.20 per call) Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (1014686025 (estimated locally),1.79 per call) Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (114863530 (estimated locally),0.20 per call) 
+Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (Lpuart_Uart_Ip_StartReceiveDataUsingInt) @05f8d9a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 is inline copy in Lpuart_Uart_Ip_AsyncReceive/40
+  Availability: local
+  Function flags: count:71717363 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncReceive/40 (inlined) (71717363 (estimated locally),0.07 per call) 
+  Calls: Lpuart_Uart_Ip_ClearErrorFlags/133 (inlined) (71717363 (estimated locally),0.07 per call) 
+Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (Lpuart_Uart_Ip_CompleteSendDataUsingInt) @05f8d700
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_AbortSendingData/37 (108662672 (estimated locally),0.10 per call) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (6275269 (estimated locally),0.01 per call) 
+  Calls: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (114863531 (estimated locally),1.00 per call) Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (1014686026 (estimated locally),8.83 per call) Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (114863530 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_StartSendDataUsingInt/52 (Lpuart_Uart_Ip_StartSendDataUsingInt) @05f8d460
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_StartSendDataUsingInt/52 is inline copy in Lpuart_Uart_Ip_AsyncSend/35
+  Availability: local
+  Function flags: count:71717363 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_AsyncSend/35 (inlined) (71717363 (estimated locally),0.07 per call) 
+  Calls: 
+Lpuart_Uart_Ip_ErrIrqHandler/51 (Lpuart_Uart_Ip_ErrIrqHandler) @05f8d1c0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_ErrIrqHandler/51 is inline copy in Lpuart_Uart_Ip_IrqHandler/47
+  Availability: local
+  Function flags: count:751619280 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 (inlined) (751619280 (estimated locally),0.70 per call) 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (38031935 (estimated locally),0.04 per call) Lpuart_Uart_Ip_ClearStatusFlag.part.0/72 (inlined) (124017181 (estimated locally),0.12 per call) 
+   Indirect call(131533375 (estimated locally),0.12 per call)  Num speculative call targets: 0
+Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (Lpuart_Uart_Ip_TxCompleteIrqHandler) @05f7fd20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_TxCompleteIrqHandler/50 is inline copy in Lpuart_Uart_Ip_IrqHandler/47
+  Availability: local
+  Function flags: count:62008590 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 (inlined) (62008590 (estimated locally),0.06 per call) 
+  Calls: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (6275269 (estimated locally),0.01 per call) 
+   Indirect call(21703007 (estimated locally),0.02 per call)  Num speculative call targets: 0
+Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (Lpuart_Uart_Ip_TxEmptyIrqHandler) @05f7f7e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_TxEmptyIrqHandler/49 is inline copy in Lpuart_Uart_Ip_IrqHandler/47
+  Availability: local
+  Function flags: count:62008590 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 (inlined) (62008590 (estimated locally),0.06 per call) 
+  Calls: Lpuart_Uart_Ip_PutData/56 (20462835 (estimated locally),0.02 per call) 
+   Indirect call(7161992 (estimated locally),0.01 per call)  Num speculative call targets: 0
+Lpuart_Uart_Ip_RxIrqHandler/48 (Lpuart_Uart_Ip_RxIrqHandler) @05f7f2a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_RxIrqHandler/48 is inline copy in Lpuart_Uart_Ip_IrqHandler/47
+  Availability: local
+  Function flags: count:124017180 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 (inlined) (124017180 (estimated locally),0.12 per call) 
+  Calls: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (40925669 (estimated locally),0.04 per call) Lpuart_Uart_Ip_GetData/57 (124017180 (estimated locally),0.12 per call) 
+   Indirect call(28647969 (estimated locally),0.03 per call)  Num speculative call targets: 0
+   Indirect call(43406013 (estimated locally),0.04 per call)  Num speculative call targets: 0
+Lpuart_Uart_Ip_IrqHandler/47 (Lpuart_Uart_Ip_IrqHandler) @05f7fee0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (inlined) (62008590 (estimated locally),0.06 per call) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (inlined) (62008590 (estimated locally),0.06 per call) Lpuart_Uart_Ip_RxIrqHandler/48 (inlined) (124017180 (estimated locally),0.12 per call) Lpuart_Uart_Ip_ErrIrqHandler/51 (inlined) (751619280 (estimated locally),0.70 per call) Lpuart_Uart_Ip_ClearErrorFlags/22 (inlined) (322122544 (estimated locally),0.30 per call) DevAssert/27 (1073741823 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_SetRxBuffer/46 (Lpuart_Uart_Ip_SetRxBuffer) @05f7fc40
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_SetTxBuffer/45 (Lpuart_Uart_Ip_SetTxBuffer) @05f7f9a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_GetBaudRate/44 (Lpuart_Uart_Ip_GetBaudRate) @05f7f700
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_SetBaudRate/43 (Lpuart_Uart_Ip_SetBaudRate) @05f7f460
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:507180667 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetBaudRateDivisor/3 (inlined) (157482133 (estimated locally),0.31 per call) Lpuart_Uart_Ip_SetOversamplingRatio/5 (inlined) (157482133 (estimated locally),0.31 per call) DevAssert/27 (157482133 (estimated locally),0.31 per call) DevAssert/27 (157482133 (estimated locally),0.31 per call) DevAssert/27 (507180667 (estimated locally),1.00 per call) DevAssert/27 (507180667 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_AbortReceivingData/42 (Lpuart_Uart_Ip_AbortReceivingData) @05f7f1c0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_ClearErrorFlags/134 (inlined) (536870913 (estimated locally),0.50 per call) Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (108662672 (estimated locally),0.10 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_GetReceiveStatus/41 (Lpuart_Uart_Ip_GetReceiveStatus) @05e69e00
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_AsyncReceive/40 (Lpuart_Uart_Ip_AsyncReceive) @05e698c0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (inlined) (71717363 (estimated locally),0.07 per call) DevAssert/27 (354334800 (estimated locally),0.33 per call) DevAssert/27 (354334800 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (354334800 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (354334800 (estimated locally),0.33 per call) SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_StartGetData/39 (Lpuart_Uart_Ip_StartGetData) @05e69000
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) *.LC0/67 (read) *.LC1/68 (read) *.LC2/69 (read) 
+  Referring: 
+  Function Lpuart_Uart_Ip_StartGetData/39 is inline copy in Lpuart_Uart_Ip_SyncReceive/38
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_SyncReceive/38 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (3225597974 (estimated locally),3.00 per call) Lpuart_Uart_Ip_GetData/57 (2993805098 (estimated locally),2.79 per call) Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (27451520058 (estimated locally),25.57 per call) 
+Lpuart_Uart_Ip_SyncReceive/38 (Lpuart_Uart_Ip_SyncReceive) @05e69d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_StartGetData/39 (inlined) (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (354334800 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (354334800 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (354334800 (estimated locally),0.33 per call) SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_AbortSendingData/37 (Lpuart_Uart_Ip_AbortSendingData) @05e69a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (108662672 (estimated locally),0.10 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_GetTransmitStatus/36 (Lpuart_Uart_Ip_GetTransmitStatus) @05e697e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apUserConfig/30 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_AsyncSend/35 (Lpuart_Uart_Ip_AsyncSend) @05e69540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apUserConfig/30 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_StartSendDataUsingInt/52 (inlined) (71717363 (estimated locally),0.07 per call) DevAssert/27 (354334800 (estimated locally),0.33 per call) DevAssert/27 (354334800 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (354334800 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (354334800 (estimated locally),0.33 per call) SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) DevAssert/27 (1073741824 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_SyncSend/34 (Lpuart_Uart_Ip_SyncSend) @05e691c0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:26949131 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (8893214 (estimated locally),0.33 per call) Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (119227247 (estimated locally),4.42 per call) Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (1014686025 (estimated locally),37.65 per call) Lpuart_Uart_Ip_PutData/56 (114863530 (estimated locally),4.26 per call) Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (8893213 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (8893213 (estimated locally),0.33 per call) SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (8893213 (estimated locally),0.33 per call) SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (26949131 (estimated locally),1.00 per call) DevAssert/27 (26949131 (estimated locally),1.00 per call) DevAssert/27 (26949131 (estimated locally),1.00 per call) DevAssert/27 (26949131 (estimated locally),1.00 per call) DevAssert/27 (26949131 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_Deinit/33 (Lpuart_Uart_Ip_Deinit) @05ee6e00
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:96446980 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (96446980 (estimated locally),1.00 per call) Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (1034174439 (estimated locally),10.72 per call) Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (96446980 (estimated locally),1.00 per call) DevAssert/27 (96446980 (estimated locally),1.00 per call) DevAssert/27 (96446980 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_Init/32 (Lpuart_Uart_Ip_Init) @05ee6d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpuart_Uart_Ip_apStateStructuresArray/29 (read) Lpuart_Uart_Ip_apBases/31 (read) Lpuart_Uart_Ip_apStateStructuresArray/29 (write) Lpuart_Uart_Ip_apUserConfig/30 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:32534376 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpuart_Uart_Ip_SetStopBitCount/10 (inlined) (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetParityMode/9 (inlined) (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetBitCountPerChar/137 (inlined) (16267188 (estimated locally),0.50 per call) Lpuart_Uart_Ip_SetBitCountPerChar/8 (inlined) (16267188 (estimated locally),0.50 per call) Lpuart_Uart_Ip_SetBaudRateDivisor/135 (inlined) (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetOversamplingRatio/136 (inlined) (32534376 (estimated locally),1.00 per call) DevAssert/27 (32534376 (estimated locally),1.00 per call) DevAssert/27 (32534376 (estimated locally),1.00 per call) DevAssert/27 (32534376 (estimated locally),1.00 per call) DevAssert/27 (32534376 (estimated locally),1.00 per call) DevAssert/27 (32534376 (estimated locally),1.00 per call) DevAssert/27 (32534376 (estimated locally),1.00 per call) 
+Lpuart_Uart_Ip_apBases/31 (Lpuart_Uart_Ip_apBases) @05edea68
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Lpuart_Uart_Ip_apUserConfig/30 (Lpuart_Uart_Ip_apUserConfig) @05ede990
+  Type: variable definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) 
+  Availability: available
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructuresArray/29 (Lpuart_Uart_Ip_apStateStructuresArray) @05ede900
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (read) Lpuart_Uart_Ip_StartReceiveDataUsingInt/54 (read) Lpuart_Uart_Ip_ErrIrqHandler/51 (read) Lpuart_Uart_Ip_StartGetData/39 (read) Lpuart_Uart_Ip_Init/32 (read) Lpuart_Uart_Ip_RxIrqHandler/48 (read) Lpuart_Uart_Ip_Init/32 (write) Lpuart_Uart_Ip_StartSendDataUsingInt/52 (read) Lpuart_Uart_Ip_Deinit/33 (write) Lpuart_Uart_Ip_GetData/57 (read) Lpuart_Uart_Ip_SyncSend/34 (read) Lpuart_Uart_Ip_AsyncSend/35 (read) Lpuart_Uart_Ip_TxEmptyIrqHandler/49 (read) Lpuart_Uart_Ip_GetTransmitStatus/36 (read) Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (read) Lpuart_Uart_Ip_PutData/56 (read) Lpuart_Uart_Ip_AbortSendingData/37 (read) Lpuart_Uart_Ip_SetRxBuffer/46 (read) Lpuart_Uart_Ip_SyncReceive/38 (read) Lpuart_Uart_Ip_AsyncReceive/40 (read) Lpuart_Uart_Ip_TxCompleteIrqHandler/50 (read) Lpuart_Uart_Ip_GetReceiveStatus/41 (read) Lpuart_Uart_Ip_AbortReceivingData/42 (read) Lpuart_Uart_Ip_SetBaudRate/43 (read) Lpuart_Uart_Ip_GetBaudRate/44 (read) Lpuart_Uart_Ip_SetTxBuffer/45 (read) Lpuart_Uart_Ip_Deinit/33 (read) Lpuart_Uart_Ip_IrqHandler/47 (read) 
+  Availability: available
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructure/28 (Lpuart_Uart_Ip_apStateStructure) @05ede870
+  Type: variable definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+DevAssert/27 (DevAssert) @05dbb7e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:21262216 (estimated locally) body local optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 (1073741823 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetRxBuffer/46 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetRxBuffer/46 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetRxBuffer/46 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetTxBuffer/45 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetTxBuffer/45 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetTxBuffer/45 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetBaudRate/44 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetBaudRate/44 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetBaudRate/43 (157482133 (estimated locally),0.31 per call) Lpuart_Uart_Ip_SetBaudRate/43 (157482133 (estimated locally),0.31 per call) Lpuart_Uart_Ip_SetBaudRate/43 (507180667 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SetBaudRate/43 (507180667 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AbortReceivingData/42 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AbortReceivingData/42 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AbortReceivingData/42 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetReceiveStatus/41 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetReceiveStatus/41 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetReceiveStatus/41 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncReceive/40 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_AsyncReceive/40 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_AsyncReceive/40 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncReceive/40 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncReceive/40 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncReceive/40 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncReceive/38 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncReceive/38 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncReceive/38 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncReceive/38 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AbortSendingData/37 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AbortSendingData/37 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AbortSendingData/37 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetTransmitStatus/36 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetTransmitStatus/36 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_GetTransmitStatus/36 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncSend/35 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_AsyncSend/35 (354334800 (estimated locally),0.33 per call) Lpuart_Uart_Ip_AsyncSend/35 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncSend/35 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncSend/35 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_AsyncSend/35 (1073741824 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncSend/34 (26949131 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncSend/34 (26949131 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncSend/34 (26949131 (estimated locally),1.00 per call) Lpuart_Uart_Ip_SyncSend/34 (26949131 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Deinit/33 (96446980 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Deinit/33 (96446980 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Init/32 (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Init/32 (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Init/32 (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Init/32 (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Init/32 (32534376 (estimated locally),1.00 per call) Lpuart_Uart_Ip_Init/32 (32534376 (estimated locally),1.00 per call) 
+  Calls: 
+Lpuart_Uart_Ip_CheckTimeout/24 (Lpuart_Uart_Ip_CheckTimeout) @05e50620
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_StartTimeout/23 (Lpuart_Uart_Ip_StartTimeout) @05e50380
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_ClearErrorFlags/22 (Lpuart_Uart_Ip_ClearErrorFlags) @05e500e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  previous sharing asm name: 133
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_ClearErrorFlags/22 is inline copy in Lpuart_Uart_Ip_IrqHandler/47
+  Availability: local
+  Function flags: count:322122544 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_IrqHandler/47 (inlined) (322122544 (estimated locally),0.30 per call) 
+  Calls: 
+Lpuart_Uart_Ip_Getchar10/18 (Lpuart_Uart_Ip_Getchar10) @05e48620
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_Getchar10/18 is inline copy in Lpuart_Uart_Ip_GetData/57
+  Availability: local
+  Function flags: count:418115066 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 (inlined) (418115066 (estimated locally),0.39 per call) 
+  Calls: 
+Lpuart_Uart_Ip_Getchar9/17 (Lpuart_Uart_Ip_Getchar9) @05e48380
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_Getchar9/17 is inline copy in Lpuart_Uart_Ip_GetData/57
+  Availability: local
+  Function flags: count:215392613 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_GetData/57 (inlined) (215392613 (estimated locally),0.20 per call) 
+  Calls: 
+Lpuart_Uart_Ip_Putchar10/15 (Lpuart_Uart_Ip_Putchar10) @05e31e00
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_Putchar10/15 is inline copy in Lpuart_Uart_Ip_PutData/56
+  Availability: local
+  Function flags: count:418115066 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 (inlined) (418115066 (estimated locally),0.39 per call) 
+  Calls: 
+Lpuart_Uart_Ip_Putchar9/14 (Lpuart_Uart_Ip_Putchar9) @05e31b60
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_Putchar9/14 is inline copy in Lpuart_Uart_Ip_PutData/56
+  Availability: local
+  Function flags: count:215392613 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_PutData/56 (inlined) (215392613 (estimated locally),0.20 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetStopBitCount/10 (Lpuart_Uart_Ip_SetStopBitCount) @05e310e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetStopBitCount/10 is inline copy in Lpuart_Uart_Ip_Init/32
+  Availability: local
+  Function flags: count:32534376 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 (inlined) (32534376 (estimated locally),1.00 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetParityMode/9 (Lpuart_Uart_Ip_SetParityMode) @05e2ce00
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetParityMode/9 is inline copy in Lpuart_Uart_Ip_Init/32
+  Availability: local
+  Function flags: count:32534376 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 (inlined) (32534376 (estimated locally),1.00 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetBitCountPerChar/8 (Lpuart_Uart_Ip_SetBitCountPerChar) @05e2cb60
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  previous sharing asm name: 137
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetBitCountPerChar/8 is inline copy in Lpuart_Uart_Ip_Init/32
+  Availability: local
+  Function flags: count:16267188 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_Init/32 (inlined) (16267188 (estimated locally),0.50 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetOversamplingRatio/5 (Lpuart_Uart_Ip_SetOversamplingRatio) @05e2c380
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  previous sharing asm name: 136
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetOversamplingRatio/5 is inline copy in Lpuart_Uart_Ip_SetBaudRate/43
+  Availability: local
+  Function flags: count:157482133 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 (inlined) (157482133 (estimated locally),0.31 per call) 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRateDivisor/3 (Lpuart_Uart_Ip_SetBaudRateDivisor) @05e25d20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  previous sharing asm name: 135
+  References: 
+  Referring: 
+  Function Lpuart_Uart_Ip_SetBaudRateDivisor/3 is inline copy in Lpuart_Uart_Ip_SetBaudRate/43
+  Availability: local
+  Function flags: count:157482133 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpuart_Uart_Ip_SetBaudRate/43 (inlined) (157482133 (estimated locally),0.31 per call) 
+  Calls: 
+Materializing clones
+cloning Lpuart_Uart_Ip_StartTimeout/23 to Lpuart_Uart_Ip_StartTimeout.constprop/132
+   replace map: 3 -> 0
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+Lpuart_Uart_Ip_StartTimeout (uint32 * StartTimeOut, uint32 * TimeoutTicksOut, uint32 TimeoutUs, OsIf_CounterType OsifCounter)
+{
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = OsIf_GetCounter (OsifCounter_4(D));
+  *StartTimeOut_6(D) = _1;
+  # DEBUG BEGIN_STMT
+  _2 = OsIf_MicrosToTicks (TimeoutUs_8(D), OsifCounter_4(D));
+  *TimeoutTicksOut_10(D) = _2;
+  return;
+
+}
+
+
+Lpuart_Uart_Ip_StartTimeout.constprop (uint32 * StartTimeOut, uint32 * TimeoutTicksOut, uint32 TimeoutUs)
+{
+  OsIf_CounterType OsifCounter;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG OsifCounter => 0
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  _1 = OsIf_GetCounter (0);
+  *StartTimeOut_2(D) = _1;
+  # DEBUG BEGIN_STMT
+  _4 = OsIf_MicrosToTicks (TimeoutUs_3(D), 0);
+  *TimeoutTicksOut_5(D) = _4;
+  return;
+
+}
+
+
+cloning Lpuart_Uart_Ip_CheckTimeout/24 to Lpuart_Uart_Ip_CheckTimeout.constprop/131
+   replace map: 3 -> 0
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+Lpuart_Uart_Ip_CheckTimeout (uint32 * StartTime, uint32 * ElapsedTicks, uint32 TimeoutTicks, OsIf_CounterType OsifCounter)
+{
+  uint32 CurrentElapsedTicks;
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  CurrentElapsedTicks_7 = OsIf_GetElapsed (StartTime_4(D), OsifCounter_5(D));
+  # DEBUG CurrentElapsedTicks => CurrentElapsedTicks_7
+  # DEBUG BEGIN_STMT
+  _1 = *ElapsedTicks_8(D);
+  _2 = _1 + CurrentElapsedTicks_7;
+  *ElapsedTicks_8(D) = _2;
+  # DEBUG BEGIN_STMT
+  _11 = _2 >= TimeoutTicks_10(D);
+  return _11;
+
+}
+
+
+Lpuart_Uart_Ip_CheckTimeout.constprop (uint32 * StartTime, uint32 * ElapsedTicks, uint32 TimeoutTicks)
+{
+  uint32 CurrentElapsedTicks;
+  OsIf_CounterType OsifCounter;
+
+  <bb 3> [local count: 1073741824]:
+  # DEBUG OsifCounter => 0
+
+  <bb 2> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  CurrentElapsedTicks_2 = OsIf_GetElapsed (StartTime_1(D), 0);
+  # DEBUG CurrentElapsedTicks => CurrentElapsedTicks_2
+  # DEBUG BEGIN_STMT
+  _4 = *ElapsedTicks_3(D);
+  _5 = CurrentElapsedTicks_2 + _4;
+  *ElapsedTicks_3(D) = _5;
+  # DEBUG BEGIN_STMT
+  _7 = _5 >= TimeoutTicks_6(D);
+  return _7;
+
+}
+
+
+Materialization Call site updates done.
+
+Reclaiming functions: Lpuart_Uart_Ip_CheckTimeout/24 Lpuart_Uart_Ip_StartTimeout/23
+Reclaiming variables:
+Clearing address taken flags:
+updating call of Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _6 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.16_5, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_6 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.16_5);
+updating call of Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _4 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.15_3, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_4 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.15_3);
+updating call of Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 -> Lpuart_Uart_Ip_StartTimeout.constprop/132: Lpuart_Uart_Ip_StartTimeout (&StartTime, &TimeoutTicks, 0, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:Lpuart_Uart_Ip_StartTimeout.constprop (&StartTime, &TimeoutTicks, 0);
+updating call of Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _6 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.10_5, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_6 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.10_5);
+updating call of Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _4 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.9_3, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_4 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.9_3);
+updating call of Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 -> Lpuart_Uart_Ip_StartTimeout.constprop/132: Lpuart_Uart_Ip_StartTimeout (&StartTime, &TimeoutTicks, 0, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:Lpuart_Uart_Ip_StartTimeout.constprop (&StartTime, &TimeoutTicks, 0);
+updating call of Lpuart_Uart_Ip_Deinit/33 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _9 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.3_8, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_9 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.3_8);
+updating call of Lpuart_Uart_Ip_Deinit/33 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _7 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.2_6, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_7 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.2_6);
+updating call of Lpuart_Uart_Ip_Deinit/33 -> Lpuart_Uart_Ip_StartTimeout.constprop/132: Lpuart_Uart_Ip_StartTimeout (&StartTime, &TimeoutTicks, 0, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:Lpuart_Uart_Ip_StartTimeout.constprop (&StartTime, &TimeoutTicks, 0);
+updating call of Lpuart_Uart_Ip_SyncSend/34 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _14 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.7_13, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_14 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.7_13);
+updating call of Lpuart_Uart_Ip_SyncSend/34 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _12 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.6_11, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_12 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.6_11);
+updating call of Lpuart_Uart_Ip_SyncSend/34 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _9 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.5_8, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_9 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.5_8);
+updating call of Lpuart_Uart_Ip_SyncSend/34 -> Lpuart_Uart_Ip_StartTimeout.constprop/132: Lpuart_Uart_Ip_StartTimeout (&StartTime, &TimeoutTicks, Timeout_42(D), 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:Lpuart_Uart_Ip_StartTimeout.constprop (&StartTime, &TimeoutTicks, Timeout_42(D));
+updating call of Lpuart_Uart_Ip_SyncReceive/38 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _9 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.12_8, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_9 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.12_8);
+updating call of Lpuart_Uart_Ip_SyncReceive/38 -> Lpuart_Uart_Ip_StartTimeout.constprop/132: Lpuart_Uart_Ip_StartTimeout (&StartTime, &TimeoutTicks, Timeout_39(D), 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:Lpuart_Uart_Ip_StartTimeout.constprop (&StartTime, &TimeoutTicks, Timeout_39(D));
+updating call of Lpuart_Uart_Ip_SyncReceive/38 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _68 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.11_7, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_68 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.11_7);
+updating call of Lpuart_Uart_Ip_SyncReceive/38 -> Lpuart_Uart_Ip_CheckTimeout.constprop/131: _88 = Lpuart_Uart_Ip_CheckTimeout (&StartTime, &ElapsedTicks, TimeoutTicks.11_7, 0);
+    m_always_copy_start: 4
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 0, prev_clone_index: 0
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+                             2. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:_88 = Lpuart_Uart_Ip_CheckTimeout.constprop (&StartTime, &ElapsedTicks, TimeoutTicks.11_7);
+Trivially needed variables: *.LC2/69 *.LC1/68 *.LC0/67 Lpuart_Uart_Ip_apBases/31 Lpuart_Uart_Ip_apUserConfig/30 Lpuart_Uart_Ip_apStateStructuresArray/29 Lpuart_Uart_Ip_apStateStructure/28
+Removing variables:
+
+Final Symbol table:
+
+memset/138 (__builtin_memset) @05e310e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_StartTimeout.constprop.0/132 (Lpuart_Uart_Ip_StartTimeout.constprop) @0626f7e0
+  Type: function definition analyzed
+  Visibility: asm_written artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_CheckTimeout.constprop.0/131 (Lpuart_Uart_Ip_CheckTimeout.constprop) @0626fb60
+  Type: function definition analyzed
+  Visibility: asm_written artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03/71 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_03) @060269a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03/70 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_03) @060268c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+*.LC2/69 (*.LC2) @06028090
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written artificial
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+*.LC1/68 (*.LC1) @06028000
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written artificial
+  Aux: @06028090
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+*.LC0/67 (*.LC0) @06021f30
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written artificial
+  Aux: @06028000
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02/66 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_02) @06026000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02/65 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_02) @06011ee0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01/64 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_01) @060118c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01/63 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_01) @060117e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00/62 (SchM_Exit_Uart_UART_EXCLUSIVE_AREA_00) @060110e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00/61 (SchM_Enter_Uart_UART_EXCLUSIVE_AREA_00) @06011000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_GetElapsed/60 (OsIf_GetElapsed) @05fa0d20
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_MicrosToTicks/59 (OsIf_MicrosToTicks) @05fa0b60
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_GetCounter/58 (OsIf_GetCounter) @05fa0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_GetData/57 (Lpuart_Uart_Ip_GetData) @05f8d2a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_PutData/56 (Lpuart_Uart_Ip_PutData) @05f8dee0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_CompleteReceiveDataUsingInt/55 (Lpuart_Uart_Ip_CompleteReceiveDataUsingInt) @05f8dc40
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:567507563 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_CompleteSendDataUsingInt/53 (Lpuart_Uart_Ip_CompleteSendDataUsingInt) @05f8d700
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:114863530 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_IrqHandler/47 (Lpuart_Uart_Ip_IrqHandler) @05f7fee0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SetRxBuffer/46 (Lpuart_Uart_Ip_SetRxBuffer) @05f7fc40
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SetTxBuffer/45 (Lpuart_Uart_Ip_SetTxBuffer) @05f7f9a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_GetBaudRate/44 (Lpuart_Uart_Ip_GetBaudRate) @05f7f700
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SetBaudRate/43 (Lpuart_Uart_Ip_SetBaudRate) @05f7f460
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:507180667 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_AbortReceivingData/42 (Lpuart_Uart_Ip_AbortReceivingData) @05f7f1c0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_GetReceiveStatus/41 (Lpuart_Uart_Ip_GetReceiveStatus) @05e69e00
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_AsyncReceive/40 (Lpuart_Uart_Ip_AsyncReceive) @05e698c0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SyncReceive/38 (Lpuart_Uart_Ip_SyncReceive) @05e69d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_AbortSendingData/37 (Lpuart_Uart_Ip_AbortSendingData) @05e69a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_GetTransmitStatus/36 (Lpuart_Uart_Ip_GetTransmitStatus) @05e697e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_AsyncSend/35 (Lpuart_Uart_Ip_AsyncSend) @05e69540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_SyncSend/34 (Lpuart_Uart_Ip_SyncSend) @05e691c0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:26949131 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_Deinit/33 (Lpuart_Uart_Ip_Deinit) @05ee6e00
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:96446980 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_Init/32 (Lpuart_Uart_Ip_Init) @05ee6d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:32534376 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpuart_Uart_Ip_apBases/31 (Lpuart_Uart_Ip_apBases) @05edea68
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @06021f30
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Lpuart_Uart_Ip_apUserConfig/30 (Lpuart_Uart_Ip_apUserConfig) @05ede990
+  Type: variable definition analyzed
+  Visibility: externally_visible asm_written public
+  Aux: @05edea68
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructuresArray/29 (Lpuart_Uart_Ip_apStateStructuresArray) @05ede900
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @05ede990
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Lpuart_Uart_Ip_apStateStructure/28 (Lpuart_Uart_Ip_apStateStructure) @05ede870
+  Type: variable definition analyzed
+  Visibility: externally_visible asm_written public
+  Aux: @05ede900
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+DevAssert/27 (DevAssert) @05dbb7e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:21262216 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 

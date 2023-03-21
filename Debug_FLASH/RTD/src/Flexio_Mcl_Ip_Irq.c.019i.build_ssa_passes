@@ -1,0 +1,113 @@
+MCL_FLEXIO_ISR ()
+{
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  Flexio_Mcl_Ip_CommonIrq ();
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Flexio_Mcl_Ip_CommonIrq ()
+{
+  uint8 u8TimerMaskFlag;
+  uint8 u8ShifterErrMaskFlag;
+  uint8 u8ShifterErrEnabledIrq;
+  uint8 u8ShifterEnabledIrq;
+  uint8 u8ShifterMaskFlag;
+  struct FLEXIO_Type * BaseAddr;
+
+  <bb 2> :
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  BaseAddr = Flexio_Ip_paxBase[0];
+  # DEBUG BEGIN_STMT
+  _1 = Flexio_Mcl_Ip_GetAllShifterStatus (BaseAddr);
+  u8ShifterMaskFlag = (uint8) _1;
+  # DEBUG BEGIN_STMT
+  _2 = Flexio_Mcl_Ip_GetAllShifterInterrupt (BaseAddr);
+  u8ShifterEnabledIrq = (uint8) _2;
+  # DEBUG BEGIN_STMT
+  _3 = Flexio_Mcl_Ip_GetAllShifterErrorInterrupt (BaseAddr);
+  u8ShifterErrEnabledIrq = (uint8) _3;
+  # DEBUG BEGIN_STMT
+  _4 = Flexio_Mcl_Ip_GetAllShifterErrorStatus (BaseAddr);
+  u8ShifterErrMaskFlag = (uint8) _4;
+  # DEBUG BEGIN_STMT
+  _5 = Flexio_Mcl_Ip_GetAllTimerStatus (BaseAddr);
+  u8TimerMaskFlag = (uint8) _5;
+  # DEBUG BEGIN_STMT
+  _6 = Flexio_Ip_baIpIsInitialized[0];
+  if (_6 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+
+  <bb 3> :
+  # DEBUG BEGIN_STMT
+  _7 = BaseAddr->SHIFTERR;
+  _8 = u8ShifterErrMaskFlag & u8ShifterErrEnabledIrq;
+  _9 = (long unsigned int) _8;
+  _10 = _7 | _9;
+  BaseAddr->SHIFTERR = _10;
+  # DEBUG BEGIN_STMT
+  _11 = u8ShifterMaskFlag & u8ShifterEnabledIrq;
+  _12 = (int) _11;
+  _13 = _12 & 1;
+  if (_13 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  _14 = u8ShifterErrMaskFlag & u8ShifterErrEnabledIrq;
+  _15 = (int) _14;
+  _16 = _15 & 1;
+  if (_16 != 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_IrqHandler (0, u8ShifterMaskFlag, u8ShifterErrMaskFlag);
+
+  <bb 6> :
+  # DEBUG BEGIN_STMT
+  _17 = u8ShifterMaskFlag & u8ShifterEnabledIrq;
+  _18 = (int) _17;
+  _19 = _18 & 2;
+  if (_19 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 7>; [INV]
+
+  <bb 7> :
+  _20 = u8ShifterErrMaskFlag & u8ShifterErrEnabledIrq;
+  _21 = (int) _20;
+  _22 = _21 & 2;
+  if (_22 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 8> :
+  # DEBUG BEGIN_STMT
+  Flexio_Spi_Ip_IrqHandler (1, u8ShifterMaskFlag, u8ShifterErrMaskFlag);
+  goto <bb 10>; [INV]
+
+  <bb 9> :
+  # DEBUG BEGIN_STMT
+  _23 = (long unsigned int) u8ShifterErrMaskFlag;
+  BaseAddr->SHIFTERR = _23;
+  # DEBUG BEGIN_STMT
+  _24 = (long unsigned int) u8TimerMaskFlag;
+  BaseAddr->TIMSTAT = _24;
+
+  <bb 10> :
+  return;
+
+}
+
+

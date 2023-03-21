@@ -1,0 +1,6 @@
+Callgraph clone;Flexio_Spi_Ip_ConfigExternalDevice;5;../RTD/src/Flexio_Spi_Ip.c;390;13;Flexio_Spi_Ip_ConfigExternalDevice.constprop.0;42;../RTD/src/Flexio_Spi_Ip.c;390;13;constprop
+Callgraph clone;Flexio_Spi_Ip_SyncTransmitProcessData;6;../RTD/src/Flexio_Spi_Ip.c;486;13;Flexio_Spi_Ip_SyncTransmit;12;../RTD/src/Flexio_Spi_Ip.c;1189;26;inlining to
+Callgraph clone;Flexio_Spi_Ip_ClearShifterTimerRegisters;9;../RTD/src/Flexio_Spi_Ip.c;1080;13;Flexio_Spi_Ip_ConfigExternalDevice.constprop.0;42;../RTD/src/Flexio_Spi_Ip.c;390;13;inlining to
+Callgraph removal;Flexio_Spi_Ip_ConfigExternalDevice;5;../RTD/src/Flexio_Spi_Ip.c;390;13
+Callgraph removal;Flexio_Spi_Ip_ClearShifterTimerRegisters;9;../RTD/src/Flexio_Spi_Ip.c;1080;13
+Callgraph removal;Flexio_Spi_Ip_SyncTransmitProcessData;6;../RTD/src/Flexio_Spi_Ip.c;486;13

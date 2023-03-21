@@ -1,0 +1,134 @@
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlag;20;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;Lpuart_Uart_Ip_ClearStatusFlag.part.0;72;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;part
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_StartSendDataUsingInt;52;../RTD/src/Lpuart_Uart_Ip.c;1462;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetTransmitterCmd;1;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;226;20;Lpuart_Uart_Ip_StartSendDataUsingInt;52;../RTD/src/Lpuart_Uart_Ip.c;1462;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetReceiverCmd;2;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;241;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_FlushRxBuffer;26;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;725;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Putchar;13;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;485;20;Lpuart_Uart_Ip_PutData;56;../RTD/src/Lpuart_Uart_Ip.c;2046;13;inlining to
+Callgraph removal;Lpuart_Uart_Ip_Putchar;13;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;485;20
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_TxEmptyIrqHandler;49;../RTD/src/Lpuart_Uart_Ip.c;1281;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_TxEmptyIrqHandler;49;../RTD/src/Lpuart_Uart_Ip.c;1281;13;inlining to
+Callgraph removal;Lpuart_Uart_Ip_SetIntMode;82;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20
+Callgraph clone;Lpuart_Uart_Ip_Getchar;16;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21;Lpuart_Uart_Ip_GetData;57;../RTD/src/Lpuart_Uart_Ip.c;2105;13;inlining to
+Callgraph removal;Lpuart_Uart_Ip_Getchar;84;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21
+Callgraph clone;Lpuart_Uart_Ip_SetTransmitterCmd;1;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;226;20;Lpuart_Uart_Ip_CompleteSendDataUsingInt;53;../RTD/src/Lpuart_Uart_Ip.c;1561;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_CompleteSendDataUsingInt;53;../RTD/src/Lpuart_Uart_Ip.c;1561;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteSendDataUsingInt;53;../RTD/src/Lpuart_Uart_Ip.c;1561;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteSendDataUsingInt;53;../RTD/src/Lpuart_Uart_Ip.c;1561;13;inlining to
+Callgraph removal;Lpuart_Uart_Ip_SetTransmitterCmd;85;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;226;20
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlagWithMask;21;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;660;20;Lpuart_Uart_Ip_StartGetData;39;../RTD/src/Lpuart_Uart_Ip.c;738;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetReceiverCmd;2;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;241;20;Lpuart_Uart_Ip_StartGetData;39;../RTD/src/Lpuart_Uart_Ip.c;738;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_StartGetData;39;../RTD/src/Lpuart_Uart_Ip.c;738;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_StartGetData;39;../RTD/src/Lpuart_Uart_Ip.c;738;13;inlining to
+Callgraph removal;Lpuart_Uart_Ip_ClearStatusFlagWithMask;21;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;660;20
+Callgraph clone;Lpuart_Uart_Ip_Getchar;16;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetReceiverCmd;2;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;241;20;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_CompleteReceiveDataUsingInt;55;../RTD/src/Lpuart_Uart_Ip.c;1845;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlag;20;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlag;20;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlag;20;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlag;20;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph removal;Lpuart_Uart_Ip_ClearStatusFlag;20;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20
+Callgraph clone;Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd;7;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;321;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Hw_Init;0;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;205;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph removal;Lpuart_Uart_Ip_Hw_Init;0;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;205;20
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_Deinit;33;../RTD/src/Lpuart_Uart_Ip.c;342;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetTransmitterCmd;1;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;226;20;Lpuart_Uart_Ip_SyncSend;34;../RTD/src/Lpuart_Uart_Ip.c;394;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_SyncSend;34;../RTD/src/Lpuart_Uart_Ip.c;394;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetTransmitterCmd;1;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;226;20;Lpuart_Uart_Ip_SyncSend;34;../RTD/src/Lpuart_Uart_Ip.c;394;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_SyncSend;34;../RTD/src/Lpuart_Uart_Ip.c;394;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_SyncSend;34;../RTD/src/Lpuart_Uart_Ip.c;394;27;inlining to
+Callgraph removal;Lpuart_Uart_Ip_SetTransmitterCmd;1;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;226;20
+Callgraph clone;Lpuart_Uart_Ip_FlushTxBuffer;25;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;713;20;Lpuart_Uart_Ip_AbortSendingData;37;../RTD/src/Lpuart_Uart_Ip.c;594;27;inlining to
+Callgraph removal;Lpuart_Uart_Ip_FlushTxBuffer;25;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;713;20
+Callgraph clone;Lpuart_Uart_Ip_Getchar;16;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21;Lpuart_Uart_Ip_SyncReceive;38;../RTD/src/Lpuart_Uart_Ip.c;655;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetReceiverCmd;2;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;241;20;Lpuart_Uart_Ip_SyncReceive;38;../RTD/src/Lpuart_Uart_Ip.c;655;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetReceiverCmd;2;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;241;20;Lpuart_Uart_Ip_SyncReceive;38;../RTD/src/Lpuart_Uart_Ip.c;655;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20;Lpuart_Uart_Ip_SyncReceive;38;../RTD/src/Lpuart_Uart_Ip.c;655;27;inlining to
+Callgraph removal;Lpuart_Uart_Ip_SetReceiverCmd;2;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;241;20
+Callgraph removal;Lpuart_Uart_Ip_SetIntMode;11;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;424;20
+Callgraph removal;Lpuart_Uart_Ip_Getchar;124;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21
+Callgraph clone;Lpuart_Uart_Ip_FlushRxBuffer;26;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;725;20;Lpuart_Uart_Ip_AbortReceivingData;42;../RTD/src/Lpuart_Uart_Ip.c;918;27;inlining to
+Callgraph removal;Lpuart_Uart_Ip_FlushRxBuffer;26;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;725;20
+Callgraph clone;Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd;7;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;321;20;Lpuart_Uart_Ip_SetBaudRate;43;../RTD/src/Lpuart_Uart_Ip.c;983;27;inlining to
+Callgraph removal;Lpuart_Uart_Ip_EnableBothEdgeSamplingCmd;7;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;321;20
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Getchar;16;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Getchar;16;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph removal;Lpuart_Uart_Ip_Getchar;16;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;553;21
+Callgraph removal;Lpuart_Uart_Ip_GetStatusFlag;19;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;610;23
+Callgraph removal;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23
+Callgraph removal;Lpuart_Uart_Ip_GetIntMode;12;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;439;23
+Callgraph clone;Lpuart_Uart_Ip_CheckTimeout;24;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;699;23;Lpuart_Uart_Ip_CheckTimeout.constprop.0;131;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;699;23;constprop
+Callgraph clone;Lpuart_Uart_Ip_StartTimeout;23;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;687;20;Lpuart_Uart_Ip_StartTimeout.constprop.0;132;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;687;20;constprop
+Callgraph clone;Lpuart_Uart_Ip_ClearErrorFlags;22;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;672;20;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearErrorFlags;22;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;672;20;Lpuart_Uart_Ip_AbortReceivingData;42;../RTD/src/Lpuart_Uart_Ip.c;918;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetBaudRateDivisor;3;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;255;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetStopBitCount;10;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;408;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetOversamplingRatio;5;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;288;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearErrorFlags;22;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;672;20;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetBaudRateDivisor;3;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;255;20;Lpuart_Uart_Ip_SetBaudRate;43;../RTD/src/Lpuart_Uart_Ip.c;983;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Getchar9;17;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;566;22;Lpuart_Uart_Ip_GetData;57;../RTD/src/Lpuart_Uart_Ip.c;2105;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetParityMode;9;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;391;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetOversamplingRatio;5;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;288;20;Lpuart_Uart_Ip_SetBaudRate;43;../RTD/src/Lpuart_Uart_Ip.c;983;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ClearStatusFlag.part.0;72;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Getchar10;18;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;586;22;Lpuart_Uart_Ip_GetData;57;../RTD/src/Lpuart_Uart_Ip.c;2105;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Putchar9;14;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;500;20;Lpuart_Uart_Ip_PutData;56;../RTD/src/Lpuart_Uart_Ip.c;2046;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_Putchar10;15;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;524;20;Lpuart_Uart_Ip_PutData;56;../RTD/src/Lpuart_Uart_Ip.c;2046;13;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetBitCountPerChar;8;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;338;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_SetBitCountPerChar;8;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;338;20;Lpuart_Uart_Ip_Init;32;../RTD/src/Lpuart_Uart_Ip.c;252;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_StartSendDataUsingInt;52;../RTD/src/Lpuart_Uart_Ip.c;1462;34;Lpuart_Uart_Ip_AsyncSend;35;../RTD/src/Lpuart_Uart_Ip.c;477;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_RxIrqHandler;48;../RTD/src/Lpuart_Uart_Ip.c;1239;13;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_TxCompleteIrqHandler;50;../RTD/src/Lpuart_Uart_Ip.c;1319;13;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_TxEmptyIrqHandler;49;../RTD/src/Lpuart_Uart_Ip.c;1281;13;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34;Lpuart_Uart_Ip_AsyncReceive;40;../RTD/src/Lpuart_Uart_Ip.c;803;27;inlining to
+Callgraph clone;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13;Lpuart_Uart_Ip_IrqHandler;47;../RTD/src/Lpuart_Uart_Ip.c;1165;6;inlining to
+Callgraph clone;Lpuart_Uart_Ip_StartGetData;39;../RTD/src/Lpuart_Uart_Ip.c;738;13;Lpuart_Uart_Ip_SyncReceive;38;../RTD/src/Lpuart_Uart_Ip.c;655;27;inlining to
+Callgraph removal;Lpuart_Uart_Ip_CheckTimeout;24;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;699;23
+Callgraph removal;Lpuart_Uart_Ip_StartTimeout;23;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;687;20
+Callgraph removal;Lpuart_Uart_Ip_Putchar9;14;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;500;20
+Callgraph removal;Lpuart_Uart_Ip_Putchar10;15;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;524;20
+Callgraph removal;Lpuart_Uart_Ip_Getchar9;17;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;566;22
+Callgraph removal;Lpuart_Uart_Ip_Getchar10;18;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;586;22
+Callgraph removal;Lpuart_Uart_Ip_SetBitCountPerChar;8;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;338;20
+Callgraph removal;Lpuart_Uart_Ip_SetStopBitCount;10;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;408;20
+Callgraph removal;Lpuart_Uart_Ip_SetParityMode;9;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;391;20
+Callgraph removal;Lpuart_Uart_Ip_StartSendDataUsingInt;52;../RTD/src/Lpuart_Uart_Ip.c;1462;34
+Callgraph removal;Lpuart_Uart_Ip_StartGetData;39;../RTD/src/Lpuart_Uart_Ip.c;738;13
+Callgraph removal;Lpuart_Uart_Ip_StartReceiveDataUsingInt;54;../RTD/src/Lpuart_Uart_Ip.c;1727;34
+Callgraph removal;Lpuart_Uart_Ip_SetBaudRateDivisor;3;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;255;20
+Callgraph removal;Lpuart_Uart_Ip_SetOversamplingRatio;5;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;288;20
+Callgraph removal;Lpuart_Uart_Ip_ClearErrorFlags;22;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;672;20
+Callgraph removal;Lpuart_Uart_Ip_ErrIrqHandler;51;../RTD/src/Lpuart_Uart_Ip.c;1349;13
+Callgraph removal;Lpuart_Uart_Ip_ClearStatusFlag.part.0;72;../RTD/include/Lpuart_Uart_Ip_HwAccess.h;626;20
+Callgraph removal;Lpuart_Uart_Ip_RxIrqHandler;48;../RTD/src/Lpuart_Uart_Ip.c;1239;13
+Callgraph removal;Lpuart_Uart_Ip_TxEmptyIrqHandler;49;../RTD/src/Lpuart_Uart_Ip.c;1281;13
+Callgraph removal;Lpuart_Uart_Ip_TxCompleteIrqHandler;50;../RTD/src/Lpuart_Uart_Ip.c;1319;13

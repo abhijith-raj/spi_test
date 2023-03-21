@@ -1,0 +1,3030 @@
+Trivially needed symbols: Lpspi_Ip_GetStatus/38 Lpspi_Ip_IrqHandler/37 Lpspi_Ip_Cancel/36 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_DeInit/24 Lpspi_Ip_Init/23 Lpspi_Ip_IrqRxDmaHandler/22 Lpspi_Ip_IrqTxDmaHandler/21 Lpspi_Ip_apxStateStructureArray/3
+
+
+Initial Symbol table:
+
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10) @06e318c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10) @06e317e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12) @06e312a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12) @06e311c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/54 (Dma_Ip_GetLogicChannelStatus) @06dfac40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf1c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14) @06dde8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14) @06dde7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+OsIf_GetElapsed/45 (OsIf_GetElapsed) @06dde460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_GetCounter/44 (OsIf_GetCounter) @06dde380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_MicrosToTicks/43 (OsIf_MicrosToTicks) @06dde2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/42 (Dma_Ip_SetLogicChannelTransferList) @06dde0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_DmaInit/15 Lpspi_Ip_DmaInit/15 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_TxDmaContinueTransfer/18 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/41 (Dma_Ip_SetLogicChannelCommand) @06dd0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_IrqRxDmaHandler/22 Lpspi_Ip_TxDmaContinueTransfer/18 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13) @06dd07e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13) @06dd0540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+Lpspi_Ip_GetStatus/38 (Lpspi_Ip_GetStatus) @06dd0c40
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @01981040
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Lpspi_Ip_IrqHandler/37 (Lpspi_Ip_IrqHandler) @06dd09a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dd0c40
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 
+Lpspi_Ip_Cancel/36 (Lpspi_Ip_Cancel) @06dd0700
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dd09a0
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelCommand/41 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateTransferMode/35 (Lpspi_Ip_UpdateTransferMode) @06dd0460
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dd0700
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateDefaultTransmitData/34 (Lpspi_Ip_UpdateDefaultTransmitData) @06dd01c0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dd0460
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateLsb/33 (Lpspi_Ip_UpdateLsb) @06dbde00
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dd01c0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateFrameSize/32 (Lpspi_Ip_UpdateFrameSize) @06dbd700
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dbde00
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Lpspi_Ip_ManageBuffers/31 (Lpspi_Ip_ManageBuffers) @06dbd0e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dbd700
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqTxDmaHandler/21 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_IrqRxDmaHandler/22 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmitHalfDuplex/30 (Lpspi_Ip_AsyncTransmitHalfDuplex) @06dbdd20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dbd0e0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_TxDmaConfig/16 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmit/29 (Lpspi_Ip_AsyncTransmit) @06dbd8c0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dbdd20
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_TransmitRxInit/28 (Lpspi_TransmitRxInit) @06dbd620
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06d668c0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_TransmitTxInit/27 (Lpspi_TransmitTxInit) @06dbd380
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbd620
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 
+Lpspi_Ip_SyncTransmitHalfDuplex/26 (Lpspi_Ip_SyncTransmitHalfDuplex) @06dbd000
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dbd8c0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_HalfDuplexTransmitProcess/10 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_SyncTransmit/25 (Lpspi_Ip_SyncTransmit) @06c97b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06dbd000
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_DeInit/24 (Lpspi_Ip_DeInit) @06c97620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06c97b60
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_Init/23 (Lpspi_Ip_Init) @06c97d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06c97620
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_axStateStructure/1 (addr) Lpspi_Ip_apxStateStructureArray/3 (write) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_DmaInit/15 DevAssert/0 DevAssert/0 
+Lpspi_Ip_IrqRxDmaHandler/22 (Lpspi_Ip_IrqRxDmaHandler) @06c97a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06c97d20
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 Lpspi_Ip_RxDmaContinueTransfer/19 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_IrqTxDmaHandler/21 (Lpspi_Ip_IrqTxDmaHandler) @06c977e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06c97a80
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 Lpspi_Ip_TxDmaFinishTransfer/20 Lpspi_Ip_TxDmaContinueTransfer/18 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_TxDmaFinishTransfer/20 (Lpspi_Ip_TxDmaFinishTransfer) @06c97540
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06d66e00
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_RxDmaContinueTransfer/19 (Lpspi_Ip_RxDmaContinueTransfer) @06c972a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c97d20
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaContinueTransfer/18 (Lpspi_Ip_TxDmaContinueTransfer) @06c97000
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c97540
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_RxDmaConfig/17 (Lpspi_Ip_RxDmaConfig) @06c6eb60
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c6e540
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_u32DiscardData/2 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaConfig/16 (Lpspi_Ip_TxDmaConfig) @06c6e540
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbdd20
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_DmaInit/15 (Lpspi_Ip_DmaInit) @06c6e000
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c97620
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_CheckValidParameters/14 (Lpspi_Ip_CheckValidParameters) @06c6ed20
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbd380
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_TransferProcess/13 (Lpspi_Ip_TransferProcess) @06c6ea80
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbd700
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 
+Lpspi_Ip_HalfDuplexPrepare/12 (Lpspi_Ip_HalfDuplexPrepare) @06c6e7e0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c6e1c0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: 
+Lpspi_Ip_HalfDuplexPushDataToFifo/11 (Lpspi_Ip_HalfDuplexPushDataToFifo) @06c6e460
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbd8c0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_HalfDuplexTransmitProcess/10 
+  Calls: Lpspi_Ip_PushDataToFifo/6 
+Lpspi_Ip_HalfDuplexTransmitProcess/10 (Lpspi_Ip_HalfDuplexTransmitProcess) @06c6e1c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbd8c0
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: Lpspi_Ip_HalfDuplexPushDataToFifo/11 
+Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (Lpspi_Ip_HalfDupleTransmitChannelComplete) @06d66ee0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c6ea80
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_TransferProcessHalfDuplex/8 (Lpspi_Ip_TransferProcessHalfDuplex) @06d669a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c6ea80
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_ReadDataFromFifo/5 Lpspi_Ip_HalfDupleTransmitChannelComplete/9 
+Lpspi_Ip_ChannelFinished/7 (Lpspi_Ip_ChannelFinished) @06d66e00
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c97a80
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_PushDataToFifo/6 (Lpspi_Ip_PushDataToFifo) @06d66b60
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06dbd000
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_ReadDataFromFifo/5 (Lpspi_Ip_ReadDataFromFifo) @06d668c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06d66b60
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_apxBases/4 (Lpspi_Ip_apxBases) @069a2f30
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @06c97000
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpspi_Ip_apxStateStructureArray/3 (Lpspi_Ip_apxStateStructureArray) @069a2e58
+  Type: variable definition analyzed
+  Visibility: public
+  Aux: @06c977e0
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_ChannelFinished/7 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_Init/23 (write) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_DeInit/24 (write) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_TransmitRxInit/28 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_HalfDuplexPushDataToFifo/11 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_RxDmaConfig/17 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_UpdateFrameSize/32 (read) Lpspi_Ip_UpdateLsb/33 (read) Lpspi_Ip_UpdateDefaultTransmitData/34 (read) Lpspi_Ip_UpdateTransferMode/35 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) Lpspi_Ip_GetStatus/38 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_u32DiscardData/2 (Lpspi_Ip_u32DiscardData) @069a2dc8
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @06c6e540
+  References: 
+  Referring: Lpspi_Ip_RxDmaConfig/17 (addr) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_axStateStructure/1 (Lpspi_Ip_axStateStructure) @069a2d38
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @069a39a0
+  References: 
+  Referring: Lpspi_Ip_Init/23 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @069a39a0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06c6e000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_GetStatus/38 Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_DeInit/24 Lpspi_Ip_DeInit/24 Lpspi_Ip_Init/23 Lpspi_Ip_Init/23 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10) @06e318c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10) @06e317e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12) @06e312a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12) @06e311c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/54 (Dma_Ip_GetLogicChannelStatus) @06dfac40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf1c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14) @06dde8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14) @06dde7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+OsIf_GetElapsed/45 (OsIf_GetElapsed) @06dde460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_GetCounter/44 (OsIf_GetCounter) @06dde380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_MicrosToTicks/43 (OsIf_MicrosToTicks) @06dde2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/42 (Dma_Ip_SetLogicChannelTransferList) @06dde0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_DmaInit/15 Lpspi_Ip_DmaInit/15 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_TxDmaContinueTransfer/18 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/41 (Dma_Ip_SetLogicChannelCommand) @06dd0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_IrqRxDmaHandler/22 Lpspi_Ip_TxDmaContinueTransfer/18 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13) @06dd07e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13) @06dd0540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+Lpspi_Ip_GetStatus/38 (Lpspi_Ip_GetStatus) @06dd0c40
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Lpspi_Ip_IrqHandler/37 (Lpspi_Ip_IrqHandler) @06dd09a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 
+Lpspi_Ip_Cancel/36 (Lpspi_Ip_Cancel) @06dd0700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelCommand/41 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateTransferMode/35 (Lpspi_Ip_UpdateTransferMode) @06dd0460
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateDefaultTransmitData/34 (Lpspi_Ip_UpdateDefaultTransmitData) @06dd01c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateLsb/33 (Lpspi_Ip_UpdateLsb) @06dbde00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateFrameSize/32 (Lpspi_Ip_UpdateFrameSize) @06dbd700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Lpspi_Ip_ManageBuffers/31 (Lpspi_Ip_ManageBuffers) @06dbd0e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqTxDmaHandler/21 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_IrqRxDmaHandler/22 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmitHalfDuplex/30 (Lpspi_Ip_AsyncTransmitHalfDuplex) @06dbdd20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_TxDmaConfig/16 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmit/29 (Lpspi_Ip_AsyncTransmit) @06dbd8c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_TransmitRxInit/28 (Lpspi_TransmitRxInit) @06dbd620
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_TransmitTxInit/27 (Lpspi_TransmitTxInit) @06dbd380
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 
+Lpspi_Ip_SyncTransmitHalfDuplex/26 (Lpspi_Ip_SyncTransmitHalfDuplex) @06dbd000
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_HalfDuplexTransmitProcess/10 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_SyncTransmit/25 (Lpspi_Ip_SyncTransmit) @06c97b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_DeInit/24 (Lpspi_Ip_DeInit) @06c97620
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_Init/23 (Lpspi_Ip_Init) @06c97d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_axStateStructure/1 (addr) Lpspi_Ip_apxStateStructureArray/3 (write) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_DmaInit/15 DevAssert/0 DevAssert/0 
+Lpspi_Ip_IrqRxDmaHandler/22 (Lpspi_Ip_IrqRxDmaHandler) @06c97a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 Lpspi_Ip_RxDmaContinueTransfer/19 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_IrqTxDmaHandler/21 (Lpspi_Ip_IrqTxDmaHandler) @06c977e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 Lpspi_Ip_TxDmaFinishTransfer/20 Lpspi_Ip_TxDmaContinueTransfer/18 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_TxDmaFinishTransfer/20 (Lpspi_Ip_TxDmaFinishTransfer) @06c97540
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_RxDmaContinueTransfer/19 (Lpspi_Ip_RxDmaContinueTransfer) @06c972a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaContinueTransfer/18 (Lpspi_Ip_TxDmaContinueTransfer) @06c97000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_RxDmaConfig/17 (Lpspi_Ip_RxDmaConfig) @06c6eb60
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_u32DiscardData/2 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaConfig/16 (Lpspi_Ip_TxDmaConfig) @06c6e540
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_DmaInit/15 (Lpspi_Ip_DmaInit) @06c6e000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_CheckValidParameters/14 (Lpspi_Ip_CheckValidParameters) @06c6ed20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_TransferProcess/13 (Lpspi_Ip_TransferProcess) @06c6ea80
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 
+Lpspi_Ip_HalfDuplexPrepare/12 (Lpspi_Ip_HalfDuplexPrepare) @06c6e7e0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: 
+Lpspi_Ip_HalfDuplexPushDataToFifo/11 (Lpspi_Ip_HalfDuplexPushDataToFifo) @06c6e460
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_HalfDuplexTransmitProcess/10 
+  Calls: Lpspi_Ip_PushDataToFifo/6 
+Lpspi_Ip_HalfDuplexTransmitProcess/10 (Lpspi_Ip_HalfDuplexTransmitProcess) @06c6e1c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: Lpspi_Ip_HalfDuplexPushDataToFifo/11 
+Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (Lpspi_Ip_HalfDupleTransmitChannelComplete) @06d66ee0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_TransferProcessHalfDuplex/8 (Lpspi_Ip_TransferProcessHalfDuplex) @06d669a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_ReadDataFromFifo/5 Lpspi_Ip_HalfDupleTransmitChannelComplete/9 
+Lpspi_Ip_ChannelFinished/7 (Lpspi_Ip_ChannelFinished) @06d66e00
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_PushDataToFifo/6 (Lpspi_Ip_PushDataToFifo) @06d66b60
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_ReadDataFromFifo/5 (Lpspi_Ip_ReadDataFromFifo) @06d668c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_apxBases/4 (Lpspi_Ip_apxBases) @069a2f30
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpspi_Ip_apxStateStructureArray/3 (Lpspi_Ip_apxStateStructureArray) @069a2e58
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_ChannelFinished/7 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_Init/23 (write) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_DeInit/24 (write) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_TransmitRxInit/28 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_HalfDuplexPushDataToFifo/11 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_RxDmaConfig/17 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_UpdateFrameSize/32 (read) Lpspi_Ip_UpdateLsb/33 (read) Lpspi_Ip_UpdateDefaultTransmitData/34 (read) Lpspi_Ip_UpdateTransferMode/35 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) Lpspi_Ip_GetStatus/38 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_u32DiscardData/2 (Lpspi_Ip_u32DiscardData) @069a2dc8
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_RxDmaConfig/17 (addr) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_axStateStructure/1 (Lpspi_Ip_axStateStructure) @069a2d38
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_Init/23 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @069a39a0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_GetStatus/38 Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_DeInit/24 Lpspi_Ip_DeInit/24 Lpspi_Ip_Init/23 Lpspi_Ip_Init/23 
+  Calls: 
+
+
+Initial Symbol table:
+
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10) @06e318c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10) @06e317e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12) @06e312a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12) @06e311c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/54 (Dma_Ip_GetLogicChannelStatus) @06dfac40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf1c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14) @06dde8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14) @06dde7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+OsIf_GetElapsed/45 (OsIf_GetElapsed) @06dde460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_GetCounter/44 (OsIf_GetCounter) @06dde380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_MicrosToTicks/43 (OsIf_MicrosToTicks) @06dde2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/42 (Dma_Ip_SetLogicChannelTransferList) @06dde0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_DmaInit/15 Lpspi_Ip_DmaInit/15 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_TxDmaContinueTransfer/18 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/41 (Dma_Ip_SetLogicChannelCommand) @06dd0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_IrqRxDmaHandler/22 Lpspi_Ip_TxDmaContinueTransfer/18 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13) @06dd07e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13) @06dd0540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+Lpspi_Ip_GetStatus/38 (Lpspi_Ip_GetStatus) @06dd0c40
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Lpspi_Ip_IrqHandler/37 (Lpspi_Ip_IrqHandler) @06dd09a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 
+Lpspi_Ip_Cancel/36 (Lpspi_Ip_Cancel) @06dd0700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelCommand/41 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateTransferMode/35 (Lpspi_Ip_UpdateTransferMode) @06dd0460
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateDefaultTransmitData/34 (Lpspi_Ip_UpdateDefaultTransmitData) @06dd01c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateLsb/33 (Lpspi_Ip_UpdateLsb) @06dbde00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateFrameSize/32 (Lpspi_Ip_UpdateFrameSize) @06dbd700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Lpspi_Ip_ManageBuffers/31 (Lpspi_Ip_ManageBuffers) @06dbd0e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqTxDmaHandler/21 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_IrqRxDmaHandler/22 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmitHalfDuplex/30 (Lpspi_Ip_AsyncTransmitHalfDuplex) @06dbdd20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_TxDmaConfig/16 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmit/29 (Lpspi_Ip_AsyncTransmit) @06dbd8c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_TransmitRxInit/28 (Lpspi_TransmitRxInit) @06dbd620
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_TransmitTxInit/27 (Lpspi_TransmitTxInit) @06dbd380
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 
+Lpspi_Ip_SyncTransmitHalfDuplex/26 (Lpspi_Ip_SyncTransmitHalfDuplex) @06dbd000
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_HalfDuplexTransmitProcess/10 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_SyncTransmit/25 (Lpspi_Ip_SyncTransmit) @06c97b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_DeInit/24 (Lpspi_Ip_DeInit) @06c97620
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_Init/23 (Lpspi_Ip_Init) @06c97d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_axStateStructure/1 (addr) Lpspi_Ip_apxStateStructureArray/3 (write) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_DmaInit/15 DevAssert/0 DevAssert/0 
+Lpspi_Ip_IrqRxDmaHandler/22 (Lpspi_Ip_IrqRxDmaHandler) @06c97a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 Lpspi_Ip_RxDmaContinueTransfer/19 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_IrqTxDmaHandler/21 (Lpspi_Ip_IrqTxDmaHandler) @06c977e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 Lpspi_Ip_TxDmaFinishTransfer/20 Lpspi_Ip_TxDmaContinueTransfer/18 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_TxDmaFinishTransfer/20 (Lpspi_Ip_TxDmaFinishTransfer) @06c97540
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_RxDmaContinueTransfer/19 (Lpspi_Ip_RxDmaContinueTransfer) @06c972a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaContinueTransfer/18 (Lpspi_Ip_TxDmaContinueTransfer) @06c97000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_RxDmaConfig/17 (Lpspi_Ip_RxDmaConfig) @06c6eb60
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_u32DiscardData/2 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaConfig/16 (Lpspi_Ip_TxDmaConfig) @06c6e540
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_DmaInit/15 (Lpspi_Ip_DmaInit) @06c6e000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_CheckValidParameters/14 (Lpspi_Ip_CheckValidParameters) @06c6ed20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_TransferProcess/13 (Lpspi_Ip_TransferProcess) @06c6ea80
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 
+Lpspi_Ip_HalfDuplexPrepare/12 (Lpspi_Ip_HalfDuplexPrepare) @06c6e7e0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: 
+Lpspi_Ip_HalfDuplexPushDataToFifo/11 (Lpspi_Ip_HalfDuplexPushDataToFifo) @06c6e460
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_HalfDuplexTransmitProcess/10 
+  Calls: Lpspi_Ip_PushDataToFifo/6 
+Lpspi_Ip_HalfDuplexTransmitProcess/10 (Lpspi_Ip_HalfDuplexTransmitProcess) @06c6e1c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: Lpspi_Ip_HalfDuplexPushDataToFifo/11 
+Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (Lpspi_Ip_HalfDupleTransmitChannelComplete) @06d66ee0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_TransferProcessHalfDuplex/8 (Lpspi_Ip_TransferProcessHalfDuplex) @06d669a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_ReadDataFromFifo/5 Lpspi_Ip_HalfDupleTransmitChannelComplete/9 
+Lpspi_Ip_ChannelFinished/7 (Lpspi_Ip_ChannelFinished) @06d66e00
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_PushDataToFifo/6 (Lpspi_Ip_PushDataToFifo) @06d66b60
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_ReadDataFromFifo/5 (Lpspi_Ip_ReadDataFromFifo) @06d668c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_apxBases/4 (Lpspi_Ip_apxBases) @069a2f30
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpspi_Ip_apxStateStructureArray/3 (Lpspi_Ip_apxStateStructureArray) @069a2e58
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_ChannelFinished/7 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_Init/23 (write) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_DeInit/24 (write) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_TransmitRxInit/28 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_HalfDuplexPushDataToFifo/11 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_RxDmaConfig/17 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_UpdateFrameSize/32 (read) Lpspi_Ip_UpdateLsb/33 (read) Lpspi_Ip_UpdateDefaultTransmitData/34 (read) Lpspi_Ip_UpdateTransferMode/35 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) Lpspi_Ip_GetStatus/38 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_u32DiscardData/2 (Lpspi_Ip_u32DiscardData) @069a2dc8
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_RxDmaConfig/17 (addr) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_axStateStructure/1 (Lpspi_Ip_axStateStructure) @069a2d38
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_Init/23 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @069a39a0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_GetStatus/38 Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_DeInit/24 Lpspi_Ip_DeInit/24 Lpspi_Ip_Init/23 Lpspi_Ip_Init/23 
+  Calls: 
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10) @06e318c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10) @06e317e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12) @06e312a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12) @06e311c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/54 (Dma_Ip_GetLogicChannelStatus) @06dfac40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf1c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14) @06dde8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14) @06dde7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: 
+OsIf_GetElapsed/45 (OsIf_GetElapsed) @06dde460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_GetCounter/44 (OsIf_GetCounter) @06dde380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+OsIf_MicrosToTicks/43 (OsIf_MicrosToTicks) @06dde2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_HalfDupleTransmitChannelComplete/9 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_TxDmaFinishTransfer/20 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/42 (Dma_Ip_SetLogicChannelTransferList) @06dde0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_DmaInit/15 Lpspi_Ip_DmaInit/15 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_TxDmaContinueTransfer/18 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/41 (Dma_Ip_SetLogicChannelCommand) @06dd0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_RxDmaContinueTransfer/19 Lpspi_Ip_IrqRxDmaHandler/22 Lpspi_Ip_TxDmaContinueTransfer/18 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13) @06dd07e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13) @06dd0540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+Lpspi_Ip_GetStatus/38 (Lpspi_Ip_GetStatus) @06dd0c40
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 
+Lpspi_Ip_IrqHandler/37 (Lpspi_Ip_IrqHandler) @06dd09a0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 
+Lpspi_Ip_Cancel/36 (Lpspi_Ip_Cancel) @06dd0700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelCommand/41 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateTransferMode/35 (Lpspi_Ip_UpdateTransferMode) @06dd0460
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateDefaultTransmitData/34 (Lpspi_Ip_UpdateDefaultTransmitData) @06dd01c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateLsb/33 (Lpspi_Ip_UpdateLsb) @06dbde00
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_UpdateFrameSize/32 (Lpspi_Ip_UpdateFrameSize) @06dbd700
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 DevAssert/0 DevAssert/0 
+Lpspi_Ip_ManageBuffers/31 (Lpspi_Ip_ManageBuffers) @06dbd0e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqTxDmaHandler/21 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_IrqRxDmaHandler/22 Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_GetLogicChannelStatus/54 Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmitHalfDuplex/30 (Lpspi_Ip_AsyncTransmitHalfDuplex) @06dbdd20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_Ip_TxDmaConfig/16 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_Ip_AsyncTransmit/29 (Lpspi_Ip_AsyncTransmit) @06dbd8c0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 Lpspi_Ip_RxDmaConfig/17 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 
+Lpspi_TransmitRxInit/28 (Lpspi_TransmitRxInit) @06dbd620
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_TransmitTxInit/27 (Lpspi_TransmitTxInit) @06dbd380
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 
+Lpspi_Ip_SyncTransmitHalfDuplex/26 (Lpspi_Ip_SyncTransmitHalfDuplex) @06dbd000
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_HalfDuplexTransmitProcess/10 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 Lpspi_Ip_HalfDuplexPrepare/12 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_SyncTransmit/25 (Lpspi_Ip_SyncTransmit) @06c97b60
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 OsIf_GetCounter/44 Lpspi_TransmitRxInit/28 Lpspi_TransmitTxInit/27 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 DevAssert/0 Lpspi_Ip_CheckValidParameters/14 DevAssert/0 DevAssert/0 DevAssert/0 OsIf_MicrosToTicks/43 
+Lpspi_Ip_DeInit/24 (Lpspi_Ip_DeInit) @06c97620
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (write) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_Init/23 (Lpspi_Ip_Init) @06c97d20
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_axStateStructure/1 (addr) Lpspi_Ip_apxStateStructureArray/3 (write) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_DmaInit/15 DevAssert/0 DevAssert/0 
+Lpspi_Ip_IrqRxDmaHandler/22 (Lpspi_Ip_IrqRxDmaHandler) @06c97a80
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 Lpspi_Ip_RxDmaContinueTransfer/19 
+   Indirect call Num speculative call targets: 0
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_IrqTxDmaHandler/21 (Lpspi_Ip_IrqTxDmaHandler) @06c977e0
+  Type: function definition analyzed
+  Visibility: public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 Lpspi_Ip_TxDmaFinishTransfer/20 Lpspi_Ip_TxDmaContinueTransfer/18 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_TxDmaFinishTransfer/20 (Lpspi_Ip_TxDmaFinishTransfer) @06c97540
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_RxDmaContinueTransfer/19 (Lpspi_Ip_RxDmaContinueTransfer) @06c972a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaContinueTransfer/18 (Lpspi_Ip_TxDmaContinueTransfer) @06c97000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_RxDmaConfig/17 (Lpspi_Ip_RxDmaConfig) @06c6eb60
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_u32DiscardData/2 (addr) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_TxDmaConfig/16 (Lpspi_Ip_TxDmaConfig) @06c6e540
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_DmaInit/15 (Lpspi_Ip_DmaInit) @06c6e000
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_Init/23 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 Dma_Ip_SetLogicChannelTransferList/42 
+Lpspi_Ip_CheckValidParameters/14 (Lpspi_Ip_CheckValidParameters) @06c6ed20
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: DevAssert/0 DevAssert/0 
+Lpspi_Ip_TransferProcess/13 (Lpspi_Ip_TransferProcess) @06c6ea80
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 Lpspi_Ip_PushDataToFifo/6 Lpspi_Ip_ReadDataFromFifo/5 
+Lpspi_Ip_HalfDuplexPrepare/12 (Lpspi_Ip_HalfDuplexPrepare) @06c6e7e0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: 
+Lpspi_Ip_HalfDuplexPushDataToFifo/11 (Lpspi_Ip_HalfDuplexPushDataToFifo) @06c6e460
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_HalfDuplexTransmitProcess/10 
+  Calls: Lpspi_Ip_PushDataToFifo/6 
+Lpspi_Ip_HalfDuplexTransmitProcess/10 (Lpspi_Ip_HalfDuplexTransmitProcess) @06c6e1c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 
+  Calls: Lpspi_Ip_HalfDuplexPushDataToFifo/11 
+Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (Lpspi_Ip_HalfDupleTransmitChannelComplete) @06d66ee0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 
+  Calls: OsIf_GetElapsed/45 OsIf_GetCounter/44 OsIf_MicrosToTicks/43 
+Lpspi_Ip_TransferProcessHalfDuplex/8 (Lpspi_Ip_TransferProcessHalfDuplex) @06d669a0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 Lpspi_Ip_ManageBuffers/31 
+  Calls: Lpspi_Ip_ChannelFinished/7 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_ReadDataFromFifo/5 Lpspi_Ip_HalfDupleTransmitChannelComplete/9 
+Lpspi_Ip_ChannelFinished/7 (Lpspi_Ip_ChannelFinished) @06d66e00
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_IrqTxDmaHandler/21 
+  Calls: 
+   Indirect call Num speculative call targets: 0
+Lpspi_Ip_PushDataToFifo/6 (Lpspi_Ip_PushDataToFifo) @06d66b60
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_HalfDuplexPushDataToFifo/11 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_ReadDataFromFifo/5 (Lpspi_Ip_ReadDataFromFifo) @06d668c0
+  Type: function definition analyzed
+  Visibility:
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 Lpspi_Ip_TransferProcessHalfDuplex/8 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmit/25 
+  Calls: 
+Lpspi_Ip_apxBases/4 (Lpspi_Ip_apxBases) @069a2f30
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+Lpspi_Ip_apxStateStructureArray/3 (Lpspi_Ip_apxStateStructureArray) @069a2e58
+  Type: variable definition analyzed
+  Visibility: public
+  References: 
+  Referring: Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_ChannelFinished/7 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_Init/23 (write) Lpspi_Ip_Init/23 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_DeInit/24 (write) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_TransmitTxInit/27 (read) Lpspi_TransmitRxInit/28 (read) Lpspi_Ip_ReadDataFromFifo/5 (read) Lpspi_Ip_PushDataToFifo/6 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_HalfDuplexTransmitProcess/10 (read) Lpspi_Ip_HalfDuplexPushDataToFifo/11 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_RxDmaConfig/17 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_UpdateFrameSize/32 (read) Lpspi_Ip_UpdateLsb/33 (read) Lpspi_Ip_UpdateDefaultTransmitData/34 (read) Lpspi_Ip_UpdateTransferMode/35 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) Lpspi_Ip_GetStatus/38 (read) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_u32DiscardData/2 (Lpspi_Ip_u32DiscardData) @069a2dc8
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_RxDmaConfig/17 (addr) 
+  Availability: not-ready
+  Varpool flags:
+Lpspi_Ip_axStateStructure/1 (Lpspi_Ip_axStateStructure) @069a2d38
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: Lpspi_Ip_Init/23 (addr) 
+  Availability: not-ready
+  Varpool flags:
+DevAssert/0 (DevAssert) @069a39a0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Lpspi_Ip_GetStatus/38 Lpspi_Ip_Cancel/36 Lpspi_Ip_Cancel/36 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateTransferMode/35 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateDefaultTransmitData/34 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateLsb/33 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_UpdateFrameSize/32 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_ManageBuffers/31 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmitHalfDuplex/30 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_AsyncTransmit/29 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_SyncTransmitHalfDuplex/26 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_CheckValidParameters/14 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_SyncTransmit/25 Lpspi_Ip_DeInit/24 Lpspi_Ip_DeInit/24 Lpspi_Ip_Init/23 Lpspi_Ip_Init/23 
+  Calls: 
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+Lpspi_Ip_CheckValidParameters.isra.0/66 (Lpspi_Ip_CheckValidParameters.isra) @06e68ee0
+  Type: function definition analyzed
+  Visibility:
+  References: 
+  Referring: 
+  Clone of Lpspi_Ip_CheckValidParameters/14
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmit/29 (1073741819 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (1073741821 (estimated locally),1.00 per call) 
+  Calls: DevAssert/0 (354334800 (estimated locally),0.33 per call) Lpspi_Ip_CheckValidParameters.part.0/61 (inlined) (237404317 (estimated locally),0.22 per call) 
+Lpspi_Ip_CheckValidParameters.part.0/61 (Lpspi_Ip_CheckValidParameters.part.0) @06cbfd20
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly artificial
+  References: 
+  Referring: 
+  Function Lpspi_Ip_CheckValidParameters.part.0/61 is inline copy in Lpspi_Ip_CheckValidParameters.isra/66
+  Availability: local
+  Function flags: count:237404317 (estimated locally) body local split_part optimize_size
+  Called by: Lpspi_Ip_CheckValidParameters.isra.0/66 (inlined) (237404317 (estimated locally),0.22 per call) 
+  Calls: DevAssert/0 (237404317 (estimated locally),0.22 per call) 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10) @06e318c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10) @06e317e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 (1073741824 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12) @06e312a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 (162657930 (estimated locally),0.15 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12) @06e311c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_TransferProcess/13 (162657930 (estimated locally),0.15 per call) 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/54 (Dma_Ip_GetLogicChannelStatus) @06dfac40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 (177167400 (estimated locally),0.16 per call) Lpspi_Ip_ManageBuffers/31 (177167400 (estimated locally),0.16 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (708669598 (estimated locally),0.66 per call) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (365072223 (estimated locally),0.34 per call) Lpspi_Ip_AsyncTransmit/29 (708669597 (estimated locally),0.66 per call) Lpspi_Ip_AsyncTransmit/29 (365072222 (estimated locally),0.34 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmit/29 (1073741819 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 (354334799 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_TransmitTxInit/27 (354334799 (estimated locally),0.33 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 (89561032 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (46137502 (estimated locally),0.34 per call) Lpspi_Ip_SyncTransmit/25 (76402045 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmit/25 (39358630 (estimated locally),0.34 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf1c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14) @06dde8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 (106689036 (estimated locally),0.10 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14) @06dde7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 (106689036 (estimated locally),0.10 per call) 
+  Calls: 
+OsIf_GetElapsed/45 (OsIf_GetElapsed) @06dde460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 (984180795 (estimated locally),7.25 per call) Lpspi_Ip_SyncTransmit/25 (674923428 (estimated locally),5.83 per call) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (128228408 (estimated locally),0.12 per call) Lpspi_Ip_TxDmaFinishTransfer/20 (170399783 (estimated locally),0.16 per call) 
+  Calls: 
+OsIf_GetCounter/44 (OsIf_GetCounter) @06dde380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 (89561032 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmit/25 (76402045 (estimated locally),0.66 per call) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (128228408 (estimated locally),0.12 per call) Lpspi_Ip_TxDmaFinishTransfer/20 (170399783 (estimated locally),0.16 per call) 
+  Calls: 
+OsIf_MicrosToTicks/43 (OsIf_MicrosToTicks) @06dde2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_SyncTransmitHalfDuplex/26 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (20480552 (estimated locally),0.02 per call) Lpspi_Ip_TxDmaFinishTransfer/20 (65318723 (estimated locally),0.06 per call) 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/42 (Dma_Ip_SetLogicChannelTransferList) @06dde0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_UpdateTransferMode/35 (354334802 (estimated locally),0.33 per call) Lpspi_Ip_UpdateTransferMode/35 (354334802 (estimated locally),0.33 per call) Lpspi_Ip_TxDmaConfig/16 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_RxDmaConfig/17 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_DmaInit/15 (354334800 (estimated locally),0.33 per call) Lpspi_Ip_DmaInit/15 (354334800 (estimated locally),0.33 per call) Lpspi_Ip_RxDmaContinueTransfer/19 (62456556 (estimated locally),0.06 per call) Lpspi_Ip_TxDmaContinueTransfer/18 (62456556 (estimated locally),0.06 per call) 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/41 (Dma_Ip_SetLogicChannelCommand) @06dd0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_Cancel/36 (120473833 (estimated locally),0.11 per call) Lpspi_Ip_Cancel/36 (120473833 (estimated locally),0.11 per call) Lpspi_Ip_ManageBuffers/31 (58465242 (estimated locally),0.05 per call) Lpspi_Ip_ManageBuffers/31 (58465242 (estimated locally),0.05 per call) Lpspi_Ip_IrqRxDmaHandler/22 (52943431 (estimated locally),0.05 per call) Lpspi_Ip_IrqTxDmaHandler/21 (95831459 (estimated locally),0.09 per call) Lpspi_Ip_TxDmaConfig/16 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_RxDmaConfig/17 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_RxDmaContinueTransfer/19 (62456556 (estimated locally),0.06 per call) Lpspi_Ip_TxDmaContinueTransfer/18 (62456556 (estimated locally),0.06 per call) 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13) @06dd07e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 (127455840 (estimated locally),0.12 per call) 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13) @06dd0540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 (127455840 (estimated locally),0.12 per call) 
+  Calls: 
+Lpspi_Ip_GetStatus/38 (Lpspi_Ip_GetStatus) @06dd0c40
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_IrqHandler/37 (Lpspi_Ip_IrqHandler) @06dd09a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TransferProcess/13 (221727689 (estimated locally),0.21 per call) Lpspi_Ip_TransferProcessHalfDuplex/8 (154081951 (estimated locally),0.14 per call) 
+Lpspi_Ip_Cancel/36 (Lpspi_Ip_Cancel) @06dd0700
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelCommand/41 (120473833 (estimated locally),0.11 per call) Dma_Ip_SetLogicChannelCommand/41 (120473833 (estimated locally),0.11 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_UpdateTransferMode/35 (Lpspi_Ip_UpdateTransferMode) @06dd0460
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741821 (estimated locally) body optimize_size
+  Called by: Lpspi_Ip_Init/23 (1073741824 (estimated locally),1.00 per call) 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 (354334802 (estimated locally),0.33 per call) Dma_Ip_SetLogicChannelTransferList/42 (354334802 (estimated locally),0.33 per call) DevAssert/0 (1073741821 (estimated locally),1.00 per call) DevAssert/0 (1073741821 (estimated locally),1.00 per call) 
+Lpspi_Ip_UpdateDefaultTransmitData/34 (Lpspi_Ip_UpdateDefaultTransmitData) @06dd01c0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_UpdateLsb/33 (Lpspi_Ip_UpdateLsb) @06dbde00
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_UpdateFrameSize/32 (Lpspi_Ip_UpdateFrameSize) @06dbd700
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_ManageBuffers/31 (Lpspi_Ip_ManageBuffers) @06dbd0e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_IrqTxDmaHandler/21 (58465242 (estimated locally),0.05 per call) Dma_Ip_SetLogicChannelCommand/41 (58465242 (estimated locally),0.05 per call) Dma_Ip_GetLogicChannelStatus/54 (177167400 (estimated locally),0.16 per call) Lpspi_Ip_IrqRxDmaHandler/22 (58465242 (estimated locally),0.05 per call) Dma_Ip_SetLogicChannelCommand/41 (58465242 (estimated locally),0.05 per call) Dma_Ip_GetLogicChannelStatus/54 (177167400 (estimated locally),0.16 per call) Lpspi_Ip_TransferProcess/13 (76436997 (estimated locally),0.07 per call) Lpspi_Ip_TransferProcessHalfDuplex/8 (148377698 (estimated locally),0.14 per call) DevAssert/0 (1073741823 (estimated locally),1.00 per call) DevAssert/0 (1073741823 (estimated locally),1.00 per call) 
+Lpspi_Ip_AsyncTransmitHalfDuplex/30 (Lpspi_Ip_AsyncTransmitHalfDuplex) @06dbdd20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741821 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 (177167399 (estimated locally),0.16 per call) Lpspi_Ip_RxDmaConfig/17 (177167399 (estimated locally),0.16 per call) Lpspi_Ip_TxDmaConfig/16 (177167399 (estimated locally),0.16 per call) Lpspi_TransmitRxInit/28 (143434726 (estimated locally),0.13 per call) Lpspi_TransmitTxInit/27 (708669598 (estimated locally),0.66 per call) Lpspi_Ip_HalfDuplexPrepare/12 (708669598 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (708669598 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (365072223 (estimated locally),0.34 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (1073741821 (estimated locally),1.00 per call) DevAssert/0 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_CheckValidParameters.isra.0/66 (1073741821 (estimated locally),1.00 per call) DevAssert/0 (1073741821 (estimated locally),1.00 per call) DevAssert/0 (1073741821 (estimated locally),1.00 per call) 
+Lpspi_Ip_AsyncTransmit/29 (Lpspi_Ip_AsyncTransmit) @06dbd8c0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741819 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_TxDmaConfig/16 (233860966 (estimated locally),0.22 per call) Lpspi_Ip_RxDmaConfig/17 (233860966 (estimated locally),0.22 per call) Lpspi_TransmitRxInit/28 (708669597 (estimated locally),0.66 per call) Lpspi_TransmitTxInit/27 (708669597 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (708669597 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (365072222 (estimated locally),0.34 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (1073741819 (estimated locally),1.00 per call) DevAssert/0 (1073741819 (estimated locally),1.00 per call) Lpspi_Ip_CheckValidParameters.isra.0/66 (1073741819 (estimated locally),1.00 per call) DevAssert/0 (1073741819 (estimated locally),1.00 per call) DevAssert/0 (1073741819 (estimated locally),1.00 per call) 
+Lpspi_TransmitRxInit/28 (Lpspi_TransmitRxInit) @06dbd620
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (143434726 (estimated locally),0.13 per call) Lpspi_Ip_AsyncTransmit/29 (708669597 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (18127153 (estimated locally),0.13 per call) Lpspi_Ip_SyncTransmit/25 (76402045 (estimated locally),0.66 per call) 
+  Calls: 
+Lpspi_TransmitTxInit/27 (Lpspi_TransmitTxInit) @06dbd380
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741821 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (708669598 (estimated locally),0.66 per call) Lpspi_Ip_AsyncTransmit/29 (708669597 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (89561032 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmit/25 (76402045 (estimated locally),0.66 per call) 
+  Calls: SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (354334799 (estimated locally),0.33 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (354334799 (estimated locally),0.33 per call) 
+Lpspi_Ip_SyncTransmitHalfDuplex/26 (Lpspi_Ip_SyncTransmitHalfDuplex) @06dbd000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:135698534 (estimated locally) body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 (984180795 (estimated locally),7.25 per call) OsIf_GetCounter/44 (89561032 (estimated locally),0.66 per call) Lpspi_TransmitRxInit/28 (18127153 (estimated locally),0.13 per call) Lpspi_TransmitTxInit/27 (89561032 (estimated locally),0.66 per call) Lpspi_Ip_HalfDuplexPrepare/12 (89561032 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (89561032 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (46137502 (estimated locally),0.34 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (135698534 (estimated locally),1.00 per call) DevAssert/0 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_CheckValidParameters.isra.0/66 (135698534 (estimated locally),1.00 per call) DevAssert/0 (135698534 (estimated locally),1.00 per call) DevAssert/0 (135698534 (estimated locally),1.00 per call) OsIf_MicrosToTicks/43 (135698534 (estimated locally),1.00 per call) 
+Lpspi_Ip_SyncTransmit/25 (Lpspi_Ip_SyncTransmit) @06c97b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:115760675 (estimated locally) body optimize_size
+  Called by: 
+  Calls: OsIf_GetElapsed/45 (674923428 (estimated locally),5.83 per call) OsIf_GetCounter/44 (76402045 (estimated locally),0.66 per call) Lpspi_TransmitRxInit/28 (76402045 (estimated locally),0.66 per call) Lpspi_TransmitTxInit/27 (76402045 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (76402045 (estimated locally),0.66 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (39358630 (estimated locally),0.34 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (115760675 (estimated locally),1.00 per call) DevAssert/0 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_CheckValidParameters.isra.0/66 (115760675 (estimated locally),1.00 per call) DevAssert/0 (115760675 (estimated locally),1.00 per call) DevAssert/0 (115760675 (estimated locally),1.00 per call) DevAssert/0 (115760675 (estimated locally),1.00 per call) OsIf_MicrosToTicks/43 (115760675 (estimated locally),1.00 per call) 
+Lpspi_Ip_DeInit/24 (Lpspi_Ip_DeInit) @06c97620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_Init/23 (Lpspi_Ip_Init) @06c97d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_axStateStructure/1 (addr) Lpspi_Ip_apxStateStructureArray/3 (write) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: Lpspi_Ip_UpdateTransferMode/35 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_DmaInit/15 (inlined) (354334800 (estimated locally),0.33 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) DevAssert/0 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_IrqRxDmaHandler/22 (Lpspi_Ip_IrqRxDmaHandler) @06c97a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 (58465242 (estimated locally),0.05 per call) 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 (52943431 (estimated locally),0.05 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (106689036 (estimated locally),0.10 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (106689036 (estimated locally),0.10 per call) Lpspi_Ip_RxDmaContinueTransfer/19 (inlined) (62456556 (estimated locally),0.06 per call) 
+   Indirect call(56152124 (estimated locally),0.05 per call)  Num speculative call targets: 0
+   Indirect call(56152124 (estimated locally),0.05 per call)  Num speculative call targets: 0
+Lpspi_Ip_IrqTxDmaHandler/21 (Lpspi_Ip_IrqTxDmaHandler) @06c977e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: Lpspi_Ip_ManageBuffers/31 (58465242 (estimated locally),0.05 per call) 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 (95831459 (estimated locally),0.09 per call) Lpspi_Ip_ChannelFinished/7 (95831459 (estimated locally),0.09 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (127455840 (estimated locally),0.12 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (127455840 (estimated locally),0.12 per call) Lpspi_Ip_TxDmaFinishTransfer/20 (inlined) (65318723 (estimated locally),0.06 per call) Lpspi_Ip_TxDmaContinueTransfer/18 (inlined) (62456556 (estimated locally),0.06 per call) 
+   Indirect call(67082022 (estimated locally),0.06 per call)  Num speculative call targets: 0
+Lpspi_Ip_TxDmaFinishTransfer/20 (Lpspi_Ip_TxDmaFinishTransfer) @06c97540
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function Lpspi_Ip_TxDmaFinishTransfer/20 is inline copy in Lpspi_Ip_IrqTxDmaHandler/21
+  Availability: local
+  Function flags: count:65318723 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 (inlined) (65318723 (estimated locally),0.06 per call) 
+  Calls: OsIf_GetElapsed/45 (170399783 (estimated locally),0.16 per call) OsIf_GetCounter/44 (170399783 (estimated locally),0.16 per call) OsIf_MicrosToTicks/43 (65318723 (estimated locally),0.06 per call) 
+Lpspi_Ip_RxDmaContinueTransfer/19 (Lpspi_Ip_RxDmaContinueTransfer) @06c972a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function Lpspi_Ip_RxDmaContinueTransfer/19 is inline copy in Lpspi_Ip_IrqRxDmaHandler/22
+  Availability: local
+  Function flags: count:62456556 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_IrqRxDmaHandler/22 (inlined) (62456556 (estimated locally),0.06 per call) 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 (62456556 (estimated locally),0.06 per call) Dma_Ip_SetLogicChannelTransferList/42 (62456556 (estimated locally),0.06 per call) 
+Lpspi_Ip_TxDmaContinueTransfer/18 (Lpspi_Ip_TxDmaContinueTransfer) @06c97000
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function Lpspi_Ip_TxDmaContinueTransfer/18 is inline copy in Lpspi_Ip_IrqTxDmaHandler/21
+  Availability: local
+  Function flags: count:62456556 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 (inlined) (62456556 (estimated locally),0.06 per call) 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 (62456556 (estimated locally),0.06 per call) Dma_Ip_SetLogicChannelTransferList/42 (62456556 (estimated locally),0.06 per call) 
+Lpspi_Ip_RxDmaConfig/17 (Lpspi_Ip_RxDmaConfig) @06c6eb60
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_u32DiscardData/2 (addr) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (177167399 (estimated locally),0.16 per call) Lpspi_Ip_AsyncTransmit/29 (233860966 (estimated locally),0.22 per call) 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelTransferList/42 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_TxDmaConfig/16 (Lpspi_Ip_TxDmaConfig) @06c6e540
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (177167399 (estimated locally),0.16 per call) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (177167399 (estimated locally),0.16 per call) Lpspi_Ip_AsyncTransmit/29 (233860966 (estimated locally),0.22 per call) 
+  Calls: Dma_Ip_SetLogicChannelCommand/41 (1073741824 (estimated locally),1.00 per call) Dma_Ip_SetLogicChannelTransferList/42 (1073741824 (estimated locally),1.00 per call) 
+Lpspi_Ip_DmaInit/15 (Lpspi_Ip_DmaInit) @06c6e000
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function Lpspi_Ip_DmaInit/15 is inline copy in Lpspi_Ip_Init/23
+  Availability: local
+  Function flags: count:354334800 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_Init/23 (inlined) (354334800 (estimated locally),0.33 per call) 
+  Calls: Dma_Ip_SetLogicChannelTransferList/42 (354334800 (estimated locally),0.33 per call) Dma_Ip_SetLogicChannelTransferList/42 (354334800 (estimated locally),0.33 per call) 
+Lpspi_Ip_CheckValidParameters/14 (Lpspi_Ip_CheckValidParameters) @06c6ed20
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_TransferProcess/13 (Lpspi_Ip_TransferProcess) @06c6ea80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 (221727689 (estimated locally),0.21 per call) Lpspi_Ip_ManageBuffers/31 (76436997 (estimated locally),0.07 per call) 
+  Calls: Lpspi_Ip_ChannelFinished/7 (244598391 (estimated locally),0.23 per call) SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (162657930 (estimated locally),0.15 per call) SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (162657930 (estimated locally),0.15 per call) 
+Lpspi_Ip_HalfDuplexPrepare/12 (Lpspi_Ip_HalfDuplexPrepare) @06c6e7e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxBases/4 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local nonfreeing_fn optimize_size
+  Called by: Lpspi_Ip_AsyncTransmitHalfDuplex/30 (708669598 (estimated locally),0.66 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (89561032 (estimated locally),0.66 per call) 
+  Calls: 
+Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (Lpspi_Ip_HalfDupleTransmitChannelComplete) @06d66ee0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Function Lpspi_Ip_HalfDupleTransmitChannelComplete/9 is inline copy in Lpspi_Ip_TransferProcessHalfDuplex/8
+  Availability: local
+  Function flags: count:20480552 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_TransferProcessHalfDuplex/8 (inlined) (20480552 (estimated locally),0.02 per call) 
+  Calls: OsIf_GetElapsed/45 (128228408 (estimated locally),0.12 per call) OsIf_GetCounter/44 (128228408 (estimated locally),0.12 per call) OsIf_MicrosToTicks/43 (20480552 (estimated locally),0.02 per call) 
+Lpspi_Ip_TransferProcessHalfDuplex/8 (Lpspi_Ip_TransferProcessHalfDuplex) @06d669a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxBases/4 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (read) Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_IrqHandler/37 (154081951 (estimated locally),0.14 per call) Lpspi_Ip_ManageBuffers/31 (148377698 (estimated locally),0.14 per call) 
+  Calls: Lpspi_Ip_ChannelFinished/7 (243996022 (estimated locally),0.23 per call) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (inlined) (20480552 (estimated locally),0.02 per call) 
+Lpspi_Ip_ChannelFinished/7 (Lpspi_Ip_ChannelFinished) @06d66e00
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: Lpspi_Ip_apxStateStructureArray/3 (read) 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_IrqTxDmaHandler/21 (95831459 (estimated locally),0.09 per call) Lpspi_Ip_TransferProcess/13 (244598391 (estimated locally),0.23 per call) Lpspi_Ip_TransferProcessHalfDuplex/8 (243996022 (estimated locally),0.23 per call) 
+  Calls: 
+   Indirect call(751619281 (estimated locally),0.70 per call)  Num speculative call targets: 0
+Lpspi_Ip_apxBases/4 (Lpspi_Ip_apxBases) @069a2f30
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Lpspi_TransmitTxInit/27 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_IrqHandler/37 (read) 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Lpspi_Ip_apxStateStructureArray/3 (Lpspi_Ip_apxStateStructureArray) @069a2e58
+  Type: variable definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: Lpspi_TransmitTxInit/27 (read) Lpspi_Ip_HalfDuplexPrepare/12 (read) Lpspi_Ip_RxDmaConfig/17 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_TransmitRxInit/28 (read) Lpspi_Ip_UpdateTransferMode/35 (read) Lpspi_Ip_TransferProcess/13 (read) Lpspi_Ip_UpdateDefaultTransmitData/34 (read) Lpspi_Ip_TxDmaContinueTransfer/18 (read) Lpspi_Ip_Init/23 (write) Lpspi_Ip_IrqTxDmaHandler/21 (read) Lpspi_Ip_IrqRxDmaHandler/22 (read) Lpspi_Ip_HalfDupleTransmitChannelComplete/9 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_Ip_Cancel/36 (read) Lpspi_Ip_IrqHandler/37 (read) Lpspi_Ip_DeInit/24 (write) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_ChannelFinished/7 (read) Lpspi_Ip_DeInit/24 (read) Lpspi_Ip_SyncTransmit/25 (read) Lpspi_Ip_RxDmaContinueTransfer/19 (read) Lpspi_Ip_DmaInit/15 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_AsyncTransmit/29 (read) Lpspi_Ip_TxDmaFinishTransfer/20 (read) Lpspi_Ip_TxDmaConfig/16 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (read) Lpspi_Ip_ManageBuffers/31 (read) Lpspi_Ip_UpdateFrameSize/32 (read) Lpspi_Ip_UpdateLsb/33 (read) Lpspi_Ip_SyncTransmitHalfDuplex/26 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_TransferProcessHalfDuplex/8 (read) Lpspi_Ip_Init/23 (read) Lpspi_Ip_GetStatus/38 (read) 
+  Availability: available
+  Varpool flags:
+Lpspi_Ip_u32DiscardData/2 (Lpspi_Ip_u32DiscardData) @069a2dc8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Lpspi_Ip_RxDmaConfig/17 (addr) 
+  Availability: available
+  Varpool flags: used-by-single-function
+Lpspi_Ip_axStateStructure/1 (Lpspi_Ip_axStateStructure) @069a2d38
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: Lpspi_Ip_Init/23 (addr) 
+  Availability: available
+  Varpool flags: used-by-single-function
+DevAssert/0 (DevAssert) @069a39a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:21262216 (estimated locally) body local optimize_size
+  Called by: Lpspi_Ip_CheckValidParameters.isra.0/66 (354334800 (estimated locally),0.33 per call) Lpspi_Ip_GetStatus/38 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_Cancel/36 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_Cancel/36 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_Init/23 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_Init/23 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateTransferMode/35 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_UpdateTransferMode/35 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_UpdateDefaultTransmitData/34 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateDefaultTransmitData/34 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateLsb/33 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateLsb/33 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateFrameSize/32 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateFrameSize/32 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateFrameSize/32 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_UpdateFrameSize/32 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_ManageBuffers/31 (1073741823 (estimated locally),1.00 per call) Lpspi_Ip_ManageBuffers/31 (1073741823 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmitHalfDuplex/30 (1073741821 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmit/29 (1073741819 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmit/29 (1073741819 (estimated locally),1.00 per call) Lpspi_Ip_AsyncTransmit/29 (1073741819 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmitHalfDuplex/26 (135698534 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_SyncTransmit/25 (115760675 (estimated locally),1.00 per call) Lpspi_Ip_DeInit/24 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_DeInit/24 (1073741824 (estimated locally),1.00 per call) Lpspi_Ip_CheckValidParameters.part.0/61 (237404317 (estimated locally),0.22 per call) 
+  Calls: 
+Materializing clones
+cloning Lpspi_Ip_CheckValidParameters/14 to Lpspi_Ip_CheckValidParameters.isra/66
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 16, base_index: 0, prev_clone_index: 0, type:  <pointer_type 06d637e0>, alias type:  <pointer_type 07010c40> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+Lpspi_Ip_CheckValidParameters (const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice, uint16 Length)
+{
+  <bb 2> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  _1 = ExternalDevice_7(D)->DeviceParams;
+  _2 = _1->FrameSize;
+  if (_2 > 16)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 4>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  _3 = Length_8(D) & 3;
+  _4 = _3 == 0;
+  DevAssert (_4);
+  goto <bb 6>; [100.00%]
+
+  <bb 4> [local count: 719407024]:
+  # DEBUG BEGIN_STMT
+  if (_2 > 8)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 6>; [67.00%]
+
+  <bb 5> [local count: 237404317]:
+  # DEBUG D#1 => ExternalDevice_7(D)
+  Lpspi_Ip_CheckValidParameters.part.0 (Length_8(D));
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Lpspi_Ip_CheckValidParameters.isra (struct Lpspi_Ip_DeviceParamsType * const ISRA.59, uint16 Length)
+{
+  const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice;
+  const struct Lpspi_Ip_ExternalDeviceType * ExternalDevice;
+
+  <bb 7> [local count: 1073741823]:
+  # DEBUG D#5 s=> ExternalDevice
+  # DEBUG ExternalDevice => D#5
+
+  <bb 2> [local count: 1073741823]:
+  # DEBUG D#3 s=> ExternalDevice
+  # DEBUG BEGIN_STMT
+  _1 = ISRA.59_7(D);
+  _2 = _1->FrameSize;
+  if (_2 > 16)
+    goto <bb 3>; [33.00%]
+  else
+    goto <bb 4>; [67.00%]
+
+  <bb 3> [local count: 354334800]:
+  # DEBUG BEGIN_STMT
+  _4 = Length_3(D) & 3;
+  _5 = _4 == 0;
+  DevAssert (_5);
+  goto <bb 6>; [100.00%]
+
+  <bb 4> [local count: 719407024]:
+  # DEBUG BEGIN_STMT
+  if (_2 > 8)
+    goto <bb 5>; [33.00%]
+  else
+    goto <bb 6>; [67.00%]
+
+  <bb 5> [local count: 237404317]:
+  # DEBUG D#1 => D#3
+  Lpspi_Ip_CheckValidParameters.part.0 (Length_3(D));
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  return;
+
+}
+
+
+Materialization Call site updates done.
+
+Reclaiming functions: Lpspi_Ip_CheckValidParameters/14
+Reclaiming variables:
+Clearing address taken flags:
+updating call of Lpspi_Ip_SyncTransmit/25 -> Lpspi_Ip_CheckValidParameters.isra/66: Lpspi_Ip_CheckValidParameters (ExternalDevice_56(D), Length_58(D));
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 16, base_index: 0, prev_clone_index: 0, type:  <pointer_type 06d637e0>, alias type:  <pointer_type 07010c40> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:Lpspi_Ip_CheckValidParameters.isra (_196, Length_58(D));
+updating call of Lpspi_Ip_SyncTransmitHalfDuplex/26 -> Lpspi_Ip_CheckValidParameters.isra/66: Lpspi_Ip_CheckValidParameters (ExternalDevice_50(D), Length_52(D));
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 16, base_index: 0, prev_clone_index: 0, type:  <pointer_type 06d637e0>, alias type:  <pointer_type 07010c40> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:Lpspi_Ip_CheckValidParameters.isra (_201, Length_52(D));
+updating call of Lpspi_Ip_AsyncTransmit/29 -> Lpspi_Ip_CheckValidParameters.isra/66: Lpspi_Ip_CheckValidParameters (ExternalDevice_13(D), Length_16(D));
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 16, base_index: 0, prev_clone_index: 0, type:  <pointer_type 06d637e0>, alias type:  <pointer_type 07010c40> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:Lpspi_Ip_CheckValidParameters.isra (_43, Length_16(D));
+updating call of Lpspi_Ip_AsyncTransmitHalfDuplex/30 -> Lpspi_Ip_CheckValidParameters.isra/66: Lpspi_Ip_CheckValidParameters (ExternalDevice_15(D), Length_18(D));
+    m_always_copy_start: 2
+    IPA adjusted parameters: 0. IPA_PARAM_OP_SPLIT , offset: 16, base_index: 0, prev_clone_index: 0, type:  <pointer_type 06d637e0>, alias type:  <pointer_type 07010c40> prefix: ISRA
+                             1. IPA_PARAM_OP_COPY , base_index: 1, prev_clone_index: 1
+  updated to:Lpspi_Ip_CheckValidParameters.isra (_50, Length_18(D));
+Trivially needed variables: Lpspi_Ip_apxBases/4 Lpspi_Ip_apxStateStructureArray/3 Lpspi_Ip_u32DiscardData/2 Lpspi_Ip_axStateStructure/1
+Removing variables:
+
+Final Symbol table:
+
+Lpspi_Ip_CheckValidParameters.isra.0/66 (Lpspi_Ip_CheckValidParameters.isra) @06e68ee0
+  Type: function definition analyzed
+  Visibility: asm_written artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10/58 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_10) @06e318c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10/57 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_10) @06e317e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12/56 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_12) @06e312a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12/55 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_12) @06e311c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_GetLogicChannelStatus/54 (Dma_Ip_GetLogicChannelStatus) @06dfac40
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09/53 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09/52 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_09) @06dfa380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11/51 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11/50 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_11) @06cbf700
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08/49 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08/48 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_08) @06cbf1c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14/47 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_14) @06dde8c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14/46 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_14) @06dde7e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_GetElapsed/45 (OsIf_GetElapsed) @06dde460
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_GetCounter/44 (OsIf_GetCounter) @06dde380
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+OsIf_MicrosToTicks/43 (OsIf_MicrosToTicks) @06dde2a0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelTransferList/42 (Dma_Ip_SetLogicChannelTransferList) @06dde0e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_SetLogicChannelCommand/41 (Dma_Ip_SetLogicChannelCommand) @06dd0a80
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13/40 (SchM_Exit_Spi_SPI_EXCLUSIVE_AREA_13) @06dd07e0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13/39 (SchM_Enter_Spi_SPI_EXCLUSIVE_AREA_13) @06dd0540
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_GetStatus/38 (Lpspi_Ip_GetStatus) @06dd0c40
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_IrqHandler/37 (Lpspi_Ip_IrqHandler) @06dd09a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_Cancel/36 (Lpspi_Ip_Cancel) @06dd0700
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_UpdateTransferMode/35 (Lpspi_Ip_UpdateTransferMode) @06dd0460
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741821 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_UpdateDefaultTransmitData/34 (Lpspi_Ip_UpdateDefaultTransmitData) @06dd01c0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_UpdateLsb/33 (Lpspi_Ip_UpdateLsb) @06dbde00
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_UpdateFrameSize/32 (Lpspi_Ip_UpdateFrameSize) @06dbd700
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_ManageBuffers/31 (Lpspi_Ip_ManageBuffers) @06dbd0e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_AsyncTransmitHalfDuplex/30 (Lpspi_Ip_AsyncTransmitHalfDuplex) @06dbdd20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741821 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_AsyncTransmit/29 (Lpspi_Ip_AsyncTransmit) @06dbd8c0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741819 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_TransmitRxInit/28 (Lpspi_TransmitRxInit) @06dbd620
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Lpspi_TransmitTxInit/27 (Lpspi_TransmitTxInit) @06dbd380
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741821 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_SyncTransmitHalfDuplex/26 (Lpspi_Ip_SyncTransmitHalfDuplex) @06dbd000
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:135698534 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_SyncTransmit/25 (Lpspi_Ip_SyncTransmit) @06c97b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:115760675 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_DeInit/24 (Lpspi_Ip_DeInit) @06c97620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_Init/23 (Lpspi_Ip_Init) @06c97d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_IrqRxDmaHandler/22 (Lpspi_Ip_IrqRxDmaHandler) @06c97a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_IrqTxDmaHandler/21 (Lpspi_Ip_IrqTxDmaHandler) @06c977e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741823 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_RxDmaConfig/17 (Lpspi_Ip_RxDmaConfig) @06c6eb60
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_TxDmaConfig/16 (Lpspi_Ip_TxDmaConfig) @06c6e540
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_TransferProcess/13 (Lpspi_Ip_TransferProcess) @06c6ea80
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_HalfDuplexPrepare/12 (Lpspi_Ip_HalfDuplexPrepare) @06c6e7e0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local nonfreeing_fn optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_TransferProcessHalfDuplex/8 (Lpspi_Ip_TransferProcessHalfDuplex) @06d669a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_ChannelFinished/7 (Lpspi_Ip_ChannelFinished) @06d66e00
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741824 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Lpspi_Ip_apxBases/4 (Lpspi_Ip_apxBases) @069a2f30
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized read-only const-value-known
+Lpspi_Ip_apxStateStructureArray/3 (Lpspi_Ip_apxStateStructureArray) @069a2e58
+  Type: variable definition analyzed
+  Visibility: externally_visible asm_written public
+  Aux: @069a2f30
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags:
+Lpspi_Ip_u32DiscardData/2 (Lpspi_Ip_u32DiscardData) @069a2dc8
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @069a2e58
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: used-by-single-function
+Lpspi_Ip_axStateStructure/1 (Lpspi_Ip_axStateStructure) @069a2d38
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @069a2dc8
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: used-by-single-function
+DevAssert/0 (DevAssert) @069a39a0
+  Type: function definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:21262216 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 

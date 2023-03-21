@@ -1,0 +1,22 @@
+-c
+-I../RTD/include
+-I"C:/Users/abhi/workspaceS32DS.3.5/Lpspi_Flexio_Ip_Transfer_S32K312/generate/include"
+-I"C:/Users/abhi/workspaceS32DS.3.5/Lpspi_Flexio_Ip_Transfer_S32K312/RTD/include"
+-I"C:/Users/abhi/workspaceS32DS.3.5/Lpspi_Flexio_Ip_Transfer_S32K312/include"
+-I"C:/Users/abhi/workspaceS32DS.3.5/Lpspi_Flexio_Ip_Transfer_S32K312/board"
+-I"C:/nxp/S32DS.3.5/S32DS/software/PlatformSDK_S32K3_2022_07/SW32K3_RTD_4_4_2_0_1_D2207/Base_TS_T40D34M20I1R0/header"
+-I"C:/nxp/S32DS.3.5/S32DS/software/PlatformSDK_S32K3_2022_07/SW32K3_RTD_4_4_2_0_1_D2207/Base_TS_T40D34M20I1R0/include"
+-I"C:/nxp/S32DS.3.5/S32DS/software/PlatformSDK_S32K3_2022_07/SW32K3_RTD_4_4_2_0_1_D2207/Platform_TS_T40D34M20I1R0/include"
+-I"C:/nxp/S32DS.3.5/S32DS/software/PlatformSDK_S32K3_2022_07/SW32K3_RTD_4_4_2_0_1_D2207/Platform_TS_T40D34M20I1R0/startup/include"
+-I"C:/Users/abhi/workspaceS32DS.3.5/Lpspi_Flexio_Ip_Transfer_S32K312/generate/include"
+-I"C:/Users/abhi/workspaceS32DS.3.5/Lpspi_Flexio_Ip_Transfer_S32K312/generate/src"
+-x assembler-with-cpp
+-g3
+-mcpu=cortex-m7
+-mthumb
+-mlittle-endian
+-mfloat-abi=hard
+-mfpu=fpv5-sp-d16
+-specs=nano.specs
+-specs=nosys.specs
+--sysroot="C:/nxp/S32DS.3.5/S32DS/build_tools/gcc_v10.2/gcc-10.2-arm32-eabi/arm-none-eabi/lib"

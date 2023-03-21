@@ -1,0 +1,2 @@
+Callgraph clone;iotsm_init_debug_port;38;../src/main.c;134;13;main;42;../src/main.c;217;5;inlining to
+Callgraph removal;iotsm_init_debug_port;38;../src/main.c;134;13

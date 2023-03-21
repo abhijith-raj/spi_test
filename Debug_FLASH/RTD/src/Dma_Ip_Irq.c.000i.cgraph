@@ -1,0 +1,2152 @@
+Trivially needed symbols: Dma0_Ch31_IRQHandler/33 Dma0_Ch30_IRQHandler/32 Dma0_Ch29_IRQHandler/31 Dma0_Ch28_IRQHandler/30 Dma0_Ch27_IRQHandler/29 Dma0_Ch26_IRQHandler/28 Dma0_Ch25_IRQHandler/27 Dma0_Ch24_IRQHandler/26 Dma0_Ch23_IRQHandler/25 Dma0_Ch22_IRQHandler/24 Dma0_Ch21_IRQHandler/23 Dma0_Ch20_IRQHandler/22 Dma0_Ch19_IRQHandler/21 Dma0_Ch18_IRQHandler/20 Dma0_Ch17_IRQHandler/19 Dma0_Ch16_IRQHandler/18 Dma0_Ch15_IRQHandler/17 Dma0_Ch14_IRQHandler/16 Dma0_Ch13_IRQHandler/15 Dma0_Ch12_IRQHandler/14 Dma0_Ch11_IRQHandler/13 Dma0_Ch10_IRQHandler/12 Dma0_Ch9_IRQHandler/11 Dma0_Ch8_IRQHandler/10 Dma0_Ch7_IRQHandler/9 Dma0_Ch6_IRQHandler/8 Dma0_Ch5_IRQHandler/7 Dma0_Ch4_IRQHandler/6 Dma0_Ch3_IRQHandler/5 Dma0_Ch2_IRQHandler/4 Dma0_Ch1_IRQHandler/3 Dma0_Ch0_IRQHandler/2
+
+
+Initial Symbol table:
+
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @01981040
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b840e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b84d20
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b84a80
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b847e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b84540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b842a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b84000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b83b60
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b83620
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b830e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b83d20
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b83a80
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b837e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b83540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b832a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b83000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b80b60
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b80620
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b800e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b80d20
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b80a80
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b807e0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b80540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b802a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b80000
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b7ba80
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b7b540
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b7bee0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b7bc40
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b7b9a0
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: public
+  Aux: @06b7b700
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+IrqHandler/1 (IrqHandler) @06b7b1c0
+  Type: function definition analyzed
+  Visibility:
+  Aux: @06b7b700
+  References: g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma0_Ch31_IRQHandler/33 Dma0_Ch30_IRQHandler/32 Dma0_Ch29_IRQHandler/31 Dma0_Ch28_IRQHandler/30 Dma0_Ch27_IRQHandler/29 Dma0_Ch26_IRQHandler/28 Dma0_Ch25_IRQHandler/27 Dma0_Ch24_IRQHandler/26 Dma0_Ch23_IRQHandler/25 Dma0_Ch22_IRQHandler/24 Dma0_Ch21_IRQHandler/23 Dma0_Ch20_IRQHandler/22 Dma0_Ch19_IRQHandler/21 Dma0_Ch18_IRQHandler/20 Dma0_Ch17_IRQHandler/19 Dma0_Ch16_IRQHandler/18 Dma0_Ch15_IRQHandler/17 Dma0_Ch14_IRQHandler/16 Dma0_Ch13_IRQHandler/15 Dma0_Ch12_IRQHandler/14 Dma0_Ch11_IRQHandler/13 Dma0_Ch10_IRQHandler/12 Dma0_Ch9_IRQHandler/11 Dma0_Ch8_IRQHandler/10 Dma0_Ch7_IRQHandler/9 Dma0_Ch6_IRQHandler/8 Dma0_Ch5_IRQHandler/7 Dma0_Ch4_IRQHandler/6 Dma0_Ch3_IRQHandler/5 Dma0_Ch2_IRQHandler/4 Dma0_Ch1_IRQHandler/3 Dma0_Ch0_IRQHandler/2 
+  Calls: Dma_Ip_IntIrqHandler/35 Dma_Ip_ErrorIrqHandler/34 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility:
+  Aux: @06b7b700
+  References: 
+  Referring: IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+IrqHandler/1 (IrqHandler) @06b7b1c0
+  Type: function definition analyzed
+  Visibility:
+  References: g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma0_Ch31_IRQHandler/33 Dma0_Ch30_IRQHandler/32 Dma0_Ch29_IRQHandler/31 Dma0_Ch28_IRQHandler/30 Dma0_Ch27_IRQHandler/29 Dma0_Ch26_IRQHandler/28 Dma0_Ch25_IRQHandler/27 Dma0_Ch24_IRQHandler/26 Dma0_Ch23_IRQHandler/25 Dma0_Ch22_IRQHandler/24 Dma0_Ch21_IRQHandler/23 Dma0_Ch20_IRQHandler/22 Dma0_Ch19_IRQHandler/21 Dma0_Ch18_IRQHandler/20 Dma0_Ch17_IRQHandler/19 Dma0_Ch16_IRQHandler/18 Dma0_Ch15_IRQHandler/17 Dma0_Ch14_IRQHandler/16 Dma0_Ch13_IRQHandler/15 Dma0_Ch12_IRQHandler/14 Dma0_Ch11_IRQHandler/13 Dma0_Ch10_IRQHandler/12 Dma0_Ch9_IRQHandler/11 Dma0_Ch8_IRQHandler/10 Dma0_Ch7_IRQHandler/9 Dma0_Ch6_IRQHandler/8 Dma0_Ch5_IRQHandler/7 Dma0_Ch4_IRQHandler/6 Dma0_Ch3_IRQHandler/5 Dma0_Ch2_IRQHandler/4 Dma0_Ch1_IRQHandler/3 Dma0_Ch0_IRQHandler/2 
+  Calls: Dma_Ip_IntIrqHandler/35 Dma_Ip_ErrorIrqHandler/34 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+
+Initial Symbol table:
+
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+IrqHandler/1 (IrqHandler) @06b7b1c0
+  Type: function definition analyzed
+  Visibility:
+  References: g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma0_Ch31_IRQHandler/33 Dma0_Ch30_IRQHandler/32 Dma0_Ch29_IRQHandler/31 Dma0_Ch28_IRQHandler/30 Dma0_Ch27_IRQHandler/29 Dma0_Ch26_IRQHandler/28 Dma0_Ch25_IRQHandler/27 Dma0_Ch24_IRQHandler/26 Dma0_Ch23_IRQHandler/25 Dma0_Ch22_IRQHandler/24 Dma0_Ch21_IRQHandler/23 Dma0_Ch20_IRQHandler/22 Dma0_Ch19_IRQHandler/21 Dma0_Ch18_IRQHandler/20 Dma0_Ch17_IRQHandler/19 Dma0_Ch16_IRQHandler/18 Dma0_Ch15_IRQHandler/17 Dma0_Ch14_IRQHandler/16 Dma0_Ch13_IRQHandler/15 Dma0_Ch12_IRQHandler/14 Dma0_Ch11_IRQHandler/13 Dma0_Ch10_IRQHandler/12 Dma0_Ch9_IRQHandler/11 Dma0_Ch8_IRQHandler/10 Dma0_Ch7_IRQHandler/9 Dma0_Ch6_IRQHandler/8 Dma0_Ch5_IRQHandler/7 Dma0_Ch4_IRQHandler/6 Dma0_Ch3_IRQHandler/5 Dma0_Ch2_IRQHandler/4 Dma0_Ch1_IRQHandler/3 Dma0_Ch0_IRQHandler/2 
+  Calls: Dma_Ip_IntIrqHandler/35 Dma_Ip_ErrorIrqHandler/34 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Removing unused symbols:
+
+Reclaimed Symbol table:
+
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Function flags: optimize_size
+  Called by: IrqHandler/1 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: public
+  References: 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: 
+  Calls: IrqHandler/1 
+IrqHandler/1 (IrqHandler) @06b7b1c0
+  Type: function definition analyzed
+  Visibility:
+  References: g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Function flags: body optimize_size
+  Called by: Dma0_Ch31_IRQHandler/33 Dma0_Ch30_IRQHandler/32 Dma0_Ch29_IRQHandler/31 Dma0_Ch28_IRQHandler/30 Dma0_Ch27_IRQHandler/29 Dma0_Ch26_IRQHandler/28 Dma0_Ch25_IRQHandler/27 Dma0_Ch24_IRQHandler/26 Dma0_Ch23_IRQHandler/25 Dma0_Ch22_IRQHandler/24 Dma0_Ch21_IRQHandler/23 Dma0_Ch20_IRQHandler/22 Dma0_Ch19_IRQHandler/21 Dma0_Ch18_IRQHandler/20 Dma0_Ch17_IRQHandler/19 Dma0_Ch16_IRQHandler/18 Dma0_Ch15_IRQHandler/17 Dma0_Ch14_IRQHandler/16 Dma0_Ch13_IRQHandler/15 Dma0_Ch12_IRQHandler/14 Dma0_Ch11_IRQHandler/13 Dma0_Ch10_IRQHandler/12 Dma0_Ch9_IRQHandler/11 Dma0_Ch8_IRQHandler/10 Dma0_Ch7_IRQHandler/9 Dma0_Ch6_IRQHandler/8 Dma0_Ch5_IRQHandler/7 Dma0_Ch4_IRQHandler/6 Dma0_Ch3_IRQHandler/5 Dma0_Ch2_IRQHandler/4 Dma0_Ch1_IRQHandler/3 Dma0_Ch0_IRQHandler/2 
+  Calls: Dma_Ip_IntIrqHandler/35 Dma_Ip_ErrorIrqHandler/34 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility:
+  References: 
+  Referring: IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) IrqHandler/1 (read) 
+  Availability: not-ready
+  Varpool flags: initialized read-only const-value-known
+
+Reclaiming functions:
+Reclaiming variables:
+Clearing address taken flags:
+Optimized Symbol table:
+
+IrqHandler.constprop.0/36 (IrqHandler.constprop) @06dcb2a0
+  Type: function definition analyzed
+  Visibility:
+  References: g_ptHwChTcdPtrArray/0 (read) 
+  Referring: 
+  Clone of IrqHandler/1
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: Dma0_Ch0_IRQHandler/2 (1073741824 (estimated locally),1.00 per call) Dma0_Ch1_IRQHandler/3 (1073741824 (estimated locally),1.00 per call) Dma0_Ch2_IRQHandler/4 (1073741824 (estimated locally),1.00 per call) Dma0_Ch3_IRQHandler/5 (1073741824 (estimated locally),1.00 per call) Dma0_Ch4_IRQHandler/6 (1073741824 (estimated locally),1.00 per call) Dma0_Ch5_IRQHandler/7 (1073741824 (estimated locally),1.00 per call) Dma0_Ch6_IRQHandler/8 (1073741824 (estimated locally),1.00 per call) Dma0_Ch7_IRQHandler/9 (1073741824 (estimated locally),1.00 per call) Dma0_Ch8_IRQHandler/10 (1073741824 (estimated locally),1.00 per call) Dma0_Ch9_IRQHandler/11 (1073741824 (estimated locally),1.00 per call) Dma0_Ch10_IRQHandler/12 (1073741824 (estimated locally),1.00 per call) Dma0_Ch11_IRQHandler/13 (1073741824 (estimated locally),1.00 per call) Dma0_Ch12_IRQHandler/14 (1073741824 (estimated locally),1.00 per call) Dma0_Ch13_IRQHandler/15 (1073741824 (estimated locally),1.00 per call) Dma0_Ch14_IRQHandler/16 (1073741824 (estimated locally),1.00 per call) Dma0_Ch15_IRQHandler/17 (1073741824 (estimated locally),1.00 per call) Dma0_Ch16_IRQHandler/18 (1073741824 (estimated locally),1.00 per call) Dma0_Ch17_IRQHandler/19 (1073741824 (estimated locally),1.00 per call) Dma0_Ch18_IRQHandler/20 (1073741824 (estimated locally),1.00 per call) Dma0_Ch19_IRQHandler/21 (1073741824 (estimated locally),1.00 per call) Dma0_Ch20_IRQHandler/22 (1073741824 (estimated locally),1.00 per call) Dma0_Ch21_IRQHandler/23 (1073741824 (estimated locally),1.00 per call) Dma0_Ch22_IRQHandler/24 (1073741824 (estimated locally),1.00 per call) Dma0_Ch23_IRQHandler/25 (1073741824 (estimated locally),1.00 per call) Dma0_Ch24_IRQHandler/26 (1073741824 (estimated locally),1.00 per call) Dma0_Ch25_IRQHandler/27 (1073741824 (estimated locally),1.00 per call) Dma0_Ch26_IRQHandler/28 (1073741824 (estimated locally),1.00 per call) Dma0_Ch27_IRQHandler/29 (1073741824 (estimated locally),1.00 per call) Dma0_Ch28_IRQHandler/30 (1073741824 (estimated locally),1.00 per call) Dma0_Ch29_IRQHandler/31 (1073741824 (estimated locally),1.00 per call) Dma0_Ch30_IRQHandler/32 (1073741824 (estimated locally),1.00 per call) Dma0_Ch31_IRQHandler/33 (1073741824 (estimated locally),1.00 per call) 
+  Calls: Dma_Ip_ErrorIrqHandler/34 (145277267 (estimated locally),0.14 per call) Dma_Ip_IntIrqHandler/35 (177167400 (estimated locally),0.16 per call) 
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: IrqHandler.constprop.0/36 (177167400 (estimated locally),0.16 per call) 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: IrqHandler.constprop.0/36 (145277267 (estimated locally),0.14 per call) 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: externally_visible public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) body optimize_size
+  Called by: 
+  Calls: IrqHandler.constprop.0/36 (1073741824 (estimated locally),1.00 per call) 
+IrqHandler/1 (IrqHandler) @06b7b1c0
+  Type: function
+  Body removed by symtab_remove_unreachable_nodes
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: count:1073741823 (estimated locally) body optimize_size
+  Called by: 
+  Calls: 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly
+  References: 
+  Referring: IrqHandler.constprop.0/36 (read) 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
+Materializing clones
+cloning IrqHandler/1 to IrqHandler.constprop/36
+   replace map: 0 -> 31 -> 0
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+IrqHandler (const uint32 LocHwVers, const uint32 LocHwInst, const uint32 LocHwCh)
+{
+  uint32 ChErrEnable;
+  uint32 ChIntStatus;
+
+  <bb 2> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  _1 = g_ptHwChTcdPtrArray[LocHwInst_10(D)][LocHwCh_11(D)];
+  _2 = _1->tChReg.reg_CH_INT;
+  ChIntStatus_12 = _2 & 1;
+  # DEBUG ChIntStatus => ChIntStatus_12
+  # DEBUG BEGIN_STMT
+  _3 = _1->tChReg.reg_CH_ES;
+  # DEBUG ChErrStatus => _3 & 2147483648
+  # DEBUG BEGIN_STMT
+  _4 = _1->tTcdReg.reg_CSR;
+  _19 = _4 & 6;
+  # DEBUG ChIntEnable => (uint32) _19
+  # DEBUG BEGIN_STMT
+  _5 = _1->tChReg.reg_CH_CSR;
+  ChErrEnable_13 = _5 & 4;
+  # DEBUG ChErrEnable => ChErrEnable_13
+  # DEBUG BEGIN_STMT
+  _20 = (signed int) _3;
+  if (_20 < 0)
+    goto <bb 3>; [41.00%]
+  else
+    goto <bb 6>; [59.00%]
+
+  <bb 3> [local count: 440234143]:
+  # DEBUG BEGIN_STMT
+  if (ChErrEnable_13 != 0)
+    goto <bb 4>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 4> [local count: 145277267]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_ErrorIrqHandler (LocHwVers_14(D), LocHwInst_10(D), LocHwCh_11(D));
+
+  <bb 5> [local count: 440234144]:
+  # DEBUG BEGIN_STMT
+  _1->tChReg.reg_CH_ES = 2147483648;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (ChIntStatus_12 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 7> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  _1->tChReg.reg_CH_INT = 1;
+  # DEBUG BEGIN_STMT
+  if (_19 != 0)
+    goto <bb 8>; [33.00%]
+  else
+    goto <bb 9>; [67.00%]
+
+  <bb 8> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_IntIrqHandler (LocHwVers_14(D), LocHwInst_10(D), LocHwCh_11(D));
+
+  <bb 9> [local count: 1073741824]:
+  return;
+
+}
+
+
+IrqHandler.constprop (const uint32 LocHwCh)
+{
+  uint32 ChIntStatus;
+  uint32 ChErrEnable;
+  const uint32 LocHwVers;
+  const uint32 LocHwInst;
+
+  <bb 10> [local count: 1073741823]:
+  # DEBUG LocHwInst => 0
+  # DEBUG LocHwVers => 3
+
+  <bb 2> [local count: 1073741823]:
+  # DEBUG BEGIN_STMT
+  _2 = g_ptHwChTcdPtrArray[0][LocHwCh_1(D)];
+  _3 = _2->tChReg.reg_CH_INT;
+  ChIntStatus_4 = _3 & 1;
+  # DEBUG ChIntStatus => ChIntStatus_4
+  # DEBUG BEGIN_STMT
+  _5 = _2->tChReg.reg_CH_ES;
+  # DEBUG ChErrStatus => _5 & 2147483648
+  # DEBUG BEGIN_STMT
+  _6 = _2->tTcdReg.reg_CSR;
+  _7 = _6 & 6;
+  # DEBUG ChIntEnable => (uint32) _7
+  # DEBUG BEGIN_STMT
+  _8 = _2->tChReg.reg_CH_CSR;
+  ChErrEnable_9 = _8 & 4;
+  # DEBUG ChErrEnable => ChErrEnable_9
+  # DEBUG BEGIN_STMT
+  _10 = (signed int) _5;
+  if (_10 < 0)
+    goto <bb 3>; [41.00%]
+  else
+    goto <bb 6>; [59.00%]
+
+  <bb 3> [local count: 440234143]:
+  # DEBUG BEGIN_STMT
+  if (ChErrEnable_9 != 0)
+    goto <bb 4>; [33.00%]
+  else
+    goto <bb 5>; [67.00%]
+
+  <bb 4> [local count: 145277267]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_ErrorIrqHandler (3, 0, LocHwCh_1(D));
+
+  <bb 5> [local count: 440234144]:
+  # DEBUG BEGIN_STMT
+  _2->tChReg.reg_CH_ES = 2147483648;
+
+  <bb 6> [local count: 1073741824]:
+  # DEBUG BEGIN_STMT
+  if (ChIntStatus_4 != 0)
+    goto <bb 7>; [50.00%]
+  else
+    goto <bb 9>; [50.00%]
+
+  <bb 7> [local count: 536870913]:
+  # DEBUG BEGIN_STMT
+  _2->tChReg.reg_CH_INT = 1;
+  # DEBUG BEGIN_STMT
+  if (_7 != 0)
+    goto <bb 8>; [33.00%]
+  else
+    goto <bb 9>; [67.00%]
+
+  <bb 8> [local count: 177167400]:
+  # DEBUG BEGIN_STMT
+  Dma_Ip_IntIrqHandler (3, 0, LocHwCh_1(D));
+
+  <bb 9> [local count: 1073741824]:
+  return;
+
+}
+
+
+Materialization Call site updates done.
+
+Reclaiming functions: IrqHandler/1
+Reclaiming variables:
+Clearing address taken flags:
+updating call of Dma0_Ch0_IRQHandler/2 -> IrqHandler.constprop/36: IrqHandler (3, 0, 0);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (0);
+updating call of Dma0_Ch1_IRQHandler/3 -> IrqHandler.constprop/36: IrqHandler (3, 0, 1);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (1);
+updating call of Dma0_Ch2_IRQHandler/4 -> IrqHandler.constprop/36: IrqHandler (3, 0, 2);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (2);
+updating call of Dma0_Ch3_IRQHandler/5 -> IrqHandler.constprop/36: IrqHandler (3, 0, 3);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (3);
+updating call of Dma0_Ch4_IRQHandler/6 -> IrqHandler.constprop/36: IrqHandler (3, 0, 4);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (4);
+updating call of Dma0_Ch5_IRQHandler/7 -> IrqHandler.constprop/36: IrqHandler (3, 0, 5);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (5);
+updating call of Dma0_Ch6_IRQHandler/8 -> IrqHandler.constprop/36: IrqHandler (3, 0, 6);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (6);
+updating call of Dma0_Ch7_IRQHandler/9 -> IrqHandler.constprop/36: IrqHandler (3, 0, 7);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (7);
+updating call of Dma0_Ch8_IRQHandler/10 -> IrqHandler.constprop/36: IrqHandler (3, 0, 8);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (8);
+updating call of Dma0_Ch9_IRQHandler/11 -> IrqHandler.constprop/36: IrqHandler (3, 0, 9);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (9);
+updating call of Dma0_Ch10_IRQHandler/12 -> IrqHandler.constprop/36: IrqHandler (3, 0, 10);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (10);
+updating call of Dma0_Ch11_IRQHandler/13 -> IrqHandler.constprop/36: IrqHandler (3, 0, 11);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (11);
+updating call of Dma0_Ch12_IRQHandler/14 -> IrqHandler.constprop/36: IrqHandler (3, 0, 12);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (12);
+updating call of Dma0_Ch13_IRQHandler/15 -> IrqHandler.constprop/36: IrqHandler (3, 0, 13);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (13);
+updating call of Dma0_Ch14_IRQHandler/16 -> IrqHandler.constprop/36: IrqHandler (3, 0, 14);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (14);
+updating call of Dma0_Ch15_IRQHandler/17 -> IrqHandler.constprop/36: IrqHandler (3, 0, 15);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (15);
+updating call of Dma0_Ch16_IRQHandler/18 -> IrqHandler.constprop/36: IrqHandler (3, 0, 16);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (16);
+updating call of Dma0_Ch17_IRQHandler/19 -> IrqHandler.constprop/36: IrqHandler (3, 0, 17);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (17);
+updating call of Dma0_Ch18_IRQHandler/20 -> IrqHandler.constprop/36: IrqHandler (3, 0, 18);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (18);
+updating call of Dma0_Ch19_IRQHandler/21 -> IrqHandler.constprop/36: IrqHandler (3, 0, 19);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (19);
+updating call of Dma0_Ch20_IRQHandler/22 -> IrqHandler.constprop/36: IrqHandler (3, 0, 20);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (20);
+updating call of Dma0_Ch21_IRQHandler/23 -> IrqHandler.constprop/36: IrqHandler (3, 0, 21);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (21);
+updating call of Dma0_Ch22_IRQHandler/24 -> IrqHandler.constprop/36: IrqHandler (3, 0, 22);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (22);
+updating call of Dma0_Ch23_IRQHandler/25 -> IrqHandler.constprop/36: IrqHandler (3, 0, 23);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (23);
+updating call of Dma0_Ch24_IRQHandler/26 -> IrqHandler.constprop/36: IrqHandler (3, 0, 24);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (24);
+updating call of Dma0_Ch25_IRQHandler/27 -> IrqHandler.constprop/36: IrqHandler (3, 0, 25);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (25);
+updating call of Dma0_Ch26_IRQHandler/28 -> IrqHandler.constprop/36: IrqHandler (3, 0, 26);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (26);
+updating call of Dma0_Ch27_IRQHandler/29 -> IrqHandler.constprop/36: IrqHandler (3, 0, 27);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (27);
+updating call of Dma0_Ch28_IRQHandler/30 -> IrqHandler.constprop/36: IrqHandler (3, 0, 28);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (28);
+updating call of Dma0_Ch29_IRQHandler/31 -> IrqHandler.constprop/36: IrqHandler (3, 0, 29);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (29);
+updating call of Dma0_Ch30_IRQHandler/32 -> IrqHandler.constprop/36: IrqHandler (3, 0, 30);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (30);
+updating call of Dma0_Ch31_IRQHandler/33 -> IrqHandler.constprop/36: IrqHandler (3, 0, 31);
+    m_always_copy_start: 3
+    IPA adjusted parameters: 0. IPA_PARAM_OP_COPY , base_index: 2, prev_clone_index: 2
+  updated to:IrqHandler.constprop (31);
+Trivially needed variables: g_ptHwChTcdPtrArray/0
+Removing variables:
+
+Final Symbol table:
+
+IrqHandler.constprop.0/36 (IrqHandler.constprop) @06dcb2a0
+  Type: function definition analyzed
+  Visibility: asm_written artificial
+  References: 
+  Referring: 
+  Availability: local
+  Function flags: count:1073741823 (estimated locally) local optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_IntIrqHandler/35 (Dma_Ip_IntIrqHandler) @06c331c0
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma_Ip_ErrorIrqHandler/34 (Dma_Ip_ErrorIrqHandler) @06c33000
+  Type: function
+  Visibility: external public
+  References: 
+  Referring: 
+  Availability: not_available
+  Function flags: optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch31_IRQHandler/33 (Dma0_Ch31_IRQHandler) @06b840e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch30_IRQHandler/32 (Dma0_Ch30_IRQHandler) @06b84d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch29_IRQHandler/31 (Dma0_Ch29_IRQHandler) @06b84a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch28_IRQHandler/30 (Dma0_Ch28_IRQHandler) @06b847e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch27_IRQHandler/29 (Dma0_Ch27_IRQHandler) @06b84540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch26_IRQHandler/28 (Dma0_Ch26_IRQHandler) @06b842a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch25_IRQHandler/27 (Dma0_Ch25_IRQHandler) @06b84000
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch24_IRQHandler/26 (Dma0_Ch24_IRQHandler) @06b83b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch23_IRQHandler/25 (Dma0_Ch23_IRQHandler) @06b83620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch22_IRQHandler/24 (Dma0_Ch22_IRQHandler) @06b830e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch21_IRQHandler/23 (Dma0_Ch21_IRQHandler) @06b83d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch20_IRQHandler/22 (Dma0_Ch20_IRQHandler) @06b83a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch19_IRQHandler/21 (Dma0_Ch19_IRQHandler) @06b837e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch18_IRQHandler/20 (Dma0_Ch18_IRQHandler) @06b83540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch17_IRQHandler/19 (Dma0_Ch17_IRQHandler) @06b832a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch16_IRQHandler/18 (Dma0_Ch16_IRQHandler) @06b83000
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch15_IRQHandler/17 (Dma0_Ch15_IRQHandler) @06b80b60
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch14_IRQHandler/16 (Dma0_Ch14_IRQHandler) @06b80620
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch13_IRQHandler/15 (Dma0_Ch13_IRQHandler) @06b800e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch12_IRQHandler/14 (Dma0_Ch12_IRQHandler) @06b80d20
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch11_IRQHandler/13 (Dma0_Ch11_IRQHandler) @06b80a80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch10_IRQHandler/12 (Dma0_Ch10_IRQHandler) @06b807e0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch9_IRQHandler/11 (Dma0_Ch9_IRQHandler) @06b80540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch8_IRQHandler/10 (Dma0_Ch8_IRQHandler) @06b802a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch7_IRQHandler/9 (Dma0_Ch7_IRQHandler) @06b80000
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch6_IRQHandler/8 (Dma0_Ch6_IRQHandler) @06b7ba80
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch5_IRQHandler/7 (Dma0_Ch5_IRQHandler) @06b7b540
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch4_IRQHandler/6 (Dma0_Ch4_IRQHandler) @06b7bee0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch3_IRQHandler/5 (Dma0_Ch3_IRQHandler) @06b7bc40
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch2_IRQHandler/4 (Dma0_Ch2_IRQHandler) @06b7b9a0
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch1_IRQHandler/3 (Dma0_Ch1_IRQHandler) @06b7b700
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+Dma0_Ch0_IRQHandler/2 (Dma0_Ch0_IRQHandler) @06b7b460
+  Type: function definition analyzed
+  Visibility: externally_visible asm_written public
+  References: 
+  Referring: 
+  Availability: available
+  Function flags: count:1073741824 (estimated locally) optimize_size
+  Called by: 
+  Calls: 
+g_ptHwChTcdPtrArray/0 (g_ptHwChTcdPtrArray) @06a88a20
+  Type: variable definition analyzed
+  Visibility: prevailing_def_ironly asm_written
+  Aux: @00000001
+  References: 
+  Referring: 
+  Availability: available
+  Varpool flags: initialized used-by-single-function read-only const-value-known
